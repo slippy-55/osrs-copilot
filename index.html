@@ -128,6 +128,26 @@ details.more .controls { margin-top: 6px; }
 .iconbtn { background: none; border: 0; color: var(--dim); cursor: pointer; font-size: 1rem; padding: 0 4px; }
 .iconbtn.on { color: var(--coin-y); }
 h3.sub { font-size: 1rem; margin: 18px 4px 8px; }
+.board { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+@media (min-width: 820px) { .board { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.tile { background: var(--slab); border: 1px solid var(--edge); border-radius: 6px; padding: 10px; min-height: 128px; display: flex; flex-direction: column; gap: 3px; font-size: .86rem; }
+.tile .top { display: flex; justify-content: space-between; gap: 6px; color: var(--dim); font-size: .78rem; text-transform: uppercase; letter-spacing: .04em; }
+.tile .state { font-weight: 600; }
+.tile .item { font-weight: 600; font-size: .98rem; color: var(--text); line-height: 1.2; }
+.tile .line { color: var(--dim); }
+.tile .line b { color: var(--text); font-weight: 500; }
+.tile .offer b { color: var(--coin-y); }
+.tile.empty { border-style: dashed; color: var(--dim); justify-content: center; align-items: center; text-align: center; }
+.tile.planned { border-color: var(--gold); }
+.tile.buying .state { color: var(--coin-g); } .tile.selling .state { color: var(--coin-y); }
+.tile.bought { border-color: var(--coin-g); } .tile.bought .state { color: var(--coin-g); }
+.tile.sold .state { color: var(--text); }
+.tile .warn { font-size: .78rem; }
+.tile .acts { margin-top: auto; display: flex; gap: 6px; flex-wrap: wrap; padding-top: 4px; }
+.bar { height: 6px; background: var(--stone); border-radius: 3px; overflow: hidden; margin: 3px 0; }
+.bar span { display: block; height: 100%; background: var(--gold); }
+.addbtn { background: var(--slab-2); border: 1px solid var(--gold); color: var(--coin-y); border-radius: 4px; padding: 3px 10px; font-size: .82rem; font-weight: 600; cursor: pointer; }
+.best { color: var(--coin-g); font-size: .78rem; font-weight: 600; margin-left: 6px; }
 .toast { position: fixed; left: 50%; bottom: 90px; transform: translateX(-50%); background: var(--slab-2); border: 1px solid var(--gold); padding: 10px 16px; border-radius: 6px; z-index: 30; }
 @media (prefers-reduced-motion: no-preference) { .presets { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 10px; }
 .preset { background: var(--slab); border: 1px solid var(--edge); color: var(--text); border-radius: 4px; padding: 9px 14px; font-weight: 600; cursor: pointer; text-align: left; }
@@ -143,6 +163,26 @@ details.more .controls { margin-top: 6px; }
 .iconbtn { background: none; border: 0; color: var(--dim); cursor: pointer; font-size: 1rem; padding: 0 4px; }
 .iconbtn.on { color: var(--coin-y); }
 h3.sub { font-size: 1rem; margin: 18px 4px 8px; }
+.board { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+@media (min-width: 820px) { .board { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.tile { background: var(--slab); border: 1px solid var(--edge); border-radius: 6px; padding: 10px; min-height: 128px; display: flex; flex-direction: column; gap: 3px; font-size: .86rem; }
+.tile .top { display: flex; justify-content: space-between; gap: 6px; color: var(--dim); font-size: .78rem; text-transform: uppercase; letter-spacing: .04em; }
+.tile .state { font-weight: 600; }
+.tile .item { font-weight: 600; font-size: .98rem; color: var(--text); line-height: 1.2; }
+.tile .line { color: var(--dim); }
+.tile .line b { color: var(--text); font-weight: 500; }
+.tile .offer b { color: var(--coin-y); }
+.tile.empty { border-style: dashed; color: var(--dim); justify-content: center; align-items: center; text-align: center; }
+.tile.planned { border-color: var(--gold); }
+.tile.buying .state { color: var(--coin-g); } .tile.selling .state { color: var(--coin-y); }
+.tile.bought { border-color: var(--coin-g); } .tile.bought .state { color: var(--coin-g); }
+.tile.sold .state { color: var(--text); }
+.tile .warn { font-size: .78rem; }
+.tile .acts { margin-top: auto; display: flex; gap: 6px; flex-wrap: wrap; padding-top: 4px; }
+.bar { height: 6px; background: var(--stone); border-radius: 3px; overflow: hidden; margin: 3px 0; }
+.bar span { display: block; height: 100%; background: var(--gold); }
+.addbtn { background: var(--slab-2); border: 1px solid var(--gold); color: var(--coin-y); border-radius: 4px; padding: 3px 10px; font-size: .82rem; font-weight: 600; cursor: pointer; }
+.best { color: var(--coin-g); font-size: .78rem; font-weight: 600; margin-left: 6px; }
 .toast { animation: rise .18s ease-out; } @keyframes rise { from { opacity: 0; transform: translate(-50%, 8px); } } }
 </style>
 </head>
@@ -169,6 +209,7 @@ h3.sub { font-size: 1rem; margin: 18px 4px 8px; }
   </div>
   <div class="controls">
     <label class="small">GP to use<span class="gpin"><input id="cap" type="text" inputmode="decimal" value="10"><select class="unit" id="capU" aria-label="Units"><option value="">gp</option><option value="k">k</option><option value="m" selected>m</option><option value="b">b</option></select></span></label>
+    <label class="small">Account<select id="acctSel"></select></label>
     <label class="small">GE slots<input id="slots" type="number" inputmode="numeric" min="1" max="8" value="8"></label>
     <label class="small">Rank by<select id="sort"><option value="balanced">Balanced</option><option value="gph">GP per hour</option><option value="roi">Return on GP</option><option value="rel">Most reliable</option></select></label>
     <label class="grow">Search items<input id="fq" type="text" placeholder="e.g. rune"></label>
@@ -181,6 +222,7 @@ h3.sub { font-size: 1rem; margin: 18px 4px 8px; }
       <label class="small">Max price each<span class="gpin"><input id="maxPrice" type="text" inputmode="decimal" placeholder="no limit"><select class="unit" id="maxPriceU" aria-label="Units"><option value="">gp</option><option value="k">k</option><option value="m" selected>m</option><option value="b">b</option></select></span></label>
       <label class="small">Min trades/hour<input id="minvol" type="number" inputmode="numeric"></label>
       <label class="small">Max quantity<span class="gpin"><input id="maxQty" type="text" inputmode="decimal" placeholder="no limit"><select class="unit" id="maxQtyU" aria-label="Units"><option value="" selected>×1</option><option value="k">k</option><option value="m">m</option><option value="b">b</option></select></span></label>
+      <label class="small">Min profit per flip<span class="gpin"><input id="minProfit" type="text" inputmode="decimal" placeholder="e.g. 20"><select class="unit" id="minProfitU" aria-label="Units"><option value="">gp</option><option value="k" selected>k</option><option value="m">m</option><option value="b">b</option></select></span></label>
       <label class="small">Hours to wait<input id="hours" type="number" inputmode="decimal" min="0.25" step="0.25"></label>
       <label class="small">Inflated if above 7-day avg by %<input id="inflPct" type="number" inputmode="numeric" value="10"></label>
       <label class="check"><input id="hideInfl" type="checkbox" checked> Hide inflated prices</label>
@@ -191,12 +233,13 @@ h3.sub { font-size: 1rem; margin: 18px 4px 8px; }
     </div>
   </details>
   <p class="meta" id="weekStatus"></p>
-  <h3 class="sub">Your slot plan</h3>
+  <h3 class="sub">Your GE slots</h3>
+  <div class="plan-head" id="boardHead"></div>
+  <div class="board" id="board"></div>
+  <h3 class="sub">Suggestions for your free slots</h3>
   <div class="plan-head" id="planHead"></div>
-  <div id="planList" class="list"><div class="empty">Loading…</div></div>
-  <h3 class="sub">More options</h3>
   <div id="flipList" class="list"></div>
-  <p class="lede" style="margin-top:12px">Offer prices are 1 step above the instant-sell price and 1 step below the instant-buy price. Quantities assume you get about 10% of the item's trades while you wait, so real fills can be slower. Reliability looks at how much the item trades and how steady that's been over the last week.</p>
+  <p class="lede" style="margin-top:12px">Tap "Add to slot" to hold a flip in a free slot with its prices fixed. It stays there until you remove it or Dink sees you trade that item in game, then the slot follows your offer. Offer prices are 1 step above the instant-sell price and 1 step below the instant-buy price. Quantities assume you get about 10% of the item's trades while you wait, so real fills can be slower. Reliability looks at how much the item trades and how steady that's been over the last week.</p>
 </section>
 
 <section id="picks" hidden>
@@ -331,11 +374,11 @@ const item = name => S.byName[String(name || "").trim().toLowerCase()];
 
 // ---------- flips ----------
 const PRESETS = {
-  quick:     { hours: 1,  minvol: 100, minPrice: "",   maxPrice: "", maxQty: "", staleMin: 30 },
-  ticket:    { hours: 4,  minvol: 1,   minPrice: "5m", maxPrice: "", maxQty: "2", staleMin: 240 },
-  overnight: { hours: 10, minvol: 10,  minPrice: "",   maxPrice: "", maxQty: "", staleMin: 120 },
+  quick:     { hours: 1,  minvol: 100, minPrice: "",   maxPrice: "", maxQty: "", minProfit: "15k", staleMin: 30 },
+  ticket:    { hours: 4,  minvol: 1,   minPrice: "5m", maxPrice: "", maxQty: "2", minProfit: "100k", staleMin: 240 },
+  overnight: { hours: 10, minvol: 10,  minPrice: "",   maxPrice: "", maxQty: "", minProfit: "50k", staleMin: 120 },
 };
-const FS_FIELDS = ["cap", "capU", "slots", "sort", "minPrice", "minPriceU", "maxPrice", "maxPriceU", "minvol", "maxQty", "maxQtyU", "hours", "inflPct"];
+const FS_FIELDS = ["acctSel", "cap", "capU", "slots", "sort", "minProfit", "minProfitU", "minPrice", "minPriceU", "maxPrice", "maxPriceU", "minvol", "maxQty", "maxQtyU", "hours", "inflPct"];
 const FS_CHECKS = ["hideInfl", "hideSpike", "favOnly", "showHidden", "stale"];
 let fs = store.get("flipSettings", { preset: "quick" });
 let favs = new Set(store.get("favs", [])), hidden = new Set(store.get("hidden", []));
@@ -393,23 +436,25 @@ function pctRank(arr, key) {
   return r => (sorted.length < 2 ? 1 : (sorted.findIndex(v => v >= r[key]) + 1) / sorted.length);
 }
 
-function flipRows() {
-  const cap = gpVal("cap"), q = $("#fq").value.trim().toLowerCase();
+function flipRows(avail, freeSlots, exclude) {
+  const q = $("#fq").value.trim().toLowerCase();
   const hours = Math.max(0.25, +$("#hours").value || 1), minVol = +$("#minvol").value || 0;
   const minP = gpVal("minPrice") || 0, maxP = gpVal("maxPrice") || Infinity;
   const maxQ = gpVal("maxQty") || Infinity, infl = (+$("#inflPct").value || 10) / 100;
+  const minProfit = gpVal("minProfit") || 0;
   const staleMin = (PRESETS[fs.preset] || {}).staleMin || 120;
+  const perSlot = freeSlots > 0 ? avail / freeSlots : 0;
   const rows = [];
   for (const [id, l] of Object.entries(S.latest)) {
     const m = S.byId[id];
-    if (!m || !l.high || !l.low) continue;
+    if (!m || !l.high || !l.low || exclude.has(+id)) continue;
     if (q && !m.name.toLowerCase().includes(q)) continue;
     const isFav = favs.has(+id), isHidden = hidden.has(+id);
     if (isHidden && !$("#showHidden").checked) continue;
     if ($("#favOnly").checked && !isFav) continue;
     const buyOffer = l.low + step(l.low), sellOffer = l.high - step(l.high);
     const net = sellOffer - buyOffer - tax(sellOffer);
-    if (net <= 0 || buyOffer < minP || buyOffer > maxP || buyOffer > cap) continue;
+    if (net <= 0 || buyOffer < minP || buyOffer > maxP || buyOffer > avail) continue;
     const h = S.hour[id] || {}, hv = (h.highPriceVolume || 0) + (h.lowPriceVolume || 0);
     if (hv < minVol) continue;
     const age = Math.max(minsAgo(l.highTime), minsAgo(l.lowTime));
@@ -420,68 +465,179 @@ function flipRows() {
     const spike = wkVol > 0 && hv >= 20 && hv > 3 * wkVol;
     if (inflated && $("#hideInfl").checked) continue;
     if (spike && $("#hideSpike").checked) continue;
+    // what ONE slot can hold: its share of your free GP (or one item if it costs more than that)
+    const budget = Math.min(avail, Math.max(perSlot, buyOffer));
     const limitCap = (m.limit || Infinity) * Math.max(1, Math.floor(hours / 4));
-    const qty = Math.min(limitCap, maxQ, Math.floor(cap / buyOffer), Math.max(1, Math.floor(hv * hours * 0.1)));
+    const qty = Math.min(limitCap, maxQ, Math.floor(budget / buyOffer), Math.max(1, Math.floor(hv * hours * 0.1)));
     if (qty < 1) continue;
+    const profit = qty * net;
+    if (profit < minProfit) continue;
     const rel = 0.6 * Math.min(1, Math.log10(hv + 1) / 3) + 0.4 * (1 - Math.min(1, cv));
-    rows.push({ id: +id, m, l, buyOffer, sellOffer, net, qty, profit: qty * net, gph: (qty * net) / hours, roi: (net / buyOffer) * 100, hv, age, rel, inflated, spike, wkPrice, isFav });
+    rows.push({ id: +id, m, l, buyOffer, sellOffer, net, qty, cost: qty * buyOffer, profit, gph: profit / hours, roi: (net / buyOffer) * 100, hv, age, rel, inflated, spike, wkPrice, isFav });
   }
   const rg = pctRank(rows, "gph"), rr = pctRank(rows, "roi"), rl = pctRank(rows, "rel");
-  rows.forEach(r => { r.balanced = Math.cbrt(rg(r) * rr(r) * rl(r)); });
+  // balanced: profit counts double, so tiny-but-safe flips don't crowd out real earners
+  rows.forEach(r => { r.balanced = Math.pow(rg(r) * rg(r) * rr(r) * rl(r), 0.25); });
   const key = $("#sort").value || "balanced";
   rows.sort((a, b) => b[key] - a[key]);
-  return { rows, cap, hours };
+  return { rows, hours };
 }
 
-function planSlots(rows, cap, slots) {
-  let left = cap; const plan = [], share = cap / slots;
-  for (const r of rows) {
-    if (plan.length >= slots) break;
-    const budget = Math.min(left, Math.max(share, r.buyOffer));
-    const qty = Math.min(r.qty, Math.floor(budget / r.buyOffer));
-    if (qty < 1) continue;
-    plan.push({ ...r, qty, profit: qty * r.net, cost: qty * r.buyOffer });
-    left -= qty * r.buyOffer;
+// ---------- GE slot board ----------
+let board = store.get("board", { holds: [], dismissed: [], plans: {}, t: 0 });
+function saveBoard() { board.t = Date.now(); store.set("board", board); pushBoard(); }
+let boardTimer = null;
+function pushBoard() {
+  if (!inbox.url || !inbox.key) return;
+  clearTimeout(boardTimer);
+  boardTimer = setTimeout(() => ib("/api/store?k=board", { method: "PUT", headers: { "Content-Type": "application/json" }, body: JSON.stringify(board) })
+    .then(r => { board.t = r.t; store.set("board", board); }).catch(() => {}), 800);
+}
+async function pullBoard() {
+  try {
+    const remote = await ib("/api/store?k=board");
+    if (remote.v && remote.t > (board.t || 0)) { board = { holds: [], dismissed: [], plans: {}, ...remote.v, t: remote.t }; store.set("board", board); }
+    else if (!remote.v && (board.holds.length || Object.keys(board.plans).length)) pushBoard();
+  } catch (e) {}
+}
+const boardAcct = () => $("#acctSel").value || accounts[0] || "SLIPPY55";
+
+// Work out what's in each real GE slot from Dink, then put your held flips in the free ones
+function slotPicture(acct, nSlots) {
+  const mine = events.filter(e => e.acct === acct);
+  const dismissed = new Set(board.dismissed);
+  let changed = false;
+  // a held flip is picked up as soon as Dink reports that item on this account
+  board.holds = board.holds.filter(h => {
+    if (h.acct !== acct) return true;
+    const hit = mine.find(e => e.item_id === h.item_id && e.t > h.created);
+    if (!hit) return true;
+    board.plans[acct + "|" + h.item_id] = { buy: h.buy, sell: h.sell, qty: h.qty, t: Date.now() };
+    changed = true;
+    return false;
+  });
+  const last = {};
+  mine.forEach(e => { if (e.slot) last[e.slot] = e; });
+  const tiles = {};
+  Object.entries(last).forEach(([slot, e]) => {
+    if (dismissed.has(e.id)) return;
+    const later = mine.some(o => o.t > e.t && o.item_id === e.item_id && (o.status === "SELLING" || o.status === "SOLD"));
+    if (e.status === "BUYING") tiles[slot] = { state: "buying", e };
+    else if (e.status === "SELLING") tiles[slot] = { state: "selling", e };
+    else if ((e.status === "BOUGHT" || (e.status === "CANCELLED_BUY" && e.qty > 0)) && !later) tiles[slot] = { state: "bought", e };
+    else if (e.status === "SOLD" && Date.now() - e.t < 30 * 60000) tiles[slot] = { state: "sold", e };
+  });
+  const holds = board.holds.filter(h => h.acct === acct);
+  let free = [];
+  for (let s = 1; s <= nSlots; s++) if (!tiles[s]) free.push(s);
+  holds.forEach(h => { const s = free.shift(); if (s) tiles[s] = { state: "planned", h }; else tiles["x" + h.id] = { state: "planned", h, overflow: true }; });
+  if (changed) saveBoard();
+  return tiles;
+}
+function committedGP(t) {
+  if (t.state === "planned") return t.h.buy * t.h.qty;
+  if (t.state === "buying") return (t.e.target || t.e.price) * (t.e.target_qty || t.e.qty);
+  if (t.state === "bought") return t.e.price * t.e.qty;
+  if (t.state === "selling") return (t.e.target || t.e.price) * Math.max(0, (t.e.target_qty || 0) - (t.e.qty || 0));
+  return 0;
+}
+function tileHTML(slot, t, acct) {
+  if (!t) return `<div class="tile empty"><div><b>Slot ${slot}</b><br>Empty</div></div>`;
+  const plan = board.plans[acct + "|" + (t.h ? t.h.item_id : t.e.item_id)];
+  if (t.state === "planned") {
+    const h = t.h, l = S.latest[h.item_id] || {};
+    const nowBuy = l.low ? l.low + step(l.low) : null, nowSell = l.high ? l.high - step(l.high) : null;
+    const moved = nowBuy && nowSell && (Math.abs(nowBuy - h.buy) / h.buy > 0.01 || Math.abs(nowSell - h.sell) / h.sell > 0.01);
+    const net = h.sell - h.buy - tax(h.sell);
+    return `<div class="tile planned"><div class="top"><span>Slot ${t.overflow ? "–" : slot}</span><span class="state">Held</span></div>
+      <div class="item">${esc(h.name)}</div>
+      <div class="line offer">Buy <b>${h.qty.toLocaleString("en-GB")}</b> at <b>${h.buy.toLocaleString("en-GB")}</b></div>
+      <div class="line offer">Then sell at <b>${h.sell.toLocaleString("en-GB")}</b></div>
+      <div class="line">Profit about <b>${gp(net * h.qty, true)}</b></div>
+      ${moved ? `<div class="warn">Prices have moved: now buy ${nowBuy.toLocaleString("en-GB")}, sell ${nowSell.toLocaleString("en-GB")}.</div>` : ""}
+      ${t.overflow ? `<div class="warn">No free slot for this one.</div>` : ""}
+      <div class="acts"><button class="mini" data-unhold="${h.id}">Remove</button></div></div>`;
   }
-  return { plan, left };
+  const e = t.e, l = S.latest[e.item_id] || {};
+  const pct = e.target_qty ? Math.min(100, Math.round((e.qty / e.target_qty) * 100)) : 0;
+  if (t.state === "buying") {
+    const warn = l.low && e.target && l.low > e.target ? `<div class="warn">Instant-sell is ${l.low.toLocaleString("en-GB")}, above your offer, so this may be slow.</div>` : "";
+    return `<div class="tile buying"><div class="top"><span>Slot ${slot}</span><span class="state">Buying</span></div>
+      <div class="item">${esc(e.name)}</div><div class="bar"><span style="width:${pct}%"></span></div>
+      <div class="line">${(e.qty || 0).toLocaleString("en-GB")} / ${(e.target_qty || "?").toLocaleString("en-GB")} at <b>${gp(e.target)}</b></div>
+      ${plan ? `<div class="line offer">Plan: sell at <b>${plan.sell.toLocaleString("en-GB")}</b></div>` : ""}${warn}</div>`;
+  }
+  if (t.state === "bought") {
+    const sugg = plan ? plan.sell : l.high ? l.high - step(l.high) : null;
+    const net = sugg ? sugg - e.price - tax(sugg) : null;
+    return `<div class="tile bought"><div class="top"><span>Slot ${slot}</span><span class="state">Bought</span></div>
+      <div class="item">${esc(e.name)}</div>
+      <div class="line">${e.qty.toLocaleString("en-GB")} at <b>${gp(e.price)}</b> each</div>
+      ${sugg ? `<div class="line offer">Now sell at <b>${sugg.toLocaleString("en-GB")}</b></div><div class="line">Profit about <b>${gp(net * e.qty, true)}</b></div>` : ""}
+      ${l.high && sugg && l.high < sugg ? `<div class="warn">Instant-buy is ${l.high.toLocaleString("en-GB")} right now. Waiting usually beats undercutting.</div>` : ""}
+      <div class="acts"><button class="mini" data-dismiss="${e.id}">Clear</button></div></div>`;
+  }
+  if (t.state === "selling") {
+    const warn = l.high && e.target && l.high < e.target ? `<div class="warn">Instant-buy is ${l.high.toLocaleString("en-GB")}, below your offer. Give it time before undercutting.</div>` : "";
+    return `<div class="tile selling"><div class="top"><span>Slot ${slot}</span><span class="state">Selling</span></div>
+      <div class="item">${esc(e.name)}</div><div class="bar"><span style="width:${pct}%"></span></div>
+      <div class="line">${(e.qty || 0).toLocaleString("en-GB")} / ${(e.target_qty || "?").toLocaleString("en-GB")} at <b>${gp(e.target)}</b></div>${warn}</div>`;
+  }
+  const sale = buildAuto(acct).sells.find(s => s.id === e.id);
+  return `<div class="tile sold"><div class="top"><span>Slot ${slot}</span><span class="state">Sold</span></div>
+    <div class="item">${esc(e.name)}</div><div class="line">${e.qty.toLocaleString("en-GB")} at <b>${gp(e.price)}</b></div>
+    <div class="line">Profit <b>${sale && sale.profit != null ? gp(sale.profit, true) : "not tracked"}</b></div>
+    <div class="acts"><button class="mini" data-dismiss="${e.id}">Clear</button></div></div>`;
 }
 
-function flipRow(r, slotNo) {
+function flipRow(r, best) {
   const warn = [];
   if (r.roi > 15) warn.push("Unusually big spread. Check recent trades before buying.");
   if (r.inflated) warn.push(`Priced ${Math.round((((r.l.high + r.l.low) / 2) / r.wkPrice - 1) * 100)}% above its 7-day average.`);
   if (r.spike) warn.push("Trading far more than usual right now, which can mean manipulation.");
   if (r.age > 30) warn.push(`Last trade ${r.age > 600 ? "over 10 hours" : r.age + " minutes"} ago, so the price may be out of date.`);
   return `<div class="row">
-    <div class="name">${slotNo ? `<span class="slot">Slot ${slotNo}</span>` : ""}<a href="https://prices.runescape.wiki/osrs/item/${r.id}" target="_blank" rel="noopener">${esc(r.m.name)}</a>
+    <div class="name"><a href="https://prices.runescape.wiki/osrs/item/${r.id}" target="_blank" rel="noopener">${esc(r.m.name)}</a>${best ? '<span class="best">Best fit</span>' : ""}
       <button class="iconbtn ${r.isFav ? "on" : ""}" data-fav="${r.id}" aria-label="${r.isFav ? "Remove from favourites" : "Add to favourites"}">${r.isFav ? "★" : "☆"}</button>
       <button class="iconbtn" data-hide="${r.id}" aria-label="${hidden.has(r.id) ? "Unhide" : "Hide"} ${esc(r.m.name)}">${hidden.has(r.id) ? "Unhide" : "Hide"}</button></div>
     <div class="big">${gp(r.profit)}</div>
     <div class="facts">
-      <span class="offer">Offer to buy at <b>${r.buyOffer.toLocaleString("en-GB")}</b></span>
+      <span class="offer">Buy at <b>${r.buyOffer.toLocaleString("en-GB")}</b></span>
       <span class="offer">Sell at <b>${r.sellOffer.toLocaleString("en-GB")}</b></span>
-      <span>Qty <b>${r.qty.toLocaleString("en-GB")}</b></span><span>Net each <b>${gp(r.net)}</b></span>
+      <span>Qty <b>${r.qty.toLocaleString("en-GB")}</b></span><span>Uses <b>${fmt(r.cost)}</b></span>
       <span>ROI <b>${r.roi.toFixed(1)}%</b></span><span>Trades/hour <b>${r.hv.toLocaleString("en-GB")}</b></span>
       <span>Reliability <b>${Math.round(r.rel * 100)}%</b></span>
+      <button class="addbtn" data-hold="${r.id}" data-qty="${r.qty}" data-buy="${r.buyOffer}" data-sell="${r.sellOffer}">Add to slot</button>
     </div>
     ${warn.map(w => `<div class="warn">${w}</div>`).join("")}
   </div>`;
 }
 
+let lastRows = [];
 function renderFlips() {
   saveFlipSettings();
+  const cur = $("#acctSel").value || fs.acctSel;
+  $("#acctSel").innerHTML = accounts.map(a => `<option ${a === cur ? "selected" : ""}>${esc(a)}</option>`).join("");
+  const acct = boardAcct(), nSlots = Math.min(8, Math.max(1, +$("#slots").value || 8));
   const cap = gpVal("cap");
-  if (!cap) { $("#planList").innerHTML = '<div class="empty">Enter how much GP to use, for example 10 with m selected.</div>'; $("#flipList").innerHTML = ""; $("#planHead").innerHTML = ""; return; }
-  const slots = Math.min(8, Math.max(1, +$("#slots").value || 8));
-  const { rows, hours } = flipRows();
-  const { plan, left } = planSlots(rows, cap, slots);
-  const used = plan.reduce((s, r) => s + r.cost, 0), prof = plan.reduce((s, r) => s + r.profit, 0);
-  $("#planHead").innerHTML = plan.length
-    ? `<span>GP used <b>${fmt(used)}</b></span><span>Unused <b>${fmt(left)}</b></span><span>Expected profit <b>${fmt(prof)}</b> over about ${hours} hour${hours === 1 ? "" : "s"}</span>`
-    : "";
-  $("#planList").innerHTML = plan.map((r, i) => flipRow(r, i + 1)).join("") || '<div class="empty">No flips match these filters. Try another preset, a lower minimum trades per hour, or more GP.</div>';
-  const inPlan = new Set(plan.map(r => r.id));
-  $("#flipList").innerHTML = rows.filter(r => !inPlan.has(r.id)).slice(0, 40).map(r => flipRow(r)).join("") || '<div class="empty">Nothing else matches.</div>';
+  const tiles = slotPicture(acct, nSlots);
+  const used = Object.values(tiles).filter(t => !t.overflow).length;
+  const committed = Object.values(tiles).reduce((s, t) => s + committedGP(t), 0);
+  const freeSlots = Math.max(0, nSlots - used);
+  const avail = Math.max(0, (cap || 0) - committed);
+  $("#board").innerHTML = Array.from({ length: nSlots }, (_, i) => tileHTML(i + 1, tiles[i + 1], acct)).join("") +
+    Object.entries(tiles).filter(([k]) => k.startsWith("x")).map(([, t]) => tileHTML("–", t, acct)).join("");
+  $("#boardHead").innerHTML = `<span>Free slots <b>${freeSlots}</b> of ${nSlots}</span><span>GP in use <b>${fmt(committed)}</b></span><span>GP free <b>${fmt(avail)}</b></span>${inbox.url ? "" : "<span>Connect your inbox on the Trades tab so slots follow your real offers.</span>"}`;
+  if (!cap) { $("#flipList").innerHTML = '<div class="empty">Enter how much GP to use, for example 10 with m selected.</div>'; $("#planHead").innerHTML = ""; return; }
+  if (!freeSlots || avail <= 0) { $("#planHead").innerHTML = ""; $("#flipList").innerHTML = `<div class="empty">${freeSlots ? "All your GP is in use." : "All your slots are in use."} Suggestions will appear when a slot frees up.</div>`; return; }
+  const exclude = new Set([...board.holds.filter(h => h.acct === acct).map(h => h.item_id), ...Object.values(tiles).filter(t => t.e).map(t => t.e.item_id)]);
+  const { rows, hours } = flipRows(avail, freeSlots, exclude);
+  lastRows = rows;
+  const bestIds = new Set(), seen = []; let left = avail;
+  for (const r of rows) { if (bestIds.size >= freeSlots) break; if (r.cost <= left) { bestIds.add(r.id); left -= r.cost; seen.push(r); } }
+  const bestProfit = seen.reduce((s, r) => s + r.profit, 0);
+  $("#planHead").innerHTML = seen.length ? `<span>Filling your ${freeSlots} free slot${freeSlots === 1 ? "" : "s"} with the best fits: about <b>${fmt(bestProfit)}</b> profit over ${hours} hour${hours === 1 ? "" : "s"}, using <b>${fmt(avail - left)}</b></span>` : "";
+  $("#flipList").innerHTML = rows.slice(0, 40).map(r => flipRow(r, bestIds.has(r.id))).join("") || '<div class="empty">No flips match. Try a lower min profit per flip, a lower min trades per hour, or another preset.</div>';
 }
 
 // ---------- picks ----------
@@ -723,7 +879,11 @@ async function show() {
   pages.forEach(p => { $("#" + p).hidden = p !== page; });
   document.querySelectorAll("nav#tabs a").forEach(a => a.setAttribute("aria-current", a.getAttribute("href") === "#" + page ? "page" : "false"));
   await loadMarket();
-  if (page === "flips") { renderFlips(); if (!Object.keys(S.week).length) { await loadWeek(); renderFlips(); } }
+  if (page === "flips") {
+    renderFlips();
+    if (!Object.keys(S.week).length) { await loadWeek(); renderFlips(); }
+    if (inbox.url) { await syncInbox(); await pullBoard(); renderFlips(); }
+  }
   if (page === "picks") renderPicks();
   if (page === "watch") { await ensureWatch(); renderWatch(); }
   if (page === "trades") { renderAccounts(); renderTrades(); syncInbox().then(() => { renderAccounts(); renderTrades(); }); }
@@ -733,11 +893,20 @@ async function show() {
 loadFlipSettings();
 document.querySelectorAll(".preset").forEach(b => b.addEventListener("click", () => { applyPreset(b.dataset.preset); renderFlips(); }));
 [...FS_FIELDS, ...FS_CHECKS, "fq"].forEach(id => $("#" + id).addEventListener("input", () => {
-  if (["minPrice", "maxPrice", "minvol", "maxQty", "hours"].includes(id) && fs.preset !== "custom") applyPreset("custom", true);
+  if (["minPrice", "maxPrice", "minvol", "maxQty", "hours", "minProfit"].includes(id) && fs.preset !== "custom") applyPreset("custom", true);
   renderFlips();
 }));
 $("#refresh").addEventListener("click", async () => { await loadMarket(true); renderFlips(); });
 $("#flips").addEventListener("click", e => {
+  const d = e.target.dataset;
+  if (d.hold) {
+    const id = +d.hold, m = S.byId[id];
+    board.holds.push({ id: Date.now(), acct: boardAcct(), item_id: id, name: m ? m.name : "Item " + id, qty: +d.qty, buy: +d.buy, sell: +d.sell, created: Date.now() });
+    saveBoard(); renderFlips(); toast("Held in a slot. Place the buy offer in game.");
+    return;
+  }
+  if (d.unhold) { board.holds = board.holds.filter(h => h.id != d.unhold); saveBoard(); renderFlips(); return; }
+  if (d.dismiss) { board.dismissed = [...board.dismissed, +d.dismiss].slice(-500); saveBoard(); renderFlips(); return; }
   const f = e.target.dataset.fav, h = e.target.dataset.hide;
   if (f) { const id = +f; favs.has(id) ? favs.delete(id) : favs.add(id); store.set("favs", [...favs]); renderFlips(); }
   if (h) { const id = +h; hidden.has(id) ? hidden.delete(id) : hidden.add(id); store.set("hidden", [...hidden]); renderFlips(); toast(hidden.has(id) ? "Hidden. Turn on 'Show hidden items' to undo." : "Unhidden"); }
@@ -806,7 +975,12 @@ $("#ibSave").addEventListener("click", async () => {
 window.addEventListener("hashchange", show);
 show();
 setInterval(async () => { if (document.visibilityState === "visible") { await loadMarket(true); show(); } }, 120000);
-setInterval(async () => { if (document.visibilityState === "visible" && location.hash === "#trades" && inbox.url) { await syncInbox(); renderAccounts(); renderTrades(); } }, 30000);
+setInterval(async () => {
+  if (document.visibilityState !== "visible" || !inbox.url) return;
+  const page = location.hash.slice(1) || "flips";
+  if (page === "trades") { await syncInbox(); renderAccounts(); renderTrades(); }
+  if (page === "flips") { await syncInbox(); await pullBoard(); renderFlips(); }
+}, 30000);
 </script>
 </body>
 </html>
