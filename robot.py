@@ -385,7 +385,6 @@ def run_ai(mode, by_id, by_name, latest, vol_now, vol_yday):
     month = now_iso[:7]
     month_total = sum(r["usd"] for r in costs["runs"] if r["date"].startswith(month))
     header = (f"🧠 **New {'deep' if mode == 'deep' else 'daily'} picks**: {len(theses)} idea(s). "
-              f"Cost ${usage['usd']:.3f}, this month ${month_total:.2f}. "
               f"<https://slippy-55.github.io/osrs-copilot/#picks>")
     if dropped:
         header += f"\n_{dropped} idea(s) dropped because their items can't be traded._"
