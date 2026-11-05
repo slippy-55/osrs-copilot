@@ -273,13 +273,17 @@ def news_text():
 def call_claude(mode, prompt):
     model, p_in, p_out, searches = MODES[mode]
     key = os.environ["ANTHROPIC_API_KEY"]
+    tools = [{"type": "web_search_20250305", "name": "web_search", "max_uses": searches}]
     messages = [{"role": "user", "content": prompt}]
     usage = {"in": 0, "out": 0, "searches": 0}
+    debug = {"stop_reasons": [], "blocks": []}
     text = ""
-    for _ in range(4):  # handle "pause_turn" when searches run long
+
+    def send(extra=None):
         body = {"model": model, "max_tokens": 8000, "system": PLAYBOOK, "messages": messages,
-                "tools": [{"type": "web_search_20250305", "name": "web_search",
-                           "max_uses": searches}]}
+                "tools": tools}
+        if extra:
+            body.update(extra)
         r = requests.post("https://api.anthropic.com/v1/messages", json=body, timeout=600,
                           headers={"x-api-key": key, "anthropic-version": "2023-06-01",
                                    "content-type": "application/json"})
@@ -291,16 +295,38 @@ def call_claude(mode, prompt):
             + (u.get("cache_creation_input_tokens") or 0)
         usage["out"] += u.get("output_tokens") or 0
         usage["searches"] += (u.get("server_tool_use") or {}).get("web_search_requests") or 0
+        debug["stop_reasons"].append(res.get("stop_reason"))
+        debug["blocks"].append([b.get("type") for b in res.get("content", [])])
+        return res
+
+    for _ in range(4):  # "pause_turn" means the AI paused mid-research; let it continue
+        res = send()
         text += "".join(b.get("text", "") for b in res["content"] if b.get("type") == "text")
         if res.get("stop_reason") != "pause_turn":
             break
         messages.append({"role": "assistant", "content": res["content"]})
+
+    # If it never wrote its answer, ask once more for just the JSON, with no more searching
+    if '"title"' not in text:
+        if messages[-1]["role"] == "user":
+            messages.append({"role": "assistant", "content": res["content"]})
+        messages.append({"role": "user", "content":
+                         "Stop researching. Reply now with only the JSON object described in "
+                         "your instructions, using what you've found so far."})
+        try:
+            res = send({"tool_choice": {"type": "none"}})
+            text = "".join(b.get("text", "") for b in res["content"] if b.get("type") == "text")
+        except Exception as e:
+            debug["retry_error"] = str(e)[:300]
+
+    print("AI stop reasons:", debug["stop_reasons"], "blocks:", debug["blocks"])
     # Haiku costs 5x more when one request is over 100k tokens
     if mode == "quick" and usage["in"] > 100_000:
         p_in, p_out = p_in * 5, p_out * 5
     usage["usd"] = round(usage["in"] / 1e6 * p_in + usage["out"] / 1e6 * p_out
                          + usage["searches"] * SEARCH_PRICE, 4)
     usage["model"] = model
+    usage["debug"] = debug
     return text, usage
 
 
@@ -372,7 +398,8 @@ def run_ai(mode, by_id, by_name, latest, vol_now, vol_yday):
     if mode == "deep":
         picks["last_deep"] = dt.date.today().isoformat()
     if not theses:
-        picks["raw"] = text[:3000]
+        picks["raw"] = text[:3000] or "(the AI sent back no text)"
+        picks["debug"] = usage.get("debug")
     save("picks.json", picks)
 
     hist = load("picks_history.json", {"entries": []})
