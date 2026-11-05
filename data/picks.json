@@ -1,55 +1,9 @@
 {
- "generated": "2026-11-05T16:18+00:00",
- "mode": "quick",
- "model": "claude-haiku-5-5",
- "theses": [
-  {
-   "title": "Menaphos soul altar adds soul rune supply",
-   "trigger": "True Soul Altar in Menaphos, letting players craft soul runes at 90 Runecraft",
-   "release": "Spring 2027 (roadmap; Menaphos passed the RuneFest 2026 summit poll)",
-   "evidence": "Upcoming updates list, OSRS Wiki: Menaphos includes the true Soul Altar, allowing soul rune crafting at 90 Runecraft. https://oldschool.runescape.wiki/w/Upcoming_updates",
-   "mechanism": "A new crafting route adds soul rune supply, pushing price down unless demand from soul talisman and tiara crafting absorbs it.",
-   "direction": "down",
-   "items": [
-    {
-     "name": "Soul rune",
-     "id": 566,
-     "limit": 25000,
-     "high_then": 299,
-     "low_then": 294
-    }
-   ],
-   "substitutes": "Existing soul rune sources continue; Menaphos adds supply rather than replacing them.",
-   "confidence": "low",
-   "action": "Watch",
-   "action_detail": "No position until the Menaphos release date is confirmed. If holding into release week, sell into any early price spike.",
-   "exit_plan": "Sell holdings during release-week strength, before new altar supply ramps up.",
-   "what_would_kill_it": "Soul talisman or tiara demand absorbs the extra runes, or quest gating keeps early supply tiny."
-  },
-  {
-   "title": "Diamond Dragon boss arrival boosts arrow demand",
-   "trigger": "Diamond Dragon boss in the Dungeons of Gielinor update, placed in a Varlamore dungeon with Gemstone Dragons",
-   "release": "Spring 2027 (Dungeons of Gielinor passed the RuneFest 2026 summit poll)",
-   "evidence": "Upcoming updates list, OSRS Wiki: the Diamond Dragon sits in a new Varlamore dungeon with Gemstone Dragons. https://oldschool.runescape.wiki/w/Upcoming_updates. Gemstone dragons have an Arrows weakness: https://www.runehq.com/monster/dragonstone-dragon",
-   "mechanism": "Gemstone dragons are weak to arrows, so a new Gemstone boss raises demand for arrows used in those fights.",
-   "direction": "up",
-   "items": [
-    {
-     "name": "Dragon arrow",
-     "id": 11212,
-     "limit": 11000,
-     "high_then": 2499,
-     "low_then": 2495
-    }
-   ],
-   "substitutes": "Rune, amethyst and ruby arrows, plus ranged bolts, all compete for the same ranged-user demand.",
-   "confidence": "low",
-   "action": "Watch",
-   "action_detail": "Monitor Dungeons of Gielinor release timing and the Diamond Dragon's drop table. Only act once the arrow weakness and drops are confirmed.",
-   "exit_plan": "If buying, sell after the first major content wave, when arrow demand cools.",
-   "what_would_kill_it": "Many substitute arrows absorb the demand, or the boss is only lightly used by ranged players."
-  }
- ],
- "cost_usd": 0.0397,
- "last_deep": null
+ "generated": "2026-11-05T16:56+00:00",
+ "mode": "deep",
+ "model": "claude-sonnet-5-5",
+ "theses": [],
+ "cost_usd": 0.3971,
+ "last_deep": "2026-11-05",
+ "raw": ""
 }
