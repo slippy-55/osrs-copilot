@@ -1,142 +1,55 @@
 {
- "generated": "2026-11-05T15:58+00:00",
+ "generated": "2026-11-05T16:18+00:00",
  "mode": "quick",
  "model": "claude-haiku-5-5",
  "theses": [
   {
-   "title": "Gemstone dragon arrow weakness with Diamond Dragon arrival",
-   "trigger": "Dungeons of Gielinor (Spring 2027) adds a Diamond Dragon in a Varlamore dungeon with Gemstone Dragons; the wiki lists the gemstone dragons' weakness as Arrows.",
-   "release": "Spring 2027 (poll passed; no exact date)",
-   "mechanism": "Gemstone dragons are weak to arrows, so ranged arrow-tip and bolt-tip demand rises for the new boss and existing dragon slayer tasks. Many arrow tips are cheap and plentiful, so the spike is capped.",
-   "direction": "up",
-   "items": [
-    {
-     "name": "Dragon arrowtips",
-     "id": 11237,
-     "limit": 10000,
-     "high_then": 2610,
-     "low_then": 2535
-    },
-    {
-     "name": "Onyx dragon bolts (e)",
-     "id": 21950,
-     "limit": 11000,
-     "high_then": 8848,
-     "low_then": 8848
-    }
-   ],
-   "substitutes": "Rune and adamant arrowtips, and other bolt tips such as emerald and sapphire, which are cheaper alternatives.",
-   "confidence": "low",
-   "entry_plan": "Accumulate in small lots on dips over the next few months, not on the current volume spike.",
-   "exit_plan": "Sell into the Dungeons of Gielinor release hype or when the new boss's first kill rate settles.",
-   "what_would_kill_it": "The Diamond Dragon's weakness is not Arrows, or it is already priced in. Current bolt-tip volume spikes suggest early buyers are present."
-  },
-  {
-   "title": "Deep Sea Diving farming patches drive seed demand",
-   "trigger": "The Deep Sea Diving Expansion adds underwater Spirit Tree, Celastrus tree, Mushroom and Hardwood Farming patches.",
-   "release": "Early 2027 (no exact date; poll not yet passed)",
-   "mechanism": "New patch locations need seeds and saplings to be planted, so demand for these seeds rises. Supply is steady because existing farmers already grow them.",
-   "direction": "up",
-   "items": [
-    {
-     "name": "Irit seed",
-     "id": 5297,
-     "limit": 600,
-     "high_then": 65,
-     "low_then": 61
-    },
-    {
-     "name": "Celastrus seed",
-     "id": 22869,
-     "limit": 200,
-     "high_then": 16479,
-     "low_then": 16479
-    },
-    {
-     "name": "Redwood sapling",
-     "id": 22859,
-     "limit": 100,
-     "high_then": 15653,
-     "low_then": 13897
-    }
-   ],
-   "substitutes": "Other tree seeds and saplings, plus the existing non-underwater patches, which already supply most of this demand.",
-   "confidence": "low",
-   "entry_plan": "Buy the seeds gradually after the expansion's poll passes, not before.",
-   "exit_plan": "Sell within a few weeks of the underwater patches opening.",
-   "what_would_kill_it": "The farming patches fail the poll or the release slips past 2027, and these seeds stay flat or drop from farming supply."
-  },
-  {
-   "title": "Chosen Commander's Zanik's crossbow undercuts the Dorgeshuun crossbow",
-   "trigger": "The Chosen Commander backport offers Zanik's Modified Crossbow, a stronger version of the Dorgeshuun crossbow's defence-draining special attack.",
-   "release": "Early 2027 (poll passed; no exact date)",
-   "mechanism": "A stronger version of the same special attack gives players a reason to skip the Dorgeshuun crossbow. Demand for the older crossbow falls, and its price drifts down.",
-   "direction": "down",
-   "items": [
-    {
-     "name": "Dorgeshuun crossbow",
-     "id": 8880,
-     "limit": 70,
-     "high_then": 3984,
-     "low_then": 1600
-    }
-   ],
-   "substitutes": "Other defence-draining or special-attack crossbows. Zanik's crossbow itself is likely untradeable, which keeps the effect on the old crossbow.",
-   "confidence": "low",
-   "entry_plan": "Short the Dorgeshuun crossbow only if the price has risen on hype before the release.",
-   "exit_plan": "Close once the price has fallen after the quest goes live.",
-   "what_would_kill_it": "Zanik's crossbow is tradeable and becomes the new buy target, or the old crossbow is needed for a separate Dorgeshuun task."
-  },
-  {
-   "title": "Menaphos soul altar increases soul rune supply",
-   "trigger": "Menaphos adds a true Soul Altar where soul runes can be crafted at 90 Runecraft, plus a new soul talisman and soul tiaras.",
-   "release": "Spring 2027 (poll passed; no exact date)",
-   "mechanism": "A second, more accessible soul rune crafting location raises supply, which pushes the price of soul runes down. Soul tiaras may add some demand, but it is small compared with the supply increase.",
+   "title": "Menaphos soul altar adds soul rune supply",
+   "trigger": "True Soul Altar in Menaphos, letting players craft soul runes at 90 Runecraft",
+   "release": "Spring 2027 (roadmap; Menaphos passed the RuneFest 2026 summit poll)",
+   "evidence": "Upcoming updates list, OSRS Wiki: Menaphos includes the true Soul Altar, allowing soul rune crafting at 90 Runecraft. https://oldschool.runescape.wiki/w/Upcoming_updates",
+   "mechanism": "A new crafting route adds soul rune supply, pushing price down unless demand from soul talisman and tiara crafting absorbs it.",
    "direction": "down",
    "items": [
     {
      "name": "Soul rune",
      "id": 566,
      "limit": 25000,
-     "high_then": 303,
-     "low_then": 293
+     "high_then": 299,
+     "low_then": 294
     }
    ],
-   "substitutes": "Other runes, such as blood or death runes, which do not compete directly.",
+   "substitutes": "Existing soul rune sources continue; Menaphos adds supply rather than replacing them.",
    "confidence": "low",
-   "entry_plan": "Wait until the Menaphos release is confirmed, then sell into any pre-release strength.",
-   "exit_plan": "Cover the short once the Vault and altar supply has stabilised.",
-   "what_would_kill_it": "The altar needs a costly or rare input that limits supply, or soul runes already have demand from other activities such as Runecrafting training."
+   "action": "Watch",
+   "action_detail": "No position until the Menaphos release date is confirmed. If holding into release week, sell into any early price spike.",
+   "exit_plan": "Sell holdings during release-week strength, before new altar supply ramps up.",
+   "what_would_kill_it": "Soul talisman or tiara demand absorbs the extra runes, or quest gating keeps early supply tiny."
   },
   {
-   "title": "Deep Sea Diving Slayer monsters increase supply of underwater drops",
-   "trigger": "Underwater Slayer areas add Jellyfish, Depth Crawlers, Drowned Mages, Abyssal Rock Slugs and Abyssal Arbalests, which increases the number of monsters available.",
-   "release": "Early 2027 (poll pending)",
-   "mechanism": "More Slayer monsters spread kill activity across more tasks, which lowers the price of items that these new monsters drop in bulk. The effect is largest for items with many drops and small demand.",
-   "direction": "down",
+   "title": "Diamond Dragon boss arrival boosts arrow demand",
+   "trigger": "Diamond Dragon boss in the Dungeons of Gielinor update, placed in a Varlamore dungeon with Gemstone Dragons",
+   "release": "Spring 2027 (Dungeons of Gielinor passed the RuneFest 2026 summit poll)",
+   "evidence": "Upcoming updates list, OSRS Wiki: the Diamond Dragon sits in a new Varlamore dungeon with Gemstone Dragons. https://oldschool.runescape.wiki/w/Upcoming_updates. Gemstone dragons have an Arrows weakness: https://www.runehq.com/monster/dragonstone-dragon",
+   "mechanism": "Gemstone dragons are weak to arrows, so a new Gemstone boss raises demand for arrows used in those fights.",
+   "direction": "up",
    "items": [
     {
-     "name": "Abyssal dagger",
-     "id": 13265,
-     "limit": 8,
-     "high_then": 1006317,
-     "low_then": 954088
-    },
-    {
-     "name": "Abyssal whip",
-     "id": 4151,
-     "limit": 70,
-     "high_then": 690479,
-     "low_then": 660780
+     "name": "Dragon arrow",
+     "id": 11212,
+     "limit": 11000,
+     "high_then": 2499,
+     "low_then": 2495
     }
    ],
-   "substitutes": "Existing Abyssal Demon and other Slayer monsters, which already supply these items. The impact on the whip and dagger should be small.",
+   "substitutes": "Rune, amethyst and ruby arrows, plus ranged bolts, all compete for the same ranged-user demand.",
    "confidence": "low",
-   "entry_plan": "Avoid acting before the poll outcome; the expansion may not pass in full.",
-   "exit_plan": "Close any short once the new Slayer areas are live and drop rates are confirmed.",
-   "what_would_kill_it": "The Slayer areas or their drop tables fail, or the affected items are already heavily demanded by other Slayer tasks."
+   "action": "Watch",
+   "action_detail": "Monitor Dungeons of Gielinor release timing and the Diamond Dragon's drop table. Only act once the arrow weakness and drops are confirmed.",
+   "exit_plan": "If buying, sell after the first major content wave, when arrow demand cools.",
+   "what_would_kill_it": "Many substitute arrows absorb the demand, or the boss is only lightly used by ranged players."
   }
  ],
- "cost_usd": 0.0274,
+ "cost_usd": 0.0397,
  "last_deep": null
 }

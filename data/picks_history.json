@@ -97,6 +97,34 @@
      "low_then": 660780
     }
    ]
+  },
+  {
+   "date": "2026-11-05T16:18+00:00",
+   "title": "Menaphos soul altar adds soul rune supply",
+   "direction": "down",
+   "items": [
+    {
+     "name": "Soul rune",
+     "id": 566,
+     "limit": 25000,
+     "high_then": 299,
+     "low_then": 294
+    }
+   ]
+  },
+  {
+   "date": "2026-11-05T16:18+00:00",
+   "title": "Diamond Dragon boss arrival boosts arrow demand",
+   "direction": "up",
+   "items": [
+    {
+     "name": "Dragon arrow",
+     "id": 11212,
+     "limit": 11000,
+     "high_then": 2499,
+     "low_then": 2495
+    }
+   ]
   }
  ]
 }
