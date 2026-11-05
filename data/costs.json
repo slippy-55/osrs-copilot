@@ -1,1 +1,13 @@
-{"runs": []}
+{
+ "runs": [
+  {
+   "date": "2026-11-05T15:46+00:00",
+   "mode": "quick",
+   "in": 53654,
+   "out": 4723,
+   "searches": 3,
+   "usd": 0.0377,
+   "model": "claude-haiku-5-5"
+  }
+ ]
+}
