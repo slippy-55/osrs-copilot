@@ -463,7 +463,7 @@ async function renderPicks() {
     ? `Last scan ${new Date(picks.generated).toLocaleString("en-GB", { dateStyle: "medium", timeStyle: "short" })} using ${esc(picks.model)}. ${run}`
     : `No scan yet. The first one runs automatically after 7am. ${run}`;
   if (!picks.theses || !picks.theses.length) {
-    $("#picksList").innerHTML = picks.raw ? `<div class="thesis"><h3>The AI reply couldn't be read</h3><p class="lede">${esc(picks.raw.slice(0, 800))}</p></div>` : '<div class="empty">No picks yet.</div>';
+    $("#picksList").innerHTML = picks.raw ? `<div class="thesis"><h3>The AI reply couldn't be read</h3><p class="lede">${esc(picks.raw.slice(0, 800))}</p>${picks.debug ? `<p class="meta">Details for Claude: ${esc(JSON.stringify(picks.debug).slice(0, 400))}</p>` : ""}</div>` : '<div class="empty">No picks yet.</div>';
     return;
   }
   $("#picksList").innerHTML = picks.theses.map(t => {
