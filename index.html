@@ -180,7 +180,7 @@ h3.sub { font-size: 1rem; margin: 18px 4px 8px; }
       <label class="small">Min price each<span class="gpin"><input id="minPrice" type="text" inputmode="decimal" placeholder="e.g. 5"><select class="unit" id="minPriceU" aria-label="Units"><option value="">gp</option><option value="k">k</option><option value="m" selected>m</option><option value="b">b</option></select></span></label>
       <label class="small">Max price each<span class="gpin"><input id="maxPrice" type="text" inputmode="decimal" placeholder="no limit"><select class="unit" id="maxPriceU" aria-label="Units"><option value="">gp</option><option value="k">k</option><option value="m" selected>m</option><option value="b">b</option></select></span></label>
       <label class="small">Min trades/hour<input id="minvol" type="number" inputmode="numeric"></label>
-      <label class="small">Max quantity<span class="gpin"><input id="maxQty" type="text" inputmode="decimal" placeholder="no limit"><select class="unit" id="maxQtyU" aria-label="Units"><option value="" selected>gp</option><option value="k">k</option><option value="m">m</option><option value="b">b</option></select></span></label>
+      <label class="small">Max quantity<span class="gpin"><input id="maxQty" type="text" inputmode="decimal" placeholder="no limit"><select class="unit" id="maxQtyU" aria-label="Units"><option value="" selected>×1</option><option value="k">k</option><option value="m">m</option><option value="b">b</option></select></span></label>
       <label class="small">Hours to wait<input id="hours" type="number" inputmode="decimal" min="0.25" step="0.25"></label>
       <label class="small">Inflated if above 7-day avg by %<input id="inflPct" type="number" inputmode="numeric" value="10"></label>
       <label class="check"><input id="hideInfl" type="checkbox" checked> Hide inflated prices</label>
@@ -226,12 +226,18 @@ h3.sub { font-size: 1rem; margin: 18px 4px 8px; }
 
 <section id="trades" hidden>
   <h2>Trade tracker</h2>
-  <p class="lede">Saved only on this device. Use Export and Import to move your trades between your phone and PC.</p>
+  <p class="lede" id="tradeLede">Saved only on this device until you connect your inbox below.</p>
   <div class="totals" id="tradeTotals"></div>
+  <p class="meta" id="inboxStatus"></p>
+  <h3 class="sub">Live offers from RuneLite</h3>
+  <div id="liveOffers" class="list"></div>
+  <h3 class="sub">Trades from RuneLite</h3>
+  <div id="autoTrades" class="list"></div>
+  <h3 class="sub">Log a trade by hand</h3>
   <div class="controls">
     <label class="small">Account<select id="tAcct"></select></label>
     <label class="grow">Item<input id="tItem" type="text" list="itemNames" placeholder="Start typing an item"></label>
-    <label class="small">Quantity<span class="gpin"><input id="tQty" type="text" inputmode="decimal" placeholder="e.g. 12"><select class="unit" id="tQtyU" aria-label="Units"><option value="" selected>gp</option><option value="k">k</option><option value="m">m</option><option value="b">b</option></select></span></label>
+    <label class="small">Quantity<span class="gpin"><input id="tQty" type="text" inputmode="decimal" placeholder="e.g. 12"><select class="unit" id="tQtyU" aria-label="Units"><option value="" selected>×1</option><option value="k">k</option><option value="m">m</option><option value="b">b</option></select></span></label>
     <label class="small">Bought at (each)<span class="gpin"><input id="tBuy" type="text" inputmode="decimal" placeholder="e.g. 1.1"><select class="unit" id="tBuyU" aria-label="Units"><option value="">gp</option><option value="k">k</option><option value="m" selected>m</option><option value="b">b</option></select></span></label>
     <label class="small">Sold at (each)<span class="gpin"><input id="tSell" type="text" inputmode="decimal" placeholder="leave empty if open"><select class="unit" id="tSellU" aria-label="Units"><option value="">gp</option><option value="k">k</option><option value="m" selected>m</option><option value="b">b</option></select></span></label>
     <button class="btn" id="tAdd">Log trade</button>
@@ -242,6 +248,16 @@ h3.sub { font-size: 1rem; margin: 18px 4px 8px; }
     <button class="btn quiet" id="aAdd">Add account</button>
   </div>
   <div id="tradeList" class="list"></div>
+  <details class="more" id="inboxBox" style="margin-top:16px">
+    <summary>Connect RuneLite (private inbox)</summary>
+    <div class="controls">
+      <label class="grow">Inbox address<input id="ibUrl" type="text" inputmode="url" autocapitalize="off" autocorrect="off" spellcheck="false" placeholder="https://osrs-inbox.yourname.workers.dev"></label>
+      <label class="grow">Inbox key<input id="ibKey" type="text" autocapitalize="off" autocorrect="off" spellcheck="false" placeholder="Tap Generate key"></label>
+      <button class="btn quiet" id="ibGen">Generate key</button>
+      <button class="btn" id="ibSave">Save and test</button>
+    </div>
+    <p class="lede" id="ibDink"></p>
+  </details>
   <div class="actions">
     <button class="btn quiet" id="tExport">Export trades</button>
     <label class="btn quiet">Import trades<input id="tImport" type="file" accept=".json,application/json" hidden></label>
@@ -540,6 +556,125 @@ function renderWatch() {
 // ---------- trades ----------
 let trades = store.get("trades", []);
 let accounts = store.get("accounts", ["SLIPPY55"]);
+let inbox = store.get("inbox", { url: "", key: "" });
+let events = store.get("events", []);
+const FINAL = { BOUGHT: "buy", CANCELLED_BUY: "buy", SOLD: "sell", CANCELLED_SELL: "sell" };
+const LIVE = { BUYING: "buy", SELLING: "sell" };
+
+const ibBase = () => (inbox.url || "").trim().replace(/\/+$/, "");
+async function ib(path, init = {}) {
+  const r = await fetch(ibBase() + path, { ...init, cache: "no-store", headers: { "X-Inbox-Key": inbox.key, ...(init.headers || {}) } });
+  if (!r.ok) throw new Error(r.status === 403 ? "The inbox key doesn't match." : "Inbox error " + r.status);
+  return r.json();
+}
+function saveTrades() {
+  store.set("trades", trades); store.set("accounts", accounts); store.set("tradesT", Date.now());
+  pushManual();
+}
+let pushTimer = null;
+function pushManual() {
+  if (!inbox.url || !inbox.key) return;
+  clearTimeout(pushTimer);
+  pushTimer = setTimeout(() => ib("/api/store?k=manual", { method: "PUT", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ trades, accounts }) })
+    .then(r => store.set("tradesT", r.t)).catch(() => {}), 800);
+}
+let syncing = false;
+async function syncInbox() {
+  if (!inbox.url || !inbox.key || syncing) return;
+  syncing = true;
+  try {
+    let after = events.length ? events[events.length - 1].id : 0, got;
+    do {
+      got = (await ib("/api/events?after=" + after)).events || [];
+      events = events.concat(got);
+      if (got.length) after = got[got.length - 1].id;
+    } while (got.length === 2000);
+    store.set("events", events.slice(-20000));
+    const remote = await ib("/api/store?k=manual");
+    if (remote.v && remote.t > (store.get("tradesT", 0) || 0)) {
+      trades = remote.v.trades || []; accounts = [...new Set([...(remote.v.accounts || []), ...accounts])];
+      store.set("trades", trades); store.set("accounts", accounts); store.set("tradesT", remote.t);
+    } else if (!remote.v && trades.length) pushManual();
+    [...new Set(events.map(e => e.acct))].forEach(a => { if (a && !accounts.includes(a)) accounts.push(a); });
+    store.set("accounts", accounts);
+    $("#inboxStatus").textContent = "Inbox connected. Last checked " + new Date().toLocaleTimeString("en-GB", { hour: "2-digit", minute: "2-digit" }) + ".";
+    $("#tradeLede").textContent = "RuneLite trades arrive automatically, and hand-logged trades sync between your devices.";
+  } catch (e) {
+    $("#inboxStatus").textContent = "Couldn't reach your inbox: " + e.message;
+  } finally { syncing = false; }
+}
+
+// Turn Dink's GE messages into fills, matched buys to sells (first in, first out), and live offers
+function buildAuto(filter) {
+  const live = {}, fills = [];
+  for (const e of events) {
+    if (filter !== "All" && e.acct !== filter) continue;
+    const slotKey = e.acct + "|" + e.slot;
+    if (LIVE[e.status]) { live[slotKey] = e; continue; }
+    if (FINAL[e.status]) {
+      delete live[slotKey];
+      if (e.qty > 0) fills.push({ ...e, side: FINAL[e.status] });
+    }
+  }
+  const lots = {}, sells = [];
+  for (const f of fills) {
+    const k = f.acct + "|" + f.item_id;
+    (lots[k] = lots[k] || []);
+    if (f.side === "buy") { lots[k].push({ qty: f.qty, price: f.price, t: f.t }); continue; }
+    let need = f.qty, cost = 0, matched = 0, heldMs = 0;
+    while (need > 0 && lots[k].length) {
+      const lot = lots[k][0], take = Math.min(need, lot.qty);
+      cost += take * lot.price; matched += take; heldMs += take * (f.t - lot.t);
+      lot.qty -= take; need -= take;
+      if (!lot.qty) lots[k].shift();
+    }
+    const taxPaid = f.tax || (tax(f.price) * f.qty);
+    const share = matched / f.qty;
+    sells.push({ ...f, matched, cost, profit: matched ? Math.round(f.price * matched - taxPaid * share - cost) : null,
+      buyAvg: matched ? Math.round(cost / matched) : null, heldMin: matched ? Math.round(heldMs / matched / 60000) : null });
+  }
+  const holdings = [];
+  Object.entries(lots).forEach(([k, list]) => {
+    const qty = list.reduce((s, l) => s + l.qty, 0);
+    if (!qty) return;
+    const cost = list.reduce((s, l) => s + l.qty * l.price, 0), [acct, id] = k.split("|");
+    const f = fills.find(x => String(x.item_id) === id);
+    holdings.push({ acct, item_id: +id, name: f ? f.name : "Item " + id, qty, cost, avg: Math.round(cost / qty) });
+  });
+  return { live: Object.values(live), fills, sells, holdings };
+}
+
+function liveRow(e) {
+  const l = S.latest[e.item_id] || {}, buying = e.status === "BUYING";
+  const market = buying ? l.low : l.high;
+  let note = "";
+  if (market && e.target) {
+    if (buying && market > e.target) note = `The instant-sell price is now ${market.toLocaleString("en-GB")}, above your offer, so this may fill slowly.`;
+    if (!buying && market < e.target) note = `The instant-buy price is now ${market.toLocaleString("en-GB")}, below your offer, so this may fill slowly. Be patient before undercutting.`;
+  }
+  const mins = Math.round((Date.now() - e.t) / 60000);
+  return `<div class="row"><div class="name">${buying ? "Buying" : "Selling"} ${esc(e.name)} <small style="color:var(--dim)">· slot ${e.slot ?? "?"} · ${esc(e.acct)}</small></div>
+    <div class="big">${(e.qty || 0).toLocaleString("en-GB")} / ${(e.target_qty || "?").toLocaleString("en-GB")}</div>
+    <div class="facts"><span>Offer <b>${gp(e.target)}</b> each</span><span>Market now <b>${gp(market)}</b></span><span>Last update ${mins < 1 ? "just now" : mins + " min ago"}</span></div>
+    ${note ? `<div class="warn">${note}</div>` : ""}</div>`;
+}
+function autoRow(s) {
+  const loss = s.profit != null && s.profit < 0;
+  return `<div class="row"><div class="name">Sold ${esc(s.name)} <small style="color:var(--dim)">× ${s.qty.toLocaleString("en-GB")} · ${esc(s.acct)}</small></div>
+    <div class="big">${s.profit == null ? '<span class="gp">–</span>' : gp(s.profit, true)}</div>
+    <div class="facts"><span>Sold at <b>${gp(s.price)}</b></span>${s.buyAvg ? `<span>Bought at <b>${gp(s.buyAvg)}</b></span>` : ""}
+      ${s.heldMin != null ? `<span>Held <b>${s.heldMin < 120 ? s.heldMin + " min" : Math.round(s.heldMin / 60) + " h"}</b></span>` : ""}
+      <span>${new Date(s.t).toLocaleString("en-GB", { dateStyle: "short", timeStyle: "short" })}</span></div>
+    ${s.matched < s.qty ? `<div class="warn">${s.matched ? "Part of this sale" : "This sale"} has no recorded buy, so its profit isn't counted.</div>` : ""}
+    ${loss ? '<div class="warn">Sold for less than you paid, after tax.</div>' : ""}</div>`;
+}
+function holdRow(h) {
+  const l = S.latest[h.item_id] || {}, now = l.low || l.high;
+  const pl = now ? (now - tax(now)) * h.qty - h.cost : null;
+  return `<div class="row"><div class="name">Holding ${esc(h.name)} <small style="color:var(--dim)">× ${h.qty.toLocaleString("en-GB")} · ${esc(h.acct)}</small></div>
+    <div class="big">${gp(pl, true)}</div>
+    <div class="facts"><span>Bought at <b>${gp(h.avg)}</b></span><span>Sells now for <b>${gp(now)}</b></span></div></div>`;
+}
 function renderAccounts() {
   $("#tAcct").innerHTML = accounts.map(a => `<option>${esc(a)}</option>`).join("");
   const cur = $("#tFilter").value || "All";
@@ -553,9 +688,18 @@ function tradeValue(t) {
 function renderTrades() {
   const f = $("#tFilter").value || "All";
   const shown = trades.filter(t => f === "All" || t.acct === f);
+  const auto = buildAuto(f);
   let realised = 0, unreal = 0, tied = 0;
   shown.forEach(t => { const v = tradeValue(t); if (v.open) { tied += t.buy * t.qty; unreal += v.pl || 0; } else realised += v.pl; });
+  auto.sells.forEach(s => { realised += s.profit || 0; });
+  auto.holdings.forEach(h => { const l = S.latest[h.item_id] || {}, now = l.low || l.high; tied += h.cost; if (now) unreal += (now - tax(now)) * h.qty - h.cost; });
+  auto.live.filter(e => e.status === "BUYING").forEach(e => { tied += Math.max(0, (e.target_qty || 0) - (e.qty || 0)) * (e.target || 0); });
   $("#tradeTotals").innerHTML = `<div>Banked profit ${gp(realised, true)}</div><div>Open positions ${gp(unreal, true)}</div><div>GP tied up ${gp(tied)}</div>`;
+  const connected = inbox.url && inbox.key;
+  $("#liveOffers").innerHTML = auto.live.sort((a, b) => b.t - a.t).map(liveRow).join("") ||
+    `<div class="empty">${connected ? "No offers in progress right now." : "Connect your inbox below to see your RuneLite offers here."}</div>`;
+  const recent = auto.sells.slice().reverse().slice(0, 50).map(autoRow).join("") + auto.holdings.map(holdRow).join("");
+  $("#autoTrades").innerHTML = recent || `<div class="empty">${connected ? "Completed trades from RuneLite will appear here." : "Nothing yet."}</div>`;
   $("#tradeList").innerHTML = shown.slice().reverse().map(t => {
     const v = tradeValue(t);
     return `<div class="row"><div class="name">${esc(t.name)} <small style="color:var(--dim)">× ${t.qty.toLocaleString("en-GB")} · ${esc(t.acct)}</small></div>
@@ -563,7 +707,13 @@ function renderTrades() {
       <div class="facts"><span>Bought <b>${gp(t.buy)}</b></span>${v.open ? `<span>Worth now <b>${gp(v.now)}</b></span><span>Open</span>` : `<span>Sold <b>${gp(t.sell)}</b></span>`}
       <span>${new Date(t.opened).toLocaleDateString("en-GB")}</span>
       ${v.open ? `<button class="mini" data-sell="${t.id}">Mark sold</button>` : ""}<button class="mini" data-tdel="${t.id}">Delete</button></div></div>`;
-  }).join("") || '<div class="empty">No trades logged yet. Log your first one above.</div>';
+  }).join("") || '<div class="empty">No hand-logged trades.</div>';
+  $("#ibUrl").value = $("#ibUrl").value || inbox.url; $("#ibKey").value = $("#ibKey").value || inbox.key;
+  showDinkUrl();
+}
+function showDinkUrl() {
+  const u = ($("#ibUrl").value || "").trim().replace(/\/+$/, ""), k = ($("#ibKey").value || "").trim();
+  $("#ibDink").innerHTML = u && k ? `Address for Dink's Grand Exchange webhook:<br><b style="word-break:break-all;color:var(--text)">${esc(u)}/dink/${esc(k)}</b>` : "";
 }
 
 // ---------- routing ----------
@@ -576,7 +726,7 @@ async function show() {
   if (page === "flips") { renderFlips(); if (!Object.keys(S.week).length) { await loadWeek(); renderFlips(); } }
   if (page === "picks") renderPicks();
   if (page === "watch") { await ensureWatch(); renderWatch(); }
-  if (page === "trades") { renderAccounts(); renderTrades(); }
+  if (page === "trades") { renderAccounts(); renderTrades(); syncInbox().then(() => { renderAccounts(); renderTrades(); }); }
 }
 
 // ---------- events ----------
@@ -614,15 +764,15 @@ $("#tAdd").addEventListener("click", () => {
   const sell = sellRaw ? gpVal("tSell") : null;
   if (sellRaw && isNaN(sell)) return toast("The sold price isn't a number");
   trades.push({ id: Date.now(), acct: $("#tAcct").value, itemId: m.id, name: m.name, qty, buy, sell, opened: new Date().toISOString() });
-  store.set("trades", trades); $("#tItem").value = $("#tQty").value = $("#tBuy").value = $("#tSell").value = ""; renderTrades(); toast("Trade logged");
+  saveTrades(); $("#tItem").value = $("#tQty").value = $("#tBuy").value = $("#tSell").value = ""; renderTrades(); toast("Trade logged");
 });
 $("#tradeList").addEventListener("click", e => {
   const sid = e.target.dataset.sell, did = e.target.dataset.tdel;
-  if (sid) { const t = trades.find(x => x.id == sid); const p = parseGP(prompt(`Sold ${t.name} at what price each?`, "")); if (p) { t.sell = p; t.closed = new Date().toISOString(); store.set("trades", trades); renderTrades(); } }
-  if (did && confirm("Delete this trade?")) { trades = trades.filter(x => x.id != did); store.set("trades", trades); renderTrades(); }
+  if (sid) { const t = trades.find(x => x.id == sid); const p = parseGP(prompt(`Sold ${t.name} at what price each? You can type 1.2m or 450k.`, "")); if (p) { t.sell = p; t.closed = new Date().toISOString(); saveTrades(); renderTrades(); } }
+  if (did && confirm("Delete this trade?")) { trades = trades.filter(x => x.id != did); saveTrades(); renderTrades(); }
 });
 $("#tFilter").addEventListener("change", renderTrades);
-$("#aAdd").addEventListener("click", () => { const n = $("#aName").value.trim(); if (!n || accounts.includes(n)) return; accounts.push(n); store.set("accounts", accounts); $("#aName").value = ""; renderAccounts(); toast("Added " + n); });
+$("#aAdd").addEventListener("click", () => { const n = $("#aName").value.trim(); if (!n || accounts.includes(n)) return; accounts.push(n); saveTrades(); $("#aName").value = ""; renderAccounts(); toast("Added " + n); });
 $("#tExport").addEventListener("click", () => {
   const blob = new Blob([JSON.stringify({ accounts, trades }, null, 1)], { type: "application/json" });
   const a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = "ge-copilot-trades.json"; a.click();
@@ -633,13 +783,30 @@ $("#tImport").addEventListener("change", async e => {
     const ids = new Set(trades.map(t => t.id));
     trades = trades.concat((d.trades || []).filter(t => !ids.has(t.id)));
     accounts = [...new Set([...accounts, ...(d.accounts || [])])];
-    store.set("trades", trades); store.set("accounts", accounts); renderAccounts(); renderTrades(); toast("Trades imported");
+    saveTrades(); renderAccounts(); renderTrades(); toast("Trades imported");
   } catch (err) { toast("That file isn't a GE Copilot export"); }
+});
+
+$("#ibGen").addEventListener("click", () => {
+  const b = new Uint8Array(18); crypto.getRandomValues(b);
+  $("#ibKey").value = Array.from(b, v => v.toString(16).padStart(2, "0")).join("");
+  showDinkUrl(); toast("Key made. Copy it into Cloudflare as INBOX_KEY.");
+});
+["ibUrl", "ibKey"].forEach(id => $("#" + id).addEventListener("input", showDinkUrl));
+$("#ibSave").addEventListener("click", async () => {
+  let u = $("#ibUrl").value.trim().replace(/\/+$/, "");
+  if (u && !/^https:\/\//.test(u)) u = "https://" + u.replace(/^http:\/\//, "");
+  inbox = { url: u, key: $("#ibKey").value.trim() };
+  $("#ibUrl").value = u;
+  if (!inbox.url || !inbox.key) return toast("Fill in both the address and the key");
+  try { await ib("/api/ping"); store.set("inbox", inbox); toast("Connected to your inbox"); events = []; store.set("events", []); await syncInbox(); renderAccounts(); renderTrades(); }
+  catch (e) { toast("Couldn't connect: " + e.message); $("#inboxStatus").textContent = "Couldn't connect: " + e.message; }
 });
 
 window.addEventListener("hashchange", show);
 show();
 setInterval(async () => { if (document.visibilityState === "visible") { await loadMarket(true); show(); } }, 120000);
+setInterval(async () => { if (document.visibilityState === "visible" && location.hash === "#trades" && inbox.url) { await syncInbox(); renderAccounts(); renderTrades(); } }, 30000);
 </script>
 </body>
 </html>
