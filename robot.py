@@ -22,7 +22,7 @@ COOLDOWN = 6 * 3600          # don't repeat the same alert within 6 hours
 AI_HOUR_UTC = 7              # daily scan happens after 7am UTC
 SEARCH_PRICE = 0.01          # $ per web search
 MODES = {                    # model, $/M input, $/M output, max searches
-    "quick": (os.environ.get("QUICK_MODEL", "claude-haiku-5-5"), 0.10, 0.50, 3),
+    "quick": (os.environ.get("QUICK_MODEL", "claude-haiku-5-5"), 0.10, 0.50, 5),
     "deep": (os.environ.get("DEEP_MODEL", "claude-sonnet-5-5"), 2.00, 10.00, 6),
 }
 
@@ -47,6 +47,11 @@ Use web search on oldschool.runescape.wiki to verify weaknesses, requirements an
 Every item must be directly affected by a confirmed fact you can point to (a Jagex blog, poll,
 patch note or Wiki page). If you can't point to the fact, leave the item out. Don't guess at
 drops, weaknesses or recipes that haven't been announced: search to confirm them first.
+If you have fewer confirmed ideas than asked for, add "Watch" ideas for things that are
+announced but not yet detailed. Give those action "Watch", confidence "low", and start their
+evidence with "Unconfirmed:" followed by what still needs to be revealed.
+Look across everything: just-released content (new bosses, raids, quests), this month's
+updates, polls, and the longer roadmap.
 Keep every text field under 40 words.
 "action" must be exactly one of: Buy now, Buy on announcement, Sell if holding, Avoid holding, Watch.
 Reply with ONLY a JSON object, starting with { and ending with }, no other text:
@@ -339,7 +344,7 @@ def run_ai(mode, by_id, by_name, latest, vol_now, vol_yday):
     prompt = (f"Today is {dt.date.today()}.\n\nNEWS AND ROADMAP:\n{news_text()}\n\n"
               f"UNUSUAL TRADING RIGHT NOW (could be early buyers):\n{spikes}\n\n"
               f"YOUR PREVIOUS PICKS (update or drop them, don't just repeat):\n{prev}\n\n"
-              f"Give {'4-6' if mode == 'quick' else '6-10'} theses.")
+              f"Give at least {'5' if mode == 'quick' else '8'} theses.")
     try:
         text, usage = call_claude(mode, prompt)
     except Exception as e:
