@@ -1,9 +1,142 @@
 {
- "generated": "2026-11-05T15:46+00:00",
+ "generated": "2026-11-05T15:58+00:00",
  "mode": "quick",
  "model": "claude-haiku-5-5",
- "theses": [],
- "cost_usd": 0.0377,
- "last_deep": null,
- "raw": "```json\n{\"theses\":[{\"title\":\"Graveyard floods Marks of Grace supply, so Marks of Grace fall\",\"trigger\":\"The Graveyard (Master Fremennik quest, sequel to Olaf's Quest) releases in November 2026 with a 65-80 Agility hybrid course. Jagex says it aims to be the best Marks of Grace source in the game, with 30+ per hour at the top end.\",\"release\":\"November 2026 (roadmap), with the Graceful system rework and Fremennik Graceful ornament kit also planned\",\"mechanism\":\"Marks of Grace are a supply-side input for Graceful gear and Agility. A new, passive, high-rate source adds supply to a market that players currently source through rooftops, Hallowed Sepulchre and the Penguin course. The quest is a one-time gate, so the supply shock persists as long as people run the course. Expect a steady decline rather than a single spike.\",\"direction\":\"down\",\"items\":[\"Marks of grace\"],\"substitutes\":\"Rooftop Agility courses, Hallowed Sepulchre, and the Penguin Agility course all already produce Marks of Grace. Sellers can switch between them, which dampens the drop.\",\"confidence\":\"medium\",\"entry_plan\":\"Do not short blindly. Watch the Marks of Grace price for the first 1-2 weeks after release. Wait for a spike or volume surge that fades on the first weekend, then buy the dip only if the price has already fallen toward pre-release levels, or hold cash until the price is clearly moving down.\",\"exit_plan\":\"Close after the price has fallen meaningfully (about 10-15%) or after the Graceful rework changes demand. Re-evaluate after the first month, when the course's real hourly yield is clearer.\",\"what_would_kill_it\":\"The Graveyard's actual Marks of Grace rate lands well below the advertised 30+ per hour. The Graceful rework or ornament kit lifts demand for Marks faster than the course adds supply. Or the release slips past November.\"},{\"title\":\"Gemstone Dragons Slayer task creates demand for dragon-hunter gear\",\"trigger\":\"Dungeons of Gielinor adds Sapphire, Emerald and Ruby Dragons in a new Varlamore dungeon, plus a Gemstone Dragons Slayer task that covers the whole family, similar to Metal dragons. The Diamond Dragon boss sits deeper in the cavern.\",\"release\":\"Spring 2027 (roadmap, passed poll)\",\"mechanism\":\"A family-wide Slayer task makes dragon-hunter gear valuable for every Slayer player who gets the task. Dragon hunter weapons are already the standard tool against dragons, and the new family is designed around clear combat-style weaknesses. Demand for the matching tools should rise before the content arrives, as players stock up for Slayer.\",\"direction\":\"up\",\"items\":[\"Dragon hunter crossbow\",\"Dragon hunter lance\"],\"substitutes\":\"Other ranged or melee weapons that exploit the weakness, plus Dragon"
+ "theses": [
+  {
+   "title": "Gemstone dragon arrow weakness with Diamond Dragon arrival",
+   "trigger": "Dungeons of Gielinor (Spring 2027) adds a Diamond Dragon in a Varlamore dungeon with Gemstone Dragons; the wiki lists the gemstone dragons' weakness as Arrows.",
+   "release": "Spring 2027 (poll passed; no exact date)",
+   "mechanism": "Gemstone dragons are weak to arrows, so ranged arrow-tip and bolt-tip demand rises for the new boss and existing dragon slayer tasks. Many arrow tips are cheap and plentiful, so the spike is capped.",
+   "direction": "up",
+   "items": [
+    {
+     "name": "Dragon arrowtips",
+     "id": 11237,
+     "limit": 10000,
+     "high_then": 2610,
+     "low_then": 2535
+    },
+    {
+     "name": "Onyx dragon bolts (e)",
+     "id": 21950,
+     "limit": 11000,
+     "high_then": 8848,
+     "low_then": 8848
+    }
+   ],
+   "substitutes": "Rune and adamant arrowtips, and other bolt tips such as emerald and sapphire, which are cheaper alternatives.",
+   "confidence": "low",
+   "entry_plan": "Accumulate in small lots on dips over the next few months, not on the current volume spike.",
+   "exit_plan": "Sell into the Dungeons of Gielinor release hype or when the new boss's first kill rate settles.",
+   "what_would_kill_it": "The Diamond Dragon's weakness is not Arrows, or it is already priced in. Current bolt-tip volume spikes suggest early buyers are present."
+  },
+  {
+   "title": "Deep Sea Diving farming patches drive seed demand",
+   "trigger": "The Deep Sea Diving Expansion adds underwater Spirit Tree, Celastrus tree, Mushroom and Hardwood Farming patches.",
+   "release": "Early 2027 (no exact date; poll not yet passed)",
+   "mechanism": "New patch locations need seeds and saplings to be planted, so demand for these seeds rises. Supply is steady because existing farmers already grow them.",
+   "direction": "up",
+   "items": [
+    {
+     "name": "Irit seed",
+     "id": 5297,
+     "limit": 600,
+     "high_then": 65,
+     "low_then": 61
+    },
+    {
+     "name": "Celastrus seed",
+     "id": 22869,
+     "limit": 200,
+     "high_then": 16479,
+     "low_then": 16479
+    },
+    {
+     "name": "Redwood sapling",
+     "id": 22859,
+     "limit": 100,
+     "high_then": 15653,
+     "low_then": 13897
+    }
+   ],
+   "substitutes": "Other tree seeds and saplings, plus the existing non-underwater patches, which already supply most of this demand.",
+   "confidence": "low",
+   "entry_plan": "Buy the seeds gradually after the expansion's poll passes, not before.",
+   "exit_plan": "Sell within a few weeks of the underwater patches opening.",
+   "what_would_kill_it": "The farming patches fail the poll or the release slips past 2027, and these seeds stay flat or drop from farming supply."
+  },
+  {
+   "title": "Chosen Commander's Zanik's crossbow undercuts the Dorgeshuun crossbow",
+   "trigger": "The Chosen Commander backport offers Zanik's Modified Crossbow, a stronger version of the Dorgeshuun crossbow's defence-draining special attack.",
+   "release": "Early 2027 (poll passed; no exact date)",
+   "mechanism": "A stronger version of the same special attack gives players a reason to skip the Dorgeshuun crossbow. Demand for the older crossbow falls, and its price drifts down.",
+   "direction": "down",
+   "items": [
+    {
+     "name": "Dorgeshuun crossbow",
+     "id": 8880,
+     "limit": 70,
+     "high_then": 3984,
+     "low_then": 1600
+    }
+   ],
+   "substitutes": "Other defence-draining or special-attack crossbows. Zanik's crossbow itself is likely untradeable, which keeps the effect on the old crossbow.",
+   "confidence": "low",
+   "entry_plan": "Short the Dorgeshuun crossbow only if the price has risen on hype before the release.",
+   "exit_plan": "Close once the price has fallen after the quest goes live.",
+   "what_would_kill_it": "Zanik's crossbow is tradeable and becomes the new buy target, or the old crossbow is needed for a separate Dorgeshuun task."
+  },
+  {
+   "title": "Menaphos soul altar increases soul rune supply",
+   "trigger": "Menaphos adds a true Soul Altar where soul runes can be crafted at 90 Runecraft, plus a new soul talisman and soul tiaras.",
+   "release": "Spring 2027 (poll passed; no exact date)",
+   "mechanism": "A second, more accessible soul rune crafting location raises supply, which pushes the price of soul runes down. Soul tiaras may add some demand, but it is small compared with the supply increase.",
+   "direction": "down",
+   "items": [
+    {
+     "name": "Soul rune",
+     "id": 566,
+     "limit": 25000,
+     "high_then": 303,
+     "low_then": 293
+    }
+   ],
+   "substitutes": "Other runes, such as blood or death runes, which do not compete directly.",
+   "confidence": "low",
+   "entry_plan": "Wait until the Menaphos release is confirmed, then sell into any pre-release strength.",
+   "exit_plan": "Cover the short once the Vault and altar supply has stabilised.",
+   "what_would_kill_it": "The altar needs a costly or rare input that limits supply, or soul runes already have demand from other activities such as Runecrafting training."
+  },
+  {
+   "title": "Deep Sea Diving Slayer monsters increase supply of underwater drops",
+   "trigger": "Underwater Slayer areas add Jellyfish, Depth Crawlers, Drowned Mages, Abyssal Rock Slugs and Abyssal Arbalests, which increases the number of monsters available.",
+   "release": "Early 2027 (poll pending)",
+   "mechanism": "More Slayer monsters spread kill activity across more tasks, which lowers the price of items that these new monsters drop in bulk. The effect is largest for items with many drops and small demand.",
+   "direction": "down",
+   "items": [
+    {
+     "name": "Abyssal dagger",
+     "id": 13265,
+     "limit": 8,
+     "high_then": 1006317,
+     "low_then": 954088
+    },
+    {
+     "name": "Abyssal whip",
+     "id": 4151,
+     "limit": 70,
+     "high_then": 690479,
+     "low_then": 660780
+    }
+   ],
+   "substitutes": "Existing Abyssal Demon and other Slayer monsters, which already supply these items. The impact on the whip and dagger should be small.",
+   "confidence": "low",
+   "entry_plan": "Avoid acting before the poll outcome; the expansion may not pass in full.",
+   "exit_plan": "Close any short once the new Slayer areas are live and drop rates are confirmed.",
+   "what_would_kill_it": "The Slayer areas or their drop tables fail, or the affected items are already heavily demanded by other Slayer tasks."
+  }
+ ],
+ "cost_usd": 0.0274,
+ "last_deep": null
 }

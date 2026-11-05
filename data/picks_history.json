@@ -1,3 +1,102 @@
 {
- "entries": []
+ "entries": [
+  {
+   "date": "2026-11-05T15:58+00:00",
+   "title": "Gemstone dragon arrow weakness with Diamond Dragon arrival",
+   "direction": "up",
+   "items": [
+    {
+     "name": "Dragon arrowtips",
+     "id": 11237,
+     "limit": 10000,
+     "high_then": 2610,
+     "low_then": 2535
+    },
+    {
+     "name": "Onyx dragon bolts (e)",
+     "id": 21950,
+     "limit": 11000,
+     "high_then": 8848,
+     "low_then": 8848
+    }
+   ]
+  },
+  {
+   "date": "2026-11-05T15:58+00:00",
+   "title": "Deep Sea Diving farming patches drive seed demand",
+   "direction": "up",
+   "items": [
+    {
+     "name": "Irit seed",
+     "id": 5297,
+     "limit": 600,
+     "high_then": 65,
+     "low_then": 61
+    },
+    {
+     "name": "Celastrus seed",
+     "id": 22869,
+     "limit": 200,
+     "high_then": 16479,
+     "low_then": 16479
+    },
+    {
+     "name": "Redwood sapling",
+     "id": 22859,
+     "limit": 100,
+     "high_then": 15653,
+     "low_then": 13897
+    }
+   ]
+  },
+  {
+   "date": "2026-11-05T15:58+00:00",
+   "title": "Chosen Commander's Zanik's crossbow undercuts the Dorgeshuun crossbow",
+   "direction": "down",
+   "items": [
+    {
+     "name": "Dorgeshuun crossbow",
+     "id": 8880,
+     "limit": 70,
+     "high_then": 3984,
+     "low_then": 1600
+    }
+   ]
+  },
+  {
+   "date": "2026-11-05T15:58+00:00",
+   "title": "Menaphos soul altar increases soul rune supply",
+   "direction": "down",
+   "items": [
+    {
+     "name": "Soul rune",
+     "id": 566,
+     "limit": 25000,
+     "high_then": 303,
+     "low_then": 293
+    }
+   ]
+  },
+  {
+   "date": "2026-11-05T15:58+00:00",
+   "title": "Deep Sea Diving Slayer monsters increase supply of underwater drops",
+   "direction": "down",
+   "items": [
+    {
+     "name": "Abyssal dagger",
+     "id": 13265,
+     "limit": 8,
+     "high_then": 1006317,
+     "low_then": 954088
+    },
+    {
+     "name": "Abyssal whip",
+     "id": 4151,
+     "limit": 70,
+     "high_then": 690479,
+     "low_then": 660780
+    }
+   ]
+  }
+ ]
 }
