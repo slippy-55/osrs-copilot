@@ -35,6 +35,44 @@
    "searches": 6,
    "usd": 0.3971,
    "model": "claude-sonnet-5-5"
+  },
+  {
+   "date": "2026-11-05T17:04+00:00",
+   "mode": "deep",
+   "in": 126825,
+   "out": 10351,
+   "searches": 6,
+   "usd": 0.4172,
+   "model": "claude-sonnet-5-5",
+   "debug": {
+    "stop_reasons": [
+     "max_tokens"
+    ],
+    "blocks": [
+     [
+      "thinking",
+      "server_tool_use",
+      "server_tool_use",
+      "server_tool_use",
+      "server_tool_use",
+      "server_tool_use",
+      "web_search_tool_result",
+      "web_search_tool_result",
+      "web_search_tool_result",
+      "web_search_tool_result",
+      "web_search_tool_result",
+      "thinking",
+      "server_tool_use",
+      "web_search_tool_result",
+      "thinking",
+      "text",
+      "text",
+      "text",
+      "text",
+      "text"
+     ]
+    ]
+   }
   }
  ]
 }

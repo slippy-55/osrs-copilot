@@ -125,6 +125,125 @@
      "low_then": 2495
     }
    ]
+  },
+  {
+   "date": "2026-11-05T17:04+00:00",
+   "title": "Amulet of sight supply flood",
+   "direction": "down",
+   "items": [
+    {
+     "name": "Amulet of sight",
+     "id": 34762,
+     "limit": null,
+     "high_then": 1050,
+     "low_then": 880
+    }
+   ]
+  },
+  {
+   "date": "2026-11-05T17:04+00:00",
+   "title": "Graveyard marks flood amylase and stamina",
+   "direction": "down",
+   "items": [
+    {
+     "name": "Amylase crystal",
+     "id": 12640,
+     "limit": 11000,
+     "high_then": 400,
+     "low_then": 386
+    },
+    {
+     "name": "Stamina potion(4)",
+     "id": 12625,
+     "limit": 2000,
+     "high_then": 2271,
+     "low_then": 2104
+    }
+   ]
+  },
+  {
+   "date": "2026-11-05T17:04+00:00",
+   "title": "Underwater gem rocks cut gem prices",
+   "direction": "down",
+   "items": [
+    {
+     "name": "Uncut diamond",
+     "id": 1617,
+     "limit": 10000,
+     "high_then": 2048,
+     "low_then": 2048
+    },
+    {
+     "name": "Uncut ruby",
+     "id": 1619,
+     "limit": 10000,
+     "high_then": 893,
+     "low_then": 868
+    },
+    {
+     "name": "Uncut jade",
+     "id": 1627,
+     "limit": 10000,
+     "high_then": 70,
+     "low_then": 67
+    },
+    {
+     "name": "Uncut opal",
+     "id": 1625,
+     "limit": 10000,
+     "high_then": 82,
+     "low_then": 80
+    },
+    {
+     "name": "Uncut red topaz",
+     "id": 1629,
+     "limit": 10000,
+     "high_then": 742,
+     "low_then": 742
+    }
+   ]
+  },
+  {
+   "date": "2026-11-05T17:04+00:00",
+   "title": "Underwater farming patches lift rare seeds",
+   "direction": "up",
+   "items": [
+    {
+     "name": "Irit seed",
+     "id": 5297,
+     "limit": 600,
+     "high_then": 81,
+     "low_then": 80
+    },
+    {
+     "name": "Celastrus seed",
+     "id": 22869,
+     "limit": 200,
+     "high_then": 16479,
+     "low_then": 16162
+    },
+    {
+     "name": "Mahogany seed",
+     "id": 21488,
+     "limit": 200,
+     "high_then": 119,
+     "low_then": 78
+    }
+   ]
+  },
+  {
+   "date": "2026-11-05T17:04+00:00",
+   "title": "Zanik crossbow may replace Dorgeshuun crossbow",
+   "direction": "down",
+   "items": [
+    {
+     "name": "Dorgeshuun crossbow",
+     "id": 8880,
+     "limit": 70,
+     "high_then": 2055,
+     "low_then": 1600
+    }
+   ]
   }
  ]
 }
