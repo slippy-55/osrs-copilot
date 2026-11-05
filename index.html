@@ -111,8 +111,36 @@ section[hidden] { display: none; }
 .totals div .gp { display: block; font-size: 1.25rem; }
 .actions { display: flex; gap: 8px; flex-wrap: wrap; margin: 10px 0; }
 .mini { background: none; border: 1px solid var(--edge); color: var(--text); border-radius: 4px; padding: 3px 9px; font-size: .82rem; cursor: pointer; }
+.presets { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 10px; }
+.preset { background: var(--slab); border: 1px solid var(--edge); color: var(--text); border-radius: 4px; padding: 9px 14px; font-weight: 600; cursor: pointer; text-align: left; }
+.preset small { display: block; font-weight: 400; color: var(--dim); font-size: .78rem; }
+.preset[aria-pressed="true"] { border-color: var(--coin-y); color: var(--coin-y); background: var(--slab-2); }
+details.more { margin: -4px 0 12px; }
+details.more summary { cursor: pointer; color: var(--gold); padding: 6px 4px; font-weight: 600; }
+details.more .controls { margin-top: 6px; }
+.plan-head { display: flex; flex-wrap: wrap; gap: 6px 22px; margin: 4px 4px 10px; font-size: .9rem; color: var(--dim); }
+.plan-head b { color: var(--text); font-weight: 600; }
+.slot { color: var(--dim); font-weight: 500; margin-right: 6px; }
+.offer b { color: var(--coin-y); }
+.iconbtn { background: none; border: 0; color: var(--dim); cursor: pointer; font-size: 1rem; padding: 0 4px; }
+.iconbtn.on { color: var(--coin-y); }
+h3.sub { font-size: 1rem; margin: 18px 4px 8px; }
 .toast { position: fixed; left: 50%; bottom: 90px; transform: translateX(-50%); background: var(--slab-2); border: 1px solid var(--gold); padding: 10px 16px; border-radius: 6px; z-index: 30; }
-@media (prefers-reduced-motion: no-preference) { .toast { animation: rise .18s ease-out; } @keyframes rise { from { opacity: 0; transform: translate(-50%, 8px); } } }
+@media (prefers-reduced-motion: no-preference) { .presets { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 10px; }
+.preset { background: var(--slab); border: 1px solid var(--edge); color: var(--text); border-radius: 4px; padding: 9px 14px; font-weight: 600; cursor: pointer; text-align: left; }
+.preset small { display: block; font-weight: 400; color: var(--dim); font-size: .78rem; }
+.preset[aria-pressed="true"] { border-color: var(--coin-y); color: var(--coin-y); background: var(--slab-2); }
+details.more { margin: -4px 0 12px; }
+details.more summary { cursor: pointer; color: var(--gold); padding: 6px 4px; font-weight: 600; }
+details.more .controls { margin-top: 6px; }
+.plan-head { display: flex; flex-wrap: wrap; gap: 6px 22px; margin: 4px 4px 10px; font-size: .9rem; color: var(--dim); }
+.plan-head b { color: var(--text); font-weight: 600; }
+.slot { color: var(--dim); font-weight: 500; margin-right: 6px; }
+.offer b { color: var(--coin-y); }
+.iconbtn { background: none; border: 0; color: var(--dim); cursor: pointer; font-size: 1rem; padding: 0 4px; }
+.iconbtn.on { color: var(--coin-y); }
+h3.sub { font-size: 1rem; margin: 18px 4px 8px; }
+.toast { animation: rise .18s ease-out; } @keyframes rise { from { opacity: 0; transform: translate(-50%, 8px); } } }
 </style>
 </head>
 <body>
@@ -130,15 +158,42 @@ section[hidden] { display: none; }
 
 <section id="flips">
   <h2>Flip finder</h2>
-  <p class="lede">Ranked by profit per 4-hour buy-limit window after GE tax. It assumes you buy at the instant-sell price, sell at the instant-buy price, and get about 10% of the item's trading volume. Real fills are usually slower, so treat the numbers as a best case.</p>
+  <div class="presets" role="group" aria-label="Flip style">
+    <button class="preset" data-preset="quick">Quick<small>Fills within about an hour</small></button>
+    <button class="preset" data-preset="ticket">High-ticket<small>5m+ items, 1–2 at a time</small></button>
+    <button class="preset" data-preset="overnight">Overnight<small>Set offers and leave them</small></button>
+    <button class="preset" data-preset="custom">Custom<small>Your own filters</small></button>
+  </div>
   <div class="controls">
     <label class="small">GP to use<input id="cap" type="text" inputmode="decimal" value="10m"></label>
-    <label class="small">Min trades/hour<input id="minvol" type="number" inputmode="numeric" value="20"></label>
+    <label class="small">GE slots<input id="slots" type="number" inputmode="numeric" min="1" max="8" value="8"></label>
+    <label class="small">Rank by<select id="sort"><option value="balanced">Balanced</option><option value="gph">GP per hour</option><option value="roi">Return on GP</option><option value="rel">Most reliable</option></select></label>
     <label class="grow">Search items<input id="fq" type="text" placeholder="e.g. rune"></label>
-    <label class="check"><input id="stale" type="checkbox"> Show stale prices</label>
     <button class="btn" id="refresh">Refresh prices</button>
   </div>
-  <div id="flipList" class="list"><div class="empty">Loading…</div></div>
+  <details class="more" id="moreFilters">
+    <summary>More filters</summary>
+    <div class="controls">
+      <label class="small">Min price each<input id="minPrice" type="text" inputmode="decimal" placeholder="e.g. 5m"></label>
+      <label class="small">Max price each<input id="maxPrice" type="text" inputmode="decimal" placeholder="no limit"></label>
+      <label class="small">Min trades/hour<input id="minvol" type="number" inputmode="numeric"></label>
+      <label class="small">Max quantity<input id="maxQty" type="text" inputmode="decimal" placeholder="no limit"></label>
+      <label class="small">Hours to wait<input id="hours" type="number" inputmode="decimal" min="0.25" step="0.25"></label>
+      <label class="small">Inflated if above 7-day avg by %<input id="inflPct" type="number" inputmode="numeric" value="10"></label>
+      <label class="check"><input id="hideInfl" type="checkbox" checked> Hide inflated prices</label>
+      <label class="check"><input id="hideSpike" type="checkbox" checked> Hide volume spikes</label>
+      <label class="check"><input id="favOnly" type="checkbox"> Favourites only</label>
+      <label class="check"><input id="showHidden" type="checkbox"> Show hidden items</label>
+      <label class="check"><input id="stale" type="checkbox"> Show stale prices</label>
+    </div>
+  </details>
+  <p class="meta" id="weekStatus"></p>
+  <h3 class="sub">Your slot plan</h3>
+  <div class="plan-head" id="planHead"></div>
+  <div id="planList" class="list"><div class="empty">Loading…</div></div>
+  <h3 class="sub">More options</h3>
+  <div id="flipList" class="list"></div>
+  <p class="lede" style="margin-top:12px">Offer prices are 1 step above the instant-sell price and 1 step below the instant-buy price. Quantities assume you get about 10% of the item's trades while you wait, so real fills can be slower. Reliability looks at how much the item trades and how steady that's been over the last week.</p>
 </section>
 
 <section id="picks" hidden>
@@ -244,48 +299,168 @@ async function loadMarket(force) {
 const item = name => S.byName[String(name || "").trim().toLowerCase()];
 
 // ---------- flips ----------
-function renderFlips() {
-  const cap = parseGP($("#cap").value), minVol = +$("#minvol").value || 0, showStale = $("#stale").checked, q = $("#fq").value.trim().toLowerCase();
-  store.set("flipCap", $("#cap").value);
-  if (!cap) { $("#flipList").innerHTML = '<div class="empty">Enter how much GP to use, for example 10m or 500k.</div>'; return; }
+const PRESETS = {
+  quick:     { hours: 1,  minvol: 100, minPrice: "",   maxPrice: "", maxQty: "", staleMin: 30 },
+  ticket:    { hours: 4,  minvol: 1,   minPrice: "5m", maxPrice: "", maxQty: "2", staleMin: 240 },
+  overnight: { hours: 10, minvol: 10,  minPrice: "",   maxPrice: "", maxQty: "", staleMin: 120 },
+};
+const FS_FIELDS = ["cap", "slots", "sort", "minPrice", "maxPrice", "minvol", "maxQty", "hours", "inflPct"];
+const FS_CHECKS = ["hideInfl", "hideSpike", "favOnly", "showHidden", "stale"];
+let fs = store.get("flipSettings", { preset: "quick" });
+let favs = new Set(store.get("favs", [])), hidden = new Set(store.get("hidden", []));
+S.week = {};
+
+function applyPreset(name, keepCustom) {
+  fs.preset = name;
+  if (PRESETS[name] && !keepCustom) Object.entries(PRESETS[name]).forEach(([k, v]) => { if ($("#" + k)) $("#" + k).value = v; });
+  document.querySelectorAll(".preset").forEach(b => b.setAttribute("aria-pressed", b.dataset.preset === name));
+  if (name === "custom") $("#moreFilters").open = true;
+}
+function loadFlipSettings() {
+  FS_FIELDS.forEach(k => { if (fs[k] != null) $("#" + k).value = fs[k]; });
+  FS_CHECKS.forEach(k => { if (fs[k] != null) $("#" + k).checked = fs[k]; });
+  applyPreset(fs.preset || "quick", fs.minvol != null);
+}
+function saveFlipSettings() {
+  FS_FIELDS.forEach(k => { fs[k] = $("#" + k).value; });
+  FS_CHECKS.forEach(k => { fs[k] = $("#" + k).checked; });
+  store.set("flipSettings", fs);
+}
+
+// Same hour on each of the last 7 days: average price, average volume, and how steady the volume is
+async function loadWeek() {
+  const cached = store.get("weekCache", null);
+  if (cached && Date.now() - cached.at < 3 * 3600000) { S.week = cached.data; return; }
+  $("#weekStatus").textContent = "Checking 7-day prices…";
+  const h = Math.floor(Date.now() / 3600000) * 3600 - 3600;
+  try {
+    const days = await Promise.all([1, 2, 3, 4, 5, 6, 7].map(d => getJSON(`${API}/1h?timestamp=${h - d * 86400}`).then(r => r.data).catch(() => ({}))));
+    const acc = {};
+    days.forEach(day => Object.entries(day).forEach(([id, d]) => {
+      const p = d.avgHighPrice && d.avgLowPrice ? (d.avgHighPrice + d.avgLowPrice) / 2 : d.avgHighPrice || d.avgLowPrice;
+      const v = (d.highPriceVolume || 0) + (d.lowPriceVolume || 0);
+      (acc[id] = acc[id] || { p: [], v: [] });
+      if (p) acc[id].p.push(p);
+      acc[id].v.push(v);
+    }));
+    const data = {};
+    Object.entries(acc).forEach(([id, a]) => {
+      const vs = a.v.concat(Array(7 - a.v.length).fill(0));
+      const mean = vs.reduce((s, x) => s + x, 0) / 7;
+      const sd = Math.sqrt(vs.reduce((s, x) => s + (x - mean) ** 2, 0) / 7);
+      data[id] = [a.p.length ? Math.round(a.p.reduce((s, x) => s + x, 0) / a.p.length) : 0, Math.round(mean * 10) / 10, mean ? Math.round((sd / mean) * 100) / 100 : 1];
+    });
+    S.week = data;
+    store.set("weekCache", { at: Date.now(), data });
+    $("#weekStatus").textContent = "";
+  } catch (e) { $("#weekStatus").textContent = "Couldn't load 7-day prices, so the inflated-price filter is off for now."; }
+}
+
+const step = p => (p < 1000 ? 1 : Math.max(1, Math.round(p * 0.0005)));
+function pctRank(arr, key) {
+  const sorted = arr.map(r => r[key]).sort((a, b) => a - b);
+  return r => (sorted.length < 2 ? 1 : (sorted.findIndex(v => v >= r[key]) + 1) / sorted.length);
+}
+
+function flipRows() {
+  const cap = parseGP($("#cap").value), q = $("#fq").value.trim().toLowerCase();
+  const hours = Math.max(0.25, +$("#hours").value || 1), minVol = +$("#minvol").value || 0;
+  const minP = parseGP($("#minPrice").value) || 0, maxP = parseGP($("#maxPrice").value) || Infinity;
+  const maxQ = parseGP($("#maxQty").value) || Infinity, infl = (+$("#inflPct").value || 10) / 100;
+  const staleMin = (PRESETS[fs.preset] || {}).staleMin || 120;
   const rows = [];
   for (const [id, l] of Object.entries(S.latest)) {
     const m = S.byId[id];
-    if (!m || !l.high || !l.low || (q && !m.name.toLowerCase().includes(q))) continue;
-    const buy = l.low, sell = l.high, net = sell - buy - tax(sell);
-    if (net <= 0 || buy > cap) continue;
+    if (!m || !l.high || !l.low) continue;
+    if (q && !m.name.toLowerCase().includes(q)) continue;
+    const isFav = favs.has(+id), isHidden = hidden.has(+id);
+    if (isHidden && !$("#showHidden").checked) continue;
+    if ($("#favOnly").checked && !isFav) continue;
+    const buyOffer = l.low + step(l.low), sellOffer = l.high - step(l.high);
+    const net = sellOffer - buyOffer - tax(sellOffer);
+    if (net <= 0 || buyOffer < minP || buyOffer > maxP || buyOffer > cap) continue;
     const h = S.hour[id] || {}, hv = (h.highPriceVolume || 0) + (h.lowPriceVolume || 0);
     if (hv < minVol) continue;
     const age = Math.max(minsAgo(l.highTime), minsAgo(l.lowTime));
-    if (age > 30 && !showStale) continue;
-    const qty = Math.min(m.limit || Infinity, Math.floor(cap / buy), Math.max(1, Math.floor(hv * 4 * 0.1)));
-    rows.push({ m, buy, sell, net, qty, profit: qty * net, roi: (net / buy) * 100, hv, age });
+    if (age > staleMin && !$("#stale").checked) continue;
+    const [wkPrice, wkVol, cv] = S.week[id] || [0, 0, 1];
+    const mid = (l.high + l.low) / 2;
+    const inflated = wkPrice > 0 && mid > wkPrice * (1 + infl);
+    const spike = wkVol > 0 && hv >= 20 && hv > 3 * wkVol;
+    if (inflated && $("#hideInfl").checked) continue;
+    if (spike && $("#hideSpike").checked) continue;
+    const limitCap = (m.limit || Infinity) * Math.max(1, Math.floor(hours / 4));
+    const qty = Math.min(limitCap, maxQ, Math.floor(cap / buyOffer), Math.max(1, Math.floor(hv * hours * 0.1)));
+    if (qty < 1) continue;
+    const rel = 0.6 * Math.min(1, Math.log10(hv + 1) / 3) + 0.4 * (1 - Math.min(1, cv));
+    rows.push({ id: +id, m, l, buyOffer, sellOffer, net, qty, profit: qty * net, gph: (qty * net) / hours, roi: (net / buyOffer) * 100, hv, age, rel, inflated, spike, wkPrice, isFav });
   }
-  rows.sort((a, b) => b.profit - a.profit);
-  $("#flipList").innerHTML = rows.slice(0, 60).map(r => `
-    <div class="row">
-      <div class="name"><a href="https://prices.runescape.wiki/osrs/item/${r.m.id}" target="_blank" rel="noopener">${esc(r.m.name)}</a></div>
-      <div class="big">${gp(r.profit)} <small style="color:var(--dim)">per 4h</small></div>
-      <div class="facts">
-        <span>Buy at <b>${gp(r.buy)}</b></span><span>Sell at <b>${gp(r.sell)}</b></span>
-        <span>Net each <b>${gp(r.net)}</b></span><span>Qty <b>${r.qty.toLocaleString("en-GB")}</b>${r.qty === r.m.limit ? " (buy limit)" : ""}</span>
-        <span>ROI <b>${r.roi.toFixed(1)}%</b></span><span>Trades/hour <b>${r.hv.toLocaleString("en-GB")}</b></span>
-      </div>
-      ${r.roi > 15 ? '<div class="warn">Unusually big spread. It may be a thin or manipulated market, so check recent trades first.</div>' : ""}
-      ${r.age > 30 ? `<div class="warn">Last trade ${r.age > 600 ? "over 10 hours" : r.age + " minutes"} ago, so this price may be out of date.</div>` : ""}
-    </div>`).join("") || '<div class="empty">No flips match. Try lowering the trades per hour or raising your GP.</div>';
+  const rg = pctRank(rows, "gph"), rr = pctRank(rows, "roi"), rl = pctRank(rows, "rel");
+  rows.forEach(r => { r.balanced = Math.cbrt(rg(r) * rr(r) * rl(r)); });
+  const key = $("#sort").value || "balanced";
+  rows.sort((a, b) => b[key] - a[key]);
+  return { rows, cap, hours };
+}
+
+function planSlots(rows, cap, slots) {
+  let left = cap; const plan = [], share = cap / slots;
+  for (const r of rows) {
+    if (plan.length >= slots) break;
+    const budget = Math.min(left, Math.max(share, r.buyOffer));
+    const qty = Math.min(r.qty, Math.floor(budget / r.buyOffer));
+    if (qty < 1) continue;
+    plan.push({ ...r, qty, profit: qty * r.net, cost: qty * r.buyOffer });
+    left -= qty * r.buyOffer;
+  }
+  return { plan, left };
+}
+
+function flipRow(r, slotNo) {
+  const warn = [];
+  if (r.roi > 15) warn.push("Unusually big spread. Check recent trades before buying.");
+  if (r.inflated) warn.push(`Priced ${Math.round((((r.l.high + r.l.low) / 2) / r.wkPrice - 1) * 100)}% above its 7-day average.`);
+  if (r.spike) warn.push("Trading far more than usual right now, which can mean manipulation.");
+  if (r.age > 30) warn.push(`Last trade ${r.age > 600 ? "over 10 hours" : r.age + " minutes"} ago, so the price may be out of date.`);
+  return `<div class="row">
+    <div class="name">${slotNo ? `<span class="slot">Slot ${slotNo}</span>` : ""}<a href="https://prices.runescape.wiki/osrs/item/${r.id}" target="_blank" rel="noopener">${esc(r.m.name)}</a>
+      <button class="iconbtn ${r.isFav ? "on" : ""}" data-fav="${r.id}" aria-label="${r.isFav ? "Remove from favourites" : "Add to favourites"}">${r.isFav ? "★" : "☆"}</button>
+      <button class="iconbtn" data-hide="${r.id}" aria-label="${hidden.has(r.id) ? "Unhide" : "Hide"} ${esc(r.m.name)}">${hidden.has(r.id) ? "Unhide" : "Hide"}</button></div>
+    <div class="big">${gp(r.profit)}</div>
+    <div class="facts">
+      <span class="offer">Offer to buy at <b>${r.buyOffer.toLocaleString("en-GB")}</b></span>
+      <span class="offer">Sell at <b>${r.sellOffer.toLocaleString("en-GB")}</b></span>
+      <span>Qty <b>${r.qty.toLocaleString("en-GB")}</b></span><span>Net each <b>${gp(r.net)}</b></span>
+      <span>ROI <b>${r.roi.toFixed(1)}%</b></span><span>Trades/hour <b>${r.hv.toLocaleString("en-GB")}</b></span>
+      <span>Reliability <b>${Math.round(r.rel * 100)}%</b></span>
+    </div>
+    ${warn.map(w => `<div class="warn">${w}</div>`).join("")}
+  </div>`;
+}
+
+function renderFlips() {
+  saveFlipSettings();
+  const cap = parseGP($("#cap").value);
+  if (!cap) { $("#planList").innerHTML = '<div class="empty">Enter how much GP to use, for example 10m or 500k.</div>'; $("#flipList").innerHTML = ""; $("#planHead").innerHTML = ""; return; }
+  const slots = Math.min(8, Math.max(1, +$("#slots").value || 8));
+  const { rows, hours } = flipRows();
+  const { plan, left } = planSlots(rows, cap, slots);
+  const used = plan.reduce((s, r) => s + r.cost, 0), prof = plan.reduce((s, r) => s + r.profit, 0);
+  $("#planHead").innerHTML = plan.length
+    ? `<span>GP used <b>${fmt(used)}</b></span><span>Unused <b>${fmt(left)}</b></span><span>Expected profit <b>${fmt(prof)}</b> over about ${hours} hour${hours === 1 ? "" : "s"}</span>`
+    : "";
+  $("#planList").innerHTML = plan.map((r, i) => flipRow(r, i + 1)).join("") || '<div class="empty">No flips match these filters. Try another preset, a lower minimum trades per hour, or more GP.</div>';
+  const inPlan = new Set(plan.map(r => r.id));
+  $("#flipList").innerHTML = rows.filter(r => !inPlan.has(r.id)).slice(0, 40).map(r => flipRow(r)).join("") || '<div class="empty">Nothing else matches.</div>';
 }
 
 // ---------- picks ----------
 async function renderPicks() {
-  let picks, costs;
-  try { [picks, costs] = await Promise.all([getJSON("data/picks.json?t=" + Date.now()), getJSON("data/costs.json?t=" + Date.now()).catch(() => ({ runs: [] }))]); }
+  let picks;
+  try { picks = await getJSON("data/picks.json?t=" + Date.now()); }
   catch (e) { $("#picksList").innerHTML = '<div class="empty">Couldn\'t load picks. If you\'re opening this file directly, open the website version instead.</div>'; return; }
-  const month = new Date().toISOString().slice(0, 7);
-  const spent = (costs.runs || []).filter(r => r.date.startsWith(month)).reduce((s, r) => s + r.usd, 0);
   const run = `<a href="https://github.com/${REPO}/actions/workflows/robot.yml" target="_blank" rel="noopener">Run a new scan</a>`;
   $("#picksMeta").innerHTML = picks.generated
-    ? `Last scan ${new Date(picks.generated).toLocaleString("en-GB", { dateStyle: "medium", timeStyle: "short" })} using ${esc(picks.model)}. AI spend this month: $${spent.toFixed(2)}. ${run}`
+    ? `Last scan ${new Date(picks.generated).toLocaleString("en-GB", { dateStyle: "medium", timeStyle: "short" })} using ${esc(picks.model)}. ${run}`
     : `No scan yet. The first one runs automatically after 7am. ${run}`;
   if (!picks.theses || !picks.theses.length) {
     $("#picksList").innerHTML = picks.raw ? `<div class="thesis"><h3>The AI reply couldn't be read</h3><p class="lede">${esc(picks.raw.slice(0, 800))}</p></div>` : '<div class="empty">No picks yet.</div>';
@@ -367,17 +542,25 @@ async function show() {
   pages.forEach(p => { $("#" + p).hidden = p !== page; });
   document.querySelectorAll("nav#tabs a").forEach(a => a.setAttribute("aria-current", a.getAttribute("href") === "#" + page ? "page" : "false"));
   await loadMarket();
-  if (page === "flips") renderFlips();
+  if (page === "flips") { renderFlips(); if (!Object.keys(S.week).length) { await loadWeek(); renderFlips(); } }
   if (page === "picks") renderPicks();
   if (page === "watch") { await ensureWatch(); renderWatch(); }
   if (page === "trades") { renderAccounts(); renderTrades(); }
 }
 
 // ---------- events ----------
-$("#cap").value = store.get("flipCap", "10m");
-["cap", "minvol", "fq", "stale"].forEach(id => $("#" + id).addEventListener("input", renderFlips));
+loadFlipSettings();
+document.querySelectorAll(".preset").forEach(b => b.addEventListener("click", () => { applyPreset(b.dataset.preset); renderFlips(); }));
+[...FS_FIELDS, ...FS_CHECKS, "fq"].forEach(id => $("#" + id).addEventListener("input", () => {
+  if (["minPrice", "maxPrice", "minvol", "maxQty", "hours"].includes(id) && fs.preset !== "custom") applyPreset("custom", true);
+  renderFlips();
+}));
 $("#refresh").addEventListener("click", async () => { await loadMarket(true); renderFlips(); });
-
+$("#flips").addEventListener("click", e => {
+  const f = e.target.dataset.fav, h = e.target.dataset.hide;
+  if (f) { const id = +f; favs.has(id) ? favs.delete(id) : favs.add(id); store.set("favs", [...favs]); renderFlips(); }
+  if (h) { const id = +h; hidden.has(id) ? hidden.delete(id) : hidden.add(id); store.set("hidden", [...hidden]); renderFlips(); toast(hidden.has(id) ? "Hidden. Turn on 'Show hidden items' to undo." : "Unhidden"); }
+});
 $("#wAdd").addEventListener("click", () => {
   const m = item($("#wItem").value);
   if (!m) return toast("Pick an item from the suggestions");
