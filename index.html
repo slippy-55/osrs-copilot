@@ -304,10 +304,11 @@ async function renderPicks() {
       <span class="tag ${up ? "up" : "down"}">${up ? "Likely to rise" : "Likely to fall"}</span><span class="tag">${esc(t.confidence || "?")} confidence</span>
       <div class="scroll"><table class="items"><thead><tr><th>Item</th><th>Buy now</th><th>Sell now</th><th>Since pick</th><th>Limit</th></tr></thead><tbody>${rows}</tbody></table></div>
       <dl>
+        <dt>Suggested action</dt><dd><b>${esc(t.action || "Watch")}</b>${t.action_detail ? ": " + esc(t.action_detail) : ""}</dd>
         <dt>Trigger</dt><dd>${esc(t.trigger)}${t.release ? " (" + esc(t.release) + ")" : ""}</dd>
         <dt>Why</dt><dd>${esc(t.mechanism)}</dd>
+        <dt>Evidence</dt><dd>${esc(t.evidence || "None given, so treat this one with extra caution")}</dd>
         <dt>Substitutes</dt><dd>${esc(t.substitutes || "None given")}</dd>
-        <dt>When to buy</dt><dd>${esc(t.entry_plan)}</dd>
         <dt>When to sell</dt><dd>${esc(t.exit_plan)}</dd>
         <dt>What would kill it</dt><dd>${esc(t.what_would_kill_it)}</dd>
       </dl></article>`;
