@@ -44,11 +44,16 @@ Stamina potion). Ideas with no tradeable items are thrown away.
 Stress-test every idea: cheaper substitutes? already priced in? how elastic is supply
 (boss-drop-only items spike harder than skilled or botted items)?
 Use web search on oldschool.runescape.wiki to verify weaknesses, requirements and recipes.
+Every item must be directly affected by a confirmed fact you can point to (a Jagex blog, poll,
+patch note or Wiki page). If you can't point to the fact, leave the item out. Don't guess at
+drops, weaknesses or recipes that haven't been announced: search to confirm them first.
 Keep every text field under 40 words.
+"action" must be exactly one of: Buy now, Buy on announcement, Sell if holding, Avoid holding, Watch.
 Reply with ONLY a JSON object, starting with { and ending with }, no other text:
-{"theses":[{"title":"","trigger":"","release":"","mechanism":"","direction":"up or down",
-"items":["exact OSRS item names"],"substitutes":"","confidence":"low, medium or high",
-"entry_plan":"","exit_plan":"","what_would_kill_it":""}]}"""
+{"theses":[{"title":"","trigger":"","release":"","evidence":"the confirmed fact, plus its URL",
+"mechanism":"","direction":"up or down","items":["exact OSRS item names"],"substitutes":"",
+"confidence":"low, medium or high","action":"","action_detail":"what to do and when",
+"exit_plan":"","what_would_kill_it":""}]}"""
 
 
 # ---------- small helpers ----------
@@ -99,6 +104,55 @@ def discord(text):
         except Exception as e:
             print("Discord post failed:", e)
         time.sleep(1)
+
+
+def discord_embeds(content, embeds):
+    url = os.environ.get("DISCORD_WEBHOOK")
+    if not url:
+        print("[no Discord webhook set]\n" + content + "\n" + json.dumps(embeds, indent=1)[:3000])
+        return
+    for i in range(0, max(len(embeds), 1), 4):  # small batches stay under Discord's size limit
+        body = {"username": "GE Bot", "content": content if i == 0 else "", "embeds": embeds[i:i + 4]}
+        try:
+            r = requests.post(url, json=body, timeout=20)
+            if r.status_code >= 400:
+                print("Discord rejected the message:", r.text[:300])
+        except Exception as e:
+            print("Discord post failed:", e)
+        time.sleep(1)
+
+
+def clip(text, n):
+    text = str(text or "").strip() or "n/a"
+    return text if len(text) <= n else text[: n - 1] + "…"
+
+
+def thesis_embed(t):
+    up = str(t.get("direction", "")).lower().startswith("up")
+    items = []
+    for i in t["items"]:
+        if not i.get("id"):
+            continue
+        items.append(f"[{i['name']}](https://prices.runescape.wiki/osrs/item/{i['id']}): "
+                     f"buy {fmt(i.get('high_then'))}, sell {fmt(i.get('low_then'))}, "
+                     f"limit {i.get('limit') or '?'}")
+    link = re.search(r"https?://\S+", str(t.get("evidence", "")))
+    e = {
+        "title": clip(("📈 " if up else "📉 ") + str(t.get("title")), 250),
+        "color": 0x5ED57D if up else 0xEA6550,
+        "description": clip(f"**{t.get('action') or 'Watch'}**: {t.get('action_detail') or ''}", 900),
+        "fields": [
+            {"name": "Items (prices now)", "value": clip("\n".join(items), 1000)},
+            {"name": "Why", "value": clip(t.get("mechanism"), 600)},
+            {"name": "Evidence", "value": clip(t.get("evidence"), 400)},
+            {"name": "Sell when", "value": clip(t.get("exit_plan"), 400)},
+            {"name": "What would kill it", "value": clip(t.get("what_would_kill_it"), 400)},
+        ],
+        "footer": {"text": clip(f"{t.get('confidence', '?')} confidence · {t.get('release') or 'date unknown'}", 200)},
+    }
+    if link:
+        e["url"] = link.group(0).rstrip(").,")
+    return e
 
 
 def hour_data(ts):
@@ -330,17 +384,14 @@ def run_ai(mode, by_id, by_name, latest, vol_now, vol_yday):
 
     month = now_iso[:7]
     month_total = sum(r["usd"] for r in costs["runs"] if r["date"].startswith(month))
-    lines = [f"🧠 **New {'deep' if mode == 'deep' else 'daily'} picks** "
-             f"(cost ${usage['usd']:.3f}, this month ${month_total:.2f})"]
+    header = (f"🧠 **New {'deep' if mode == 'deep' else 'daily'} picks**: {len(theses)} idea(s). "
+              f"Cost ${usage['usd']:.3f}, this month ${month_total:.2f}. "
+              f"<https://slippy-55.github.io/osrs-copilot/#picks>")
     if dropped:
-        lines.append(f"_{dropped} idea(s) dropped because their items can't be traded._")
-    for t in theses:
-        arrow = "📈" if t.get("direction", "").startswith("up") else "📉"
-        names = ", ".join(i["name"] for i in t["items"][:4])
-        lines.append(f"{arrow} **{t.get('title')}** ({t.get('confidence')}): {names}")
+        header += f"\n_{dropped} idea(s) dropped because their items can't be traded._"
     if not theses:
-        lines.append("The AI reply couldn't be read. Open the app's Picks tab for details.")
-    discord("\n".join(lines))
+        header += "\nThe AI reply couldn't be read. Open the app's Picks tab for details."
+    discord_embeds(header, [thesis_embed(t) for t in theses])
 
 
 def main():
