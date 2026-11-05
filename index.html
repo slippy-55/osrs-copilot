@@ -1,0 +1,430 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="GE Copilot">
+<meta name="theme-color" content="#211c15">
+<title>GE Copilot</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  color-scheme: dark;
+  --stone: #211c15;
+  --slab: #2d261d;
+  --slab-2: #382f24;
+  --edge: #4d412f;
+  --text: #ecdfc6;
+  --dim: #a89676;
+  --coin-y: #f3d34a;
+  --coin-w: #ffffff;
+  --coin-g: #5ed57d;
+  --loss: #ea6550;
+  --gold: #d8a740;
+  --font: "IBM Plex Sans Condensed", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+  box-sizing: border-box;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+*, *::before, *::after { box-sizing: inherit; }
+html { scroll-padding-top: env(safe-area-inset-top, 0px); }
+body {
+  margin: 0; background: var(--stone); color: var(--text);
+  font: 16px/1.45 var(--font); font-variant-numeric: tabular-nums;
+  -webkit-text-size-adjust: 100%;
+}
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--stone); }
+a { color: var(--gold); }
+button, input, select { font: inherit; color: inherit; }
+:focus-visible { outline: 2px solid var(--coin-y); outline-offset: 2px; }
+
+header { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; padding: 18px 18px 6px; max-width: 1100px; margin: 0 auto; }
+h1 { margin: 0; font-size: 1.55rem; font-weight: 700; letter-spacing: -0.01em; }
+h1 .coin { color: var(--coin-y); }
+#status { color: var(--dim); font-size: .85rem; text-align: right; }
+main { max-width: 1100px; margin: 0 auto; padding: 0 14px 110px; }
+h2 { font-size: 1.2rem; margin: 14px 4px 4px; }
+.lede { color: var(--dim); margin: 0 4px 14px; max-width: 70ch; font-size: .93rem; }
+
+nav#tabs {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 20;
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  background: #1a1611; border-top: 1px solid var(--edge);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+nav#tabs a { text-decoration: none; color: var(--dim); text-align: center; padding: 10px 4px 12px; font-weight: 600; font-size: .95rem; }
+nav#tabs a[aria-current="page"] { color: var(--coin-y); box-shadow: inset 0 3px 0 var(--coin-y); }
+@media (min-width: 820px) {
+  nav#tabs { position: static; max-width: 1100px; margin: 4px auto 10px; background: none; border: 0; border-bottom: 1px solid var(--edge); grid-template-columns: repeat(4, max-content); gap: 6px; padding: 0 14px; }
+  nav#tabs a { padding: 10px 16px; }
+  nav#tabs a[aria-current="page"] { box-shadow: inset 0 -3px 0 var(--coin-y); }
+  main { padding-bottom: 40px; }
+}
+section[hidden] { display: none; }
+
+.controls { display: flex; flex-wrap: wrap; gap: 10px; align-items: end; background: var(--slab); border: 1px solid var(--edge); border-radius: 6px; padding: 12px; margin-bottom: 12px; }
+.controls label { display: grid; gap: 3px; font-size: .82rem; color: var(--dim); }
+.controls input[type=text], .controls input[type=number], .controls select { background: var(--stone); border: 1px solid var(--edge); border-radius: 4px; padding: 8px 10px; min-width: 0; width: 100%; }
+.controls .grow { flex: 1 1 160px; }
+.controls .small { flex: 0 1 110px; }
+.check { display: flex !important; grid-auto-flow: column; align-items: center; gap: 6px; padding-bottom: 8px; }
+.btn { background: var(--slab-2); border: 1px solid var(--gold); color: var(--coin-y); border-radius: 4px; padding: 8px 14px; font-weight: 600; cursor: pointer; }
+.btn.quiet { border-color: var(--edge); color: var(--text); }
+.btn:active { transform: translateY(1px); }
+
+.gp { font-weight: 600; }
+.gp.y { color: var(--coin-y); } .gp.w { color: var(--coin-w); } .gp.g { color: var(--coin-g); }
+.gp.loss { color: var(--loss); }
+
+.list { display: grid; gap: 1px; background: var(--edge); border: 1px solid var(--edge); border-radius: 6px; overflow: hidden; }
+.row { background: var(--slab); padding: 10px 12px; display: grid; gap: 4px 14px; grid-template-columns: 1fr auto; }
+.row .name { font-weight: 600; }
+.row .name a { color: var(--text); text-decoration: none; }
+.row .big { text-align: right; font-size: 1.1rem; }
+.row .facts { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: .86rem; color: var(--dim); }
+.row .facts b { color: var(--text); font-weight: 500; }
+.warn { color: var(--loss); font-size: .82rem; grid-column: 1 / -1; }
+.empty { background: var(--slab); padding: 18px; color: var(--dim); }
+
+.thesis { background: var(--slab); border: 1px solid var(--edge); border-radius: 6px; padding: 14px; margin-bottom: 12px; }
+.thesis h3 { margin: 0 0 6px; font-size: 1.08rem; }
+.tag { display: inline-block; font-size: .8rem; padding: 1px 8px; border-radius: 3px; margin-right: 6px; border: 1px solid var(--edge); color: var(--dim); }
+.tag.up { color: var(--coin-g); border-color: #3c6b46; }
+.tag.down { color: var(--loss); border-color: #7a3a2f; }
+.thesis dl { margin: 10px 0 0; display: grid; grid-template-columns: max-content 1fr; gap: 4px 12px; font-size: .92rem; }
+.thesis dt { color: var(--dim); }
+.thesis dd { margin: 0; max-width: 70ch; }
+@media (max-width: 560px) { .thesis dl { grid-template-columns: 1fr; } .thesis dd { margin-bottom: 6px; } }
+.items { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: .9rem; }
+.items th, .items td { text-align: right; padding: 5px 6px; border-top: 1px solid var(--edge); }
+.items th:first-child, .items td:first-child { text-align: left; }
+.items th { color: var(--dim); font-weight: 500; }
+.scroll { overflow-x: auto; }
+.meta { color: var(--dim); font-size: .88rem; margin: 0 4px 12px; }
+.totals { display: flex; flex-wrap: wrap; gap: 8px 22px; margin: 0 4px 12px; }
+.totals div { font-size: .85rem; color: var(--dim); }
+.totals div .gp { display: block; font-size: 1.25rem; }
+.actions { display: flex; gap: 8px; flex-wrap: wrap; margin: 10px 0; }
+.mini { background: none; border: 1px solid var(--edge); color: var(--text); border-radius: 4px; padding: 3px 9px; font-size: .82rem; cursor: pointer; }
+.toast { position: fixed; left: 50%; bottom: 90px; transform: translateX(-50%); background: var(--slab-2); border: 1px solid var(--gold); padding: 10px 16px; border-radius: 6px; z-index: 30; }
+@media (prefers-reduced-motion: no-preference) { .toast { animation: rise .18s ease-out; } @keyframes rise { from { opacity: 0; transform: translate(-50%, 8px); } } }
+</style>
+</head>
+<body>
+<header>
+  <h1><span class="coin">GE</span> Copilot</h1>
+  <div id="status">Loading prices…</div>
+</header>
+<nav id="tabs">
+  <a href="#flips">Flips</a>
+  <a href="#picks">Picks</a>
+  <a href="#watch">Watch</a>
+  <a href="#trades">Trades</a>
+</nav>
+<main>
+
+<section id="flips">
+  <h2>Flip finder</h2>
+  <p class="lede">Ranked by profit per 4-hour buy-limit window after GE tax. It assumes you buy at the instant-sell price, sell at the instant-buy price, and get about 10% of the item's trading volume. Real fills are usually slower, so treat the numbers as a best case.</p>
+  <div class="controls">
+    <label class="small">GP to use<input id="cap" type="text" inputmode="decimal" value="10m"></label>
+    <label class="small">Min trades/hour<input id="minvol" type="number" inputmode="numeric" value="20"></label>
+    <label class="grow">Search items<input id="fq" type="text" placeholder="e.g. rune"></label>
+    <label class="check"><input id="stale" type="checkbox"> Show stale prices</label>
+    <button class="btn" id="refresh">Refresh prices</button>
+  </div>
+  <div id="flipList" class="list"><div class="empty">Loading…</div></div>
+</section>
+
+<section id="picks" hidden>
+  <h2>Speculation picks</h2>
+  <p class="lede">Ideas from the AI scan of Jagex news and the roadmap. These are guesses, not certainties: check the "what would kill it" line before buying.</p>
+  <p class="meta" id="picksMeta"></p>
+  <div id="picksList"></div>
+</section>
+
+<section id="watch" hidden>
+  <h2>Watchlist</h2>
+  <p class="lede">The robot checks these every 30 minutes and messages your Discord when a rule is hit. After changing the list, tap "Send to robot" and follow the steps.</p>
+  <div class="controls">
+    <label class="grow">Item<input id="wItem" type="text" list="itemNames" placeholder="Start typing an item"></label>
+    <label class="small">Alert below<input id="wBelow" type="text" inputmode="decimal" placeholder="e.g. 1.2m"></label>
+    <label class="small">Alert above<input id="wAbove" type="text" inputmode="decimal" placeholder="optional"></label>
+    <label class="small">Volume spike x<input id="wSpike" type="number" inputmode="decimal" value="3"></label>
+    <button class="btn" id="wAdd">Add item</button>
+  </div>
+  <div id="watchList" class="list"></div>
+  <div class="actions">
+    <button class="btn" id="wSend">Send to robot</button>
+    <button class="btn quiet" id="wLoad">Load robot's list</button>
+  </div>
+  <p class="lede" id="wHelp" hidden>The list is copied. On the GitHub page that just opened: select all the text in the box, paste, then tap "Commit changes" twice. The robot uses the new list from its next run.</p>
+</section>
+
+<section id="trades" hidden>
+  <h2>Trade tracker</h2>
+  <p class="lede">Saved only on this device. Use Export and Import to move your trades between your phone and PC.</p>
+  <div class="totals" id="tradeTotals"></div>
+  <div class="controls">
+    <label class="small">Account<select id="tAcct"></select></label>
+    <label class="grow">Item<input id="tItem" type="text" list="itemNames" placeholder="Start typing an item"></label>
+    <label class="small">Quantity<input id="tQty" type="text" inputmode="decimal" placeholder="e.g. 12"></label>
+    <label class="small">Bought at (each)<input id="tBuy" type="text" inputmode="decimal" placeholder="e.g. 1.1m"></label>
+    <label class="small">Sold at (each)<input id="tSell" type="text" inputmode="decimal" placeholder="leave empty if open"></label>
+    <button class="btn" id="tAdd">Log trade</button>
+  </div>
+  <div class="controls">
+    <label class="small">Show<select id="tFilter"></select></label>
+    <label class="grow">New account name<input id="aName" type="text" placeholder="e.g. my alt's name"></label>
+    <button class="btn quiet" id="aAdd">Add account</button>
+  </div>
+  <div id="tradeList" class="list"></div>
+  <div class="actions">
+    <button class="btn quiet" id="tExport">Export trades</button>
+    <label class="btn quiet">Import trades<input id="tImport" type="file" accept=".json,application/json" hidden></label>
+  </div>
+</section>
+
+</main>
+<datalist id="itemNames"></datalist>
+
+<script>
+const API = "https://prices.runescape.wiki/api/v2/osrs";
+const REPO = "slippy-55/osrs-copilot";
+const S = { byId: {}, byName: {}, latest: {}, hour: {}, loadedAt: 0 };
+const $ = s => document.querySelector(s);
+const store = {
+  get(k, d) { try { const v = localStorage.getItem(k); return v ? JSON.parse(v) : d; } catch (e) { return d; } },
+  set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) { toast("Couldn't save on this device"); } }
+};
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+const tax = p => (p >= 50 ? Math.min(Math.floor(p * 0.02), 5e6) : 0);
+function fmt(n) {
+  const a = Math.abs(n);
+  const s = a >= 1e9 ? (a / 1e9).toFixed(2) + "b" : a >= 1e7 ? (a / 1e6).toFixed(1) + "m" : a >= 1e5 ? Math.round(a / 1e3) + "k" : Math.round(a).toLocaleString("en-GB");
+  return (n < 0 ? "-" : "") + s;
+}
+function gp(n, signed) {
+  if (n == null || isNaN(n)) return '<span class="gp">–</span>';
+  const a = Math.abs(n);
+  const cls = signed && n < 0 ? "loss" : a >= 1e7 ? "g" : a >= 1e5 ? "w" : "y";
+  return `<span class="gp ${cls}">${signed && n > 0 ? "+" : ""}${fmt(n)}</span>`;
+}
+function parseGP(s) {
+  const m = String(s ?? "").trim().toLowerCase().replace(/[, ]/g, "").match(/^(\d*\.?\d+)([kmb]?)$/);
+  return m ? Math.round(parseFloat(m[1]) * { "": 1, k: 1e3, m: 1e6, b: 1e9 }[m[2]]) : NaN;
+}
+const minsAgo = t => (t ? Math.round((Date.now() / 1000 - t) / 60) : Infinity);
+function toast(msg) { const t = document.createElement("div"); t.className = "toast"; t.textContent = msg; document.body.append(t); setTimeout(() => t.remove(), 2600); }
+async function getJSON(url) { const r = await fetch(url, { cache: "no-store" }); if (!r.ok) throw new Error(r.status + " from " + url); return r.json(); }
+
+// ---------- market data ----------
+async function loadMarket(force) {
+  if (!force && S.loadedAt && Date.now() - S.loadedAt < 60000) return;
+  $("#status").textContent = "Loading prices…";
+  try {
+    let map = store.get("mapCache", null);
+    if (!map || Date.now() - map.at > 86400000) { map = { at: Date.now(), items: await getJSON(API + "/mapping") }; store.set("mapCache", map); }
+    const [lat, hr] = await Promise.all([getJSON(API + "/latest"), getJSON(API + "/1h")]);
+    S.byId = {}; S.byName = {};
+    map.items.forEach(m => { S.byId[m.id] = m; S.byName[m.name.toLowerCase()] = m; });
+    S.latest = lat.data; S.hour = hr.data; S.loadedAt = Date.now();
+    if (!$("#itemNames").children.length) $("#itemNames").innerHTML = map.items.map(m => `<option value="${esc(m.name)}">`).join("");
+    $("#status").textContent = "Prices from " + new Date().toLocaleTimeString("en-GB", { hour: "2-digit", minute: "2-digit" });
+  } catch (e) {
+    $("#status").textContent = "Couldn't load prices. Check your connection and tap Refresh.";
+    console.error(e);
+  }
+}
+const item = name => S.byName[String(name || "").trim().toLowerCase()];
+
+// ---------- flips ----------
+function renderFlips() {
+  const cap = parseGP($("#cap").value), minVol = +$("#minvol").value || 0, showStale = $("#stale").checked, q = $("#fq").value.trim().toLowerCase();
+  store.set("flipCap", $("#cap").value);
+  if (!cap) { $("#flipList").innerHTML = '<div class="empty">Enter how much GP to use, for example 10m or 500k.</div>'; return; }
+  const rows = [];
+  for (const [id, l] of Object.entries(S.latest)) {
+    const m = S.byId[id];
+    if (!m || !l.high || !l.low || (q && !m.name.toLowerCase().includes(q))) continue;
+    const buy = l.low, sell = l.high, net = sell - buy - tax(sell);
+    if (net <= 0 || buy > cap) continue;
+    const h = S.hour[id] || {}, hv = (h.highPriceVolume || 0) + (h.lowPriceVolume || 0);
+    if (hv < minVol) continue;
+    const age = Math.max(minsAgo(l.highTime), minsAgo(l.lowTime));
+    if (age > 30 && !showStale) continue;
+    const qty = Math.min(m.limit || Infinity, Math.floor(cap / buy), Math.max(1, Math.floor(hv * 4 * 0.1)));
+    rows.push({ m, buy, sell, net, qty, profit: qty * net, roi: (net / buy) * 100, hv, age });
+  }
+  rows.sort((a, b) => b.profit - a.profit);
+  $("#flipList").innerHTML = rows.slice(0, 60).map(r => `
+    <div class="row">
+      <div class="name"><a href="https://prices.runescape.wiki/osrs/item/${r.m.id}" target="_blank" rel="noopener">${esc(r.m.name)}</a></div>
+      <div class="big">${gp(r.profit)} <small style="color:var(--dim)">per 4h</small></div>
+      <div class="facts">
+        <span>Buy at <b>${gp(r.buy)}</b></span><span>Sell at <b>${gp(r.sell)}</b></span>
+        <span>Net each <b>${gp(r.net)}</b></span><span>Qty <b>${r.qty.toLocaleString("en-GB")}</b>${r.qty === r.m.limit ? " (buy limit)" : ""}</span>
+        <span>ROI <b>${r.roi.toFixed(1)}%</b></span><span>Trades/hour <b>${r.hv.toLocaleString("en-GB")}</b></span>
+      </div>
+      ${r.roi > 15 ? '<div class="warn">Unusually big spread. It may be a thin or manipulated market, so check recent trades first.</div>' : ""}
+      ${r.age > 30 ? `<div class="warn">Last trade ${r.age > 600 ? "over 10 hours" : r.age + " minutes"} ago, so this price may be out of date.</div>` : ""}
+    </div>`).join("") || '<div class="empty">No flips match. Try lowering the trades per hour or raising your GP.</div>';
+}
+
+// ---------- picks ----------
+async function renderPicks() {
+  let picks, costs;
+  try { [picks, costs] = await Promise.all([getJSON("data/picks.json?t=" + Date.now()), getJSON("data/costs.json?t=" + Date.now()).catch(() => ({ runs: [] }))]); }
+  catch (e) { $("#picksList").innerHTML = '<div class="empty">Couldn\'t load picks. If you\'re opening this file directly, open the website version instead.</div>'; return; }
+  const month = new Date().toISOString().slice(0, 7);
+  const spent = (costs.runs || []).filter(r => r.date.startsWith(month)).reduce((s, r) => s + r.usd, 0);
+  const run = `<a href="https://github.com/${REPO}/actions/workflows/robot.yml" target="_blank" rel="noopener">Run a new scan</a>`;
+  $("#picksMeta").innerHTML = picks.generated
+    ? `Last scan ${new Date(picks.generated).toLocaleString("en-GB", { dateStyle: "medium", timeStyle: "short" })} using ${esc(picks.model)}. AI spend this month: $${spent.toFixed(2)}. ${run}`
+    : `No scan yet. The first one runs automatically after 7am. ${run}`;
+  if (!picks.theses || !picks.theses.length) {
+    $("#picksList").innerHTML = picks.raw ? `<div class="thesis"><h3>The AI reply couldn't be read</h3><p class="lede">${esc(picks.raw.slice(0, 800))}</p></div>` : '<div class="empty">No picks yet.</div>';
+    return;
+  }
+  $("#picksList").innerHTML = picks.theses.map(t => {
+    const up = String(t.direction || "").toLowerCase().startsWith("up");
+    const rows = (t.items || []).map(i => {
+      const l = i.id ? S.latest[i.id] || {} : null;
+      if (!l) return `<tr><td>${esc(i.name)}</td><td colspan="4">Not tradeable or not found</td></tr>`;
+      const ch = i.low_then && l.low ? ((l.low / i.low_then - 1) * 100).toFixed(1) + "%" : "–";
+      return `<tr><td><a href="https://prices.runescape.wiki/osrs/item/${i.id}" target="_blank" rel="noopener">${esc(i.name)}</a></td><td>${gp(l.high)}</td><td>${gp(l.low)}</td><td>${ch}</td><td>${i.limit ?? "–"}</td></tr>`;
+    }).join("");
+    return `<article class="thesis">
+      <h3>${esc(t.title)}</h3>
+      <span class="tag ${up ? "up" : "down"}">${up ? "Likely to rise" : "Likely to fall"}</span><span class="tag">${esc(t.confidence || "?")} confidence</span>
+      <div class="scroll"><table class="items"><thead><tr><th>Item</th><th>Buy now</th><th>Sell now</th><th>Since pick</th><th>Limit</th></tr></thead><tbody>${rows}</tbody></table></div>
+      <dl>
+        <dt>Trigger</dt><dd>${esc(t.trigger)}${t.release ? " (" + esc(t.release) + ")" : ""}</dd>
+        <dt>Why</dt><dd>${esc(t.mechanism)}</dd>
+        <dt>Substitutes</dt><dd>${esc(t.substitutes || "None given")}</dd>
+        <dt>When to buy</dt><dd>${esc(t.entry_plan)}</dd>
+        <dt>When to sell</dt><dd>${esc(t.exit_plan)}</dd>
+        <dt>What would kill it</dt><dd>${esc(t.what_would_kill_it)}</dd>
+      </dl></article>`;
+  }).join("");
+}
+
+// ---------- watchlist ----------
+let watch = store.get("watch", null);
+async function ensureWatch() {
+  if (watch) return;
+  try { watch = (await getJSON("data/watchlist.json?t=" + Date.now())).items || []; } catch (e) { watch = []; }
+  store.set("watch", watch);
+}
+function renderWatch() {
+  $("#watchList").innerHTML = watch.map((w, i) => {
+    const m = item(w.name), l = m ? S.latest[m.id] || {} : {};
+    const rules = [w.below ? "below " + fmt(w.below) : "", w.above ? "above " + fmt(w.above) : "", w.spike ? "volume x" + w.spike : ""].filter(Boolean).join(", ");
+    return `<div class="row"><div class="name">${esc(w.name)}</div><div class="big">${gp(l.high)}</div>
+      <div class="facts"><span>Sell now <b>${gp(l.low)}</b></span><span>Alerts: <b>${esc(rules || "none")}</b></span><button class="mini" data-del="${i}">Remove</button></div></div>`;
+  }).join("") || '<div class="empty">Nothing on your watchlist yet. Add an item above.</div>';
+}
+
+// ---------- trades ----------
+let trades = store.get("trades", []);
+let accounts = store.get("accounts", ["SLIPPY55"]);
+function renderAccounts() {
+  $("#tAcct").innerHTML = accounts.map(a => `<option>${esc(a)}</option>`).join("");
+  const cur = $("#tFilter").value || "All";
+  $("#tFilter").innerHTML = ["All", ...accounts].map(a => `<option ${a === cur ? "selected" : ""}>${esc(a)}</option>`).join("");
+}
+function tradeValue(t) {
+  if (t.sell != null) return { pl: (t.sell - tax(t.sell) - t.buy) * t.qty, open: false };
+  const l = S.latest[t.itemId] || {}, now = l.low || l.high;
+  return { pl: now ? (now - tax(now) - t.buy) * t.qty : null, open: true, now };
+}
+function renderTrades() {
+  const f = $("#tFilter").value || "All";
+  const shown = trades.filter(t => f === "All" || t.acct === f);
+  let realised = 0, unreal = 0, tied = 0;
+  shown.forEach(t => { const v = tradeValue(t); if (v.open) { tied += t.buy * t.qty; unreal += v.pl || 0; } else realised += v.pl; });
+  $("#tradeTotals").innerHTML = `<div>Banked profit ${gp(realised, true)}</div><div>Open positions ${gp(unreal, true)}</div><div>GP tied up ${gp(tied)}</div>`;
+  $("#tradeList").innerHTML = shown.slice().reverse().map(t => {
+    const v = tradeValue(t);
+    return `<div class="row"><div class="name">${esc(t.name)} <small style="color:var(--dim)">× ${t.qty.toLocaleString("en-GB")} · ${esc(t.acct)}</small></div>
+      <div class="big">${gp(v.pl, true)}</div>
+      <div class="facts"><span>Bought <b>${gp(t.buy)}</b></span>${v.open ? `<span>Worth now <b>${gp(v.now)}</b></span><span>Open</span>` : `<span>Sold <b>${gp(t.sell)}</b></span>`}
+      <span>${new Date(t.opened).toLocaleDateString("en-GB")}</span>
+      ${v.open ? `<button class="mini" data-sell="${t.id}">Mark sold</button>` : ""}<button class="mini" data-tdel="${t.id}">Delete</button></div></div>`;
+  }).join("") || '<div class="empty">No trades logged yet. Log your first one above.</div>';
+}
+
+// ---------- routing ----------
+const pages = ["flips", "picks", "watch", "trades"];
+async function show() {
+  const page = pages.includes(location.hash.slice(1)) ? location.hash.slice(1) : "flips";
+  pages.forEach(p => { $("#" + p).hidden = p !== page; });
+  document.querySelectorAll("nav#tabs a").forEach(a => a.setAttribute("aria-current", a.getAttribute("href") === "#" + page ? "page" : "false"));
+  await loadMarket();
+  if (page === "flips") renderFlips();
+  if (page === "picks") renderPicks();
+  if (page === "watch") { await ensureWatch(); renderWatch(); }
+  if (page === "trades") { renderAccounts(); renderTrades(); }
+}
+
+// ---------- events ----------
+$("#cap").value = store.get("flipCap", "10m");
+["cap", "minvol", "fq", "stale"].forEach(id => $("#" + id).addEventListener("input", renderFlips));
+$("#refresh").addEventListener("click", async () => { await loadMarket(true); renderFlips(); });
+
+$("#wAdd").addEventListener("click", () => {
+  const m = item($("#wItem").value);
+  if (!m) return toast("Pick an item from the suggestions");
+  watch.push({ name: m.name, id: m.id, below: parseGP($("#wBelow").value) || 0, above: parseGP($("#wAbove").value) || 0, spike: +$("#wSpike").value || 0 });
+  store.set("watch", watch); $("#wItem").value = $("#wBelow").value = $("#wAbove").value = ""; renderWatch(); toast("Added " + m.name);
+});
+$("#watchList").addEventListener("click", e => { const i = e.target.dataset.del; if (i != null) { watch.splice(+i, 1); store.set("watch", watch); renderWatch(); } });
+$("#wSend").addEventListener("click", async () => {
+  const text = JSON.stringify({ items: watch }, null, 2);
+  try { await navigator.clipboard.writeText(text); } catch (e) { prompt("Copy this text:", text); }
+  $("#wHelp").hidden = false;
+  window.open(`https://github.com/${REPO}/edit/main/data/watchlist.json`, "_blank");
+});
+$("#wLoad").addEventListener("click", async () => { watch = null; store.set("watch", null); await ensureWatch(); renderWatch(); toast("Loaded the robot's list"); });
+
+$("#tAdd").addEventListener("click", () => {
+  const m = item($("#tItem").value), qty = parseGP($("#tQty").value), buy = parseGP($("#tBuy").value), sellRaw = $("#tSell").value.trim();
+  if (!m) return toast("Pick an item from the suggestions");
+  if (!qty || !buy) return toast("Enter a quantity and the price you bought at");
+  const sell = sellRaw ? parseGP(sellRaw) : null;
+  if (sellRaw && isNaN(sell)) return toast("The sold price isn't a number");
+  trades.push({ id: Date.now(), acct: $("#tAcct").value, itemId: m.id, name: m.name, qty, buy, sell, opened: new Date().toISOString() });
+  store.set("trades", trades); $("#tItem").value = $("#tQty").value = $("#tBuy").value = $("#tSell").value = ""; renderTrades(); toast("Trade logged");
+});
+$("#tradeList").addEventListener("click", e => {
+  const sid = e.target.dataset.sell, did = e.target.dataset.tdel;
+  if (sid) { const t = trades.find(x => x.id == sid); const p = parseGP(prompt(`Sold ${t.name} at what price each?`, "")); if (p) { t.sell = p; t.closed = new Date().toISOString(); store.set("trades", trades); renderTrades(); } }
+  if (did && confirm("Delete this trade?")) { trades = trades.filter(x => x.id != did); store.set("trades", trades); renderTrades(); }
+});
+$("#tFilter").addEventListener("change", renderTrades);
+$("#aAdd").addEventListener("click", () => { const n = $("#aName").value.trim(); if (!n || accounts.includes(n)) return; accounts.push(n); store.set("accounts", accounts); $("#aName").value = ""; renderAccounts(); toast("Added " + n); });
+$("#tExport").addEventListener("click", () => {
+  const blob = new Blob([JSON.stringify({ accounts, trades }, null, 1)], { type: "application/json" });
+  const a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = "ge-copilot-trades.json"; a.click();
+});
+$("#tImport").addEventListener("change", async e => {
+  try {
+    const d = JSON.parse(await e.target.files[0].text());
+    const ids = new Set(trades.map(t => t.id));
+    trades = trades.concat((d.trades || []).filter(t => !ids.has(t.id)));
+    accounts = [...new Set([...accounts, ...(d.accounts || [])])];
+    store.set("trades", trades); store.set("accounts", accounts); renderAccounts(); renderTrades(); toast("Trades imported");
+  } catch (err) { toast("That file isn't a GE Copilot export"); }
+});
+
+window.addEventListener("hashchange", show);
+show();
+setInterval(async () => { if (document.visibilityState === "visible") { await loadMarket(true); show(); } }, 120000);
+</script>
+</body>
+</html>
