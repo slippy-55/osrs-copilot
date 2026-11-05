@@ -6,7 +6,7 @@ Once a day:  quick AI scan of news + roadmap (Claude Haiku, cheap).
 Sundays:     deep AI scan (Claude Sonnet).
 Results are saved in the data/ folder, which the app reads.
 """
-import os, json, time, math, difflib, datetime as dt
+import os, re, json, time, math, difflib, datetime as dt
 import xml.etree.ElementTree as ET
 import requests
 
@@ -38,10 +38,14 @@ Patterns that work:
 - Gear nerfs/buffs, best-in-slot changes, buy-limit changes, new Slayer monsters,
   new Farming patches (seed demand), skill reworks, seasonal events.
 - Second-order effects: what is the in-demand item made from?
+Only name items that can be traded on the Grand Exchange. If content affects an untradeable
+item, follow it to the tradeable item it turns into (e.g. Marks of Grace -> Amylase crystal ->
+Stamina potion). Ideas with no tradeable items are thrown away.
 Stress-test every idea: cheaper substitutes? already priced in? how elastic is supply
 (boss-drop-only items spike harder than skilled or botted items)?
 Use web search on oldschool.runescape.wiki to verify weaknesses, requirements and recipes.
-Reply with ONLY a JSON object, no other text:
+Keep every text field under 40 words.
+Reply with ONLY a JSON object, starting with { and ending with }, no other text:
 {"theses":[{"title":"","trigger":"","release":"","mechanism":"","direction":"up or down",
 "items":["exact OSRS item names"],"substitutes":"","confidence":"low, medium or high",
 "entry_plan":"","exit_plan":"","what_would_kill_it":""}]}"""
@@ -214,7 +218,7 @@ def call_claude(mode, prompt):
     usage = {"in": 0, "out": 0, "searches": 0}
     text = ""
     for _ in range(4):  # handle "pause_turn" when searches run long
-        body = {"model": model, "max_tokens": 4000, "system": PLAYBOOK, "messages": messages,
+        body = {"model": model, "max_tokens": 8000, "system": PLAYBOOK, "messages": messages,
                 "tools": [{"type": "web_search_20250305", "name": "web_search",
                            "max_uses": searches}]}
         r = requests.post("https://api.anthropic.com/v1/messages", json=body, timeout=600,
@@ -241,6 +245,29 @@ def call_claude(mode, prompt):
     return text, usage
 
 
+def parse_theses(text):
+    """Read the AI's JSON. If the reply was cut off, rescue the ideas that are complete."""
+    t = text.replace("```json", "").replace("```", "")
+    dec = json.JSONDecoder()
+    start = t.find("{")
+    if start >= 0:
+        try:
+            obj, _ = dec.raw_decode(t[start:])
+            if isinstance(obj, dict) and isinstance(obj.get("theses"), list):
+                return obj["theses"]
+        except Exception:
+            pass
+    out = []
+    for m in re.finditer(r'\{\s*"title"', t):
+        try:
+            obj, _ = dec.raw_decode(t[m.start():])
+            if isinstance(obj, dict) and obj.get("title"):
+                out.append(obj)
+        except Exception:
+            continue
+    return out
+
+
 def run_ai(mode, by_id, by_name, latest, vol_now, vol_yday):
     if not os.environ.get("ANTHROPIC_API_KEY"):
         print("No ANTHROPIC_API_KEY set, skipping AI picks")
@@ -265,11 +292,7 @@ def run_ai(mode, by_id, by_name, latest, vol_now, vol_yday):
         discord(f"⚠️ AI picks failed: {e}")
         print(e)
         return
-    try:
-        clean = text.replace("```json", "").replace("```", "")
-        theses = json.loads(clean[clean.find("{"): clean.rfind("}") + 1]).get("theses", [])
-    except Exception:
-        theses = []
+    theses = parse_theses(text)
     now_iso = dt.datetime.now(dt.timezone.utc).isoformat(timespec="minutes")
     for t in theses:
         found = []
@@ -282,6 +305,9 @@ def run_ai(mode, by_id, by_name, latest, vol_now, vol_yday):
             else:
                 found.append({"name": name, "id": None})
         t["items"] = found
+    total = len(theses)
+    theses = [t for t in theses if any(i["id"] for i in t["items"])]
+    dropped = total - len(theses)
     picks = {"generated": now_iso, "mode": mode, "model": usage["model"], "theses": theses,
              "cost_usd": usage["usd"], "last_deep": old.get("last_deep")}
     if mode == "deep":
@@ -306,6 +332,8 @@ def run_ai(mode, by_id, by_name, latest, vol_now, vol_yday):
     month_total = sum(r["usd"] for r in costs["runs"] if r["date"].startswith(month))
     lines = [f"🧠 **New {'deep' if mode == 'deep' else 'daily'} picks** "
              f"(cost ${usage['usd']:.3f}, this month ${month_total:.2f})"]
+    if dropped:
+        lines.append(f"_{dropped} idea(s) dropped because their items can't be traded._")
     for t in theses:
         arrow = "📈" if t.get("direction", "").startswith("up") else "📉"
         names = ", ".join(i["name"] for i in t["items"][:4])
