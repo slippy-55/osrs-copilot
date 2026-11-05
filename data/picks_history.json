@@ -244,6 +244,109 @@
      "low_then": 1600
     }
    ]
+  },
+  {
+   "date": "2026-11-05T17:33+00:00",
+   "title": "Law altar portal move lifts law rune supply",
+   "idea": "i13",
+   "direction": "down",
+   "items": [
+    {
+     "name": "Law rune",
+     "id": 563,
+     "limit": 18000,
+     "high_then": 120,
+     "low_then": 115
+    }
+   ]
+  },
+  {
+   "date": "2026-11-05T17:33+00:00",
+   "title": "Underwater jewellery production floods bars and jewellery",
+   "idea": "i14",
+   "direction": "down",
+   "items": [
+    {
+     "name": "Gold bar",
+     "id": 2357,
+     "limit": 10000,
+     "high_then": 65,
+     "low_then": 64
+    },
+    {
+     "name": "Sapphire bracelet",
+     "id": 11072,
+     "limit": 10000,
+     "high_then": 542,
+     "low_then": 410
+    }
+   ]
+  },
+  {
+   "date": "2026-11-05T17:33+00:00",
+   "title": "Mining and Smithing rework could move ore and bar prices",
+   "idea": "i15",
+   "direction": "down",
+   "items": [
+    {
+     "name": "Runite ore",
+     "id": 451,
+     "limit": 4500,
+     "high_then": 10238,
+     "low_then": 10100
+    },
+    {
+     "name": "Runite bar",
+     "id": 2363,
+     "limit": 10000,
+     "high_then": 12010,
+     "low_then": 12007
+    }
+   ]
+  },
+  {
+   "date": "2026-11-05T17:33+00:00",
+   "title": "Jagex Account migration may cut bot supply of botted goods",
+   "idea": "i16",
+   "direction": "up",
+   "items": [
+    {
+     "name": "Raw cave eel",
+     "id": 5001,
+     "limit": 13000,
+     "high_then": 49,
+     "low_then": 21
+    },
+    {
+     "name": "Raw yellowfin",
+     "id": 32325,
+     "limit": 15000,
+     "high_then": 621,
+     "low_then": 621
+    }
+   ]
+  },
+  {
+   "date": "2026-11-05T17:33+00:00",
+   "title": "Quest Month free combat gear weakens basic gear prices",
+   "idea": "i17",
+   "direction": "down",
+   "items": [
+    {
+     "name": "Wooden shield",
+     "id": 1171,
+     "limit": 125,
+     "high_then": 90,
+     "low_then": 51
+    },
+    {
+     "name": "Iron scimitar",
+     "id": 1323,
+     "limit": 125,
+     "high_then": 166,
+     "low_then": 141
+    }
+   ]
   }
  ]
 }

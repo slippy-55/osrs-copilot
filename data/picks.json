@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-05T17:04+00:00",
+ "generated": "2026-11-05T17:33+00:00",
  "mode": "deep",
  "model": "claude-sonnet-5-5",
  "theses": [
@@ -10,6 +10,15 @@
    "evidence": "The tradeable Amulet of Sight is a quest reward, the first is free, and Hudson sells more. First-day price was 381 GP. https://www.gielinorgains.com/game-updates/2026-11-03-quest-month-kick-off-tfa-tweaks-and-more",
    "mechanism": "Every quester gets a free amulet, and an NPC sells unlimited copies. Supply is effectively uncapped, so the price should drift toward the Hudson shop price.",
    "direction": "down",
+   "substitutes": "Hudson's shop is a perfect substitute. The amulet is also only +10 Ranged attack.",
+   "confidence": "high",
+   "action": "Avoid holding",
+   "action_detail": "Don't buy. If you hold any, sell into early demand now. Check Hudson's price to find the floor.",
+   "exit_plan": "Re-evaluate only if the price falls to the Hudson price and holds there.",
+   "what_would_kill_it": "Heavy pure or Ranged-account demand creates a stable premium. Alternatively, Jagex limits Hudson's stock.",
+   "id": "i1",
+   "status": "open",
+   "first_seen": "2026-11-05",
    "items": [
     {
      "name": "Amulet of sight",
@@ -19,20 +28,36 @@
      "low_then": 880
     }
    ],
-   "substitutes": "Hudson's shop is a perfect substitute. The amulet is also only +10 Ranged attack.",
-   "confidence": "high",
-   "action": "Avoid holding",
-   "action_detail": "Don't buy. If you hold any, sell into early demand now. Check Hudson's price to find the floor.",
-   "exit_plan": "Re-evaluate only if the price falls to the Hudson price and holds there.",
-   "what_would_kill_it": "Heavy pure or Ranged-account demand creates a stable premium. Alternatively, Jagex limits Hudson's stock."
+   "history": [
+    {
+     "date": "2026-11-05",
+     "verdict": "carried over",
+     "reason": "Raised by an earlier scan, waiting for review"
+    },
+    {
+     "date": "2026-11-05",
+     "verdict": "keep",
+     "reason": "Wiki confirms Sergeant Hudson sells extra amulets after the quest, so supply is uncapped. Nothing has changed."
+    }
+   ],
+   "last_reviewed": "2026-11-05"
   },
   {
    "title": "Graveyard marks flood amylase and stamina",
    "trigger": "The Graveyard master quest unlocks a 65+ Agility course. Jagex says it will be the best Marks of Grace source.",
    "release": "November 2026 (exact day not confirmed)",
-   "evidence": "<cite index=\"21-11\">The blog says 30+ Marks of Grace per hour at the top end, aiming to be the best source in the game.</cite> <cite index=\"47-3\">Marks buy amylase, the stamina potion secondary.</cite> https://secure.runescape.com/m=news/the-graveyard---rewards-blog?oldschool=1",
+   "evidence": "Graveyard blog aims for 30+ Marks/hr, the best in the game. Graceful rework proposal refunds duplicate pieces in Marks. Marks buy amylase. https://secure.runescape.com/m=news/the-graveyard---rewards-blog?oldschool=1",
    "mechanism": "More marks per hour means more amylase packs, since 10 marks buy 100 crystals. That adds amylase supply and lowers Stamina potion costs. The effect is gradual.",
    "direction": "down",
+   "substitutes": "Existing rooftop courses already supply marks. Jagex says Ardougne beats the Graveyard's low-intensity option.",
+   "confidence": "medium",
+   "action": "Sell if holding",
+   "action_detail": "Sell amylase stock before the quest drops. Don't stockpile stamina ingredients. Re-check after launch day for marks-per-hour reality.",
+   "exit_plan": "Buy back after the price drops 10-15% and the post-launch flood stabilises.",
+   "what_would_kill_it": "The master quest gate limits early participation. Or Jagex nerfs mark rates after launch feedback.",
+   "id": "i2",
+   "status": "open",
+   "first_seen": "2026-11-05",
    "items": [
     {
      "name": "Amylase crystal",
@@ -49,12 +74,20 @@
      "low_then": 2104
     }
    ],
-   "substitutes": "Existing rooftop courses already supply marks. Jagex says Ardougne beats the Graveyard's low-intensity option.",
-   "confidence": "medium",
-   "action": "Sell if holding",
-   "action_detail": "Sell amylase stock before the quest drops. Don't stockpile stamina ingredients. Re-check after launch day for marks-per-hour reality.",
-   "exit_plan": "Buy back after the price drops 10-15% and the post-launch flood stabilises.",
-   "what_would_kill_it": "The master quest gate limits early participation. Or Jagex nerfs mark rates after launch feedback."
+   "history": [
+    {
+     "date": "2026-11-05",
+     "verdict": "carried over",
+     "reason": "Raised by an earlier scan, waiting for review"
+    },
+    {
+     "date": "2026-11-05",
+     "verdict": "update",
+     "reason": "Blog also says duplicate Graceful pieces would be refunded in Marks if the rework is approved. That would be a one-off extra supply of Marks. Release date is only 'November'."
+    }
+   ],
+   "recheck_when": "Graveyard release date; Graceful rework poll result",
+   "last_reviewed": "2026-11-05"
   },
   {
    "title": "Underwater gem rocks cut gem prices",
@@ -63,6 +96,15 @@
    "evidence": "Unconfirmed: poll outcome and gem rates. <cite index=\"29-7,29-8\">Precious rocks (65 Mining) give uncut sapphires, emeralds, rubies and diamonds. Exotic rocks (75 Mining) give opals, jades and red topazes.</cite> https://oldschool.runescape.wiki/w/Update:Deep_Sea_Diving_Expansion",
    "mechanism": "New mineable gem supply at high levels should lower raw uncut gem prices if the area passes its poll and rates are decent. Opal, jade and topaz are most exposed.",
    "direction": "down",
+   "substitutes": "Shilo Village gem rocks, existing mining and drops. Skilled supply is elastic, so the drop is limited.",
+   "confidence": "low",
+   "action": "Watch",
+   "action_detail": "Wait for poll results and rates. Sell any large uncut gem stock before release if the poll passes.",
+   "exit_plan": "If rates are low or the poll fails, ignore the idea.",
+   "what_would_kill_it": "The poll fails, rates are poor, or the 65-75 Mining and Sailing gates keep participation small.",
+   "id": "i3",
+   "status": "open",
+   "first_seen": "2026-11-05",
    "items": [
     {
      "name": "Uncut diamond",
@@ -100,12 +142,19 @@
      "low_then": 742
     }
    ],
-   "substitutes": "Shilo Village gem rocks, existing mining and drops. Skilled supply is elastic, so the drop is limited.",
-   "confidence": "low",
-   "action": "Watch",
-   "action_detail": "Wait for poll results and rates. Sell any large uncut gem stock before release if the poll passes.",
-   "exit_plan": "If rates are low or the poll fails, ignore the idea.",
-   "what_would_kill_it": "The poll fails, rates are poor, or the 65-75 Mining and Sailing gates keep participation small."
+   "history": [
+    {
+     "date": "2026-11-05",
+     "verdict": "carried over",
+     "reason": "Raised by an earlier scan, waiting for review"
+    },
+    {
+     "date": "2026-11-05",
+     "verdict": "keep",
+     "reason": "Deep Sea Diving poll is still TBD and the update is early 2027. The evidence is unchanged, so it stays a low-confidence Watch."
+    }
+   ],
+   "last_reviewed": "2026-11-05"
   },
   {
    "title": "Underwater farming patches lift rare seeds",
@@ -114,19 +163,28 @@
    "evidence": "Unconfirmed: poll result and seed requirements. <cite index=\"32-10\">The proposal includes an underwater cave farming area with Spirit Tree, Celastrus, Mushroom and Hardwood Tree patches.</cite> https://mmohuts.com/news/old-school-runescape-proposes-deep-sea-diving-and-burial-at-sea-quest",
    "mechanism": "Extra patches mean extra seed demand per player. Spirit and celastrus seeds are rare, so they are most sensitive. Mahogany is secondary.",
    "direction": "up",
+   "substitutes": "Players can skip the patches, and existing patches already supply the produce.",
+   "confidence": "low",
+   "action": "Watch",
+   "action_detail": "Wait for the poll result. If it passes, buy a small amount of Spirit and Celastrus seeds on the release date announcement.",
+   "exit_plan": "Sell into the first-week spike after release.",
+   "what_would_kill_it": "The farming area fails its poll, or Sailing and Burial at Sea gates keep early demand small.",
+   "id": "i4",
+   "status": "open",
+   "first_seen": "2026-11-05",
    "items": [
     {
      "name": "Irit seed",
      "id": 5297,
      "limit": 600,
      "high_then": 81,
-     "low_then": 80
+     "low_then": 74
     },
     {
      "name": "Celastrus seed",
      "id": 22869,
      "limit": 200,
-     "high_then": 16479,
+     "high_then": 16315,
      "low_then": 16162
     },
     {
@@ -134,23 +192,40 @@
      "id": 21488,
      "limit": 200,
      "high_then": 119,
-     "low_then": 78
+     "low_then": 75
     }
    ],
-   "substitutes": "Players can skip the patches, and existing patches already supply the produce.",
-   "confidence": "low",
-   "action": "Watch",
-   "action_detail": "Wait for the poll result. If it passes, buy a small amount of Spirit and Celastrus seeds on the release date announcement.",
-   "exit_plan": "Sell into the first-week spike after release.",
-   "what_would_kill_it": "The farming area fails its poll, or Sailing and Burial at Sea gates keep early demand small."
+   "history": [
+    {
+     "date": "2026-11-05",
+     "verdict": "carried over",
+     "reason": "Raised by an earlier scan, waiting for review"
+    },
+    {
+     "date": "2026-11-05",
+     "verdict": "update",
+     "reason": "Irit seed is not connected to any proposed patch, so I removed it. The remaining items match the patch types in the proposal. The poll is still pending."
+    }
+   ],
+   "recheck_when": "Deep Sea Diving poll result on the farming area question",
+   "last_reviewed": "2026-11-05"
   },
   {
    "title": "Zanik crossbow may replace Dorgeshuun crossbow",
    "trigger": "The Chosen Commander backport rewards Zanik's Modified Crossbow, a stronger version of the Dorgeshuun crossbow's defence-drain special.",
    "release": "Early 2027",
-   "evidence": "Unconfirmed: whether Zanik's crossbow is tradeable, plus its stats and requirements. Wiki upcoming-updates page says its special is a stronger defence-draining version of the Dorgeshuun crossbow. https://oldschool.runescape.wiki/w/Upcoming_updates",
+   "evidence": "Unconfirmed: whether it is tradeable, and whether it fires normal bolts. Wiki: proposed reward with rune crossbow stats and a Defence-reducing special. https://oldschool.runescape.wiki/w/Zanik's_Modified_Crossbow",
    "mechanism": "If the quest reward is untradeable and stronger, the Dorgeshuun crossbow loses its niche. If the reward is tradeable, it takes demand and sets a new price.",
    "direction": "down",
+   "substitutes": "The Dorgeshuun crossbow may keep demand if Zanik's version is slower or limited.",
+   "confidence": "low",
+   "action": "Watch",
+   "action_detail": "Wait for the Chosen Commander rewards blog and poll details. Sell any Dorgeshuun crossbows only if the replacement is clearly better and untradeable.",
+   "exit_plan": "Exit before release if the details confirm a stronger replacement.",
+   "what_would_kill_it": "Zanik's crossbow has weak stats, a high requirement, or limited use. The Dorgeshuun crossbow keeps its niche.",
+   "id": "i5",
+   "status": "open",
+   "first_seen": "2026-11-05",
    "items": [
     {
      "name": "Dorgeshuun crossbow",
@@ -160,14 +235,482 @@
      "low_then": 1600
     }
    ],
-   "substitutes": "The Dorgeshuun crossbow may keep demand if Zanik's version is slower or limited.",
+   "history": [
+    {
+     "date": "2026-11-05",
+     "verdict": "carried over",
+     "reason": "Raised by an earlier scan, waiting for review"
+    },
+    {
+     "date": "2026-11-05",
+     "verdict": "update",
+     "reason": "Wiki says Zanik's crossbow is a proposed reward with rune crossbow stats and a defence-reducing special. It does not say whether it is tradeable. The quest is early 2027. This also absorbs the duplicate idea i10."
+    }
+   ],
+   "recheck_when": "The Chosen Commander rewards blog",
+   "last_reviewed": "2026-11-05"
+  },
+  {
+   "date": "2026-11-05T15:58+00:00",
+   "title": "Menaphos soul altar increases soul rune supply",
+   "direction": "down",
+   "id": "i9",
+   "status": "open",
+   "first_seen": "2026-11-05T15:58+00:00",
+   "items": [
+    {
+     "name": "Soul rune",
+     "id": 566,
+     "limit": 25000,
+     "high_then": 303,
+     "low_then": 293
+    }
+   ],
+   "history": [
+    {
+     "date": "2026-11-05",
+     "verdict": "carried over",
+     "reason": "Raised by an earlier scan, waiting for review"
+    },
+    {
+     "date": "2026-11-05",
+     "verdict": "update",
+     "reason": "Wiki confirms soul rune crafting at 90 Runecraft in Menaphos. Rune rates are not announced and the release is Spring 2027, so this is a low-confidence Watch."
+    }
+   ],
+   "action": "Watch",
+   "confidence": "low",
+   "evidence": "Unconfirmed: runes per hour and XP rates. Wiki: Menaphos adds the true Soul Altar, with soul runes craftable at 90 Runecraft. https://oldschool.runescape.wiki/w/Upcoming_updates",
+   "recheck_when": "Menaphos rewards or Soul Altar blog",
+   "last_reviewed": "2026-11-05"
+  },
+  {
+   "date": "2026-11-05T15:58+00:00",
+   "title": "Gemstone dragons raise antifire and dragonbane demand",
+   "direction": "up",
+   "id": "i12",
+   "status": "open",
+   "first_seen": "2026-11-05T15:58+00:00",
+   "items": [
+    {
+     "name": "Antifire potion(4)",
+     "id": 2452,
+     "limit": 2000,
+     "high_then": 694,
+     "low_then": 675
+    },
+    {
+     "name": "Dragon hunter lance",
+     "id": 22978,
+     "limit": 8,
+     "high_then": 37450000,
+     "low_then": 36595563
+    }
+   ],
+   "history": [
+    {
+     "date": "2026-11-05",
+     "verdict": "carried over",
+     "reason": "Raised by an earlier scan, waiting for review"
+    },
+    {
+     "date": "2026-11-05",
+     "verdict": "update",
+     "reason": "No confirmed weakness for Gemstone Dragons. Dragon arrowtips and Onyx bolts have no source behind them. One third-party source says antifire is needed and that dragon-hunter gear is relevant, so I narrowed the items to those two."
+    }
+   ],
+   "action": "Watch",
+   "confidence": "low",
+   "evidence": "Unconfirmed: official weaknesses and drop tables. Wiki confirms Gemstone Dragons and the Diamond Dragon in a Varlamore dungeon. A third-party summary says to bring antifires. https://oldschool.runescape.wiki/w/Upcoming_updates",
+   "recheck_when": "Dungeons of Gielinor boss blog",
+   "last_reviewed": "2026-11-05"
+  },
+  {
+   "title": "Law altar portal move lifts law rune supply",
+   "trigger": "Gathering Efficiencies QoL moves the portal closer to the Law Altar",
+   "release": "2026-11-11",
+   "evidence": "The Wiki upcoming-updates page lists moving the portal closer to the Law Altar as a Gathering Efficiencies change not yet added. Release date is November 11th. https://oldschool.runescape.wiki/w/Upcoming_updates",
+   "mechanism": "Faster law rune runs mean more runes per hour, so supply rises slightly and the price drifts down.",
+   "direction": "down",
+   "items": [
+    {
+     "name": "Law rune",
+     "id": 563,
+     "limit": 18000,
+     "high_then": 120,
+     "low_then": 115
+    }
+   ],
+   "substitutes": "Law runes are also made by other players and bought from other sources. The effect is likely small.",
+   "confidence": "low",
+   "action": "Avoid holding",
+   "action_detail": "Don't hold a law rune stockpile into November 11th. Check price trend after release.",
+   "exit_plan": "Reassess about a week after release once the price has settled.",
+   "what_would_kill_it": "Law altar runs stay slow, or the update slips and the portal move is cut.",
+   "recheck_when": "November 11th update notes",
+   "id": "i13",
+   "status": "open",
+   "first_seen": "2026-11-05",
+   "last_reviewed": "2026-11-05",
+   "history": [
+    {
+     "date": "2026-11-05",
+     "verdict": "new",
+     "reason": "First raised"
+    }
+   ]
+  },
+  {
+   "title": "Underwater jewellery production floods bars and jewellery",
+   "trigger": "Deep Sea Diving jewellery production sites with faster-respawn gold and silver rocks and vent furnaces",
+   "release": "Early 2027",
+   "evidence": "Unconfirmed: poll result, jewellery types and rates. The Jagex blog proposes gold and silver rocks with faster respawn, plus vents that act as furnaces. https://oldschool.runescape.wiki/w/Update:Deep_Sea_Diving_Expansion",
+   "mechanism": "A faster, semi-automated source of gold and silver and of cut jewellery raises supply and lowers prices.",
+   "direction": "down",
+   "items": [
+    {
+     "name": "Gold bar",
+     "id": 2357,
+     "limit": 10000,
+     "high_then": 65,
+     "low_then": 64
+    },
+    {
+     "name": "Sapphire bracelet",
+     "id": 11072,
+     "limit": 10000,
+     "high_then": 542,
+     "low_then": 410
+    }
+   ],
+   "substitutes": "Existing jewellery methods and Shilo gem rocks, and Sailing-level gating limits who can use it.",
    "confidence": "low",
    "action": "Watch",
-   "action_detail": "Wait for the Chosen Commander rewards blog and poll details. Sell any Dorgeshuun crossbows only if the replacement is clearly better and untradeable.",
-   "exit_plan": "Exit before release if the details confirm a stronger replacement.",
-   "what_would_kill_it": "Zanik's crossbow has weak stats, a high requirement, or limited use. The Dorgeshuun crossbow keeps its niche."
+   "action_detail": "Wait for the poll result and jewellery details. Do not trade before they are known.",
+   "exit_plan": "If the poll fails, drop it. If it passes, check the rates blog.",
+   "what_would_kill_it": "The jewellery poll question fails, or the vent only works for low-value items.",
+   "recheck_when": "Deep Sea Diving poll result",
+   "id": "i14",
+   "status": "open",
+   "first_seen": "2026-11-05",
+   "last_reviewed": "2026-11-05",
+   "history": [
+    {
+     "date": "2026-11-05",
+     "verdict": "new",
+     "reason": "First raised"
+    }
+   ]
+  },
+  {
+   "title": "Mining and Smithing rework could move ore and bar prices",
+   "trigger": "Mining and Smithing Reforged skill rework passed its poll",
+   "release": "Summer 2027",
+   "evidence": "Unconfirmed: all rework details, including rates and recipes. The Wiki upcoming-updates page lists the rework as passed, with no details yet determined. https://oldschool.runescape.wiki/w/Upcoming_updates",
+   "mechanism": "Reworks often change gathering rates and recipes. Faster or easier ore supply would lower ore and bar prices, though the direction is not yet known.",
+   "direction": "down",
+   "items": [
+    {
+     "name": "Runite ore",
+     "id": 451,
+     "limit": 4500,
+     "high_then": 10238,
+     "low_then": 10100
+    },
+    {
+     "name": "Runite bar",
+     "id": 2363,
+     "limit": 10000,
+     "high_then": 12010,
+     "low_then": 12007
+    }
+   ],
+   "substitutes": "Any new recipes could shift demand to other bars instead.",
+   "confidence": "low",
+   "action": "Watch",
+   "action_detail": "Wait for the design blog. Take no position until recipes and rates are revealed.",
+   "exit_plan": "If the blog shows a supply buff, sell holdings before release. If it shows a demand sink, flip the idea.",
+   "what_would_kill_it": "The rework lowers supply or adds sinks, or details show only cosmetic changes.",
+   "recheck_when": "Mining and Smithing Reforged blog",
+   "id": "i15",
+   "status": "open",
+   "first_seen": "2026-11-05",
+   "last_reviewed": "2026-11-05",
+   "history": [
+    {
+     "date": "2026-11-05",
+     "verdict": "new",
+     "reason": "First raised"
+    }
+   ]
+  },
+  {
+   "title": "Jagex Account migration may cut bot supply of botted goods",
+   "trigger": "The full transition to Jagex Accounts begins on November 17th",
+   "release": "2026-11-17",
+   "evidence": "Unconfirmed: whether legacy accounts lose access and how many bots are affected. Jagex blog 'Jagex Accounts: Migration Begins Nov 17' (16 Oct 2026). https://secure.runescape.com/m=news/jagex-accounts-migration-begins-nov-17?oldschool=1",
+   "mechanism": "If unmigrated accounts get locked out, bot-heavy items could see supply fall. The raw fish items had unusually heavy trading today, though no cause is confirmed.",
+   "direction": "up",
+   "items": [
+    {
+     "name": "Raw cave eel",
+     "id": 5001,
+     "limit": 13000,
+     "high_then": 49,
+     "low_then": 21
+    },
+    {
+     "name": "Raw yellowfin",
+     "id": 32325,
+     "limit": 15000,
+     "high_then": 621,
+     "low_then": 621
+    }
+   ],
+   "substitutes": "Botters can migrate accounts and the items have many substitutes, so any effect is likely small.",
+   "confidence": "low",
+   "action": "Watch",
+   "action_detail": "Watch prices around November 17th and check whether any ban wave or lockout news follows.",
+   "exit_plan": "Drop the idea if prices stay flat for two weeks after migration.",
+   "what_would_kill_it": "Migration is soft with no lockout, or bots migrate with no loss of volume.",
+   "recheck_when": "Migration deadline details and any ban wave announcement",
+   "id": "i16",
+   "status": "open",
+   "first_seen": "2026-11-05",
+   "last_reviewed": "2026-11-05",
+   "history": [
+    {
+     "date": "2026-11-05",
+     "verdict": "new",
+     "reason": "First raised"
+    }
+   ]
+  },
+  {
+   "title": "Quest Month free combat gear weakens basic gear prices",
+   "trigger": "Captain Harlan gives free basic equipment for each combat style every 30 minutes after Mudfoot's Big Adventure",
+   "release": "2026-11-03 (live)",
+   "evidence": "Wiki says Captain Harlan offers free equipment for all three combat styles every 30 minutes once the player has progressed far enough. https://oldschool.runescape.wiki/w/Captain_Harlan",
+   "mechanism": "Newer accounts get free bronze-tier weapons and starter runes, so demand for the cheapest starter gear falls. Prices are very low, so the profit is small.",
+   "direction": "down",
+   "items": [
+    {
+     "name": "Wooden shield",
+     "id": 1171,
+     "limit": 125,
+     "high_then": 90,
+     "low_then": 51
+    },
+    {
+     "name": "Iron scimitar",
+     "id": 1323,
+     "limit": 125,
+     "high_then": 166,
+     "low_then": 141
+    }
+   ],
+   "substitutes": "Players can already get this gear cheaply through other routes, and the item prices are already near the floor.",
+   "confidence": "low",
+   "action": "Avoid holding",
+   "action_detail": "Don't stockpile cheap starter gear. There is no real trade here, only a reason not to hold.",
+   "exit_plan": "None needed, as nothing is held.",
+   "what_would_kill_it": "Prices are already at the floor and the free gear is limited to quest-only items.",
+   "recheck_when": "Any change to Captain Harlan's free gear",
+   "id": "i17",
+   "status": "open",
+   "first_seen": "2026-11-05",
+   "last_reviewed": "2026-11-05",
+   "history": [
+    {
+     "date": "2026-11-05",
+     "verdict": "new",
+     "reason": "First raised"
+    }
+   ]
   }
  ],
- "cost_usd": 0.4172,
+ "dropped": [
+  {
+   "date": "2026-11-05T16:18+00:00",
+   "title": "Diamond Dragon boss arrival boosts arrow demand",
+   "direction": "up",
+   "id": "i6",
+   "status": "dropped",
+   "first_seen": "2026-11-05T16:18+00:00",
+   "items": [
+    {
+     "name": "Dragon arrow",
+     "id": 11212,
+     "limit": 11000,
+     "high_then": 2499,
+     "low_then": 2495
+    }
+   ],
+   "history": [
+    {
+     "date": "2026-11-05",
+     "verdict": "carried over",
+     "reason": "Raised by an earlier scan, waiting for review"
+    },
+    {
+     "date": "2026-11-05",
+     "verdict": "drop",
+     "reason": "No confirmed arrow-based weakness for the Diamond Dragon. Wiki only confirms the boss exists in a Varlamore dungeon. The release is Spring 2027, and i12 covers this area."
+    }
+   ],
+   "dropped_on": "2026-11-05",
+   "drop_reason": "No confirmed arrow-based weakness for the Diamond Dragon. Wiki only confirms the boss exists in a Varlamore dungeon. The release is Spring 2027, and i12 covers this area.",
+   "last_reviewed": "2026-11-05"
+  },
+  {
+   "date": "2026-11-05T16:18+00:00",
+   "title": "Menaphos soul altar adds soul rune supply",
+   "direction": "down",
+   "id": "i7",
+   "status": "dropped",
+   "first_seen": "2026-11-05T16:18+00:00",
+   "items": [
+    {
+     "name": "Soul rune",
+     "id": 566,
+     "limit": 25000,
+     "high_then": 299,
+     "low_then": 294
+    }
+   ],
+   "history": [
+    {
+     "date": "2026-11-05",
+     "verdict": "carried over",
+     "reason": "Raised by an earlier scan, waiting for review"
+    },
+    {
+     "date": "2026-11-05",
+     "verdict": "drop",
+     "reason": "Duplicate of i9."
+    }
+   ],
+   "dropped_on": "2026-11-05",
+   "drop_reason": "Duplicate of i9.",
+   "last_reviewed": "2026-11-05"
+  },
+  {
+   "date": "2026-11-05T15:58+00:00",
+   "title": "Deep Sea Diving Slayer monsters increase supply of underwater drops",
+   "direction": "down",
+   "id": "i8",
+   "status": "dropped",
+   "first_seen": "2026-11-05T15:58+00:00",
+   "items": [
+    {
+     "name": "Abyssal dagger",
+     "id": 13265,
+     "limit": 8,
+     "high_then": 1006317,
+     "low_then": 954088
+    },
+    {
+     "name": "Abyssal whip",
+     "id": 4151,
+     "limit": 70,
+     "high_then": 690479,
+     "low_then": 660780
+    }
+   ],
+   "history": [
+    {
+     "date": "2026-11-05",
+     "verdict": "carried over",
+     "reason": "Raised by an earlier scan, waiting for review"
+    },
+    {
+     "date": "2026-11-05",
+     "verdict": "drop",
+     "reason": "Abyssal whip and dagger come from abyssal demons, and no source links them to the new Deep Sea Diving monsters. It was never well founded."
+    }
+   ],
+   "dropped_on": "2026-11-05",
+   "drop_reason": "Abyssal whip and dagger come from abyssal demons, and no source links them to the new Deep Sea Diving monsters. It was never well founded.",
+   "last_reviewed": "2026-11-05"
+  },
+  {
+   "date": "2026-11-05T15:58+00:00",
+   "title": "Chosen Commander's Zanik's crossbow undercuts the Dorgeshuun crossbow",
+   "direction": "down",
+   "id": "i10",
+   "status": "dropped",
+   "first_seen": "2026-11-05T15:58+00:00",
+   "items": [
+    {
+     "name": "Dorgeshuun crossbow",
+     "id": 8880,
+     "limit": 70,
+     "high_then": 3984,
+     "low_then": 1600
+    }
+   ],
+   "history": [
+    {
+     "date": "2026-11-05",
+     "verdict": "carried over",
+     "reason": "Raised by an earlier scan, waiting for review"
+    },
+    {
+     "date": "2026-11-05",
+     "verdict": "drop",
+     "reason": "Duplicate of i5."
+    }
+   ],
+   "dropped_on": "2026-11-05",
+   "drop_reason": "Duplicate of i5.",
+   "last_reviewed": "2026-11-05"
+  },
+  {
+   "date": "2026-11-05T15:58+00:00",
+   "title": "Deep Sea Diving farming patches drive seed demand",
+   "direction": "up",
+   "id": "i11",
+   "status": "dropped",
+   "first_seen": "2026-11-05T15:58+00:00",
+   "items": [
+    {
+     "name": "Irit seed",
+     "id": 5297,
+     "limit": 600,
+     "high_then": 65,
+     "low_then": 61
+    },
+    {
+     "name": "Celastrus seed",
+     "id": 22869,
+     "limit": 200,
+     "high_then": 16479,
+     "low_then": 16479
+    },
+    {
+     "name": "Redwood sapling",
+     "id": 22859,
+     "limit": 100,
+     "high_then": 15653,
+     "low_then": 13897
+    }
+   ],
+   "history": [
+    {
+     "date": "2026-11-05",
+     "verdict": "carried over",
+     "reason": "Raised by an earlier scan, waiting for review"
+    },
+    {
+     "date": "2026-11-05",
+     "verdict": "drop",
+     "reason": "Duplicate of i4. Irit seed and Redwood sapling are not tied to any announced patch."
+    }
+   ],
+   "dropped_on": "2026-11-05",
+   "drop_reason": "Duplicate of i4. Irit seed and Redwood sapling are not tied to any announced patch.",
+   "last_reviewed": "2026-11-05"
+  }
+ ],
  "last_deep": "2026-11-05"
 }
