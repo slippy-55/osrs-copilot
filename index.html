@@ -72,6 +72,9 @@ section[hidden] { display: none; }
 .controls input[type=text], .controls input[type=number], .controls select { background: var(--stone); border: 1px solid var(--edge); border-radius: 4px; padding: 8px 10px; min-width: 0; width: 100%; }
 .controls .grow { flex: 1 1 160px; }
 .controls .small { flex: 0 1 110px; }
+.gpin { display: flex; gap: 4px; }
+.gpin input { flex: 1 1 auto; min-width: 0; }
+.controls select.unit { width: auto; flex: 0 0 auto; padding: 8px 6px; }
 .check { display: flex !important; grid-auto-flow: column; align-items: center; gap: 6px; padding-bottom: 8px; }
 .btn { background: var(--slab-2); border: 1px solid var(--gold); color: var(--coin-y); border-radius: 4px; padding: 8px 14px; font-weight: 600; cursor: pointer; }
 .btn.quiet { border-color: var(--edge); color: var(--text); }
@@ -165,7 +168,7 @@ h3.sub { font-size: 1rem; margin: 18px 4px 8px; }
     <button class="preset" data-preset="custom">Custom<small>Your own filters</small></button>
   </div>
   <div class="controls">
-    <label class="small">GP to use<input id="cap" type="text" inputmode="decimal" value="10m"></label>
+    <label class="small">GP to use<span class="gpin"><input id="cap" type="text" inputmode="decimal" value="10"><select class="unit" id="capU" aria-label="Units"><option value="">gp</option><option value="k">k</option><option value="m" selected>m</option><option value="b">b</option></select></span></label>
     <label class="small">GE slots<input id="slots" type="number" inputmode="numeric" min="1" max="8" value="8"></label>
     <label class="small">Rank by<select id="sort"><option value="balanced">Balanced</option><option value="gph">GP per hour</option><option value="roi">Return on GP</option><option value="rel">Most reliable</option></select></label>
     <label class="grow">Search items<input id="fq" type="text" placeholder="e.g. rune"></label>
@@ -174,10 +177,10 @@ h3.sub { font-size: 1rem; margin: 18px 4px 8px; }
   <details class="more" id="moreFilters">
     <summary>More filters</summary>
     <div class="controls">
-      <label class="small">Min price each<input id="minPrice" type="text" inputmode="decimal" placeholder="e.g. 5m"></label>
-      <label class="small">Max price each<input id="maxPrice" type="text" inputmode="decimal" placeholder="no limit"></label>
+      <label class="small">Min price each<span class="gpin"><input id="minPrice" type="text" inputmode="decimal" placeholder="e.g. 5"><select class="unit" id="minPriceU" aria-label="Units"><option value="">gp</option><option value="k">k</option><option value="m" selected>m</option><option value="b">b</option></select></span></label>
+      <label class="small">Max price each<span class="gpin"><input id="maxPrice" type="text" inputmode="decimal" placeholder="no limit"><select class="unit" id="maxPriceU" aria-label="Units"><option value="">gp</option><option value="k">k</option><option value="m" selected>m</option><option value="b">b</option></select></span></label>
       <label class="small">Min trades/hour<input id="minvol" type="number" inputmode="numeric"></label>
-      <label class="small">Max quantity<input id="maxQty" type="text" inputmode="decimal" placeholder="no limit"></label>
+      <label class="small">Max quantity<span class="gpin"><input id="maxQty" type="text" inputmode="decimal" placeholder="no limit"><select class="unit" id="maxQtyU" aria-label="Units"><option value="" selected>gp</option><option value="k">k</option><option value="m">m</option><option value="b">b</option></select></span></label>
       <label class="small">Hours to wait<input id="hours" type="number" inputmode="decimal" min="0.25" step="0.25"></label>
       <label class="small">Inflated if above 7-day avg by %<input id="inflPct" type="number" inputmode="numeric" value="10"></label>
       <label class="check"><input id="hideInfl" type="checkbox" checked> Hide inflated prices</label>
@@ -198,7 +201,7 @@ h3.sub { font-size: 1rem; margin: 18px 4px 8px; }
 
 <section id="picks" hidden>
   <h2>Speculation picks</h2>
-  <p class="lede">Ideas from the AI scan of Jagex news and the roadmap. These are guesses, not certainties: check the "what would kill it" line before buying.</p>
+  <p class="lede">The AI's running list of ideas from Jagex news and the roadmap. Every scan reviews each idea and keeps, updates or drops it. These are guesses, not certainties: check the "what would kill it" line before buying.</p>
   <p class="meta" id="picksMeta"></p>
   <div id="picksList"></div>
 </section>
@@ -208,8 +211,8 @@ h3.sub { font-size: 1rem; margin: 18px 4px 8px; }
   <p class="lede">The robot checks these every 30 minutes and messages your Discord when a rule is hit. After changing the list, tap "Send to robot" and follow the steps.</p>
   <div class="controls">
     <label class="grow">Item<input id="wItem" type="text" list="itemNames" placeholder="Start typing an item"></label>
-    <label class="small">Alert below<input id="wBelow" type="text" inputmode="decimal" placeholder="e.g. 1.2m"></label>
-    <label class="small">Alert above<input id="wAbove" type="text" inputmode="decimal" placeholder="optional"></label>
+    <label class="small">Alert below<span class="gpin"><input id="wBelow" type="text" inputmode="decimal" placeholder="e.g. 1.2"><select class="unit" id="wBelowU" aria-label="Units"><option value="">gp</option><option value="k">k</option><option value="m" selected>m</option><option value="b">b</option></select></span></label>
+    <label class="small">Alert above<span class="gpin"><input id="wAbove" type="text" inputmode="decimal" placeholder="optional"><select class="unit" id="wAboveU" aria-label="Units"><option value="">gp</option><option value="k">k</option><option value="m" selected>m</option><option value="b">b</option></select></span></label>
     <label class="small">Volume spike x<input id="wSpike" type="number" inputmode="decimal" value="3"></label>
     <button class="btn" id="wAdd">Add item</button>
   </div>
@@ -228,9 +231,9 @@ h3.sub { font-size: 1rem; margin: 18px 4px 8px; }
   <div class="controls">
     <label class="small">Account<select id="tAcct"></select></label>
     <label class="grow">Item<input id="tItem" type="text" list="itemNames" placeholder="Start typing an item"></label>
-    <label class="small">Quantity<input id="tQty" type="text" inputmode="decimal" placeholder="e.g. 12"></label>
-    <label class="small">Bought at (each)<input id="tBuy" type="text" inputmode="decimal" placeholder="e.g. 1.1m"></label>
-    <label class="small">Sold at (each)<input id="tSell" type="text" inputmode="decimal" placeholder="leave empty if open"></label>
+    <label class="small">Quantity<span class="gpin"><input id="tQty" type="text" inputmode="decimal" placeholder="e.g. 12"><select class="unit" id="tQtyU" aria-label="Units"><option value="" selected>gp</option><option value="k">k</option><option value="m">m</option><option value="b">b</option></select></span></label>
+    <label class="small">Bought at (each)<span class="gpin"><input id="tBuy" type="text" inputmode="decimal" placeholder="e.g. 1.1"><select class="unit" id="tBuyU" aria-label="Units"><option value="">gp</option><option value="k">k</option><option value="m" selected>m</option><option value="b">b</option></select></span></label>
+    <label class="small">Sold at (each)<span class="gpin"><input id="tSell" type="text" inputmode="decimal" placeholder="leave empty if open"><select class="unit" id="tSellU" aria-label="Units"><option value="">gp</option><option value="k">k</option><option value="m" selected>m</option><option value="b">b</option></select></span></label>
     <button class="btn" id="tAdd">Log trade</button>
   </div>
   <div class="controls">
@@ -274,6 +277,18 @@ function parseGP(s) {
   const m = String(s ?? "").trim().toLowerCase().replace(/[, ]/g, "").match(/^(\d*\.?\d+)([kmb]?)$/);
   return m ? Math.round(parseFloat(m[1]) * { "": 1, k: 1e3, m: 1e6, b: 1e9 }[m[2]]) : NaN;
 }
+// Read a GP box together with its k / m / b dropdown ("1.5" + "m" = 1,500,000)
+function gpVal(id) {
+  const raw = $("#" + id).value.trim().toLowerCase().replace(/[, ]/g, "");
+  if (!raw) return NaN;
+  const unit = /[kmb]$/.test(raw) ? "" : ($("#" + id + "U") || {}).value || "";
+  return parseGP(raw + unit);
+}
+function setGP(id, str) {
+  const m = String(str ?? "").trim().toLowerCase().match(/^([\d.]*)([kmb]?)$/);
+  $("#" + id).value = m ? m[1] : "";
+  if (m && m[2] && $("#" + id + "U")) $("#" + id + "U").value = m[2];
+}
 const minsAgo = t => (t ? Math.round((Date.now() / 1000 - t) / 60) : Infinity);
 function toast(msg) { const t = document.createElement("div"); t.className = "toast"; t.textContent = msg; document.body.append(t); setTimeout(() => t.remove(), 2600); }
 async function getJSON(url) { const r = await fetch(url, { cache: "no-store" }); if (!r.ok) throw new Error(r.status + " from " + url); return r.json(); }
@@ -304,7 +319,7 @@ const PRESETS = {
   ticket:    { hours: 4,  minvol: 1,   minPrice: "5m", maxPrice: "", maxQty: "2", staleMin: 240 },
   overnight: { hours: 10, minvol: 10,  minPrice: "",   maxPrice: "", maxQty: "", staleMin: 120 },
 };
-const FS_FIELDS = ["cap", "slots", "sort", "minPrice", "maxPrice", "minvol", "maxQty", "hours", "inflPct"];
+const FS_FIELDS = ["cap", "capU", "slots", "sort", "minPrice", "minPriceU", "maxPrice", "maxPriceU", "minvol", "maxQty", "maxQtyU", "hours", "inflPct"];
 const FS_CHECKS = ["hideInfl", "hideSpike", "favOnly", "showHidden", "stale"];
 let fs = store.get("flipSettings", { preset: "quick" });
 let favs = new Set(store.get("favs", [])), hidden = new Set(store.get("hidden", []));
@@ -312,12 +327,12 @@ S.week = {};
 
 function applyPreset(name, keepCustom) {
   fs.preset = name;
-  if (PRESETS[name] && !keepCustom) Object.entries(PRESETS[name]).forEach(([k, v]) => { if ($("#" + k)) $("#" + k).value = v; });
+  if (PRESETS[name] && !keepCustom) Object.entries(PRESETS[name]).forEach(([k, v]) => { if (!$("#" + k)) return; if ($("#" + k + "U")) setGP(k, v); else $("#" + k).value = v; });
   document.querySelectorAll(".preset").forEach(b => b.setAttribute("aria-pressed", b.dataset.preset === name));
   if (name === "custom") $("#moreFilters").open = true;
 }
 function loadFlipSettings() {
-  FS_FIELDS.forEach(k => { if (fs[k] != null) $("#" + k).value = fs[k]; });
+  FS_FIELDS.forEach(k => { if (fs[k] == null) return; if ($("#" + k + "U") && /[kmb]$/i.test(fs[k])) setGP(k, fs[k]); else $("#" + k).value = fs[k]; });
   FS_CHECKS.forEach(k => { if (fs[k] != null) $("#" + k).checked = fs[k]; });
   applyPreset(fs.preset || "quick", fs.minvol != null);
 }
@@ -363,10 +378,10 @@ function pctRank(arr, key) {
 }
 
 function flipRows() {
-  const cap = parseGP($("#cap").value), q = $("#fq").value.trim().toLowerCase();
+  const cap = gpVal("cap"), q = $("#fq").value.trim().toLowerCase();
   const hours = Math.max(0.25, +$("#hours").value || 1), minVol = +$("#minvol").value || 0;
-  const minP = parseGP($("#minPrice").value) || 0, maxP = parseGP($("#maxPrice").value) || Infinity;
-  const maxQ = parseGP($("#maxQty").value) || Infinity, infl = (+$("#inflPct").value || 10) / 100;
+  const minP = gpVal("minPrice") || 0, maxP = gpVal("maxPrice") || Infinity;
+  const maxQ = gpVal("maxQty") || Infinity, infl = (+$("#inflPct").value || 10) / 100;
   const staleMin = (PRESETS[fs.preset] || {}).staleMin || 120;
   const rows = [];
   for (const [id, l] of Object.entries(S.latest)) {
@@ -439,8 +454,8 @@ function flipRow(r, slotNo) {
 
 function renderFlips() {
   saveFlipSettings();
-  const cap = parseGP($("#cap").value);
-  if (!cap) { $("#planList").innerHTML = '<div class="empty">Enter how much GP to use, for example 10m or 500k.</div>'; $("#flipList").innerHTML = ""; $("#planHead").innerHTML = ""; return; }
+  const cap = gpVal("cap");
+  if (!cap) { $("#planList").innerHTML = '<div class="empty">Enter how much GP to use, for example 10 with m selected.</div>'; $("#flipList").innerHTML = ""; $("#planHead").innerHTML = ""; return; }
   const slots = Math.min(8, Math.max(1, +$("#slots").value || 8));
   const { rows, hours } = flipRows();
   const { plan, left } = planSlots(rows, cap, slots);
@@ -486,8 +501,24 @@ async function renderPicks() {
         <dt>Substitutes</dt><dd>${esc(t.substitutes || "None given")}</dd>
         <dt>When to sell</dt><dd>${esc(t.exit_plan)}</dd>
         <dt>What would kill it</dt><dd>${esc(t.what_would_kill_it)}</dd>
-      </dl></article>`;
-  }).join("");
+        ${t.recheck_when ? `<dt>Recheck when</dt><dd>${esc(t.recheck_when)}</dd>` : ""}
+      </dl>
+      ${historyHTML(t)}</article>`;
+  }).join("") + droppedHTML(picks.dropped || []);
+}
+
+function historyHTML(t) {
+  const h = t.history || [];
+  if (!h.length) return "";
+  const first = t.first_seen ? new Date(t.first_seen).toLocaleDateString("en-GB") : "";
+  return `<details class="more" style="margin:10px 0 0"><summary>Review history${first ? " (first raised " + first + ")" : ""}</summary>
+    <dl>${h.slice().reverse().map(e => `<dt>${esc(new Date(e.date).toLocaleDateString("en-GB"))}</dt><dd><b>${esc(e.verdict)}</b>${e.reason ? ": " + esc(e.reason) : ""}</dd>`).join("")}</dl></details>`;
+}
+function droppedHTML(list) {
+  if (!list.length) return "";
+  return `<details class="more"><summary>Dropped ideas (${list.length})</summary><div class="list">${list.map(t => `
+    <div class="row"><div class="name">${esc(t.title)}</div><div class="big" style="font-size:.85rem;color:var(--dim)">${t.dropped_on ? new Date(t.dropped_on).toLocaleDateString("en-GB") : ""}</div>
+    <div class="facts"><span>${esc(t.drop_reason || "No reason given")}</span></div></div>`).join("")}</div></details>`;
 }
 
 // ---------- watchlist ----------
@@ -564,7 +595,7 @@ $("#flips").addEventListener("click", e => {
 $("#wAdd").addEventListener("click", () => {
   const m = item($("#wItem").value);
   if (!m) return toast("Pick an item from the suggestions");
-  watch.push({ name: m.name, id: m.id, below: parseGP($("#wBelow").value) || 0, above: parseGP($("#wAbove").value) || 0, spike: +$("#wSpike").value || 0 });
+  watch.push({ name: m.name, id: m.id, below: gpVal("wBelow") || 0, above: gpVal("wAbove") || 0, spike: +$("#wSpike").value || 0 });
   store.set("watch", watch); $("#wItem").value = $("#wBelow").value = $("#wAbove").value = ""; renderWatch(); toast("Added " + m.name);
 });
 $("#watchList").addEventListener("click", e => { const i = e.target.dataset.del; if (i != null) { watch.splice(+i, 1); store.set("watch", watch); renderWatch(); } });
@@ -577,10 +608,10 @@ $("#wSend").addEventListener("click", async () => {
 $("#wLoad").addEventListener("click", async () => { watch = null; store.set("watch", null); await ensureWatch(); renderWatch(); toast("Loaded the robot's list"); });
 
 $("#tAdd").addEventListener("click", () => {
-  const m = item($("#tItem").value), qty = parseGP($("#tQty").value), buy = parseGP($("#tBuy").value), sellRaw = $("#tSell").value.trim();
+  const m = item($("#tItem").value), qty = gpVal("tQty"), buy = gpVal("tBuy"), sellRaw = $("#tSell").value.trim();
   if (!m) return toast("Pick an item from the suggestions");
   if (!qty || !buy) return toast("Enter a quantity and the price you bought at");
-  const sell = sellRaw ? parseGP(sellRaw) : null;
+  const sell = sellRaw ? gpVal("tSell") : null;
   if (sellRaw && isNaN(sell)) return toast("The sold price isn't a number");
   trades.push({ id: Date.now(), acct: $("#tAcct").value, itemId: m.id, name: m.name, qty, buy, sell, opened: new Date().toISOString() });
   store.set("trades", trades); $("#tItem").value = $("#tQty").value = $("#tBuy").value = $("#tSell").value = ""; renderTrades(); toast("Trade logged");
