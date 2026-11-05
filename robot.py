@@ -54,11 +54,20 @@ Look across everything: just-released content (new bosses, raids, quests), this 
 updates, polls, and the longer roadmap.
 Keep every text field under 40 words.
 "action" must be exactly one of: Buy now, Buy on announcement, Sell if holding, Avoid holding, Watch.
+
+You keep a running IDEAS LIST between scans. You'll be shown every open idea. Review EACH one:
+- "keep" if nothing has changed,
+- "update" if there's new information (send only the fields that changed),
+- "drop" if it's been disproved, priced in, played out or was never well founded.
+Every review needs a short reason. Then add new ideas that aren't already on the list.
+Keep the open list to the 20 strongest ideas: drop the weakest if it would go over.
+"recheck_when" says which news would change the idea (e.g. "Dungeons of Gielinor boss blog").
 Reply with ONLY a JSON object, starting with { and ending with }, no other text:
-{"theses":[{"title":"","trigger":"","release":"","evidence":"the confirmed fact, plus its URL",
+{"reviews":[{"id":"i3","verdict":"keep, update or drop","reason":"","changes":{}}],
+"theses":[{"title":"","trigger":"","release":"","evidence":"the confirmed fact, plus its URL",
 "mechanism":"","direction":"up or down","items":["exact OSRS item names"],"substitutes":"",
 "confidence":"low, medium or high","action":"","action_detail":"what to do and when",
-"exit_plan":"","what_would_kill_it":""}]}"""
+"exit_plan":"","what_would_kill_it":"","recheck_when":""}]}"""
 
 
 # ---------- small helpers ----------
@@ -330,27 +339,88 @@ def call_claude(mode, prompt):
     return text, usage
 
 
-def parse_theses(text):
-    """Read the AI's JSON. If the reply was cut off, rescue the ideas that are complete."""
+def parse_reply(text):
+    """Read the AI's JSON. If the reply was cut off, rescue the parts that are complete."""
     t = text.replace("```json", "").replace("```", "")
     dec = json.JSONDecoder()
     start = t.find("{")
     if start >= 0:
         try:
             obj, _ = dec.raw_decode(t[start:])
-            if isinstance(obj, dict) and isinstance(obj.get("theses"), list):
-                return obj["theses"]
+            if isinstance(obj, dict) and ("theses" in obj or "reviews" in obj):
+                return obj.get("reviews") or [], obj.get("theses") or []
         except Exception:
             pass
-    out = []
-    for m in re.finditer(r'\{\s*"title"', t):
-        try:
-            obj, _ = dec.raw_decode(t[m.start():])
-            if isinstance(obj, dict) and obj.get("title"):
-                out.append(obj)
-        except Exception:
+    reviews, theses = [], []
+    for pattern, bucket, key in ((r'\{\s*"id"\s*:\s*"i\d+"', reviews, "verdict"),
+                                 (r'\{\s*"title"', theses, "title")):
+        for m in re.finditer(pattern, t):
+            try:
+                obj, _ = dec.raw_decode(t[m.start():])
+                if isinstance(obj, dict) and obj.get(key):
+                    bucket.append(obj)
+            except Exception:
+                continue
+    return reviews, theses
+
+
+def parse_theses(text):
+    return parse_reply(text)[1]
+
+
+def clean_text(d):
+    for k, v in list(d.items()):  # remove citation markup the AI sometimes copies in
+        if isinstance(v, str):
+            d[k] = re.sub(r"</?cite[^>]*>", "", v).strip()
+    return d
+
+
+def resolve_items(names, by_name, latest):
+    found = []
+    for name in names or []:
+        if isinstance(name, dict):
+            name = name.get("name", "")
+        m = find_item(str(name), by_name)
+        if m:
+            lt = latest.get(str(m["id"])) or {}
+            found.append({"name": m["name"], "id": m["id"], "limit": m.get("limit"),
+                          "high_then": lt.get("high"), "low_then": lt.get("low")})
+        else:
+            found.append({"name": str(name), "id": None})
+    return found
+
+
+def load_ideas(by_name, latest):
+    """The running ideas list. The first time, rebuild it from earlier scans."""
+    ideas = load("ideas.json", None)
+    if ideas is not None:
+        return ideas
+    ideas = {"next": 1, "ideas": []}
+    seen = set()
+    old = load("picks.json", {}).get("theses", [])
+    hist = load("picks_history.json", {"entries": []})["entries"]
+    for t in list(old) + list(reversed(hist)):
+        title = (t.get("title") or "").strip()
+        if not title or title.lower() in seen:
             continue
-    return out
+        seen.add(title.lower())
+        idea = {k: v for k, v in t.items() if k != "items"}
+        idea.update({"id": f"i{ideas['next']}", "status": "open",
+                     "first_seen": t.get("date") or dt.date.today().isoformat(),
+                     "items": t.get("items") or [], "history": [
+                         {"date": dt.date.today().isoformat(), "verdict": "carried over",
+                          "reason": "Raised by an earlier scan, waiting for review"}]})
+        ideas["next"] += 1
+        ideas["ideas"].append(idea)
+    return ideas
+
+
+def brief(idea):
+    return {"id": idea["id"], "title": idea.get("title"), "action": idea.get("action"),
+            "direction": idea.get("direction"), "confidence": idea.get("confidence"),
+            "items": [i.get("name") for i in idea.get("items", [])],
+            "evidence": (idea.get("evidence") or "")[:200], "recheck_when": idea.get("recheck_when") or "",
+            "first_seen": idea.get("first_seen")}
 
 
 def run_ai(mode, by_id, by_name, latest, vol_now, vol_yday):
@@ -365,64 +435,113 @@ def run_ai(mode, by_id, by_name, latest, vol_now, vol_yday):
             spikes.append((vn / vy, m["name"]))
     spikes = "\n".join(f"{n}: volume x{r:.1f} vs yesterday"
                        for r, n in sorted(spikes, reverse=True)[:15]) or "none"
-    old = load("picks.json", {})
-    prev = "\n".join(f"- {t.get('title')}" for t in old.get("theses", [])) or "none"
+    ideas = load_ideas(by_name, latest)
+    open_ideas = [i for i in ideas["ideas"] if i.get("status") == "open"]
+    listing = json.dumps([brief(i) for i in open_ideas], ensure_ascii=False) if open_ideas else "none yet"
     prompt = (f"Today is {dt.date.today()}.\n\nNEWS AND ROADMAP:\n{news_text()}\n\n"
               f"UNUSUAL TRADING RIGHT NOW (could be early buyers):\n{spikes}\n\n"
-              f"YOUR PREVIOUS PICKS (update or drop them, don't just repeat):\n{prev}\n\n"
-              f"Give at least {'5' if mode == 'quick' else '8'} theses.")
+              f"YOUR OPEN IDEAS LIST (review every one):\n{listing}\n\n"
+              f"Then add at least {'2' if mode == 'quick' else '4'} new ideas if you can find them, "
+              f"so there are at least {'5' if mode == 'quick' else '8'} open ideas in total.")
     try:
         text, usage = call_claude(mode, prompt)
     except Exception as e:
         discord(f"⚠️ AI picks failed: {e}")
         print(e)
         return
-    theses = parse_theses(text)
+    reviews, new = parse_reply(text)
+    today = dt.date.today().isoformat()
     now_iso = dt.datetime.now(dt.timezone.utc).isoformat(timespec="minutes")
-    for t in theses:
-        found = []
-        for name in t.get("items", []):
-            m = find_item(name, by_name)
-            if m:
-                lt = latest.get(str(m["id"])) or {}
-                found.append({"name": m["name"], "id": m["id"], "limit": m.get("limit"),
-                              "high_then": lt.get("high"), "low_then": lt.get("low")})
-            else:
-                found.append({"name": name, "id": None})
-        t["items"] = found
-    total = len(theses)
-    theses = [t for t in theses if any(i["id"] for i in t["items"])]
-    dropped = total - len(theses)
-    picks = {"generated": now_iso, "mode": mode, "model": usage["model"], "theses": theses,
-             "cost_usd": usage["usd"], "last_deep": old.get("last_deep")}
+    by_idea = {i["id"]: i for i in ideas["ideas"]}
+    summary = {"keep": [], "update": [], "drop": []}
+
+    for r in reviews:
+        idea = by_idea.get(str(r.get("id")))
+        if not idea or idea.get("status") != "open":
+            continue
+        clean_text(r)
+        verdict = str(r.get("verdict", "keep")).lower().strip()
+        verdict = verdict if verdict in summary else "keep"
+        changes = r.get("changes") if isinstance(r.get("changes"), dict) else {}
+        clean_text(changes)
+        if verdict == "update" and changes:
+            if "items" in changes:
+                changes["items"] = resolve_items(changes["items"], by_name, latest)
+            changes.pop("id", None)
+            idea.update(changes)
+        if verdict == "drop":
+            idea["status"] = "dropped"
+            idea["dropped_on"] = today
+            idea["drop_reason"] = r.get("reason", "")
+        idea["last_reviewed"] = today
+        idea.setdefault("history", []).append({"date": today, "verdict": verdict,
+                                               "reason": r.get("reason", "")})
+        idea["history"] = idea["history"][-12:]
+        summary[verdict].append(idea)
+
+    added, untradeable = [], 0
+    open_titles = {i.get("title", "").lower() for i in ideas["ideas"] if i.get("status") == "open"}
+    for t in new:
+        clean_text(t)
+        t["items"] = resolve_items(t.get("items"), by_name, latest)
+        if not any(i["id"] for i in t["items"]):
+            untradeable += 1
+            continue
+        if (t.get("title") or "").lower() in open_titles:
+            continue
+        t.update({"id": f"i{ideas['next']}", "status": "open", "first_seen": today,
+                  "last_reviewed": today, "history": [{"date": today, "verdict": "new",
+                                                       "reason": "First raised"}]})
+        ideas["next"] += 1
+        ideas["ideas"].append(t)
+        added.append(t)
+
+    # keep dropped ideas for a while so you can see why they went
+    dropped_all = [i for i in ideas["ideas"] if i.get("status") == "dropped"]
+    keep_dropped = {i["id"] for i in sorted(dropped_all, key=lambda i: i.get("dropped_on", ""))[-40:]}
+    ideas["ideas"] = [i for i in ideas["ideas"] if i.get("status") == "open" or i["id"] in keep_dropped]
+    ideas["updated"] = now_iso
+    save("ideas.json", ideas)
+
+    open_now = [i for i in ideas["ideas"] if i.get("status") == "open"]
+    picks = {"generated": now_iso, "mode": mode, "model": usage["model"], "theses": open_now,
+             "dropped": sorted([i for i in ideas["ideas"] if i.get("status") == "dropped"],
+                               key=lambda i: i.get("dropped_on", ""), reverse=True),
+             "last_deep": load("picks.json", {}).get("last_deep")}
     if mode == "deep":
-        picks["last_deep"] = dt.date.today().isoformat()
-    if not theses:
+        picks["last_deep"] = today
+    if not reviews and not new:
         picks["raw"] = text[:3000] or "(the AI sent back no text)"
         picks["debug"] = usage.get("debug")
     save("picks.json", picks)
 
     hist = load("picks_history.json", {"entries": []})
-    for t in theses:
-        hist["entries"].append({"date": now_iso, "title": t.get("title"),
+    for t in added:
+        hist["entries"].append({"date": now_iso, "title": t.get("title"), "idea": t["id"],
                                 "direction": t.get("direction"), "items": t["items"]})
     hist["entries"] = hist["entries"][-300:]
     save("picks_history.json", hist)
 
     costs = load("costs.json", {"runs": []})
-    costs["runs"].append({"date": now_iso, "mode": mode, **usage})
+    costs["runs"].append({"date": now_iso, "mode": mode, **{k: v for k, v in usage.items() if k != "debug"}})
     costs["runs"] = costs["runs"][-400:]
     save("costs.json", costs)
 
-    month = now_iso[:7]
-    month_total = sum(r["usd"] for r in costs["runs"] if r["date"].startswith(month))
-    header = (f"🧠 **New {'deep' if mode == 'deep' else 'daily'} picks**: {len(theses)} idea(s). "
-              f"<https://slippy-55.github.io/osrs-copilot/#picks>")
-    if dropped:
-        header += f"\n_{dropped} idea(s) dropped because their items can't be traded._"
-    if not theses:
-        header += "\nThe AI reply couldn't be read. Open the app's Picks tab for details."
-    discord_embeds(header, [thesis_embed(t) for t in theses])
+    lines = [f"🧠 **{'Deep' if mode == 'deep' else 'Daily'} scan**: {len(open_now)} open idea(s), "
+             f"{len(added)} new. <https://slippy-55.github.io/osrs-copilot/#picks>"]
+    if summary["update"]:
+        lines.append("**Updated:** " + "; ".join(f"{i.get('title')}" for i in summary["update"]))
+    if summary["drop"]:
+        lines.append("**Dropped:** " + "; ".join(f"{i.get('title')} ({i.get('drop_reason')})"
+                                                for i in summary["drop"]))
+    if summary["keep"]:
+        lines.append(f"**Kept:** {len(summary['keep'])} unchanged")
+    if untradeable:
+        lines.append(f"_{untradeable} new idea(s) skipped because their items can't be traded._")
+    if not reviews and not new:
+        lines.append("The AI reply couldn't be read. Open the app's Picks tab for details.")
+    header = clip("\n".join(lines), 1900)
+    discord_embeds(header, [thesis_embed(t) for t in added + summary["update"]])
 
 
 def main():
