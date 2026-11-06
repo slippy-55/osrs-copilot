@@ -15,7 +15,7 @@
    "exit_plan": "Re-evaluate only if the price falls to the Hudson price and holds there.",
    "what_would_kill_it": "Heavy pure or Ranged-account demand creates a stable premium. Alternatively, Jagex limits Hudson's stock.",
    "id": "i1",
-   "status": "open",
+   "status": "dropped",
    "first_seen": "2026-11-05",
    "items": [
     {
@@ -36,9 +36,16 @@
      "date": "2026-11-05",
      "verdict": "keep",
      "reason": "Wiki confirms Sergeant Hudson sells extra amulets after the quest, so supply is uncapped. Nothing has changed."
+    },
+    {
+     "date": "2026-11-06",
+     "verdict": "drop",
+     "reason": "Flood thesis is not playing out. Wiki now shows the amulet at about 557 GP, up from the 381 first-day price cited earlier, with thin daily volume (27). Supply from free and NPC copies has not pushed price down."
     }
    ],
-   "last_reviewed": "2026-11-05"
+   "last_reviewed": "2026-11-06",
+   "dropped_on": "2026-11-06",
+   "drop_reason": "Flood thesis is not playing out. Wiki now shows the amulet at about 557 GP, up from the 381 first-day price cited earlier, with thin daily volume (27). Supply from free and NPC copies has not pushed price down."
   },
   {
    "title": "Graveyard marks flood amylase and stamina",
@@ -82,10 +89,15 @@
      "date": "2026-11-05",
      "verdict": "update",
      "reason": "Blog also says duplicate Graceful pieces would be refunded in Marks if the rework is approved. That would be a one-off extra supply of Marks. Release date is only 'November'."
+    },
+    {
+     "date": "2026-11-06",
+     "verdict": "keep",
+     "reason": "The Graveyard is still confirmed for November with 30+ Marks per hour cited, but the exact release day is unconfirmed. Thesis still depends on the release and the Graceful poll."
     }
    ],
    "recheck_when": "Graveyard release date; Graceful rework poll result",
-   "last_reviewed": "2026-11-05"
+   "last_reviewed": "2026-11-06"
   },
   {
    "title": "Underwater gem rocks cut gem prices",
@@ -150,9 +162,14 @@
      "date": "2026-11-05",
      "verdict": "keep",
      "reason": "Deep Sea Diving poll is still TBD and the update is early 2027. The evidence is unchanged, so it stays a low-confidence Watch."
+    },
+    {
+     "date": "2026-11-06",
+     "verdict": "keep",
+     "reason": "Still unconfirmed. Deep Sea Diving remains a poll-stage proposal with jewellery production questions, and no gem drop or rate details are published."
     }
    ],
-   "last_reviewed": "2026-11-05"
+   "last_reviewed": "2026-11-06"
   },
   {
    "title": "Underwater farming patches lift rare seeds",
@@ -203,10 +220,15 @@
      "date": "2026-11-05",
      "verdict": "update",
      "reason": "Irit seed is not connected to any proposed patch, so I removed it. The remaining items match the patch types in the proposal. The poll is still pending."
+    },
+    {
+     "date": "2026-11-06",
+     "verdict": "keep",
+     "reason": "Still poll-stage. The Jagex blog asks whether to add an underwater farming area, with no confirmed seed list or rates yet."
     }
    ],
    "recheck_when": "Deep Sea Diving poll result on the farming area question",
-   "last_reviewed": "2026-11-05"
+   "last_reviewed": "2026-11-06"
   },
   {
    "title": "Zanik crossbow may replace Dorgeshuun crossbow",
@@ -243,10 +265,15 @@
      "date": "2026-11-05",
      "verdict": "update",
      "reason": "Wiki says Zanik's crossbow is a proposed reward with rune crossbow stats and a defence-reducing special. It does not say whether it is tradeable. The quest is early 2027. This also absorbs the duplicate idea i10."
+    },
+    {
+     "date": "2026-11-06",
+     "verdict": "keep",
+     "reason": "Zanik's crossbow is confirmed as a Chosen Commander reward, but tradeability and ammo are still unknown."
     }
    ],
    "recheck_when": "The Chosen Commander rewards blog",
-   "last_reviewed": "2026-11-05"
+   "last_reviewed": "2026-11-06"
   },
   {
    "date": "2026-11-05T16:18+00:00",
@@ -377,13 +404,18 @@
      "date": "2026-11-05",
      "verdict": "update",
      "reason": "Wiki confirms soul rune crafting at 90 Runecraft in Menaphos. Rune rates are not announced and the release is Spring 2027, so this is a low-confidence Watch."
+    },
+    {
+     "date": "2026-11-06",
+     "verdict": "keep",
+     "reason": "Menaphos and the true Soul Altar with soul runes at 90 Runecraft are confirmed on the Wiki. Runes per hour and the release date remain unknown."
     }
    ],
    "action": "Watch",
    "confidence": "low",
    "evidence": "Unconfirmed: runes per hour and XP rates. Wiki: Menaphos adds the true Soul Altar, with soul runes craftable at 90 Runecraft. https://oldschool.runescape.wiki/w/Upcoming_updates",
    "recheck_when": "Menaphos rewards or Soul Altar blog",
-   "last_reviewed": "2026-11-05"
+   "last_reviewed": "2026-11-06"
   },
   {
    "date": "2026-11-05T15:58+00:00",
@@ -475,15 +507,8 @@
      "name": "Antifire potion(4)",
      "id": 2452,
      "limit": 2000,
-     "high_then": 694,
-     "low_then": 675
-    },
-    {
-     "name": "Dragon hunter lance",
-     "id": 22978,
-     "limit": 8,
-     "high_then": 37450000,
-     "low_then": 36595563
+     "high_then": 692,
+     "low_then": 645
     }
    ],
    "history": [
@@ -496,13 +521,18 @@
      "date": "2026-11-05",
      "verdict": "update",
      "reason": "No confirmed weakness for Gemstone Dragons. Dragon arrowtips and Onyx bolts have no source behind them. One third-party source says antifire is needed and that dragon-hunter gear is relevant, so I narrowed the items to those two."
+    },
+    {
+     "date": "2026-11-06",
+     "verdict": "update",
+     "reason": "Gemstone dragons are confirmed arrow-weak and Dragonstone dragons drain antifire timers, supporting antifire demand. Dragon hunter lance has no confirmed link, so it is removed. Diamond Dragon weakness is still unknown."
     }
    ],
    "action": "Watch",
    "confidence": "low",
-   "evidence": "Unconfirmed: official weaknesses and drop tables. Wiki confirms Gemstone Dragons and the Diamond Dragon in a Varlamore dungeon. A third-party summary says to bring antifires. https://oldschool.runescape.wiki/w/Upcoming_updates",
+   "evidence": "Unconfirmed: Diamond Dragon weakness and drop table. Confirmed: Dragonstone dragons drain antifire timers (https://runescape.fandom.com/wiki/Gemstone_dragons) and Gemstone dragons are weak to arrows (https://runescape.fandom.com/wiki/Gemstone_dragons). Dungeon release is Spring 2027 (https://oldschool.runescape.wiki/w/Upcoming_updates).",
    "recheck_when": "Dungeons of Gielinor boss blog",
-   "last_reviewed": "2026-11-05"
+   "last_reviewed": "2026-11-06"
   },
   {
    "title": "Law altar portal move lifts law rune supply",
@@ -528,16 +558,23 @@
    "what_would_kill_it": "Law altar runs stay slow, or the update slips and the portal move is cut.",
    "recheck_when": "November 11th update notes",
    "id": "i13",
-   "status": "open",
+   "status": "dropped",
    "first_seen": "2026-11-05",
-   "last_reviewed": "2026-11-05",
+   "last_reviewed": "2026-11-06",
    "history": [
     {
      "date": "2026-11-05",
      "verdict": "new",
      "reason": "First raised"
+    },
+    {
+     "date": "2026-11-06",
+     "verdict": "drop",
+     "reason": "Moving the portal closer to the Law Altar is a small quality-of-life change with no confirmed effect on law rune supply. The thesis has no measurable mechanism."
     }
-   ]
+   ],
+   "dropped_on": "2026-11-06",
+   "drop_reason": "Moving the portal closer to the Law Altar is a small quality-of-life change with no confirmed effect on law rune supply. The thesis has no measurable mechanism."
   },
   {
    "title": "Underwater jewellery production floods bars and jewellery",
@@ -572,12 +609,17 @@
    "id": "i14",
    "status": "open",
    "first_seen": "2026-11-05",
-   "last_reviewed": "2026-11-05",
+   "last_reviewed": "2026-11-06",
    "history": [
     {
      "date": "2026-11-05",
      "verdict": "new",
      "reason": "First raised"
+    },
+    {
+     "date": "2026-11-06",
+     "verdict": "keep",
+     "reason": "Still poll-stage. Jewellery production sites are proposed, but the poll result, jewellery types and rates are not published."
     }
    ]
   },
@@ -614,12 +656,17 @@
    "id": "i15",
    "status": "open",
    "first_seen": "2026-11-05",
-   "last_reviewed": "2026-11-05",
+   "last_reviewed": "2026-11-06",
    "history": [
     {
      "date": "2026-11-05",
      "verdict": "new",
      "reason": "First raised"
+    },
+    {
+     "date": "2026-11-06",
+     "verdict": "keep",
+     "reason": "Mining and Smithing Reforged is confirmed only for Summer 2027 with no details. Ore and bar effects remain speculative until a blog arrives."
     }
    ]
   },
@@ -654,16 +701,23 @@
    "what_would_kill_it": "Migration is soft with no lockout, or bots migrate with no loss of volume.",
    "recheck_when": "Migration deadline details and any ban wave announcement",
    "id": "i16",
-   "status": "open",
+   "status": "dropped",
    "first_seen": "2026-11-05",
-   "last_reviewed": "2026-11-05",
+   "last_reviewed": "2026-11-06",
    "history": [
     {
      "date": "2026-11-05",
      "verdict": "new",
      "reason": "First raised"
+    },
+    {
+     "date": "2026-11-06",
+     "verdict": "drop",
+     "reason": "No confirmed fact links the Jagex Accounts migration to bot supply or ban waves. The raw fish idea was never well founded."
     }
-   ]
+   ],
+   "dropped_on": "2026-11-06",
+   "drop_reason": "No confirmed fact links the Jagex Accounts migration to bot supply or ban waves. The raw fish idea was never well founded."
   },
   {
    "title": "Quest Month free combat gear weakens basic gear prices",
@@ -696,17 +750,24 @@
    "what_would_kill_it": "Prices are already at the floor and the free gear is limited to quest-only items.",
    "recheck_when": "Any change to Captain Harlan's free gear",
    "id": "i17",
-   "status": "open",
+   "status": "dropped",
    "first_seen": "2026-11-05",
-   "last_reviewed": "2026-11-05",
+   "last_reviewed": "2026-11-06",
    "history": [
     {
      "date": "2026-11-05",
      "verdict": "new",
      "reason": "First raised"
+    },
+    {
+     "date": "2026-11-06",
+     "verdict": "drop",
+     "reason": "I could not re-confirm the Captain Harlan free-gear claim in this scan. Effect on basic gear prices is small even if true."
     }
-   ]
+   ],
+   "dropped_on": "2026-11-06",
+   "drop_reason": "I could not re-confirm the Captain Harlan free-gear claim in this scan. Effect on basic gear prices is small even if true."
   }
  ],
- "updated": "2026-11-05T17:33+00:00"
+ "updated": "2026-11-06T09:15+00:00"
 }
