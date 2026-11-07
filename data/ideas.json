@@ -1,5 +1,5 @@
 {
- "next": 18,
+ "next": 20,
  "ideas": [
   {
    "title": "Amulet of sight supply flood",
@@ -94,10 +94,15 @@
      "date": "2026-11-06",
      "verdict": "keep",
      "reason": "The Graveyard is still confirmed for November with 30+ Marks per hour cited, but the exact release day is unconfirmed. Thesis still depends on the release and the Graceful poll."
+    },
+    {
+     "date": "2026-11-07",
+     "verdict": "keep",
+     "reason": "The Graveyard is still set for November, and the rewards blog still targets 30+ Marks of Grace per hour at high intensity. The Graceful refund is a proposal, so the thesis still stands at medium confidence."
     }
    ],
    "recheck_when": "Graveyard release date; Graceful rework poll result",
-   "last_reviewed": "2026-11-06"
+   "last_reviewed": "2026-11-07"
   },
   {
    "title": "Underwater gem rocks cut gem prices",
@@ -167,15 +172,20 @@
      "date": "2026-11-06",
      "verdict": "keep",
      "reason": "Still unconfirmed. Deep Sea Diving remains a poll-stage proposal with jewellery production questions, and no gem drop or rate details are published."
+    },
+    {
+     "date": "2026-11-07",
+     "verdict": "keep",
+     "reason": "Deep Sea Diving is still poll-stage content targeted for early 2027. No gem rates or rock-tier details have been confirmed, so this stays a low-confidence Watch."
     }
    ],
-   "last_reviewed": "2026-11-06"
+   "last_reviewed": "2026-11-07"
   },
   {
    "title": "Underwater farming patches lift rare seeds",
    "trigger": "The Deep Sea Diving expansion adds underwater Spirit Tree, Celastrus, Mushroom and Hardwood farming patches.",
    "release": "Early 2027 (poll result pending)",
-   "evidence": "Unconfirmed: poll result and seed requirements. <cite index=\"32-10\">The proposal includes an underwater cave farming area with Spirit Tree, Celastrus, Mushroom and Hardwood Tree patches.</cite> https://mmohuts.com/news/old-school-runescape-proposes-deep-sea-diving-and-burial-at-sea-quest",
+   "evidence": "Unconfirmed: poll result and seed requirements. Wiki: Underwater Spirit Tree, Celastrus, Mushroom and Hardwood farming patches are planned. Expansion is poll-stage, early 2027. https://oldschool.runescape.wiki/w/Upcoming_updates",
    "mechanism": "Extra patches mean extra seed demand per player. Spirit and celastrus seeds are rare, so they are most sensitive. Mahogany is secondary.",
    "direction": "up",
    "substitutes": "Players can skip the patches, and existing patches already supply the produce.",
@@ -225,16 +235,21 @@
      "date": "2026-11-06",
      "verdict": "keep",
      "reason": "Still poll-stage. The Jagex blog asks whether to add an underwater farming area, with no confirmed seed list or rates yet."
+    },
+    {
+     "date": "2026-11-07",
+     "verdict": "update",
+     "reason": "Diving expansion farming patches are now confirmed as poll-stage content for early 2027, not live. Seed requirements remain unknown."
     }
    ],
-   "recheck_when": "Deep Sea Diving poll result on the farming area question",
-   "last_reviewed": "2026-11-06"
+   "recheck_when": "Deep Sea Diving poll results on the farming area question",
+   "last_reviewed": "2026-11-07"
   },
   {
    "title": "Zanik crossbow may replace Dorgeshuun crossbow",
    "trigger": "The Chosen Commander backport rewards Zanik's Modified Crossbow, a stronger version of the Dorgeshuun crossbow's defence-drain special.",
    "release": "Early 2027",
-   "evidence": "Unconfirmed: whether it is tradeable, and whether it fires normal bolts. Wiki: proposed reward with rune crossbow stats and a Defence-reducing special. https://oldschool.runescape.wiki/w/Zanik's_Modified_Crossbow",
+   "evidence": "Unconfirmed: whether Zanik's crossbow is tradeable and what ammo it uses. Confirmed: it is a Chosen Commander reward and is stronger than the Dorgeshuun crossbow. https://oldschool.runescape.wiki/w/Upcoming_updates",
    "mechanism": "If the quest reward is untradeable and stronger, the Dorgeshuun crossbow loses its niche. If the reward is tradeable, it takes demand and sets a new price.",
    "direction": "down",
    "substitutes": "The Dorgeshuun crossbow may keep demand if Zanik's version is slower or limited.",
@@ -270,10 +285,15 @@
      "date": "2026-11-06",
      "verdict": "keep",
      "reason": "Zanik's crossbow is confirmed as a Chosen Commander reward, but tradeability and ammo are still unknown."
+    },
+    {
+     "date": "2026-11-07",
+     "verdict": "update",
+     "reason": "The Chosen Commander backport is now confirmed to reward Zanik's Modified Crossbow, which is a stronger version of the Dorgeshuun crossbow. Its tradeability and bolt type remain unknown."
     }
    ],
-   "recheck_when": "The Chosen Commander rewards blog",
-   "last_reviewed": "2026-11-06"
+   "recheck_when": "The Chosen Commander rewards blog or Early 2027 release notes",
+   "last_reviewed": "2026-11-07"
   },
   {
    "date": "2026-11-05T16:18+00:00",
@@ -409,13 +429,18 @@
      "date": "2026-11-06",
      "verdict": "keep",
      "reason": "Menaphos and the true Soul Altar with soul runes at 90 Runecraft are confirmed on the Wiki. Runes per hour and the release date remain unknown."
+    },
+    {
+     "date": "2026-11-07",
+     "verdict": "keep",
+     "reason": "Menaphos passed the RuneFest poll and includes the true Soul Altar with soul runes at 90 Runecraft. Runes-per-hour rates are still unannounced."
     }
    ],
    "action": "Watch",
    "confidence": "low",
    "evidence": "Unconfirmed: runes per hour and XP rates. Wiki: Menaphos adds the true Soul Altar, with soul runes craftable at 90 Runecraft. https://oldschool.runescape.wiki/w/Upcoming_updates",
    "recheck_when": "Menaphos rewards or Soul Altar blog",
-   "last_reviewed": "2026-11-06"
+   "last_reviewed": "2026-11-07"
   },
   {
    "date": "2026-11-05T15:58+00:00",
@@ -526,13 +551,18 @@
      "date": "2026-11-06",
      "verdict": "update",
      "reason": "Gemstone dragons are confirmed arrow-weak and Dragonstone dragons drain antifire timers, supporting antifire demand. Dragon hunter lance has no confirmed link, so it is removed. Diamond Dragon weakness is still unknown."
+    },
+    {
+     "date": "2026-11-07",
+     "verdict": "update",
+     "reason": "Dungeons of Gielinor passed its poll and the Diamond Dragon is confirmed, with a call to stock antifires. Its weakness and drop table are still unconfirmed."
     }
    ],
    "action": "Watch",
-   "confidence": "low",
-   "evidence": "Unconfirmed: Diamond Dragon weakness and drop table. Confirmed: Dragonstone dragons drain antifire timers (https://runescape.fandom.com/wiki/Gemstone_dragons) and Gemstone dragons are weak to arrows (https://runescape.fandom.com/wiki/Gemstone_dragons). Dungeon release is Spring 2027 (https://oldschool.runescape.wiki/w/Upcoming_updates).",
-   "recheck_when": "Dungeons of Gielinor boss blog",
-   "last_reviewed": "2026-11-06"
+   "confidence": "medium",
+   "evidence": "Confirmed: Dungeons of Gielinor passed; Diamond Dragon is a deeper boss and players are told to stock antifires. Unconfirmed: Diamond Dragon weakness and drops. https://oldschool.runescape.wiki/w/Update:RuneFest_2026_Summit_Overview",
+   "recheck_when": "Dungeons of Gielinor boss blog with Diamond Dragon weakness and drop table",
+   "last_reviewed": "2026-11-07"
   },
   {
    "title": "Law altar portal move lifts law rune supply",
@@ -609,7 +639,7 @@
    "id": "i14",
    "status": "open",
    "first_seen": "2026-11-05",
-   "last_reviewed": "2026-11-06",
+   "last_reviewed": "2026-11-07",
    "history": [
     {
      "date": "2026-11-05",
@@ -620,6 +650,11 @@
      "date": "2026-11-06",
      "verdict": "keep",
      "reason": "Still poll-stage. Jewellery production sites are proposed, but the poll result, jewellery types and rates are not published."
+    },
+    {
+     "date": "2026-11-07",
+     "verdict": "keep",
+     "reason": "Underwater jewellery production is still poll-stage content. Jewellery types, rates and bar demand are unannounced, so the thesis stays a low-confidence Watch."
     }
    ]
   },
@@ -654,9 +689,9 @@
    "what_would_kill_it": "The rework lowers supply or adds sinks, or details show only cosmetic changes.",
    "recheck_when": "Mining and Smithing Reforged blog",
    "id": "i15",
-   "status": "open",
+   "status": "dropped",
    "first_seen": "2026-11-05",
-   "last_reviewed": "2026-11-06",
+   "last_reviewed": "2026-11-07",
    "history": [
     {
      "date": "2026-11-05",
@@ -667,8 +702,15 @@
      "date": "2026-11-06",
      "verdict": "keep",
      "reason": "Mining and Smithing Reforged is confirmed only for Summer 2027 with no details. Ore and bar effects remain speculative until a blog arrives."
+    },
+    {
+     "date": "2026-11-07",
+     "verdict": "drop",
+     "reason": "The Mining and Smithing rework has no details yet, and no confirmed mechanism links it to runite ore or bar prices. Nothing tradeable is affected by a confirmed fact."
     }
-   ]
+   ],
+   "dropped_on": "2026-11-07",
+   "drop_reason": "The Mining and Smithing rework has no details yet, and no confirmed mechanism links it to runite ore or bar prices. Nothing tradeable is affected by a confirmed fact."
   },
   {
    "title": "Jagex Account migration may cut bot supply of botted goods",
@@ -767,7 +809,77 @@
    ],
    "dropped_on": "2026-11-06",
    "drop_reason": "I could not re-confirm the Captain Harlan free-gear claim in this scan. Effect on basic gear prices is small even if true."
+  },
+  {
+   "title": "Abyssal rock slugs skip salt, trimming bag of salt demand",
+   "trigger": "Deep Sea Diving Abyssal Slayer area poll result",
+   "release": "Early 2027 (target, poll-stage)",
+   "evidence": "Proposed Abyssal Rock Slugs do not need salt to finish. https://osrstoolkit.com/osrs-deep-sea-diving-expansion/ . Bags of salt are tradeable and used on rock slugs. https://oldschool.runescape.wiki/w/Bag_of_salt",
+   "mechanism": "Fewer Slayer tasks need bags of salt, so marginal demand drops. Bags are plentiful in the Slayer shop and GE, so price impact should be small.",
+   "direction": "down",
+   "items": [
+    {
+     "name": "Bag of salt",
+     "id": 4161,
+     "limit": 8000,
+     "high_then": 26,
+     "low_then": 21
+    }
+   ],
+   "substitutes": "Salt shaker, also used on rock slugs (tradeability not checked). Slayer shop supply is effectively unlimited.",
+   "confidence": "low",
+   "action": "Watch",
+   "action_detail": "No trade. Revisit only if the Deep Sea Diving poll passes and the Abyssal slug stats are confirmed.",
+   "exit_plan": "Drop if the poll fails or the salt-free slug is removed.",
+   "what_would_kill_it": "Poll failure, or Abyssal Rock Slugs still requiring salt.",
+   "recheck_when": "Deep Sea Diving poll results and Abyssal Slayer area blog",
+   "id": "i18",
+   "status": "open",
+   "first_seen": "2026-11-07",
+   "last_reviewed": "2026-11-07",
+   "history": [
+    {
+     "date": "2026-11-07",
+     "verdict": "new",
+     "reason": "First raised"
+    }
+   ]
+  },
+  {
+   "title": "Gemstone dragon arrow weakness could lift dragon arrow demand",
+   "trigger": "Dungeons of Gielinor Gemstone Dragons Slayer task details",
+   "release": "Spring 2027 (target)",
+   "evidence": "Unconfirmed: Varlamore gemstone dragon weaknesses are not yet announced. Existing gemstone dragons are weak to arrows. https://runescape.wiki/w/Gemstone_dragons . RuneFest says the new dragons have clear weaknesses. https://oldschool.runescape.wiki/w/Update:RuneFest_2026_Summit_Overview",
+   "mechanism": "If the new Varlamore gemstone dragons share the arrow weakness, a new Slayer task would pull ranged ammunition demand upward.",
+   "direction": "up",
+   "items": [
+    {
+     "name": "Dragon arrow",
+     "id": 11212,
+     "limit": 11000,
+     "high_then": 2540,
+     "low_then": 2527
+    }
+   ],
+   "substitutes": "Other ranged ammunition (rune or amethyst arrows) if the weakness is not arrows.",
+   "confidence": "low",
+   "action": "Watch",
+   "action_detail": "No trade yet. Check the weakness when the Dungeons of Gielinor boss blog releases.",
+   "exit_plan": "Drop if the Varlamore dragon weakness is not arrows.",
+   "what_would_kill_it": "A melee or magic weakness for the Varlamore gemstone dragons.",
+   "recheck_when": "Dungeons of Gielinor boss blog with gemstone dragon weaknesses",
+   "id": "i19",
+   "status": "open",
+   "first_seen": "2026-11-07",
+   "last_reviewed": "2026-11-07",
+   "history": [
+    {
+     "date": "2026-11-07",
+     "verdict": "new",
+     "reason": "First raised"
+    }
+   ]
   }
  ],
- "updated": "2026-11-06T09:15+00:00"
+ "updated": "2026-11-07T08:23+00:00"
 }

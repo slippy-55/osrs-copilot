@@ -347,6 +347,36 @@
      "low_then": 141
     }
    ]
+  },
+  {
+   "date": "2026-11-07T08:23+00:00",
+   "title": "Abyssal rock slugs skip salt, trimming bag of salt demand",
+   "idea": "i18",
+   "direction": "down",
+   "items": [
+    {
+     "name": "Bag of salt",
+     "id": 4161,
+     "limit": 8000,
+     "high_then": 26,
+     "low_then": 21
+    }
+   ]
+  },
+  {
+   "date": "2026-11-07T08:23+00:00",
+   "title": "Gemstone dragon arrow weakness could lift dragon arrow demand",
+   "idea": "i19",
+   "direction": "up",
+   "items": [
+    {
+     "name": "Dragon arrow",
+     "id": 11212,
+     "limit": 11000,
+     "high_then": 2540,
+     "low_then": 2527
+    }
+   ]
   }
  ]
 }
