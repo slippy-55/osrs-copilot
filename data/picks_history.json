@@ -377,6 +377,73 @@
      "low_then": 2527
     }
    ]
+  },
+  {
+   "date": "2026-11-08T09:21+00:00",
+   "title": "Amulet of sight quest reward floods the market",
+   "idea": "i20",
+   "direction": "down",
+   "items": [
+    {
+     "name": "Amulet of sight",
+     "id": 34762,
+     "limit": null,
+     "high_then": 656,
+     "low_then": 615
+    }
+   ]
+  },
+  {
+   "date": "2026-11-08T09:21+00:00",
+   "title": "Law altar portal move trims law rune cost",
+   "idea": "i21",
+   "direction": "down",
+   "items": [
+    {
+     "name": "Law rune",
+     "id": 563,
+     "limit": 18000,
+     "high_then": 121,
+     "low_then": 117
+    }
+   ]
+  },
+  {
+   "date": "2026-11-08T09:21+00:00",
+   "title": "Wesley coconut crushing may shift coconut and milk demand",
+   "idea": "i22",
+   "direction": "up",
+   "items": [
+    {
+     "name": "Coconut",
+     "id": 5974,
+     "limit": 11000,
+     "high_then": 1063,
+     "low_then": 1018
+    }
+   ]
+  },
+  {
+   "date": "2026-11-08T09:21+00:00",
+   "title": "Mining and Smithing Reforged may reprice ores and bars",
+   "idea": "i23",
+   "direction": "up",
+   "items": [
+    {
+     "name": "Runite ore",
+     "id": 451,
+     "limit": 4500,
+     "high_then": 10195,
+     "low_then": 10005
+    },
+    {
+     "name": "Adamantite bar",
+     "id": 2361,
+     "limit": 10000,
+     "high_then": 1740,
+     "low_then": 1731
+    }
+   ]
   }
  ]
 }

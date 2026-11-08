@@ -1,5 +1,5 @@
 {
- "next": 20,
+ "next": 24,
  "ideas": [
   {
    "title": "Amulet of sight supply flood",
@@ -99,10 +99,15 @@
      "date": "2026-11-07",
      "verdict": "keep",
      "reason": "The Graveyard is still set for November, and the rewards blog still targets 30+ Marks of Grace per hour at high intensity. The Graceful refund is a proposal, so the thesis still stands at medium confidence."
+    },
+    {
+     "date": "2026-11-08",
+     "verdict": "keep",
+     "reason": "The Graveyard is still due in November with no exact date. The 30+ Marks/hr course target is unchanged. Sell before release."
     }
    ],
    "recheck_when": "Graveyard release date; Graceful rework poll result",
-   "last_reviewed": "2026-11-07"
+   "last_reviewed": "2026-11-08"
   },
   {
    "title": "Underwater gem rocks cut gem prices",
@@ -177,9 +182,14 @@
      "date": "2026-11-07",
      "verdict": "keep",
      "reason": "Deep Sea Diving is still poll-stage content targeted for early 2027. No gem rates or rock-tier details have been confirmed, so this stays a low-confidence Watch."
+    },
+    {
+     "date": "2026-11-08",
+     "verdict": "keep",
+     "reason": "The Deep Sea Diving expansion is still early 2027 and the poll result is not in. Nothing new."
     }
    ],
-   "last_reviewed": "2026-11-07"
+   "last_reviewed": "2026-11-08"
   },
   {
    "title": "Underwater farming patches lift rare seeds",
@@ -240,10 +250,15 @@
      "date": "2026-11-07",
      "verdict": "update",
      "reason": "Diving expansion farming patches are now confirmed as poll-stage content for early 2027, not live. Seed requirements remain unknown."
+    },
+    {
+     "date": "2026-11-08",
+     "verdict": "keep",
+     "reason": "The underwater farming patches are still planned for early 2027 with no seed details. Still a Watch."
     }
    ],
    "recheck_when": "Deep Sea Diving poll results on the farming area question",
-   "last_reviewed": "2026-11-07"
+   "last_reviewed": "2026-11-08"
   },
   {
    "title": "Zanik crossbow may replace Dorgeshuun crossbow",
@@ -290,10 +305,15 @@
      "date": "2026-11-07",
      "verdict": "update",
      "reason": "The Chosen Commander backport is now confirmed to reward Zanik's Modified Crossbow, which is a stronger version of the Dorgeshuun crossbow. Its tradeability and bolt type remain unknown."
+    },
+    {
+     "date": "2026-11-08",
+     "verdict": "keep",
+     "reason": "The Chosen Commander is still Early 2027. Tradeability and ammo for Zanik's crossbow are still unknown."
     }
    ],
    "recheck_when": "The Chosen Commander rewards blog or Early 2027 release notes",
-   "last_reviewed": "2026-11-07"
+   "last_reviewed": "2026-11-08"
   },
   {
    "date": "2026-11-05T16:18+00:00",
@@ -434,13 +454,18 @@
      "date": "2026-11-07",
      "verdict": "keep",
      "reason": "Menaphos passed the RuneFest poll and includes the true Soul Altar with soul runes at 90 Runecraft. Runes-per-hour rates are still unannounced."
+    },
+    {
+     "date": "2026-11-08",
+     "verdict": "keep",
+     "reason": "Menaphos is still Spring 2027 and the Soul Altar rates are unannounced."
     }
    ],
    "action": "Watch",
    "confidence": "low",
    "evidence": "Unconfirmed: runes per hour and XP rates. Wiki: Menaphos adds the true Soul Altar, with soul runes craftable at 90 Runecraft. https://oldschool.runescape.wiki/w/Upcoming_updates",
    "recheck_when": "Menaphos rewards or Soul Altar blog",
-   "last_reviewed": "2026-11-07"
+   "last_reviewed": "2026-11-08"
   },
   {
    "date": "2026-11-05T15:58+00:00",
@@ -556,13 +581,18 @@
      "date": "2026-11-07",
      "verdict": "update",
      "reason": "Dungeons of Gielinor passed its poll and the Diamond Dragon is confirmed, with a call to stock antifires. Its weakness and drop table are still unconfirmed."
+    },
+    {
+     "date": "2026-11-08",
+     "verdict": "keep",
+     "reason": "Dungeons of Gielinor is still Spring 2027 and the Diamond Dragon weakness is unannounced."
     }
    ],
    "action": "Watch",
    "confidence": "medium",
    "evidence": "Confirmed: Dungeons of Gielinor passed; Diamond Dragon is a deeper boss and players are told to stock antifires. Unconfirmed: Diamond Dragon weakness and drops. https://oldschool.runescape.wiki/w/Update:RuneFest_2026_Summit_Overview",
    "recheck_when": "Dungeons of Gielinor boss blog with Diamond Dragon weakness and drop table",
-   "last_reviewed": "2026-11-07"
+   "last_reviewed": "2026-11-08"
   },
   {
    "title": "Law altar portal move lifts law rune supply",
@@ -639,7 +669,7 @@
    "id": "i14",
    "status": "open",
    "first_seen": "2026-11-05",
-   "last_reviewed": "2026-11-07",
+   "last_reviewed": "2026-11-08",
    "history": [
     {
      "date": "2026-11-05",
@@ -655,6 +685,11 @@
      "date": "2026-11-07",
      "verdict": "keep",
      "reason": "Underwater jewellery production is still poll-stage content. Jewellery types, rates and bar demand are unannounced, so the thesis stays a low-confidence Watch."
+    },
+    {
+     "date": "2026-11-08",
+     "verdict": "keep",
+     "reason": "The jewellery production details are still unpolled. Weak but valid Watch."
     }
    ]
   },
@@ -836,12 +871,17 @@
    "id": "i18",
    "status": "open",
    "first_seen": "2026-11-07",
-   "last_reviewed": "2026-11-07",
+   "last_reviewed": "2026-11-08",
    "history": [
     {
      "date": "2026-11-07",
      "verdict": "new",
      "reason": "First raised"
+    },
+    {
+     "date": "2026-11-08",
+     "verdict": "keep",
+     "reason": "The Abyssal Slayer area is still at proposal stage."
     }
    ]
   },
@@ -871,15 +911,167 @@
    "id": "i19",
    "status": "open",
    "first_seen": "2026-11-07",
-   "last_reviewed": "2026-11-07",
+   "last_reviewed": "2026-11-08",
    "history": [
     {
      "date": "2026-11-07",
+     "verdict": "new",
+     "reason": "First raised"
+    },
+    {
+     "date": "2026-11-08",
+     "verdict": "keep",
+     "reason": "The new gemstone dragon weaknesses are still unannounced."
+    }
+   ]
+  },
+  {
+   "title": "Amulet of sight quest reward floods the market",
+   "trigger": "The Writing's on the Wall (Quest Month) gives a free tradeable +10 Ranged amulet. Hudson sells more at 1,500 coins.",
+   "release": "Released 3 Nov 2026",
+   "evidence": "Wiki: tradeable, +10 Ranged, no level requirement, free on quest completion, unlimited Hudson stock at 1,500 coins. https://oldschool.runescape.wiki/w/Amulet_of_sight",
+   "mechanism": "Every quester gets one free and the shop stock is unlimited. Quest completers can sell spares, so supply is high and demand is limited to new players.",
+   "direction": "down",
+   "items": [
+    {
+     "name": "Amulet of sight",
+     "id": 34762,
+     "limit": null,
+     "high_then": 656,
+     "low_then": 615
+    }
+   ],
+   "substitutes": "Necklace of fangs and amulet of accuracy for ironmen and low-level players. Free first copy means little buyer demand.",
+   "confidence": "medium",
+   "action": "Avoid holding",
+   "action_detail": "Don't buy for resale. The price is already very low, so this is mainly a reason not to flip it.",
+   "exit_plan": "Not applicable. Revisit only if Jagex removes the shop or the amulet gets a use in a later update.",
+   "what_would_kill_it": "A later reward, such as a Slayer-helm-style requirement, that makes the amulet required or consumed.",
+   "recheck_when": "Quest Month follow-up blogs or any Ranged amulet changes",
+   "id": "i20",
+   "status": "open",
+   "first_seen": "2026-11-08",
+   "last_reviewed": "2026-11-08",
+   "history": [
+    {
+     "date": "2026-11-08",
+     "verdict": "new",
+     "reason": "First raised"
+    }
+   ]
+  },
+  {
+   "title": "Law altar portal move trims law rune cost",
+   "trigger": "The Gathering Efficiencies QoL update moves the portal closer to the Law Altar.",
+   "release": "11 Nov 2026",
+   "evidence": "Wiki upcoming updates lists Gathering Efficiencies QoL for Nov 11. The portal-near-Law-Altar change passed its poll and is still pending. https://oldschool.runescape.wiki/w/Upcoming_updates",
+   "mechanism": "Faster law rune crafting trips could raise supply slightly and lower price. The size of the effect is a guess.",
+   "direction": "down",
+   "items": [
+    {
+     "name": "Law rune",
+     "id": 563,
+     "limit": 18000,
+     "high_then": 121,
+     "low_then": 117
+    }
+   ],
+   "substitutes": "Existing Law Altar and Wrath-style supply; plenty of other law rune sources. Effect is likely small.",
+   "confidence": "low",
+   "action": "Watch",
+   "action_detail": "Unconfirmed: the exact portal distance and any other Law Altar changes in the patch notes. Check law rune price trend after Nov 11.",
+   "exit_plan": "If law runes fall more than 3% after release, hold off buying until the price stabilises.",
+   "what_would_kill_it": "Patch notes that skip the Law Altar change, or a small time saving that the market ignores.",
+   "recheck_when": "Gathering Efficiencies patch notes on 11 Nov",
+   "id": "i21",
+   "status": "open",
+   "first_seen": "2026-11-08",
+   "last_reviewed": "2026-11-08",
+   "history": [
+    {
+     "date": "2026-11-08",
+     "verdict": "new",
+     "reason": "First raised"
+    }
+   ]
+  },
+  {
+   "title": "Wesley coconut crushing may shift coconut and milk demand",
+   "trigger": "Gathering Efficiencies QoL lets Wesley crush coconuts into coconut milk.",
+   "release": "11 Nov 2026",
+   "evidence": "Wiki upcoming updates lists Wesley crushing coconuts into coconut milk as a passed poll item still to be added. https://oldschool.runescape.wiki/w/Upcoming_updates",
+   "mechanism": "It is a convenience feature that could slightly raise demand for coconuts, or reduce the premium on crushed milk, depending on what uses coconut milk.",
+   "direction": "up",
+   "items": [
+    {
+     "name": "Coconut",
+     "id": 5974,
+     "limit": 11000,
+     "high_then": 1063,
+     "low_then": 1018
+    }
+   ],
+   "substitutes": "Unknown until the patch notes show the crushing cost and what uses coconut milk. Hand-crushing remains possible.",
+   "confidence": "low",
+   "action": "Watch",
+   "action_detail": "Unconfirmed: the crushing cost, what coconut milk is used for, and the volume involved. Check the patch notes on 11 Nov.",
+   "exit_plan": "If coconut milk has no meaningful demand, drop the idea after release day.",
+   "what_would_kill_it": "Coconut milk having no real demand, or a trivial effect on coconut volume.",
+   "recheck_when": "Gathering Efficiencies patch notes on 11 Nov",
+   "id": "i22",
+   "status": "open",
+   "first_seen": "2026-11-08",
+   "last_reviewed": "2026-11-08",
+   "history": [
+    {
+     "date": "2026-11-08",
+     "verdict": "new",
+     "reason": "First raised"
+    }
+   ]
+  },
+  {
+   "title": "Mining and Smithing Reforged may reprice ores and bars",
+   "trigger": "A Summer 2027 rework of the Mining and Smithing skills.",
+   "release": "Summer 2027",
+   "evidence": "Wiki: Mining and Smithing Reforged passed a poll (RuneFest 2026 Summit question 9). Details are still undecided. https://oldschool.runescape.wiki/w/Upcoming_updates",
+   "mechanism": "Skill reworks often change ore and bar supply or demand. The direction is unknown until Jagex publishes the details.",
+   "direction": "up",
+   "items": [
+    {
+     "name": "Runite ore",
+     "id": 451,
+     "limit": 4500,
+     "high_then": 10195,
+     "low_then": 10005
+    },
+    {
+     "name": "Adamantite bar",
+     "id": 2361,
+     "limit": 10000,
+     "high_then": 1740,
+     "low_then": 1731
+    }
+   ],
+   "substitutes": "Unknown until details are published. Mining and Smithing are heavily botted, so supply is elastic.",
+   "confidence": "low",
+   "action": "Watch",
+   "action_detail": "Unconfirmed: whether rates or recipes change for runite and adamantite, and any buy-limit or recipe changes. Wait for the design blog.",
+   "exit_plan": "If the blog shows higher supply, flip direction to down. If recipes change, switch to the affected bars.",
+   "what_would_kill_it": "A purely cosmetic or XP-only rework with no change to ore or bar rates.",
+   "recheck_when": "Mining and Smithing Reforged blog or poll",
+   "id": "i23",
+   "status": "open",
+   "first_seen": "2026-11-08",
+   "last_reviewed": "2026-11-08",
+   "history": [
+    {
+     "date": "2026-11-08",
      "verdict": "new",
      "reason": "First raised"
     }
    ]
   }
  ],
- "updated": "2026-11-07T08:23+00:00"
+ "updated": "2026-11-08T09:21+00:00"
 }

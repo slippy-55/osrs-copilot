@@ -100,6 +100,15 @@
    "searches": 4,
    "usd": 0.1137,
    "model": "claude-haiku-5-5"
+  },
+  {
+   "date": "2026-11-08T09:21+00:00",
+   "mode": "deep",
+   "in": 119106,
+   "out": 9012,
+   "searches": 6,
+   "usd": 0.3883,
+   "model": "claude-sonnet-5-5"
   }
  ]
 }
