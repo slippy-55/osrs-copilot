@@ -444,6 +444,21 @@
      "low_then": 1731
     }
    ]
+  },
+  {
+   "date": "2026-11-09T07:41+00:00",
+   "title": "Fairytale III runecraft method may lift nature rune demand",
+   "idea": "i24",
+   "direction": "up",
+   "items": [
+    {
+     "name": "Nature rune",
+     "id": 561,
+     "limit": 18000,
+     "high_then": 167,
+     "low_then": 164
+    }
+   ]
   }
  ]
 }
