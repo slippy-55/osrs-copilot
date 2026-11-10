@@ -1,5 +1,5 @@
 {
- "next": 25,
+ "next": 26,
  "ideas": [
   {
    "title": "Amulet of sight supply flood",
@@ -109,10 +109,15 @@
      "date": "2026-11-09",
      "verdict": "keep",
      "reason": "The Graveyard is confirmed for November, but its exact day is not yet set and I could not re-verify the Marks-to-amylase link this session."
+    },
+    {
+     "date": "2026-11-10",
+     "verdict": "keep",
+     "reason": "The Graveyard is still slated for November on the roadmap, but the Marks-per-hour and Graceful refund claims are unverified this scan."
     }
    ],
    "recheck_when": "Graveyard release date; Graceful rework poll result",
-   "last_reviewed": "2026-11-09"
+   "last_reviewed": "2026-11-10"
   },
   {
    "title": "Underwater gem rocks cut gem prices",
@@ -207,7 +212,7 @@
    "title": "Underwater farming patches lift rare seeds",
    "trigger": "The Deep Sea Diving expansion adds underwater Spirit Tree, Celastrus, Mushroom and Hardwood farming patches.",
    "release": "Early 2027 (poll result pending)",
-   "evidence": "Confirmed by OSRS Wiki Upcoming updates: underwater Spirit Tree, Celastrus, Mushroom and Hardwood farming patches planned for early 2027 after a poll. https://oldschool.runescape.wiki/w/Upcoming_updates",
+   "evidence": "Poll-stage Jagex proposal: an underwater cave farming area with Spirit Tree, Celastrus, Mushroom and Hardwood patches, planned for early 2027. Seed names and yields are still unconfirmed. https://oldschool.runescape.wiki/w/Upcoming_updates",
    "mechanism": "Extra patches mean extra seed demand per player. Spirit and celastrus seeds are rare, so they are most sensitive. Mahogany is secondary.",
    "direction": "up",
    "substitutes": "Players can skip the patches, and existing patches already supply the produce.",
@@ -269,10 +274,15 @@
      "date": "2026-11-09",
      "verdict": "update",
      "reason": "Confirmed patches are Spirit Tree, Celastrus, Mushroom and Hardwood. Irit seed is not among them, so I swapped in the matching seeds."
+    },
+    {
+     "date": "2026-11-10",
+     "verdict": "update",
+     "reason": "The Jagex blog now confirms an underwater cave farming area with four patch types. It is still poll-stage and planned for early 2027."
     }
    ],
    "recheck_when": "Deep Sea Diving poll results on the farming area question",
-   "last_reviewed": "2026-11-09"
+   "last_reviewed": "2026-11-10"
   },
   {
    "title": "Zanik crossbow may replace Dorgeshuun crossbow",
@@ -288,7 +298,7 @@
    "exit_plan": "Exit before release if the details confirm a stronger replacement.",
    "what_would_kill_it": "Zanik's crossbow has weak stats, a high requirement, or limited use. The Dorgeshuun crossbow keeps its niche.",
    "id": "i5",
-   "status": "open",
+   "status": "dropped",
    "first_seen": "2026-11-05",
    "items": [
     {
@@ -329,10 +339,17 @@
      "date": "2026-11-09",
      "verdict": "keep",
      "reason": "Zanik's crossbow is a confirmed Chosen Commander reward, but whether it is tradeable and its ammo are still unannounced."
+    },
+    {
+     "date": "2026-11-10",
+     "verdict": "drop",
+     "reason": "Tradeability of Zanik's crossbow is unconfirmed, and the Dorgeshuun crossbow has too little demand for a meaningful price move."
     }
    ],
    "recheck_when": "The Chosen Commander rewards blog or Early 2027 release notes",
-   "last_reviewed": "2026-11-09"
+   "last_reviewed": "2026-11-10",
+   "dropped_on": "2026-11-10",
+   "drop_reason": "Tradeability of Zanik's crossbow is unconfirmed, and the Dorgeshuun crossbow has too little demand for a meaningful price move."
   },
   {
    "date": "2026-11-05T16:18+00:00",
@@ -483,13 +500,18 @@
      "date": "2026-11-09",
      "verdict": "keep",
      "reason": "Menaphos and the true Soul Altar are confirmed for Spring 2027. Soul rune output and XP rates are still unannounced."
+    },
+    {
+     "date": "2026-11-10",
+     "verdict": "keep",
+     "reason": "Menaphos and the true Soul Altar are confirmed as passed-poll content, but soul rune rates and volumes are still unknown."
     }
    ],
    "action": "Watch",
    "confidence": "low",
    "evidence": "Unconfirmed: runes per hour and XP rates. Wiki: Menaphos adds the true Soul Altar, with soul runes craftable at 90 Runecraft. https://oldschool.runescape.wiki/w/Upcoming_updates",
    "recheck_when": "Menaphos rewards or Soul Altar blog",
-   "last_reviewed": "2026-11-09"
+   "last_reviewed": "2026-11-10"
   },
   {
    "date": "2026-11-05T15:58+00:00",
@@ -615,13 +637,18 @@
      "date": "2026-11-09",
      "verdict": "update",
      "reason": "Dungeons of Gielinor passed its poll and includes Gemstone Dragons with a Diamond Dragon boss. Their weaknesses are unannounced, so confidence drops to low."
+    },
+    {
+     "date": "2026-11-10",
+     "verdict": "keep",
+     "reason": "Dungeons of Gielinor is confirmed for Spring 2027 with a Diamond Dragon. Gemstone Dragon weaknesses and drops remain unconfirmed."
     }
    ],
    "action": "Watch",
    "confidence": "low",
    "evidence": "Confirmed: Dungeons of Gielinor passed the Summit poll with Gemstone Dragons and the Diamond Dragon. Dragons are weak to dragonbane per OSRS Wiki. Gemstone Dragon weaknesses unconfirmed. https://osrstoolkit.com/osrs-dungeons-of-gielinor-2026/",
    "recheck_when": "Dungeons of Gielinor boss blog with Diamond Dragon weakness and drop table",
-   "last_reviewed": "2026-11-09"
+   "last_reviewed": "2026-11-10"
   },
   {
    "title": "Law altar portal move lifts law rune supply",
@@ -669,7 +696,7 @@
    "title": "Underwater jewellery production floods bars and jewellery",
    "trigger": "Deep Sea Diving jewellery production sites with faster-respawn gold and silver rocks and vent furnaces",
    "release": "Early 2027",
-   "evidence": "Unconfirmed: poll result, jewellery types and rates. The Jagex blog proposes gold and silver rocks with faster respawn, plus vents that act as furnaces. https://oldschool.runescape.wiki/w/Update:Deep_Sea_Diving_Expansion",
+   "evidence": "Poll-stage proposal: silver, gold and gem rocks, plus furnace-like vents that bank smelted jewellery. Rates and jewellery types unconfirmed. https://oldschool.runescape.wiki/w/Update:Deep_Sea_Diving_Expansion",
    "mechanism": "A faster, semi-automated source of gold and silver and of cut jewellery raises supply and lowers prices.",
    "direction": "down",
    "items": [
@@ -698,7 +725,7 @@
    "id": "i14",
    "status": "open",
    "first_seen": "2026-11-05",
-   "last_reviewed": "2026-11-09",
+   "last_reviewed": "2026-11-10",
    "history": [
     {
      "date": "2026-11-05",
@@ -724,6 +751,11 @@
      "date": "2026-11-09",
      "verdict": "keep",
      "reason": "Underwater jewellery production is confirmed in the blog, but the poll result, jewellery types and rates are not yet known."
+    },
+    {
+     "date": "2026-11-10",
+     "verdict": "update",
+     "reason": "The jewellery site is now described in Jagex-sourced coverage: silver, gold and gem rocks plus a furnace that banks smelted jewellery. Rates and jewellery types are still unknown."
     }
    ]
   },
@@ -999,7 +1031,7 @@
    "id": "i20",
    "status": "open",
    "first_seen": "2026-11-08",
-   "last_reviewed": "2026-11-09",
+   "last_reviewed": "2026-11-10",
    "history": [
     {
      "date": "2026-11-08",
@@ -1010,6 +1042,11 @@
      "date": "2026-11-09",
      "verdict": "update",
      "reason": "The Amulet of Sight is confirmed tradeable, gives +10 Ranged with no level requirement, and is free from one quest while Hudson sells more. Early trade prices may already be set."
+    },
+    {
+     "date": "2026-11-10",
+     "verdict": "keep",
+     "reason": "Quest Month's second quest is confirmed to award an Amulet of Sight, so the supply source is real. Tradeability rests on one blog."
     }
    ]
   },
@@ -1081,7 +1118,7 @@
    "id": "i22",
    "status": "open",
    "first_seen": "2026-11-08",
-   "last_reviewed": "2026-11-09",
+   "last_reviewed": "2026-11-10",
    "history": [
     {
      "date": "2026-11-08",
@@ -1092,6 +1129,11 @@
      "date": "2026-11-09",
      "verdict": "keep",
      "reason": "Wesley coconut crushing is a passed poll item still to be added, with the Gathering Efficiencies patch due 11 November. Demand effect remains unquantified."
+    },
+    {
+     "date": "2026-11-10",
+     "verdict": "keep",
+     "reason": "The Wiki still lists Wesley coconut crushing as a passed poll item not yet added. Timing is still unknown."
     }
    ]
   },
@@ -1126,9 +1168,9 @@
    "what_would_kill_it": "A purely cosmetic or XP-only rework with no change to ore or bar rates.",
    "recheck_when": "Mining and Smithing Reforged blog or poll",
    "id": "i23",
-   "status": "open",
+   "status": "dropped",
    "first_seen": "2026-11-08",
-   "last_reviewed": "2026-11-09",
+   "last_reviewed": "2026-11-10",
    "history": [
     {
      "date": "2026-11-08",
@@ -1139,14 +1181,21 @@
      "date": "2026-11-09",
      "verdict": "keep",
      "reason": "Mining and Smithing Reforged is confirmed for Summer 2027 but has no details yet, so any ore or bar repricing is speculative."
+    },
+    {
+     "date": "2026-11-10",
+     "verdict": "drop",
+     "reason": "Mining and Smithing Reforged is set for Summer 2027 with no details yet, so no specific ore or bar can be tied to it."
     }
-   ]
+   ],
+   "dropped_on": "2026-11-10",
+   "drop_reason": "Mining and Smithing Reforged is set for Summer 2027 with no details yet, so no specific ore or bar can be tied to it."
   },
   {
    "title": "Fairytale III runecraft method may lift nature rune demand",
    "trigger": "Fairytale III - Nexus of Power release and its new Runecraft method details",
    "release": "Summer 2027",
-   "evidence": "Unconfirmed: runes used and XP rates. Confirmed: Fairytale III passed the Summit poll with a new Runecraft method, master tier quest and new boss. https://oldschool.runescape.wiki/w/Upcoming_updates",
+   "evidence": "Fairytale III passed the Summit poll with a master quest, a new Runecraft method and a new boss. Roadmap lists Summer 2027. Unconfirmed: runes used and XP rates. https://mypvm.com/blog/osrs-roadmap-november-2026-to-autumn-2027",
    "mechanism": "A new Runecraft method that consumes nature runes would add steady demand for them, if the method uses them.",
    "direction": "up",
    "items": [
@@ -1168,15 +1217,62 @@
    "id": "i24",
    "status": "open",
    "first_seen": "2026-11-09",
-   "last_reviewed": "2026-11-09",
+   "last_reviewed": "2026-11-10",
    "history": [
     {
      "date": "2026-11-09",
+     "verdict": "new",
+     "reason": "First raised"
+    },
+    {
+     "date": "2026-11-10",
+     "verdict": "update",
+     "reason": "The roadmap now places Fairytale III in Summer 2027, with its Runecraft method confirmed but its rewards still to be polled."
+    }
+   ]
+  },
+  {
+   "title": "Underwater precious rocks add gem supply",
+   "trigger": "Deep Sea Diving poll passes and jewellery sites go live",
+   "release": "Early 2027 (proposed)",
+   "evidence": "Guide summary says precious rocks yield sapphires, emeralds, rubies and diamonds. Unconfirmed: whether gems come uncut or cut. https://osrstoolkit.com/osrs-deep-sea-diving-expansion/",
+   "mechanism": "A new gem source raises uncut gem supply, which should push gem prices down if the rocks are fast and easy to mine.",
+   "direction": "down",
+   "items": [
+    {
+     "name": "Uncut sapphire",
+     "id": 1623,
+     "limit": 10000,
+     "high_then": 168,
+     "low_then": 165
+    },
+    {
+     "name": "Uncut diamond",
+     "id": 1617,
+     "limit": 10000,
+     "high_then": 2248,
+     "low_then": 2200
+    }
+   ],
+   "substitutes": "Existing gem mining and gem rocks already supply most gem demand.",
+   "confidence": "low",
+   "action": "Watch",
+   "action_detail": "Wait for the poll result and the jewellery site blog. Act only if yields and respawn rates are published.",
+   "exit_plan": "No position needed until yields are confirmed.",
+   "what_would_kill_it": "Rocks yield cut gems only, or the poll fails.",
+   "recheck_when": "Deep Sea Diving poll result and jewellery site blog",
+   "id": "i25",
+   "status": "open",
+   "first_seen": "2026-11-10",
+   "last_reviewed": "2026-11-10",
+   "history": [
+    {
+     "date": "2026-11-10",
      "verdict": "new",
      "reason": "First raised"
     }
    ]
   }
  ],
- "updated": "2026-11-09T07:41+00:00"
+ "updated": "2026-11-10T09:19+00:00"
 }

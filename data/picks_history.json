@@ -459,6 +459,28 @@
      "low_then": 164
     }
    ]
+  },
+  {
+   "date": "2026-11-10T09:19+00:00",
+   "title": "Underwater precious rocks add gem supply",
+   "idea": "i25",
+   "direction": "down",
+   "items": [
+    {
+     "name": "Uncut sapphire",
+     "id": 1623,
+     "limit": 10000,
+     "high_then": 168,
+     "low_then": 165
+    },
+    {
+     "name": "Uncut diamond",
+     "id": 1617,
+     "limit": 10000,
+     "high_then": 2248,
+     "low_then": 2200
+    }
+   ]
   }
  ]
 }
