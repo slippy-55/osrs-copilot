@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-10T09:19+00:00",
+ "generated": "2026-11-11T09:44+00:00",
  "mode": "quick",
  "model": "claude-haiku-5-5",
  "theses": [
@@ -70,10 +70,15 @@
      "date": "2026-11-10",
      "verdict": "keep",
      "reason": "The Graveyard is still slated for November on the roadmap, but the Marks-per-hour and Graceful refund claims are unverified this scan."
+    },
+    {
+     "date": "2026-11-11",
+     "verdict": "keep",
+     "reason": "Graveyard is still due in November and its rewards are confirmed. The Marks-to-amylase link was not re-verified in this scan, so the idea stays at medium confidence."
     }
    ],
    "recheck_when": "Graveyard release date; Graceful rework poll result",
-   "last_reviewed": "2026-11-10"
+   "last_reviewed": "2026-11-11"
   },
   {
    "title": "Underwater farming patches lift rare seeds",
@@ -146,10 +151,15 @@
      "date": "2026-11-10",
      "verdict": "update",
      "reason": "The Jagex blog now confirms an underwater cave farming area with four patch types. It is still poll-stage and planned for early 2027."
+    },
+    {
+     "date": "2026-11-11",
+     "verdict": "keep",
+     "reason": "The OSRS Wiki confirms early 2027 underwater farming patches for Spirit Tree, Celastrus, Mushroom and Hardwood. Seed names and yields are still unannounced."
     }
    ],
    "recheck_when": "Deep Sea Diving poll results on the farming area question",
-   "last_reviewed": "2026-11-10"
+   "last_reviewed": "2026-11-11"
   },
   {
    "date": "2026-11-05T15:58+00:00",
@@ -202,13 +212,18 @@
      "date": "2026-11-10",
      "verdict": "keep",
      "reason": "Menaphos and the true Soul Altar are confirmed as passed-poll content, but soul rune rates and volumes are still unknown."
+    },
+    {
+     "date": "2026-11-11",
+     "verdict": "keep",
+     "reason": "The Wiki confirms the Menaphos true Soul Altar and soul runes craftable at 90 Runecraft. Runes per hour and XP rates are still unknown."
     }
    ],
    "action": "Watch",
    "confidence": "low",
    "evidence": "Unconfirmed: runes per hour and XP rates. Wiki: Menaphos adds the true Soul Altar, with soul runes craftable at 90 Runecraft. https://oldschool.runescape.wiki/w/Upcoming_updates",
    "recheck_when": "Menaphos rewards or Soul Altar blog",
-   "last_reviewed": "2026-11-10"
+   "last_reviewed": "2026-11-11"
   },
   {
    "date": "2026-11-05T15:58+00:00",
@@ -261,13 +276,19 @@
      "date": "2026-11-10",
      "verdict": "keep",
      "reason": "Dungeons of Gielinor is confirmed for Spring 2027 with a Diamond Dragon. Gemstone Dragon weaknesses and drops remain unconfirmed."
+    },
+    {
+     "date": "2026-11-11",
+     "verdict": "update",
+     "reason": "The 'dragonbane' weakness claim was unsupported; the Diamond Dragon weakness is unannounced. The Jagex Summit overview does tell players to stock antifires before descending, which supports the demand case."
     }
    ],
    "action": "Watch",
    "confidence": "low",
-   "evidence": "Confirmed: Dungeons of Gielinor passed the Summit poll with Gemstone Dragons and the Diamond Dragon. Dragons are weak to dragonbane per OSRS Wiki. Gemstone Dragon weaknesses unconfirmed. https://osrstoolkit.com/osrs-dungeons-of-gielinor-2026/",
+   "evidence": "Jagex RuneFest Summit overview (Oct 2026) says to stock up on antifires before descending to the Gemstone Dragon caverns. Diamond Dragon weakness unannounced. https://oldschool.runescape.wiki/w/Update:RuneFest_2026_Summit_Overview",
    "recheck_when": "Dungeons of Gielinor boss blog with Diamond Dragon weakness and drop table",
-   "last_reviewed": "2026-11-10"
+   "last_reviewed": "2026-11-11",
+   "what_would_kill_it": "Dungeons of Gielinor poll fails, or the Diamond Dragon needs no antifire."
   },
   {
    "title": "Underwater jewellery production floods bars and jewellery",
@@ -302,7 +323,7 @@
    "id": "i14",
    "status": "open",
    "first_seen": "2026-11-05",
-   "last_reviewed": "2026-11-10",
+   "last_reviewed": "2026-11-11",
    "history": [
     {
      "date": "2026-11-05",
@@ -333,6 +354,11 @@
      "date": "2026-11-10",
      "verdict": "update",
      "reason": "The jewellery site is now described in Jagex-sourced coverage: silver, gold and gem rocks plus a furnace that banks smelted jewellery. Rates and jewellery types are still unknown."
+    },
+    {
+     "date": "2026-11-11",
+     "verdict": "keep",
+     "reason": "The Jagex blog and Wiki confirm poll-stage silver, gold and gem rocks plus a hydrothermal vent furnace that banks jewellery. Production rates are still unknown."
     }
    ]
   },
@@ -340,7 +366,7 @@
    "title": "Amulet of sight quest reward floods the market",
    "trigger": "The Writing's on the Wall (Quest Month) gives a free tradeable +10 Ranged amulet. Hudson sells more at 1,500 coins.",
    "release": "Released 3 Nov 2026",
-   "evidence": "Confirmed: tradeable +10 Ranged with no requirements; one free from a Quest Month quest, others sold by Hudson. https://www.gielinorgains.com/game-updates/2026-11-03-quest-month-kick-off-tfa-tweaks-and-more",
+   "evidence": "Official Nov 3 update: tradeable +10 Ranged amulet, one free from a Quest Month quest, others sold by Hudson. First-day GE price about 381 GP. https://secure.runescape.com/m=news/quest-month-kick-off-tfa-tweaks--more?oldschool=1",
    "mechanism": "Every quester gets one free and the shop stock is unlimited. Quest completers can sell spares, so supply is high and demand is limited to new players.",
    "direction": "down",
    "items": [
@@ -362,7 +388,7 @@
    "id": "i20",
    "status": "open",
    "first_seen": "2026-11-08",
-   "last_reviewed": "2026-11-10",
+   "last_reviewed": "2026-11-11",
    "history": [
     {
      "date": "2026-11-08",
@@ -378,51 +404,11 @@
      "date": "2026-11-10",
      "verdict": "keep",
      "reason": "Quest Month's second quest is confirmed to award an Amulet of Sight, so the supply source is real. Tradeability rests on one blog."
-    }
-   ]
-  },
-  {
-   "title": "Wesley coconut crushing may shift coconut and milk demand",
-   "trigger": "Gathering Efficiencies QoL lets Wesley crush coconuts into coconut milk.",
-   "release": "11 Nov 2026",
-   "evidence": "Wiki upcoming updates lists Wesley crushing coconuts into coconut milk as a passed poll item still to be added. https://oldschool.runescape.wiki/w/Upcoming_updates",
-   "mechanism": "It is a convenience feature that could slightly raise demand for coconuts, or reduce the premium on crushed milk, depending on what uses coconut milk.",
-   "direction": "up",
-   "items": [
-    {
-     "name": "Coconut",
-     "id": 5974,
-     "limit": 11000,
-     "high_then": 1063,
-     "low_then": 1018
-    }
-   ],
-   "substitutes": "Unknown until the patch notes show the crushing cost and what uses coconut milk. Hand-crushing remains possible.",
-   "confidence": "low",
-   "action": "Watch",
-   "action_detail": "Unconfirmed: the crushing cost, what coconut milk is used for, and the volume involved. Check the patch notes on 11 Nov.",
-   "exit_plan": "If coconut milk has no meaningful demand, drop the idea after release day.",
-   "what_would_kill_it": "Coconut milk having no real demand, or a trivial effect on coconut volume.",
-   "recheck_when": "Gathering Efficiencies patch notes on 11 Nov",
-   "id": "i22",
-   "status": "open",
-   "first_seen": "2026-11-08",
-   "last_reviewed": "2026-11-10",
-   "history": [
-    {
-     "date": "2026-11-08",
-     "verdict": "new",
-     "reason": "First raised"
     },
     {
-     "date": "2026-11-09",
-     "verdict": "keep",
-     "reason": "Wesley coconut crushing is a passed poll item still to be added, with the Gathering Efficiencies patch due 11 November. Demand effect remains unquantified."
-    },
-    {
-     "date": "2026-11-10",
-     "verdict": "keep",
-     "reason": "The Wiki still lists Wesley coconut crushing as a passed poll item not yet added. Timing is still unknown."
+     "date": "2026-11-11",
+     "verdict": "update",
+     "reason": "Amulet of Sight is tradeable and Hudson sells more. The first-day price was only 381 GP, so part of the supply glut may already be in the price."
     }
    ]
   },
@@ -452,7 +438,7 @@
    "id": "i24",
    "status": "open",
    "first_seen": "2026-11-09",
-   "last_reviewed": "2026-11-10",
+   "last_reviewed": "2026-11-11",
    "history": [
     {
      "date": "2026-11-09",
@@ -463,6 +449,11 @@
      "date": "2026-11-10",
      "verdict": "update",
      "reason": "The roadmap now places Fairytale III in Summer 2027, with its Runecraft method confirmed but its rewards still to be polled."
+    },
+    {
+     "date": "2026-11-11",
+     "verdict": "keep",
+     "reason": "Fairytale III is poll-passed for Summer 2027 with a new Runecraft method. Runes used and XP rates are still unannounced."
     }
    ]
   },
@@ -470,7 +461,7 @@
    "title": "Underwater precious rocks add gem supply",
    "trigger": "Deep Sea Diving poll passes and jewellery sites go live",
    "release": "Early 2027 (proposed)",
-   "evidence": "Guide summary says precious rocks yield sapphires, emeralds, rubies and diamonds. Unconfirmed: whether gems come uncut or cut. https://osrstoolkit.com/osrs-deep-sea-diving-expansion/",
+   "evidence": "Jagex Deep Sea Diving blog and Wiki: 65 Mining precious gem rocks give uncut sapphires, emeralds, rubies and diamonds. Still poll-stage. https://oldschool.runescape.wiki/w/Update:Deep_Sea_Diving_Expansion",
    "mechanism": "A new gem source raises uncut gem supply, which should push gem prices down if the rocks are fast and easy to mine.",
    "direction": "down",
    "items": [
@@ -499,17 +490,74 @@
    "id": "i25",
    "status": "open",
    "first_seen": "2026-11-10",
-   "last_reviewed": "2026-11-10",
+   "last_reviewed": "2026-11-11",
    "history": [
     {
      "date": "2026-11-10",
      "verdict": "new",
      "reason": "First raised"
+    },
+    {
+     "date": "2026-11-11",
+     "verdict": "update",
+     "reason": "The Jagex blog and Wiki now confirm the 65 Mining precious gem rocks yield uncut sapphires, emeralds, rubies and diamonds, not cut gems. Still poll-stage."
     }
    ]
   }
  ],
  "dropped": [
+  {
+   "title": "Wesley coconut crushing may shift coconut and milk demand",
+   "trigger": "Gathering Efficiencies QoL lets Wesley crush coconuts into coconut milk.",
+   "release": "11 Nov 2026",
+   "evidence": "Wiki upcoming updates lists Wesley crushing coconuts into coconut milk as a passed poll item still to be added. https://oldschool.runescape.wiki/w/Upcoming_updates",
+   "mechanism": "It is a convenience feature that could slightly raise demand for coconuts, or reduce the premium on crushed milk, depending on what uses coconut milk.",
+   "direction": "up",
+   "items": [
+    {
+     "name": "Coconut",
+     "id": 5974,
+     "limit": 11000,
+     "high_then": 1063,
+     "low_then": 1018
+    }
+   ],
+   "substitutes": "Unknown until the patch notes show the crushing cost and what uses coconut milk. Hand-crushing remains possible.",
+   "confidence": "low",
+   "action": "Watch",
+   "action_detail": "Unconfirmed: the crushing cost, what coconut milk is used for, and the volume involved. Check the patch notes on 11 Nov.",
+   "exit_plan": "If coconut milk has no meaningful demand, drop the idea after release day.",
+   "what_would_kill_it": "Coconut milk having no real demand, or a trivial effect on coconut volume.",
+   "recheck_when": "Gathering Efficiencies patch notes on 11 Nov",
+   "id": "i22",
+   "status": "dropped",
+   "first_seen": "2026-11-08",
+   "last_reviewed": "2026-11-11",
+   "history": [
+    {
+     "date": "2026-11-08",
+     "verdict": "new",
+     "reason": "First raised"
+    },
+    {
+     "date": "2026-11-09",
+     "verdict": "keep",
+     "reason": "Wesley coconut crushing is a passed poll item still to be added, with the Gathering Efficiencies patch due 11 November. Demand effect remains unquantified."
+    },
+    {
+     "date": "2026-11-10",
+     "verdict": "keep",
+     "reason": "The Wiki still lists Wesley coconut crushing as a passed poll item not yet added. Timing is still unknown."
+    },
+    {
+     "date": "2026-11-11",
+     "verdict": "drop",
+     "reason": "Coconut is a low-value item with negligible demand from a crushing mechanic, and its date is not confirmed. Not worth a slot."
+    }
+   ],
+   "dropped_on": "2026-11-11",
+   "drop_reason": "Coconut is a low-value item with negligible demand from a crushing mechanic, and its date is not confirmed. Not worth a slot."
+  },
   {
    "title": "Zanik crossbow may replace Dorgeshuun crossbow",
    "trigger": "The Chosen Commander backport rewards Zanik's Modified Crossbow, a stronger version of the Dorgeshuun crossbow's defence-drain special.",
