@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-11T09:44+00:00",
+ "generated": "2026-11-12T07:32+00:00",
  "mode": "quick",
  "model": "claude-haiku-5-5",
  "theses": [
@@ -75,10 +75,15 @@
      "date": "2026-11-11",
      "verdict": "keep",
      "reason": "Graveyard is still due in November and its rewards are confirmed. The Marks-to-amylase link was not re-verified in this scan, so the idea stays at medium confidence."
+    },
+    {
+     "date": "2026-11-12",
+     "verdict": "keep",
+     "reason": "Roadmap still lists The Graveyard for November with its Marks and Agility method. No new confirmed rewards or rates found, so the thesis stands at medium confidence."
     }
    ],
    "recheck_when": "Graveyard release date; Graceful rework poll result",
-   "last_reviewed": "2026-11-11"
+   "last_reviewed": "2026-11-12"
   },
   {
    "title": "Underwater farming patches lift rare seeds",
@@ -156,10 +161,15 @@
      "date": "2026-11-11",
      "verdict": "keep",
      "reason": "The OSRS Wiki confirms early 2027 underwater farming patches for Spirit Tree, Celastrus, Mushroom and Hardwood. Seed names and yields are still unannounced."
+    },
+    {
+     "date": "2026-11-12",
+     "verdict": "keep",
+     "reason": "Deep Sea Diving is still poll-stage and listed for early 2027. The underwater farming area is proposed, and seed names and yields are not yet confirmed."
     }
    ],
    "recheck_when": "Deep Sea Diving poll results on the farming area question",
-   "last_reviewed": "2026-11-11"
+   "last_reviewed": "2026-11-12"
   },
   {
    "date": "2026-11-05T15:58+00:00",
@@ -217,13 +227,18 @@
      "date": "2026-11-11",
      "verdict": "keep",
      "reason": "The Wiki confirms the Menaphos true Soul Altar and soul runes craftable at 90 Runecraft. Runes per hour and XP rates are still unknown."
+    },
+    {
+     "date": "2026-11-12",
+     "verdict": "keep",
+     "reason": "Menaphos passed the Summit poll and is on the roadmap for Spring 2027. Soul rune rates are still unannounced, so the idea stays low confidence."
     }
    ],
    "action": "Watch",
    "confidence": "low",
    "evidence": "Unconfirmed: runes per hour and XP rates. Wiki: Menaphos adds the true Soul Altar, with soul runes craftable at 90 Runecraft. https://oldschool.runescape.wiki/w/Upcoming_updates",
    "recheck_when": "Menaphos rewards or Soul Altar blog",
-   "last_reviewed": "2026-11-11"
+   "last_reviewed": "2026-11-12"
   },
   {
    "date": "2026-11-05T15:58+00:00",
@@ -281,13 +296,18 @@
      "date": "2026-11-11",
      "verdict": "update",
      "reason": "The 'dragonbane' weakness claim was unsupported; the Diamond Dragon weakness is unannounced. The Jagex Summit overview does tell players to stock antifires before descending, which supports the demand case."
+    },
+    {
+     "date": "2026-11-12",
+     "verdict": "update",
+     "reason": "Gemstone Dragons are confirmed for Dungeons of Gielinor. The regular dragons have weaknesses, and the wiki says dragons are weak to dragonbane. The antifire claim and Diamond Dragon weakness remain unverified."
     }
    ],
    "action": "Watch",
    "confidence": "low",
-   "evidence": "Jagex RuneFest Summit overview (Oct 2026) says to stock up on antifires before descending to the Gemstone Dragon caverns. Diamond Dragon weakness unannounced. https://oldschool.runescape.wiki/w/Update:RuneFest_2026_Summit_Overview",
+   "evidence": "Dungeons of Gielinor (Spring 2027 roadmap) adds Gemstone Dragons, designed around clear weaknesses. Wiki: dragons are weak to dragonbane. Diamond Dragon weakness unannounced. https://osrstoolkit.com/osrs-dungeons-of-gielinor-2026/",
    "recheck_when": "Dungeons of Gielinor boss blog with Diamond Dragon weakness and drop table",
-   "last_reviewed": "2026-11-11",
+   "last_reviewed": "2026-11-12",
    "what_would_kill_it": "Dungeons of Gielinor poll fails, or the Diamond Dragon needs no antifire."
   },
   {
@@ -323,7 +343,7 @@
    "id": "i14",
    "status": "open",
    "first_seen": "2026-11-05",
-   "last_reviewed": "2026-11-11",
+   "last_reviewed": "2026-11-12",
    "history": [
     {
      "date": "2026-11-05",
@@ -359,56 +379,11 @@
      "date": "2026-11-11",
      "verdict": "keep",
      "reason": "The Jagex blog and Wiki confirm poll-stage silver, gold and gem rocks plus a hydrothermal vent furnace that banks jewellery. Production rates are still unknown."
-    }
-   ]
-  },
-  {
-   "title": "Amulet of sight quest reward floods the market",
-   "trigger": "The Writing's on the Wall (Quest Month) gives a free tradeable +10 Ranged amulet. Hudson sells more at 1,500 coins.",
-   "release": "Released 3 Nov 2026",
-   "evidence": "Official Nov 3 update: tradeable +10 Ranged amulet, one free from a Quest Month quest, others sold by Hudson. First-day GE price about 381 GP. https://secure.runescape.com/m=news/quest-month-kick-off-tfa-tweaks--more?oldschool=1",
-   "mechanism": "Every quester gets one free and the shop stock is unlimited. Quest completers can sell spares, so supply is high and demand is limited to new players.",
-   "direction": "down",
-   "items": [
-    {
-     "name": "Amulet of sight",
-     "id": 34762,
-     "limit": null,
-     "high_then": 656,
-     "low_then": 615
-    }
-   ],
-   "substitutes": "Necklace of fangs and amulet of accuracy for ironmen and low-level players. Free first copy means little buyer demand.",
-   "confidence": "medium",
-   "action": "Avoid holding",
-   "action_detail": "Don't buy for resale. The price is already very low, so this is mainly a reason not to flip it.",
-   "exit_plan": "Not applicable. Revisit only if Jagex removes the shop or the amulet gets a use in a later update.",
-   "what_would_kill_it": "A later reward, such as a Slayer-helm-style requirement, that makes the amulet required or consumed.",
-   "recheck_when": "Quest Month follow-up blogs or any Ranged amulet changes",
-   "id": "i20",
-   "status": "open",
-   "first_seen": "2026-11-08",
-   "last_reviewed": "2026-11-11",
-   "history": [
-    {
-     "date": "2026-11-08",
-     "verdict": "new",
-     "reason": "First raised"
     },
     {
-     "date": "2026-11-09",
-     "verdict": "update",
-     "reason": "The Amulet of Sight is confirmed tradeable, gives +10 Ranged with no level requirement, and is free from one quest while Hudson sells more. Early trade prices may already be set."
-    },
-    {
-     "date": "2026-11-10",
+     "date": "2026-11-12",
      "verdict": "keep",
-     "reason": "Quest Month's second quest is confirmed to award an Amulet of Sight, so the supply source is real. Tradeability rests on one blog."
-    },
-    {
-     "date": "2026-11-11",
-     "verdict": "update",
-     "reason": "Amulet of Sight is tradeable and Hudson sells more. The first-day price was only 381 GP, so part of the supply glut may already be in the price."
+     "reason": "Jewellery sites are still a poll-stage proposal with silver, gold and gem rocks and a magical furnace that banks jewellery. Rates and jewellery types are still unconfirmed."
     }
    ]
   },
@@ -438,7 +413,7 @@
    "id": "i24",
    "status": "open",
    "first_seen": "2026-11-09",
-   "last_reviewed": "2026-11-11",
+   "last_reviewed": "2026-11-12",
    "history": [
     {
      "date": "2026-11-09",
@@ -454,6 +429,11 @@
      "date": "2026-11-11",
      "verdict": "keep",
      "reason": "Fairytale III is poll-passed for Summer 2027 with a new Runecraft method. Runes used and XP rates are still unannounced."
+    },
+    {
+     "date": "2026-11-12",
+     "verdict": "keep",
+     "reason": "Fairytale III is still on the roadmap for Summer 2027 with a new Runecraft method. Runes used and XP rates are still unannounced."
     }
    ]
   },
@@ -490,7 +470,7 @@
    "id": "i25",
    "status": "open",
    "first_seen": "2026-11-10",
-   "last_reviewed": "2026-11-11",
+   "last_reviewed": "2026-11-12",
    "history": [
     {
      "date": "2026-11-10",
@@ -501,11 +481,108 @@
      "date": "2026-11-11",
      "verdict": "update",
      "reason": "The Jagex blog and Wiki now confirm the 65 Mining precious gem rocks yield uncut sapphires, emeralds, rubies and diamonds, not cut gems. Still poll-stage."
+    },
+    {
+     "date": "2026-11-12",
+     "verdict": "keep",
+     "reason": "Precious gem rocks are still poll-stage Deep Sea Diving content. Drop rates and the gem yield are unconfirmed."
+    }
+   ]
+  },
+  {
+   "title": "Zanik's Modified Crossbow reward could undercut Dorgeshuun crossbow",
+   "trigger": "The Chosen Commander quest release and its reward tradeability",
+   "release": "Early 2027",
+   "evidence": "Unconfirmed: whether the reward is tradeable. Jagex says the quest reward Zanik's Modified Crossbow has a stronger defence-draining special than the Dorgeshuun crossbow. Dorgeshuun crossbow is tradeable. https://oldschool.runescape.wiki/w/Upcoming_updates",
+   "mechanism": "If a stronger, tradeable crossbow with a similar special is released, demand for Dorgeshuun crossbow could fall as a substitute.",
+   "direction": "down",
+   "items": [
+    {
+     "name": "Dorgeshuun crossbow",
+     "id": 8880,
+     "limit": 70,
+     "high_then": 3650,
+     "low_then": 1600
+    }
+   ],
+   "substitutes": "Adamant crossbow and other crossbows; Dorgeshuun is the bone-bolt crossbow.",
+   "confidence": "low",
+   "action": "Watch",
+   "action_detail": "Watch for the reward's tradeability. Sell only if the reward is confirmed tradeable and a stronger version is released.",
+   "exit_plan": "Drop the idea if the reward is untradeable or the quest is delayed.",
+   "what_would_kill_it": "Reward is untradeable, or the modified crossbow is weaker than the Dorgeshuun crossbow.",
+   "recheck_when": "The Chosen Commander blog or quest reward page",
+   "id": "i26",
+   "status": "open",
+   "first_seen": "2026-11-12",
+   "last_reviewed": "2026-11-12",
+   "history": [
+    {
+     "date": "2026-11-12",
+     "verdict": "new",
+     "reason": "First raised"
     }
    ]
   }
  ],
  "dropped": [
+  {
+   "title": "Amulet of sight quest reward floods the market",
+   "trigger": "The Writing's on the Wall (Quest Month) gives a free tradeable +10 Ranged amulet. Hudson sells more at 1,500 coins.",
+   "release": "Released 3 Nov 2026",
+   "evidence": "Official Nov 3 update: tradeable +10 Ranged amulet, one free from a Quest Month quest, others sold by Hudson. First-day GE price about 381 GP. https://secure.runescape.com/m=news/quest-month-kick-off-tfa-tweaks--more?oldschool=1",
+   "mechanism": "Every quester gets one free and the shop stock is unlimited. Quest completers can sell spares, so supply is high and demand is limited to new players.",
+   "direction": "down",
+   "items": [
+    {
+     "name": "Amulet of sight",
+     "id": 34762,
+     "limit": null,
+     "high_then": 656,
+     "low_then": 615
+    }
+   ],
+   "substitutes": "Necklace of fangs and amulet of accuracy for ironmen and low-level players. Free first copy means little buyer demand.",
+   "confidence": "medium",
+   "action": "Avoid holding",
+   "action_detail": "Don't buy for resale. The price is already very low, so this is mainly a reason not to flip it.",
+   "exit_plan": "Not applicable. Revisit only if Jagex removes the shop or the amulet gets a use in a later update.",
+   "what_would_kill_it": "A later reward, such as a Slayer-helm-style requirement, that makes the amulet required or consumed.",
+   "recheck_when": "Quest Month follow-up blogs or any Ranged amulet changes",
+   "id": "i20",
+   "status": "dropped",
+   "first_seen": "2026-11-08",
+   "last_reviewed": "2026-11-12",
+   "history": [
+    {
+     "date": "2026-11-08",
+     "verdict": "new",
+     "reason": "First raised"
+    },
+    {
+     "date": "2026-11-09",
+     "verdict": "update",
+     "reason": "The Amulet of Sight is confirmed tradeable, gives +10 Ranged with no level requirement, and is free from one quest while Hudson sells more. Early trade prices may already be set."
+    },
+    {
+     "date": "2026-11-10",
+     "verdict": "keep",
+     "reason": "Quest Month's second quest is confirmed to award an Amulet of Sight, so the supply source is real. Tradeability rests on one blog."
+    },
+    {
+     "date": "2026-11-11",
+     "verdict": "update",
+     "reason": "Amulet of Sight is tradeable and Hudson sells more. The first-day price was only 381 GP, so part of the supply glut may already be in the price."
+    },
+    {
+     "date": "2026-11-12",
+     "verdict": "drop",
+     "reason": "The flood thesis was wrong. The first-day price of 381 GP has since risen, with the wiki showing about 780 GP and a 44% rise. Hudson's unlimited 1,500 GP supply does not force the price down."
+    }
+   ],
+   "dropped_on": "2026-11-12",
+   "drop_reason": "The flood thesis was wrong. The first-day price of 381 GP has since risen, with the wiki showing about 780 GP and a 44% rise. Hudson's unlimited 1,500 GP supply does not force the price down."
+  },
   {
    "title": "Wesley coconut crushing may shift coconut and milk demand",
    "trigger": "Gathering Efficiencies QoL lets Wesley crush coconuts into coconut milk.",

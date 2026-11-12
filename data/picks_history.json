@@ -481,6 +481,21 @@
      "low_then": 2200
     }
    ]
+  },
+  {
+   "date": "2026-11-12T07:32+00:00",
+   "title": "Zanik's Modified Crossbow reward could undercut Dorgeshuun crossbow",
+   "idea": "i26",
+   "direction": "down",
+   "items": [
+    {
+     "name": "Dorgeshuun crossbow",
+     "id": 8880,
+     "limit": 70,
+     "high_then": 3650,
+     "low_then": 1600
+    }
+   ]
   }
  ]
 }
