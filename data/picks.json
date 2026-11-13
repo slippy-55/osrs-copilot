@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-12T07:32+00:00",
+ "generated": "2026-11-13T11:24+00:00",
  "mode": "quick",
  "model": "claude-haiku-5-5",
  "theses": [
@@ -80,10 +80,15 @@
      "date": "2026-11-12",
      "verdict": "keep",
      "reason": "Roadmap still lists The Graveyard for November with its Marks and Agility method. No new confirmed rewards or rates found, so the thesis stands at medium confidence."
+    },
+    {
+     "date": "2026-11-13",
+     "verdict": "keep",
+     "reason": "Graveyard rewards blog still stands. The roadmap says November, but a Nov 11 report says The Graveyard has no date yet, so timing is unconfirmed. Keep Sell if holding, and wait for a date before acting."
     }
    ],
    "recheck_when": "Graveyard release date; Graceful rework poll result",
-   "last_reviewed": "2026-11-12"
+   "last_reviewed": "2026-11-13"
   },
   {
    "title": "Underwater farming patches lift rare seeds",
@@ -166,10 +171,15 @@
      "date": "2026-11-12",
      "verdict": "keep",
      "reason": "Deep Sea Diving is still poll-stage and listed for early 2027. The underwater farming area is proposed, and seed names and yields are not yet confirmed."
+    },
+    {
+     "date": "2026-11-13",
+     "verdict": "keep",
+     "reason": "Wiki and Jagex still list the underwater Spirit Tree, Celastrus, Mushroom and Hardwood patches as proposals. Seed names and yields remain unconfirmed. Massively OP says the expansion arrived, which conflicts with Jagex and the wiki listing early 2027."
     }
    ],
    "recheck_when": "Deep Sea Diving poll results on the farming area question",
-   "last_reviewed": "2026-11-12"
+   "last_reviewed": "2026-11-13"
   },
   {
    "date": "2026-11-05T15:58+00:00",
@@ -232,13 +242,18 @@
      "date": "2026-11-12",
      "verdict": "keep",
      "reason": "Menaphos passed the Summit poll and is on the roadmap for Spring 2027. Soul rune rates are still unannounced, so the idea stays low confidence."
+    },
+    {
+     "date": "2026-11-13",
+     "verdict": "update",
+     "reason": "Wiki confirms the true Soul Altar and soul runes at 90 Runecraft. Rune rates are still unannounced, so it stays Watch."
     }
    ],
    "action": "Watch",
    "confidence": "low",
-   "evidence": "Unconfirmed: runes per hour and XP rates. Wiki: Menaphos adds the true Soul Altar, with soul runes craftable at 90 Runecraft. https://oldschool.runescape.wiki/w/Upcoming_updates",
+   "evidence": "Wiki confirms Menaphos adds the true Soul Altar, with soul runes craftable at 90 Runecraft. Unconfirmed: runes per hour and XP rates. https://oldschool.runescape.wiki/w/Upcoming_updates",
    "recheck_when": "Menaphos rewards or Soul Altar blog",
-   "last_reviewed": "2026-11-12"
+   "last_reviewed": "2026-11-13"
   },
   {
    "date": "2026-11-05T15:58+00:00",
@@ -301,20 +316,25 @@
      "date": "2026-11-12",
      "verdict": "update",
      "reason": "Gemstone Dragons are confirmed for Dungeons of Gielinor. The regular dragons have weaknesses, and the wiki says dragons are weak to dragonbane. The antifire claim and Diamond Dragon weakness remain unverified."
+    },
+    {
+     "date": "2026-11-13",
+     "verdict": "update",
+     "reason": "Jagex's Dungeons of Gielinor summary explicitly tells players to bring antifires for the Diamond Dragon. Gemstone weaknesses and drop tables are still unannounced, so the idea stays Watch."
     }
    ],
    "action": "Watch",
    "confidence": "low",
-   "evidence": "Dungeons of Gielinor (Spring 2027 roadmap) adds Gemstone Dragons, designed around clear weaknesses. Wiki: dragons are weak to dragonbane. Diamond Dragon weakness unannounced. https://osrstoolkit.com/osrs-dungeons-of-gielinor-2026/",
+   "evidence": "Jagex's RuneFest summary says to stock antifires before descending, and the Diamond Dragon lair is deep in a cavern. Gemstone dragon weaknesses and drops are unannounced. https://oldschool.runescape.wiki/w/Update:RuneFest_2026_Summit_Overview",
    "recheck_when": "Dungeons of Gielinor boss blog with Diamond Dragon weakness and drop table",
-   "last_reviewed": "2026-11-12",
+   "last_reviewed": "2026-11-13",
    "what_would_kill_it": "Dungeons of Gielinor poll fails, or the Diamond Dragon needs no antifire."
   },
   {
    "title": "Underwater jewellery production floods bars and jewellery",
    "trigger": "Deep Sea Diving jewellery production sites with faster-respawn gold and silver rocks and vent furnaces",
    "release": "Early 2027",
-   "evidence": "Poll-stage proposal: silver, gold and gem rocks, plus furnace-like vents that bank smelted jewellery. Rates and jewellery types unconfirmed. https://oldschool.runescape.wiki/w/Update:Deep_Sea_Diving_Expansion",
+   "evidence": "Jagex Nov 9 blog: poll-stage jewellery site proposal with silver, gold and gem rocks. Rates and jewellery types unconfirmed. Wiki lists early 2027. https://oldschool.runescape.com/m=news/deep-sea-diving-expansion",
    "mechanism": "A faster, semi-automated source of gold and silver and of cut jewellery raises supply and lowers prices.",
    "direction": "down",
    "items": [
@@ -343,7 +363,7 @@
    "id": "i14",
    "status": "open",
    "first_seen": "2026-11-05",
-   "last_reviewed": "2026-11-12",
+   "last_reviewed": "2026-11-13",
    "history": [
     {
      "date": "2026-11-05",
@@ -384,6 +404,11 @@
      "date": "2026-11-12",
      "verdict": "keep",
      "reason": "Jewellery sites are still a poll-stage proposal with silver, gold and gem rocks and a magical furnace that banks jewellery. Rates and jewellery types are still unconfirmed."
+    },
+    {
+     "date": "2026-11-13",
+     "verdict": "update",
+     "reason": "Jagex's Nov 9 blog confirms the low-level jewellery site concept as a poll proposal. Rates and jewellery types are still unannounced. Release is early 2027 per the wiki."
     }
    ]
   },
@@ -391,7 +416,7 @@
    "title": "Fairytale III runecraft method may lift nature rune demand",
    "trigger": "Fairytale III - Nexus of Power release and its new Runecraft method details",
    "release": "Summer 2027",
-   "evidence": "Fairytale III passed the Summit poll with a master quest, a new Runecraft method and a new boss. Roadmap lists Summer 2027. Unconfirmed: runes used and XP rates. https://mypvm.com/blog/osrs-roadmap-november-2026-to-autumn-2027",
+   "evidence": "Unconfirmed: whether the new Runecraft method uses nature runes, and its XP rates. Roadmap confirms a master quest, a Runecraft method and a boss for Summer 2027. https://mypvm.com/blog/osrs-roadmap-no",
    "mechanism": "A new Runecraft method that consumes nature runes would add steady demand for them, if the method uses them.",
    "direction": "up",
    "items": [
@@ -413,7 +438,7 @@
    "id": "i24",
    "status": "open",
    "first_seen": "2026-11-09",
-   "last_reviewed": "2026-11-12",
+   "last_reviewed": "2026-11-13",
    "history": [
     {
      "date": "2026-11-09",
@@ -434,6 +459,11 @@
      "date": "2026-11-12",
      "verdict": "keep",
      "reason": "Fairytale III is still on the roadmap for Summer 2027 with a new Runecraft method. Runes used and XP rates are still unannounced."
+    },
+    {
+     "date": "2026-11-13",
+     "verdict": "update",
+     "reason": "Fairytale III is confirmed on the roadmap for Summer 2027 with a new Runecraft method. Nothing confirms that the method uses nature runes, so the evidence now says so."
     }
    ]
   },
@@ -470,7 +500,7 @@
    "id": "i25",
    "status": "open",
    "first_seen": "2026-11-10",
-   "last_reviewed": "2026-11-12",
+   "last_reviewed": "2026-11-13",
    "history": [
     {
      "date": "2026-11-10",
@@ -486,6 +516,11 @@
      "date": "2026-11-12",
      "verdict": "keep",
      "reason": "Precious gem rocks are still poll-stage Deep Sea Diving content. Drop rates and the gem yield are unconfirmed."
+    },
+    {
+     "date": "2026-11-13",
+     "verdict": "keep",
+     "reason": "Gem rock supply is still poll-stage. Jewellery site reporting confirms gem rocks exist in the proposal, but uncut gem rates are unconfirmed."
     }
    ]
   },
@@ -515,10 +550,85 @@
    "id": "i26",
    "status": "open",
    "first_seen": "2026-11-12",
-   "last_reviewed": "2026-11-12",
+   "last_reviewed": "2026-11-13",
    "history": [
     {
      "date": "2026-11-12",
+     "verdict": "new",
+     "reason": "First raised"
+    },
+    {
+     "date": "2026-11-13",
+     "verdict": "keep",
+     "reason": "Chosen Commander is slated for early 2027 and the Jagex post says Zanik's crossbow has a stronger defence-draining special. Tradeability of the reward is still unconfirmed, so it stays Watch and low."
+    }
+   ]
+  },
+  {
+   "title": "Ascension shard supply up, Obligator demand per charge down",
+   "trigger": "Quest Month Week Two patch raised the shard mining chance and tripled Obligator charges per shard",
+   "release": "Live since Nov 11, 2026",
+   "evidence": "Nov 11 patch: shard mining chance raised from 1/3 to 1/2; shard charges to the Obligator tripled. Wiki: shards tradeable, GE buy limit raised to 30,000 on Oct 28. https://secure.runescape.com/m=news/quest-month-week-two--tfa-changes?oldschool=1 and https://oldschool.runescape.wiki/w/Ascension_shards",
+   "mechanism": "More mining output and three times the Obligator charges per shard cut the shard demand per charge while raising supply, pushing the price down.",
+   "direction": "down",
+   "items": [
+    {
+     "name": "Ascension shards",
+     "id": 34669,
+     "limit": 30000,
+     "high_then": 669,
+     "low_then": 650
+    }
+   ],
+   "substitutes": "No tradeable substitute for Obligator charges or Ascension bolts. Mining supply is the main lever.",
+   "confidence": "medium",
+   "action": "Sell if holding",
+   "action_detail": "Sell stock over the next few days while buy-limit volume is high. Wiki and third-party price sources conflict (671 vs about 2,000 gp), so check the live GE price first.",
+   "exit_plan": "If price stays below the Oct 28 buy-limit change level for a week, stop selling and re-evaluate.",
+   "what_would_kill_it": "Jagex raising shard demand, such as new Ascension sinks, or a mining nerf to Ascension rocks.",
+   "recheck_when": "Fractured Archive patch notes or a Quest Month week three update changing shard rates or sinks",
+   "id": "i27",
+   "status": "open",
+   "first_seen": "2026-11-13",
+   "last_reviewed": "2026-11-13",
+   "history": [
+    {
+     "date": "2026-11-13",
+     "verdict": "new",
+     "reason": "First raised"
+    }
+   ]
+  },
+  {
+   "title": "Amulet of Sight supply from quest and Hudson caps early Ranged price",
+   "trigger": "Quest Month Kick Off gave a tradeable Ranged amulet as a quest reward, with more purchasable from Hudson",
+   "release": "Live since Nov 3, 2026",
+   "evidence": "Jagex Nov 3 post: Amulet of Sight gives +10 Ranged Attack, is tradeable, has no level requirements, and is free from quest completion. https://secure.runescape.com/m=news/quest-month-kick-off-tfa-tweaks--more?oldschool=1 and https://www.gielinorgains.com/game-updates/2026-11-03-quest-month-kick-off-tfa-tweaks-and-more",
+   "mechanism": "A free quest reward plus an NPC shop lets players fill demand from supply, so the amulet's price should drift down toward the NPC price.",
+   "direction": "down",
+   "items": [
+    {
+     "name": "Amulet of sight",
+     "id": 34762,
+     "limit": null,
+     "high_then": 2000,
+     "low_then": 1042
+    }
+   ],
+   "substitutes": "Other low-level Ranged necklaces and amulets. Price and Hudson sale price are not confirmed.",
+   "confidence": "low",
+   "action": "Avoid holding",
+   "action_detail": "Do not buy for speculation. Check GE price and Hudson's sale price before any move, and revisit after the second-week quest rewards settle.",
+   "exit_plan": "If you hold, sell into early buyers once the price bounces off the Hudson price.",
+   "what_would_kill_it": "A new demand source, such as a Ranged-focused quest or a good Ranged training use for early players.",
+   "recheck_when": "Quest Month week three or a GE price check for Amulet of Sight",
+   "id": "i28",
+   "status": "open",
+   "first_seen": "2026-11-13",
+   "last_reviewed": "2026-11-13",
+   "history": [
+    {
+     "date": "2026-11-13",
      "verdict": "new",
      "reason": "First raised"
     }

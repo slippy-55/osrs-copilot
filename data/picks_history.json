@@ -496,6 +496,36 @@
      "low_then": 1600
     }
    ]
+  },
+  {
+   "date": "2026-11-13T11:24+00:00",
+   "title": "Ascension shard supply up, Obligator demand per charge down",
+   "idea": "i27",
+   "direction": "down",
+   "items": [
+    {
+     "name": "Ascension shards",
+     "id": 34669,
+     "limit": 30000,
+     "high_then": 669,
+     "low_then": 650
+    }
+   ]
+  },
+  {
+   "date": "2026-11-13T11:24+00:00",
+   "title": "Amulet of Sight supply from quest and Hudson caps early Ranged price",
+   "idea": "i28",
+   "direction": "down",
+   "items": [
+    {
+     "name": "Amulet of sight",
+     "id": 34762,
+     "limit": null,
+     "high_then": 2000,
+     "low_then": 1042
+    }
+   ]
   }
  ]
 }
