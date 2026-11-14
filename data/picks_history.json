@@ -526,6 +526,57 @@
      "low_then": 1042
     }
    ]
+  },
+  {
+   "date": "2026-11-14T13:58+00:00",
+   "title": "Ascension bolts ride cheaper shards",
+   "idea": "i29",
+   "direction": "down",
+   "items": [
+    {
+     "name": "Ascension bolts",
+     "id": 34684,
+     "limit": 11000,
+     "high_then": 79,
+     "low_then": 77
+    }
+   ]
+  },
+  {
+   "date": "2026-11-14T13:58+00:00",
+   "title": "Groups of 3+ lift Fractured Archive unique supply",
+   "idea": "i30",
+   "direction": "down",
+   "items": [
+    {
+     "name": "Obligator (uncharged)",
+     "id": 34717,
+     "limit": 8,
+     "high_then": 2463840000,
+     "low_then": 2462000000
+    },
+    {
+     "name": "Ascension crossbows",
+     "id": 34681,
+     "limit": null,
+     "high_then": 238000000,
+     "low_then": 229521135
+    },
+    {
+     "name": "Zorya's tome (uncharged)",
+     "id": 34727,
+     "limit": 8,
+     "high_then": 27801555,
+     "low_then": 26766120
+    },
+    {
+     "name": "Rondache",
+     "id": 34719,
+     "limit": 8,
+     "high_then": 13314541,
+     "low_then": 13012355
+    }
+   ]
   }
  ]
 }

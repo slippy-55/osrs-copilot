@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-13T11:24+00:00",
+ "generated": "2026-11-14T13:58+00:00",
  "mode": "quick",
  "model": "claude-haiku-5-5",
  "theses": [
@@ -85,10 +85,15 @@
      "date": "2026-11-13",
      "verdict": "keep",
      "reason": "Graveyard rewards blog still stands. The roadmap says November, but a Nov 11 report says The Graveyard has no date yet, so timing is unconfirmed. Keep Sell if holding, and wait for a date before acting."
+    },
+    {
+     "date": "2026-11-14",
+     "verdict": "keep",
+     "reason": "Graveyard still has no release date, so the Marks-to-amylase thesis remains pending. Nothing new changes the mechanism."
     }
    ],
    "recheck_when": "Graveyard release date; Graceful rework poll result",
-   "last_reviewed": "2026-11-13"
+   "last_reviewed": "2026-11-14"
   },
   {
    "title": "Underwater farming patches lift rare seeds",
@@ -176,10 +181,15 @@
      "date": "2026-11-13",
      "verdict": "keep",
      "reason": "Wiki and Jagex still list the underwater Spirit Tree, Celastrus, Mushroom and Hardwood patches as proposals. Seed names and yields remain unconfirmed. Massively OP says the expansion arrived, which conflicts with Jagex and the wiki listing early 2027."
+    },
+    {
+     "date": "2026-11-14",
+     "verdict": "keep",
+     "reason": "Wiki still lists the underwater farming patches for early 2027 with no confirmed seed names. Some press says Deep Sea Diving has already arrived, which conflicts with the Wiki and remains unresolved."
     }
    ],
    "recheck_when": "Deep Sea Diving poll results on the farming area question",
-   "last_reviewed": "2026-11-13"
+   "last_reviewed": "2026-11-14"
   },
   {
    "date": "2026-11-05T15:58+00:00",
@@ -247,13 +257,18 @@
      "date": "2026-11-13",
      "verdict": "update",
      "reason": "Wiki confirms the true Soul Altar and soul runes at 90 Runecraft. Rune rates are still unannounced, so it stays Watch."
+    },
+    {
+     "date": "2026-11-14",
+     "verdict": "keep",
+     "reason": "Menaphos and the true Soul Altar are still roadmap items, with the Wiki confirming soul runes at 90 Runecraft. Runes per hour remain unannounced."
     }
    ],
    "action": "Watch",
    "confidence": "low",
    "evidence": "Wiki confirms Menaphos adds the true Soul Altar, with soul runes craftable at 90 Runecraft. Unconfirmed: runes per hour and XP rates. https://oldschool.runescape.wiki/w/Upcoming_updates",
    "recheck_when": "Menaphos rewards or Soul Altar blog",
-   "last_reviewed": "2026-11-13"
+   "last_reviewed": "2026-11-14"
   },
   {
    "date": "2026-11-05T15:58+00:00",
@@ -321,13 +336,18 @@
      "date": "2026-11-13",
      "verdict": "update",
      "reason": "Jagex's Dungeons of Gielinor summary explicitly tells players to bring antifires for the Diamond Dragon. Gemstone weaknesses and drop tables are still unannounced, so the idea stays Watch."
+    },
+    {
+     "date": "2026-11-14",
+     "verdict": "keep",
+     "reason": "Wiki and RuneFest coverage confirm the Diamond Dragon and the antifire warning. Gemstone dragon weaknesses and drops are still unannounced, and the roadmap places the content in Spring 2027."
     }
    ],
    "action": "Watch",
    "confidence": "low",
    "evidence": "Jagex's RuneFest summary says to stock antifires before descending, and the Diamond Dragon lair is deep in a cavern. Gemstone dragon weaknesses and drops are unannounced. https://oldschool.runescape.wiki/w/Update:RuneFest_2026_Summit_Overview",
    "recheck_when": "Dungeons of Gielinor boss blog with Diamond Dragon weakness and drop table",
-   "last_reviewed": "2026-11-13",
+   "last_reviewed": "2026-11-14",
    "what_would_kill_it": "Dungeons of Gielinor poll fails, or the Diamond Dragon needs no antifire."
   },
   {
@@ -363,7 +383,7 @@
    "id": "i14",
    "status": "open",
    "first_seen": "2026-11-05",
-   "last_reviewed": "2026-11-13",
+   "last_reviewed": "2026-11-14",
    "history": [
     {
      "date": "2026-11-05",
@@ -409,6 +429,11 @@
      "date": "2026-11-13",
      "verdict": "update",
      "reason": "Jagex's Nov 9 blog confirms the low-level jewellery site concept as a poll proposal. Rates and jewellery types are still unannounced. Release is early 2027 per the wiki."
+    },
+    {
+     "date": "2026-11-14",
+     "verdict": "keep",
+     "reason": "Jewellery sites are still poll-stage, with the Wiki placing Deep Sea Diving in early 2027. Massively OP's claim that it arrived conflicts with the Wiki and Jagex wording."
     }
    ]
   },
@@ -438,7 +463,7 @@
    "id": "i24",
    "status": "open",
    "first_seen": "2026-11-09",
-   "last_reviewed": "2026-11-13",
+   "last_reviewed": "2026-11-14",
    "history": [
     {
      "date": "2026-11-09",
@@ -464,6 +489,11 @@
      "date": "2026-11-13",
      "verdict": "update",
      "reason": "Fairytale III is confirmed on the roadmap for Summer 2027 with a new Runecraft method. Nothing confirms that the method uses nature runes, so the evidence now says so."
+    },
+    {
+     "date": "2026-11-14",
+     "verdict": "keep",
+     "reason": "The Fairytale III Runecraft method is confirmed on the roadmap for Summer 2027, but its rune requirements are still unannounced."
     }
    ]
   },
@@ -500,7 +530,7 @@
    "id": "i25",
    "status": "open",
    "first_seen": "2026-11-10",
-   "last_reviewed": "2026-11-13",
+   "last_reviewed": "2026-11-14",
    "history": [
     {
      "date": "2026-11-10",
@@ -521,46 +551,11 @@
      "date": "2026-11-13",
      "verdict": "keep",
      "reason": "Gem rock supply is still poll-stage. Jewellery site reporting confirms gem rocks exist in the proposal, but uncut gem rates are unconfirmed."
-    }
-   ]
-  },
-  {
-   "title": "Zanik's Modified Crossbow reward could undercut Dorgeshuun crossbow",
-   "trigger": "The Chosen Commander quest release and its reward tradeability",
-   "release": "Early 2027",
-   "evidence": "Unconfirmed: whether the reward is tradeable. Jagex says the quest reward Zanik's Modified Crossbow has a stronger defence-draining special than the Dorgeshuun crossbow. Dorgeshuun crossbow is tradeable. https://oldschool.runescape.wiki/w/Upcoming_updates",
-   "mechanism": "If a stronger, tradeable crossbow with a similar special is released, demand for Dorgeshuun crossbow could fall as a substitute.",
-   "direction": "down",
-   "items": [
-    {
-     "name": "Dorgeshuun crossbow",
-     "id": 8880,
-     "limit": 70,
-     "high_then": 3650,
-     "low_then": 1600
-    }
-   ],
-   "substitutes": "Adamant crossbow and other crossbows; Dorgeshuun is the bone-bolt crossbow.",
-   "confidence": "low",
-   "action": "Watch",
-   "action_detail": "Watch for the reward's tradeability. Sell only if the reward is confirmed tradeable and a stronger version is released.",
-   "exit_plan": "Drop the idea if the reward is untradeable or the quest is delayed.",
-   "what_would_kill_it": "Reward is untradeable, or the modified crossbow is weaker than the Dorgeshuun crossbow.",
-   "recheck_when": "The Chosen Commander blog or quest reward page",
-   "id": "i26",
-   "status": "open",
-   "first_seen": "2026-11-12",
-   "last_reviewed": "2026-11-13",
-   "history": [
-    {
-     "date": "2026-11-12",
-     "verdict": "new",
-     "reason": "First raised"
     },
     {
-     "date": "2026-11-13",
+     "date": "2026-11-14",
      "verdict": "keep",
-     "reason": "Chosen Commander is slated for early 2027 and the Jagex post says Zanik's crossbow has a stronger defence-draining special. Tradeability of the reward is still unconfirmed, so it stays Watch and low."
+     "reason": "Gem rock rates are still poll-stage and tied to Deep Sea Diving's early 2027 timing. No new confirmation has appeared."
     }
    ]
   },
@@ -568,7 +563,7 @@
    "title": "Ascension shard supply up, Obligator demand per charge down",
    "trigger": "Quest Month Week Two patch raised the shard mining chance and tripled Obligator charges per shard",
    "release": "Live since Nov 11, 2026",
-   "evidence": "Nov 11 patch: shard mining chance raised from 1/3 to 1/2; shard charges to the Obligator tripled. Wiki: shards tradeable, GE buy limit raised to 30,000 on Oct 28. https://secure.runescape.com/m=news/quest-month-week-two--tfa-changes?oldschool=1 and https://oldschool.runescape.wiki/w/Ascension_shards",
+   "evidence": "Wiki Update:Quest Month Week Two confirms 3x Obligator charges per shard, +20% raid shards and mining chance 1/3 to 1/2. Wiki Obligator page: 1 shard, 60 nature, 60 death = 30 charges. https://oldschool.runescape.wiki/w/Obligator",
    "mechanism": "More mining output and three times the Obligator charges per shard cut the shard demand per charge while raising supply, pushing the price down.",
    "direction": "down",
    "items": [
@@ -590,12 +585,17 @@
    "id": "i27",
    "status": "open",
    "first_seen": "2026-11-13",
-   "last_reviewed": "2026-11-13",
+   "last_reviewed": "2026-11-14",
    "history": [
     {
      "date": "2026-11-13",
      "verdict": "new",
      "reason": "First raised"
+    },
+    {
+     "date": "2026-11-14",
+     "verdict": "update",
+     "reason": "Wiki now confirms the 3x Obligator charges per shard, the 20% raid shard increase and the 1/2 mining chance. Shard supply is up and shard use per charge is down."
     }
    ]
   },
@@ -625,10 +625,106 @@
    "id": "i28",
    "status": "open",
    "first_seen": "2026-11-13",
-   "last_reviewed": "2026-11-13",
+   "last_reviewed": "2026-11-14",
    "history": [
     {
      "date": "2026-11-13",
+     "verdict": "new",
+     "reason": "First raised"
+    },
+    {
+     "date": "2026-11-14",
+     "verdict": "keep",
+     "reason": "Jagex's Quest Month posts still confirm Amulet of Sight as a quest reward, and it is tradeable with no level requirement. The thesis holds."
+    }
+   ]
+  },
+  {
+   "title": "Ascension bolts ride cheaper shards",
+   "trigger": "Ascension shard supply raised on 11 Nov 2026",
+   "release": "Live since 11 Nov 2026 patch",
+   "evidence": "Wiki: shards +20% from raid and mining chance 1/3 to 1/2 on 11 Nov. Bolts are made at 86 Fletching, 10 per shard (osrstoolkit). https://oldschool.runescape.wiki/w/Update:Quest_Month:_Week_Two_%26_TFA_Changes ; https://osrstoolkit.com/osrs-fractured-archive-raid-guide/",
+   "mechanism": "Bolts cost roughly one shard per 10, so a larger shard supply lowers the bolt price floor for Ascension crossbow owners.",
+   "direction": "down",
+   "items": [
+    {
+     "name": "Ascension bolts",
+     "id": 34684,
+     "limit": 11000,
+     "high_then": 79,
+     "low_then": 77
+    }
+   ],
+   "substitutes": "Other crossbow bolts are not usable in Ascension crossbows, so demand is captive. Shard price moves are the main driver.",
+   "confidence": "low",
+   "action": "Sell if holding",
+   "action_detail": "Sell any Ascension bolt stock into shard-driven strength. Recheck the shard price after the next Quest Month week.",
+   "exit_plan": "Exit if bolt price stops tracking shard price for two weeks.",
+   "what_would_kill_it": "Shard price falls with no matching bolt drop, or a bolt-demand spike from new Ascension content.",
+   "recheck_when": "Fractured Archive patch notes or a Quest Month week three update changing shard rates",
+   "id": "i29",
+   "status": "open",
+   "first_seen": "2026-11-14",
+   "last_reviewed": "2026-11-14",
+   "history": [
+    {
+     "date": "2026-11-14",
+     "verdict": "new",
+     "reason": "First raised"
+    }
+   ]
+  },
+  {
+   "title": "Groups of 3+ lift Fractured Archive unique supply",
+   "trigger": "TFA loot scaling rebalance on 11 Nov 2026",
+   "release": "Live since 11 Nov 2026 patch",
+   "evidence": "Jagex's 11 Nov TFA balance changes favour groups of three or more, with solo and duo base unique rates set at 1 in 16 (mmohuts). https://mmohuts.com/news/old-school-runescape-adds-two-surprise-quests-and-reworks-tfa-raid-balance",
+   "mechanism": "Larger, more frequent groups should generate more uniques, adding supply to the tradeable uniques and pushing their prices down.",
+   "direction": "down",
+   "items": [
+    {
+     "name": "Obligator (uncharged)",
+     "id": 34717,
+     "limit": 8,
+     "high_then": 2463840000,
+     "low_then": 2462000000
+    },
+    {
+     "name": "Ascension crossbows",
+     "id": 34681,
+     "limit": null,
+     "high_then": 238000000,
+     "low_then": 229521135
+    },
+    {
+     "name": "Zorya's tome (uncharged)",
+     "id": 34727,
+     "limit": 8,
+     "high_then": 27801555,
+     "low_then": 26766120
+    },
+    {
+     "name": "Rondache",
+     "id": 34719,
+     "limit": 8,
+     "high_then": 13314541,
+     "low_then": 13012355
+    }
+   ],
+   "substitutes": "Each unique competes with the others in the same loot split, and the Obligator is the only crush megarare in the set.",
+   "confidence": "low",
+   "action": "Sell if holding",
+   "action_detail": "Sell unique stock gradually while the group-size effect is testing. Prices have already fallen sharply since launch, so do not chase.",
+   "exit_plan": "Exit if unique prices stabilise for two weeks after group-size data appears.",
+   "what_would_kill_it": "Group sizes do not grow, or unique prices already reflect the new supply.",
+   "recheck_when": "Fractured Archive loot-rate data or the next TFA balance post",
+   "id": "i30",
+   "status": "open",
+   "first_seen": "2026-11-14",
+   "last_reviewed": "2026-11-14",
+   "history": [
+    {
+     "date": "2026-11-14",
      "verdict": "new",
      "reason": "First raised"
     }
@@ -636,6 +732,53 @@
   }
  ],
  "dropped": [
+  {
+   "title": "Zanik's Modified Crossbow reward could undercut Dorgeshuun crossbow",
+   "trigger": "The Chosen Commander quest release and its reward tradeability",
+   "release": "Early 2027",
+   "evidence": "Unconfirmed: whether the reward is tradeable. Jagex says the quest reward Zanik's Modified Crossbow has a stronger defence-draining special than the Dorgeshuun crossbow. Dorgeshuun crossbow is tradeable. https://oldschool.runescape.wiki/w/Upcoming_updates",
+   "mechanism": "If a stronger, tradeable crossbow with a similar special is released, demand for Dorgeshuun crossbow could fall as a substitute.",
+   "direction": "down",
+   "items": [
+    {
+     "name": "Dorgeshuun crossbow",
+     "id": 8880,
+     "limit": 70,
+     "high_then": 3650,
+     "low_then": 1600
+    }
+   ],
+   "substitutes": "Adamant crossbow and other crossbows; Dorgeshuun is the bone-bolt crossbow.",
+   "confidence": "low",
+   "action": "Watch",
+   "action_detail": "Watch for the reward's tradeability. Sell only if the reward is confirmed tradeable and a stronger version is released.",
+   "exit_plan": "Drop the idea if the reward is untradeable or the quest is delayed.",
+   "what_would_kill_it": "Reward is untradeable, or the modified crossbow is weaker than the Dorgeshuun crossbow.",
+   "recheck_when": "The Chosen Commander blog or quest reward page",
+   "id": "i26",
+   "status": "dropped",
+   "first_seen": "2026-11-12",
+   "last_reviewed": "2026-11-14",
+   "history": [
+    {
+     "date": "2026-11-12",
+     "verdict": "new",
+     "reason": "First raised"
+    },
+    {
+     "date": "2026-11-13",
+     "verdict": "keep",
+     "reason": "Chosen Commander is slated for early 2027 and the Jagex post says Zanik's crossbow has a stronger defence-draining special. Tradeability of the reward is still unconfirmed, so it stays Watch and low."
+    },
+    {
+     "date": "2026-11-14",
+     "verdict": "drop",
+     "reason": "Wiki pages conflict on whether Zanik's crossbow is tradeable, and The Chosen Commander is not due until early 2027. The substitute is niche, so the thesis is too weak to keep."
+    }
+   ],
+   "dropped_on": "2026-11-14",
+   "drop_reason": "Wiki pages conflict on whether Zanik's crossbow is tradeable, and The Chosen Commander is not due until early 2027. The substitute is niche, so the thesis is too weak to keep."
+  },
   {
    "title": "Amulet of sight quest reward floods the market",
    "trigger": "The Writing's on the Wall (Quest Month) gives a free tradeable +10 Ranged amulet. Hudson sells more at 1,500 coins.",
