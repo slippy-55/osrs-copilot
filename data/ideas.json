@@ -1,5 +1,5 @@
 {
- "next": 31,
+ "next": 35,
  "ideas": [
   {
    "title": "Amulet of sight supply flood",
@@ -134,10 +134,15 @@
      "date": "2026-11-14",
      "verdict": "keep",
      "reason": "Graveyard still has no release date, so the Marks-to-amylase thesis remains pending. Nothing new changes the mechanism."
+    },
+    {
+     "date": "2026-11-15",
+     "verdict": "keep",
+     "reason": "The Graveyard has not shipped yet. The Wiki still says only 'November 2026', so the thesis is intact and the drop is still ahead."
     }
    ],
    "recheck_when": "Graveyard release date; Graceful rework poll result",
-   "last_reviewed": "2026-11-14"
+   "last_reviewed": "2026-11-15"
   },
   {
    "title": "Underwater gem rocks cut gem prices",
@@ -319,10 +324,15 @@
      "date": "2026-11-14",
      "verdict": "keep",
      "reason": "Wiki still lists the underwater farming patches for early 2027 with no confirmed seed names. Some press says Deep Sea Diving has already arrived, which conflicts with the Wiki and remains unresolved."
+    },
+    {
+     "date": "2026-11-15",
+     "verdict": "keep",
+     "reason": "Still poll-stage and still planned for early 2027. Seed names and yields remain unconfirmed."
     }
    ],
    "recheck_when": "Deep Sea Diving poll results on the farming area question",
-   "last_reviewed": "2026-11-14"
+   "last_reviewed": "2026-11-15"
   },
   {
    "title": "Zanik crossbow may replace Dorgeshuun crossbow",
@@ -565,13 +575,18 @@
      "date": "2026-11-14",
      "verdict": "keep",
      "reason": "Menaphos and the true Soul Altar are still roadmap items, with the Wiki confirming soul runes at 90 Runecraft. Runes per hour remain unannounced."
+    },
+    {
+     "date": "2026-11-15",
+     "verdict": "keep",
+     "reason": "Menaphos is still listed for Spring 2027 and no Soul Altar rates have been announced."
     }
    ],
    "action": "Watch",
    "confidence": "low",
    "evidence": "Wiki confirms Menaphos adds the true Soul Altar, with soul runes craftable at 90 Runecraft. Unconfirmed: runes per hour and XP rates. https://oldschool.runescape.wiki/w/Upcoming_updates",
    "recheck_when": "Menaphos rewards or Soul Altar blog",
-   "last_reviewed": "2026-11-14"
+   "last_reviewed": "2026-11-15"
   },
   {
    "date": "2026-11-05T15:58+00:00",
@@ -722,13 +737,18 @@
      "date": "2026-11-14",
      "verdict": "keep",
      "reason": "Wiki and RuneFest coverage confirm the Diamond Dragon and the antifire warning. Gemstone dragon weaknesses and drops are still unannounced, and the roadmap places the content in Spring 2027."
+    },
+    {
+     "date": "2026-11-15",
+     "verdict": "keep",
+     "reason": "Still Spring 2027. No Diamond Dragon weakness or drop table has been published."
     }
    ],
    "action": "Watch",
    "confidence": "low",
    "evidence": "Jagex's RuneFest summary says to stock antifires before descending, and the Diamond Dragon lair is deep in a cavern. Gemstone dragon weaknesses and drops are unannounced. https://oldschool.runescape.wiki/w/Update:RuneFest_2026_Summit_Overview",
    "recheck_when": "Dungeons of Gielinor boss blog with Diamond Dragon weakness and drop table",
-   "last_reviewed": "2026-11-14",
+   "last_reviewed": "2026-11-15",
    "what_would_kill_it": "Dungeons of Gielinor poll fails, or the Diamond Dragon needs no antifire."
   },
   {
@@ -806,7 +826,7 @@
    "id": "i14",
    "status": "open",
    "first_seen": "2026-11-05",
-   "last_reviewed": "2026-11-14",
+   "last_reviewed": "2026-11-15",
    "history": [
     {
      "date": "2026-11-05",
@@ -857,6 +877,11 @@
      "date": "2026-11-14",
      "verdict": "keep",
      "reason": "Jewellery sites are still poll-stage, with the Wiki placing Deep Sea Diving in early 2027. Massively OP's claim that it arrived conflicts with the Wiki and Jagex wording."
+    },
+    {
+     "date": "2026-11-15",
+     "verdict": "keep",
+     "reason": "Underwater jewellery is still poll-stage and listed for early 2027. Rates are unconfirmed."
     }
    ]
   },
@@ -1337,7 +1362,7 @@
    "id": "i24",
    "status": "open",
    "first_seen": "2026-11-09",
-   "last_reviewed": "2026-11-14",
+   "last_reviewed": "2026-11-15",
    "history": [
     {
      "date": "2026-11-09",
@@ -1368,6 +1393,11 @@
      "date": "2026-11-14",
      "verdict": "keep",
      "reason": "The Fairytale III Runecraft method is confirmed on the roadmap for Summer 2027, but its rune requirements are still unannounced."
+    },
+    {
+     "date": "2026-11-15",
+     "verdict": "keep",
+     "reason": "Fairytale III is still Summer 2027 and its Runecraft method is still undetailed."
     }
    ]
   },
@@ -1404,7 +1434,7 @@
    "id": "i25",
    "status": "open",
    "first_seen": "2026-11-10",
-   "last_reviewed": "2026-11-14",
+   "last_reviewed": "2026-11-15",
    "history": [
     {
      "date": "2026-11-10",
@@ -1430,6 +1460,11 @@
      "date": "2026-11-14",
      "verdict": "keep",
      "reason": "Gem rock rates are still poll-stage and tied to Deep Sea Diving's early 2027 timing. No new confirmation has appeared."
+    },
+    {
+     "date": "2026-11-15",
+     "verdict": "keep",
+     "reason": "Underwater gem rocks are still poll-stage, so the gem-supply idea stands."
     }
    ]
   },
@@ -1506,7 +1541,7 @@
    "id": "i27",
    "status": "open",
    "first_seen": "2026-11-13",
-   "last_reviewed": "2026-11-14",
+   "last_reviewed": "2026-11-15",
    "history": [
     {
      "date": "2026-11-13",
@@ -1517,6 +1552,11 @@
      "date": "2026-11-14",
      "verdict": "update",
      "reason": "Wiki now confirms the 3x Obligator charges per shard, the 20% raid shard increase and the 1/2 mining chance. Shard supply is up and shard use per charge is down."
+    },
+    {
+     "date": "2026-11-15",
+     "verdict": "keep",
+     "reason": "The 11 Nov shard changes are live. Nothing new has replaced them and the thesis holds."
     }
    ]
   },
@@ -1544,9 +1584,9 @@
    "what_would_kill_it": "A new demand source, such as a Ranged-focused quest or a good Ranged training use for early players.",
    "recheck_when": "Quest Month week three or a GE price check for Amulet of Sight",
    "id": "i28",
-   "status": "open",
+   "status": "dropped",
    "first_seen": "2026-11-13",
-   "last_reviewed": "2026-11-14",
+   "last_reviewed": "2026-11-15",
    "history": [
     {
      "date": "2026-11-13",
@@ -1557,8 +1597,15 @@
      "date": "2026-11-14",
      "verdict": "keep",
      "reason": "Jagex's Quest Month posts still confirm Amulet of Sight as a quest reward, and it is tradeable with no level requirement. The thesis holds."
+    },
+    {
+     "date": "2026-11-15",
+     "verdict": "drop",
+     "reason": "Quest reward has been free since 3 Nov, so about 12 days of supply has likely already crashed the price. Priced in, with no remaining edge."
     }
-   ]
+   ],
+   "dropped_on": "2026-11-15",
+   "drop_reason": "Quest reward has been free since 3 Nov, so about 12 days of supply has likely already crashed the price. Priced in, with no remaining edge."
   },
   {
    "title": "Ascension bolts ride cheaper shards",
@@ -1586,12 +1633,17 @@
    "id": "i29",
    "status": "open",
    "first_seen": "2026-11-14",
-   "last_reviewed": "2026-11-14",
+   "last_reviewed": "2026-11-15",
    "history": [
     {
      "date": "2026-11-14",
      "verdict": "new",
      "reason": "First raised"
+    },
+    {
+     "date": "2026-11-15",
+     "verdict": "keep",
+     "reason": "Bolt cost follows shard supply. The rate changes are live and no new information has arrived."
     }
    ]
   },
@@ -1642,15 +1694,174 @@
    "id": "i30",
    "status": "open",
    "first_seen": "2026-11-14",
-   "last_reviewed": "2026-11-14",
+   "last_reviewed": "2026-11-15",
    "history": [
     {
      "date": "2026-11-14",
+     "verdict": "new",
+     "reason": "First raised"
+    },
+    {
+     "date": "2026-11-15",
+     "verdict": "keep",
+     "reason": "The group-scaling balance changes are live. Loot data is still thin, so confidence stays low."
+    }
+   ]
+  },
+  {
+   "title": "Chosen Commander crossbow may consume Dorgeshuun crossbow",
+   "trigger": "Chosen Commander backport adds Zanik's Modified Crossbow, an upgrade of the Dorgeshuun crossbow's defence-drain special.",
+   "release": "Early 2027",
+   "evidence": "Unconfirmed: whether Zanik's Modified Crossbow is tradeable or made from a Dorgeshuun crossbow. Wiki confirms the quest and the reward, a stronger version of the Dorgeshuun crossbow's special. https://oldschool.runescape.wiki/w/Upcoming_updates",
+   "mechanism": "If the reward is a recipe or upgrade consuming the Dorgeshuun crossbow, demand spikes. If it is a free untradeable reward, the effect is nil or slightly negative.",
+   "direction": "up",
+   "items": [
+    {
+     "name": "Dorgeshuun crossbow",
+     "id": 8880,
+     "limit": 70,
+     "high_then": 3965,
+     "low_then": 2534
+    }
+   ],
+   "substitutes": "Other defence-drain specials (Dragon warhammer, Bandos godsword, Arclight) cover most use cases, so the upside is limited.",
+   "confidence": "low",
+   "action": "Watch",
+   "action_detail": "Do not buy yet. Wait for the Chosen Commander rewards blog to show whether the new crossbow is tradeable or an upgrade.",
+   "exit_plan": "If an upgrade consumes the crossbow, buy on the blog and sell into release-day hype.",
+   "what_would_kill_it": "The reward is untradeable and free, or the special is too weak to matter.",
+   "recheck_when": "Chosen Commander rewards or poll blog",
+   "id": "i31",
+   "status": "open",
+   "first_seen": "2026-11-15",
+   "last_reviewed": "2026-11-15",
+   "history": [
+    {
+     "date": "2026-11-15",
+     "verdict": "new",
+     "reason": "First raised"
+    }
+   ]
+  },
+  {
+   "title": "Black honey buzzards flood black feathers",
+   "trigger": "Black honey buzzards give 10-24 black feathers per catch using a bird snare at 17 Hunter. This is a new drop source live since 11 Nov.",
+   "release": "2026-11-11 (live)",
+   "evidence": "Wiki lists black honey buzzard at Hunter 17, 87.4 XP, with a guaranteed 10-24 black feathers. https://oldschool.runescape.wiki/w/Black_Honey_Buzzard",
+   "mechanism": "A new, easy, guaranteed bulk drop raises black feather supply and lowers its price. Low-level Hunter training will produce them continuously.",
+   "direction": "down",
+   "items": [
+    {
+     "name": "Black feather",
+     "id": 34785,
+     "limit": null,
+     "high_then": 10,
+     "low_then": 5
+    }
+   ],
+   "substitutes": "Few. Supply is elastic because the method is skilled and botable. Price is already only a few gp each, so profit is small.",
+   "confidence": "low",
+   "action": "Avoid holding",
+   "action_detail": "Do not stockpile black feathers. Check the GE price trend. If it has already dropped, treat the idea as priced in.",
+   "exit_plan": "Drop the idea once the price stabilises at a new floor.",
+   "what_would_kill_it": "Low XP or loot rates make the method unpopular, or the price has already collapsed.",
+   "recheck_when": "GE price check on black feather in a few days",
+   "id": "i32",
+   "status": "open",
+   "first_seen": "2026-11-15",
+   "last_reviewed": "2026-11-15",
+   "history": [
+    {
+     "date": "2026-11-15",
+     "verdict": "new",
+     "reason": "First raised"
+    }
+   ]
+  },
+  {
+   "title": "Graveyard's 65 Sailing requirement may lift ship repair demand",
+   "trigger": "The Graveyard needs 65 Sailing, and unusual volume is appearing on rosewood planks and mahogany repair kits ahead of release.",
+   "release": "Rest of November 2026",
+   "evidence": "Unconfirmed: whether the quest consumes planks or repair kits, and the exact release date. Wiki confirms 65 Sailing is required. https://oldschool.runescape.wiki/w/The_Graveyard",
+   "mechanism": "Players short of 65 Sailing may train it, using boats and repair kits. Mahogany repair kits and rosewood planks are Sailing consumables.",
+   "direction": "up",
+   "items": [
+    {
+     "name": "Mahogany repair kit",
+     "id": 31973,
+     "limit": 13000,
+     "high_then": 1179,
+     "low_then": 1107
+    },
+    {
+     "name": "Rosewood plank",
+     "id": 31438,
+     "limit": null,
+     "high_then": 4827,
+     "low_then": 4650
+    }
+   ],
+   "substitutes": "Other plank tiers and repair kits serve for training. Sailing XP is also earned from many other sources.",
+   "confidence": "low",
+   "action": "Watch",
+   "action_detail": "The volume spike may be early buyers. Wait for the release date and a quest-items list before buying.",
+   "exit_plan": "If prices rise before release, sell into the release-day spike.",
+   "what_would_kill_it": "The quest uses no Sailing consumables, or the volume proves to be noise.",
+   "recheck_when": "Graveyard release or patch notes",
+   "id": "i33",
+   "status": "open",
+   "first_seen": "2026-11-15",
+   "last_reviewed": "2026-11-15",
+   "history": [
+    {
+     "date": "2026-11-15",
+     "verdict": "new",
+     "reason": "First raised"
+    }
+   ]
+  },
+  {
+   "title": "Jagex Account migration may remove botted supply",
+   "trigger": "The full transition to Jagex Accounts begins 17 Nov. Players still on legacy logins must migrate, and some bot farms may not.",
+   "release": "2026-11-17",
+   "evidence": "Unconfirmed: any effect on bot numbers. Wiki roadmap confirms the migration begins 17 Nov. https://oldschool.runescape.wiki/w/Upcoming_updates",
+   "mechanism": "If bot accounts fail to migrate, botted skilling output falls and prices of heavily botted raw materials rise.",
+   "direction": "up",
+   "items": [
+    {
+     "name": "Magic logs",
+     "id": 1513,
+     "limit": 12000,
+     "high_then": 610,
+     "low_then": 615
+    },
+    {
+     "name": "Raw shark",
+     "id": 383,
+     "limit": 15000,
+     "high_then": 481,
+     "low_then": 476
+    }
+   ],
+   "substitutes": "Many alternative sources, and bots may adapt, so the effect would be small and temporary.",
+   "confidence": "low",
+   "action": "Watch",
+   "action_detail": "Watch magic log and raw shark prices and volume after 17 Nov. Buy only if supply visibly drops.",
+   "exit_plan": "Sell once prices revert after bots re-enter.",
+   "what_would_kill_it": "Bots migrate easily and no price change appears within a week.",
+   "recheck_when": "After 17 Nov, with GE price and volume data",
+   "id": "i34",
+   "status": "open",
+   "first_seen": "2026-11-15",
+   "last_reviewed": "2026-11-15",
+   "history": [
+    {
+     "date": "2026-11-15",
      "verdict": "new",
      "reason": "First raised"
     }
    ]
   }
  ],
- "updated": "2026-11-14T13:58+00:00"
+ "updated": "2026-11-15T09:47+00:00"
 }

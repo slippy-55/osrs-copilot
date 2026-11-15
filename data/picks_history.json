@@ -577,6 +577,80 @@
      "low_then": 13012355
     }
    ]
+  },
+  {
+   "date": "2026-11-15T09:47+00:00",
+   "title": "Chosen Commander crossbow may consume Dorgeshuun crossbow",
+   "idea": "i31",
+   "direction": "up",
+   "items": [
+    {
+     "name": "Dorgeshuun crossbow",
+     "id": 8880,
+     "limit": 70,
+     "high_then": 3965,
+     "low_then": 2534
+    }
+   ]
+  },
+  {
+   "date": "2026-11-15T09:47+00:00",
+   "title": "Black honey buzzards flood black feathers",
+   "idea": "i32",
+   "direction": "down",
+   "items": [
+    {
+     "name": "Black feather",
+     "id": 34785,
+     "limit": null,
+     "high_then": 10,
+     "low_then": 5
+    }
+   ]
+  },
+  {
+   "date": "2026-11-15T09:47+00:00",
+   "title": "Graveyard's 65 Sailing requirement may lift ship repair demand",
+   "idea": "i33",
+   "direction": "up",
+   "items": [
+    {
+     "name": "Mahogany repair kit",
+     "id": 31973,
+     "limit": 13000,
+     "high_then": 1179,
+     "low_then": 1107
+    },
+    {
+     "name": "Rosewood plank",
+     "id": 31438,
+     "limit": null,
+     "high_then": 4827,
+     "low_then": 4650
+    }
+   ]
+  },
+  {
+   "date": "2026-11-15T09:47+00:00",
+   "title": "Jagex Account migration may remove botted supply",
+   "idea": "i34",
+   "direction": "up",
+   "items": [
+    {
+     "name": "Magic logs",
+     "id": 1513,
+     "limit": 12000,
+     "high_then": 610,
+     "low_then": 615
+    },
+    {
+     "name": "Raw shark",
+     "id": 383,
+     "limit": 15000,
+     "high_then": 481,
+     "low_then": 476
+    }
+   ]
   }
  ]
 }
