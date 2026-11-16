@@ -82,11 +82,6 @@
    "history": [
     {
      "date": "2026-11-05",
-     "verdict": "carried over",
-     "reason": "Raised by an earlier scan, waiting for review"
-    },
-    {
-     "date": "2026-11-05",
      "verdict": "update",
      "reason": "Blog also says duplicate Graceful pieces would be refunded in Marks if the rework is approved. That would be a one-off extra supply of Marks. Release date is only 'November'."
     },
@@ -139,10 +134,15 @@
      "date": "2026-11-15",
      "verdict": "keep",
      "reason": "The Graveyard has not shipped yet. The Wiki still says only 'November 2026', so the thesis is intact and the drop is still ahead."
+    },
+    {
+     "date": "2026-11-16",
+     "verdict": "keep",
+     "reason": "Graveyard still has no confirmed release date, so the marks-to-amylase and stamina chain is unchanged. Recheck when Jagex sets a date."
     }
    ],
    "recheck_when": "Graveyard release date; Graceful rework poll result",
-   "last_reviewed": "2026-11-15"
+   "last_reviewed": "2026-11-16"
   },
   {
    "title": "Underwater gem rocks cut gem prices",
@@ -272,11 +272,6 @@
    "history": [
     {
      "date": "2026-11-05",
-     "verdict": "carried over",
-     "reason": "Raised by an earlier scan, waiting for review"
-    },
-    {
-     "date": "2026-11-05",
      "verdict": "update",
      "reason": "Irit seed is not connected to any proposed patch, so I removed it. The remaining items match the patch types in the proposal. The poll is still pending."
     },
@@ -329,10 +324,15 @@
      "date": "2026-11-15",
      "verdict": "keep",
      "reason": "Still poll-stage and still planned for early 2027. Seed names and yields remain unconfirmed."
+    },
+    {
+     "date": "2026-11-16",
+     "verdict": "keep",
+     "reason": "Underwater farming is still poll-stage and listed for early 2027 on the Wiki. Seed names and yields remain unconfirmed."
     }
    ],
    "recheck_when": "Deep Sea Diving poll results on the farming area question",
-   "last_reviewed": "2026-11-15"
+   "last_reviewed": "2026-11-16"
   },
   {
    "title": "Zanik crossbow may replace Dorgeshuun crossbow",
@@ -509,7 +509,7 @@
    "title": "Menaphos soul altar increases soul rune supply",
    "direction": "down",
    "id": "i9",
-   "status": "open",
+   "status": "dropped",
    "first_seen": "2026-11-05T15:58+00:00",
    "items": [
     {
@@ -521,11 +521,6 @@
     }
    ],
    "history": [
-    {
-     "date": "2026-11-05",
-     "verdict": "carried over",
-     "reason": "Raised by an earlier scan, waiting for review"
-    },
     {
      "date": "2026-11-05",
      "verdict": "update",
@@ -580,13 +575,20 @@
      "date": "2026-11-15",
      "verdict": "keep",
      "reason": "Menaphos is still listed for Spring 2027 and no Soul Altar rates have been announced."
+    },
+    {
+     "date": "2026-11-16",
+     "verdict": "drop",
+     "reason": "The Wiki says soul runes at 90 Runecraft are already craftable via the Abyss. Menaphos adds a location, and the faster method is only proposal-stage, so supply impact is weak."
     }
    ],
    "action": "Watch",
    "confidence": "low",
    "evidence": "Wiki confirms Menaphos adds the true Soul Altar, with soul runes craftable at 90 Runecraft. Unconfirmed: runes per hour and XP rates. https://oldschool.runescape.wiki/w/Upcoming_updates",
    "recheck_when": "Menaphos rewards or Soul Altar blog",
-   "last_reviewed": "2026-11-15"
+   "last_reviewed": "2026-11-16",
+   "dropped_on": "2026-11-16",
+   "drop_reason": "The Wiki says soul runes at 90 Runecraft are already craftable via the Abyss. Menaphos adds a location, and the faster method is only proposal-stage, so supply impact is weak."
   },
   {
    "date": "2026-11-05T15:58+00:00",
@@ -685,11 +687,6 @@
    "history": [
     {
      "date": "2026-11-05",
-     "verdict": "carried over",
-     "reason": "Raised by an earlier scan, waiting for review"
-    },
-    {
-     "date": "2026-11-05",
      "verdict": "update",
      "reason": "No confirmed weakness for Gemstone Dragons. Dragon arrowtips and Onyx bolts have no source behind them. One third-party source says antifire is needed and that dragon-hunter gear is relevant, so I narrowed the items to those two."
     },
@@ -742,13 +739,18 @@
      "date": "2026-11-15",
      "verdict": "keep",
      "reason": "Still Spring 2027. No Diamond Dragon weakness or drop table has been published."
+    },
+    {
+     "date": "2026-11-16",
+     "verdict": "keep",
+     "reason": "Diamond Dragon and gemstone dragon weaknesses and drops are still unannounced. Nothing new supports or breaks the antifire thesis."
     }
    ],
    "action": "Watch",
    "confidence": "low",
    "evidence": "Jagex's RuneFest summary says to stock antifires before descending, and the Diamond Dragon lair is deep in a cavern. Gemstone dragon weaknesses and drops are unannounced. https://oldschool.runescape.wiki/w/Update:RuneFest_2026_Summit_Overview",
    "recheck_when": "Dungeons of Gielinor boss blog with Diamond Dragon weakness and drop table",
-   "last_reviewed": "2026-11-15",
+   "last_reviewed": "2026-11-16",
    "what_would_kill_it": "Dungeons of Gielinor poll fails, or the Diamond Dragon needs no antifire."
   },
   {
@@ -826,7 +828,7 @@
    "id": "i14",
    "status": "open",
    "first_seen": "2026-11-05",
-   "last_reviewed": "2026-11-15",
+   "last_reviewed": "2026-11-16",
    "history": [
     {
      "date": "2026-11-05",
@@ -882,6 +884,11 @@
      "date": "2026-11-15",
      "verdict": "keep",
      "reason": "Underwater jewellery is still poll-stage and listed for early 2027. Rates are unconfirmed."
+    },
+    {
+     "date": "2026-11-16",
+     "verdict": "keep",
+     "reason": "The jewellery production site is still poll-stage. Rates and jewellery types remain unannounced."
     }
    ]
   },
@@ -1362,7 +1369,7 @@
    "id": "i24",
    "status": "open",
    "first_seen": "2026-11-09",
-   "last_reviewed": "2026-11-15",
+   "last_reviewed": "2026-11-16",
    "history": [
     {
      "date": "2026-11-09",
@@ -1398,6 +1405,11 @@
      "date": "2026-11-15",
      "verdict": "keep",
      "reason": "Fairytale III is still Summer 2027 and its Runecraft method is still undetailed."
+    },
+    {
+     "date": "2026-11-16",
+     "verdict": "keep",
+     "reason": "Fairytale III is confirmed for Summer 2027 with a new Runecraft method, but its rune requirements are still unpublished."
     }
    ]
   },
@@ -1405,7 +1417,7 @@
    "title": "Underwater precious rocks add gem supply",
    "trigger": "Deep Sea Diving poll passes and jewellery sites go live",
    "release": "Early 2027 (proposed)",
-   "evidence": "Jagex Deep Sea Diving blog and Wiki: 65 Mining precious gem rocks give uncut sapphires, emeralds, rubies and diamonds. Still poll-stage. https://oldschool.runescape.wiki/w/Update:Deep_Sea_Diving_Expansion",
+   "evidence": "Deep Sea Diving blog: gem rocks identical to Shilo Village ones; the 65 Mining precious-rock requirement is unconfirmed. https://secure.runescape.com/m=news/deep-sea-diving-expansion?oldschool=1",
    "mechanism": "A new gem source raises uncut gem supply, which should push gem prices down if the rocks are fast and easy to mine.",
    "direction": "down",
    "items": [
@@ -1434,7 +1446,7 @@
    "id": "i25",
    "status": "open",
    "first_seen": "2026-11-10",
-   "last_reviewed": "2026-11-15",
+   "last_reviewed": "2026-11-16",
    "history": [
     {
      "date": "2026-11-10",
@@ -1465,6 +1477,11 @@
      "date": "2026-11-15",
      "verdict": "keep",
      "reason": "Underwater gem rocks are still poll-stage, so the gem-supply idea stands."
+    },
+    {
+     "date": "2026-11-16",
+     "verdict": "update",
+     "reason": "The Deep Sea Diving blog says the gem rocks match those at Shilo Village. The 65 Mining requirement I had noted is not confirmed."
     }
    ]
   },
@@ -1541,7 +1558,7 @@
    "id": "i27",
    "status": "open",
    "first_seen": "2026-11-13",
-   "last_reviewed": "2026-11-15",
+   "last_reviewed": "2026-11-16",
    "history": [
     {
      "date": "2026-11-13",
@@ -1557,6 +1574,11 @@
      "date": "2026-11-15",
      "verdict": "keep",
      "reason": "The 11 Nov shard changes are live. Nothing new has replaced them and the thesis holds."
+    },
+    {
+     "date": "2026-11-16",
+     "verdict": "keep",
+     "reason": "Quest Month week two confirms cheaper Obligator charges and better Ascension shard rates, so the shard supply-up thesis holds."
     }
    ]
   },
@@ -1633,7 +1655,7 @@
    "id": "i29",
    "status": "open",
    "first_seen": "2026-11-14",
-   "last_reviewed": "2026-11-15",
+   "last_reviewed": "2026-11-16",
    "history": [
     {
      "date": "2026-11-14",
@@ -1644,6 +1666,11 @@
      "date": "2026-11-15",
      "verdict": "keep",
      "reason": "Bolt cost follows shard supply. The rate changes are live and no new information has arrived."
+    },
+    {
+     "date": "2026-11-16",
+     "verdict": "keep",
+     "reason": "Shard supply still rises under the 11 Nov changes. Bolt demand still depends on shard use."
     }
    ]
   },
@@ -1651,7 +1678,7 @@
    "title": "Groups of 3+ lift Fractured Archive unique supply",
    "trigger": "TFA loot scaling rebalance on 11 Nov 2026",
    "release": "Live since 11 Nov 2026 patch",
-   "evidence": "Jagex's 11 Nov TFA balance changes favour groups of three or more, with solo and duo base unique rates set at 1 in 16 (mmohuts). https://mmohuts.com/news/old-school-runescape-adds-two-surprise-quests-and-reworks-tfa-raid-balance",
+   "evidence": "Quest Month week two: base unique rate moves from 1/14 to 1/16, fixed by group size from 1/16 (solo/duo) up to 1/7.5 (eight players). https://accountshark.net/blog/osrs-quest-month-week-two-birds-and-the-wasps-shell-of-a-friend-fractured-archive-loot-scaling-november-11",
    "mechanism": "Larger, more frequent groups should generate more uniques, adding supply to the tradeable uniques and pushing their prices down.",
    "direction": "down",
    "items": [
@@ -1694,7 +1721,7 @@
    "id": "i30",
    "status": "open",
    "first_seen": "2026-11-14",
-   "last_reviewed": "2026-11-15",
+   "last_reviewed": "2026-11-16",
    "history": [
     {
      "date": "2026-11-14",
@@ -1705,6 +1732,11 @@
      "date": "2026-11-15",
      "verdict": "keep",
      "reason": "The group-scaling balance changes are live. Loot data is still thin, so confidence stays low."
+    },
+    {
+     "date": "2026-11-16",
+     "verdict": "update",
+     "reason": "Week two sets a fixed base unique rate by group size, from 1/16 for solos and duos up to 1/7.5 for eight players. The group-size thesis strengthens."
     }
    ]
   },
@@ -1734,12 +1766,17 @@
    "id": "i31",
    "status": "open",
    "first_seen": "2026-11-15",
-   "last_reviewed": "2026-11-15",
+   "last_reviewed": "2026-11-16",
    "history": [
     {
      "date": "2026-11-15",
      "verdict": "new",
      "reason": "First raised"
+    },
+    {
+     "date": "2026-11-16",
+     "verdict": "keep",
+     "reason": "The Chosen Commander is still unreleased. Whether Zanik's Modified Crossbow is tradeable or made from a Dorgeshuun crossbow is unconfirmed."
     }
    ]
   },
@@ -1769,12 +1806,17 @@
    "id": "i32",
    "status": "open",
    "first_seen": "2026-11-15",
-   "last_reviewed": "2026-11-15",
+   "last_reviewed": "2026-11-16",
    "history": [
     {
      "date": "2026-11-15",
      "verdict": "new",
      "reason": "First raised"
+    },
+    {
+     "date": "2026-11-16",
+     "verdict": "keep",
+     "reason": "No new evidence this scan. The thesis still depends on a black feather price check after the buzzard's drop rate."
     }
    ]
   },
@@ -1811,12 +1853,17 @@
    "id": "i33",
    "status": "open",
    "first_seen": "2026-11-15",
-   "last_reviewed": "2026-11-15",
+   "last_reviewed": "2026-11-16",
    "history": [
     {
      "date": "2026-11-15",
      "verdict": "new",
      "reason": "First raised"
+    },
+    {
+     "date": "2026-11-16",
+     "verdict": "keep",
+     "reason": "The 65 Sailing requirement is confirmed, but the Graveyard release date and whether it consumes planks or repair kits are still unannounced."
     }
    ]
   },
@@ -1853,15 +1900,20 @@
    "id": "i34",
    "status": "open",
    "first_seen": "2026-11-15",
-   "last_reviewed": "2026-11-15",
+   "last_reviewed": "2026-11-16",
    "history": [
     {
      "date": "2026-11-15",
      "verdict": "new",
      "reason": "First raised"
+    },
+    {
+     "date": "2026-11-16",
+     "verdict": "keep",
+     "reason": "Jagex Accounts migration is confirmed for 17 November. Any effect on botted supply is still unmeasured."
     }
    ]
   }
  ],
- "updated": "2026-11-15T09:47+00:00"
+ "updated": "2026-11-16T08:20+00:00"
 }
