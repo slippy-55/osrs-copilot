@@ -651,6 +651,43 @@
      "low_then": 476
     }
    ]
+  },
+  {
+   "date": "2026-11-17T10:58+00:00",
+   "title": "Zeal unlock lifts Horn of Bran demand",
+   "idea": "i35",
+   "direction": "up",
+   "items": [
+    {
+     "name": "Horn of Bran",
+     "id": 34679,
+     "limit": null,
+     "high_then": 221999999,
+     "low_then": 216000006
+    }
+   ]
+  },
+  {
+   "date": "2026-11-17T10:58+00:00",
+   "title": "Quest Month supply bag may tie up leather and headless arrows",
+   "idea": "i36",
+   "direction": "up",
+   "items": [
+    {
+     "name": "Leather",
+     "id": 1741,
+     "limit": 13000,
+     "high_then": 175,
+     "low_then": 160
+    },
+    {
+     "name": "Headless arrow",
+     "id": 53,
+     "limit": 11000,
+     "high_then": 11,
+     "low_then": 10
+    }
+   ]
   }
  ]
 }

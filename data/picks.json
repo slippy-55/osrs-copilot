@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-16T08:20+00:00",
+ "generated": "2026-11-17T10:58+00:00",
  "mode": "quick",
  "model": "claude-haiku-5-5",
  "theses": [
@@ -36,11 +36,6 @@
     }
    ],
    "history": [
-    {
-     "date": "2026-11-05",
-     "verdict": "update",
-     "reason": "Blog also says duplicate Graceful pieces would be refunded in Marks if the rework is approved. That would be a one-off extra supply of Marks. Release date is only 'November'."
-    },
     {
      "date": "2026-11-06",
      "verdict": "keep",
@@ -95,16 +90,21 @@
      "date": "2026-11-16",
      "verdict": "keep",
      "reason": "Graveyard still has no confirmed release date, so the marks-to-amylase and stamina chain is unchanged. Recheck when Jagex sets a date."
+    },
+    {
+     "date": "2026-11-17",
+     "verdict": "keep",
+     "reason": "Graveyard still sits in the November roadmap slot, so the marks-to-amylase chain is still live. No new price or rules data this scan."
     }
    ],
    "recheck_when": "Graveyard release date; Graceful rework poll result",
-   "last_reviewed": "2026-11-16"
+   "last_reviewed": "2026-11-17"
   },
   {
    "title": "Underwater farming patches lift rare seeds",
    "trigger": "The Deep Sea Diving expansion adds underwater Spirit Tree, Celastrus, Mushroom and Hardwood farming patches.",
    "release": "Early 2027 (poll result pending)",
-   "evidence": "Poll-stage Jagex proposal: an underwater cave farming area with Spirit Tree, Celastrus, Mushroom and Hardwood patches, planned for early 2027. Seed names and yields are still unconfirmed. https://oldschool.runescape.wiki/w/Upcoming_updates",
+   "evidence": "Roadmap lists the Deep Sea Diving poll as passed on 16 Nov 2026, but an earlier guide calls it poll-stage. Underwater Spirit Tree, Celastrus, Mushroom and Hardwood patches are proposed; seed yields unannounced. https://oldschool.runescape.wiki/w/Upcoming_updates",
    "mechanism": "Extra patches mean extra seed demand per player. Spirit and celastrus seeds are rare, so they are most sensitive. Mahogany is secondary.",
    "direction": "up",
    "substitutes": "Players can skip the patches, and existing patches already supply the produce.",
@@ -137,11 +137,6 @@
     }
    ],
    "history": [
-    {
-     "date": "2026-11-05",
-     "verdict": "update",
-     "reason": "Irit seed is not connected to any proposed patch, so I removed it. The remaining items match the patch types in the proposal. The poll is still pending."
-    },
     {
      "date": "2026-11-06",
      "verdict": "keep",
@@ -196,10 +191,15 @@
      "date": "2026-11-16",
      "verdict": "keep",
      "reason": "Underwater farming is still poll-stage and listed for early 2027 on the Wiki. Seed names and yields remain unconfirmed."
+    },
+    {
+     "date": "2026-11-17",
+     "verdict": "update",
+     "reason": "The roadmap now marks the Deep Sea Diving poll as passed, while an older Wiki summary still calls it poll-stage. Seed names and yields remain unannounced."
     }
    ],
    "recheck_when": "Deep Sea Diving poll results on the farming area question",
-   "last_reviewed": "2026-11-16"
+   "last_reviewed": "2026-11-17"
   },
   {
    "date": "2026-11-05T15:58+00:00",
@@ -218,11 +218,6 @@
     }
    ],
    "history": [
-    {
-     "date": "2026-11-05",
-     "verdict": "update",
-     "reason": "No confirmed weakness for Gemstone Dragons. Dragon arrowtips and Onyx bolts have no source behind them. One third-party source says antifire is needed and that dragon-hunter gear is relevant, so I narrowed the items to those two."
-    },
     {
      "date": "2026-11-06",
      "verdict": "update",
@@ -277,20 +272,25 @@
      "date": "2026-11-16",
      "verdict": "keep",
      "reason": "Diamond Dragon and gemstone dragon weaknesses and drops are still unannounced. Nothing new supports or breaks the antifire thesis."
+    },
+    {
+     "date": "2026-11-17",
+     "verdict": "keep",
+     "reason": "Gemstone dragons remain a Spring 2027 plan. Diamond Dragon weakness and drops are still unannounced, so the antifire thesis stays a Watch."
     }
    ],
    "action": "Watch",
    "confidence": "low",
    "evidence": "Jagex's RuneFest summary says to stock antifires before descending, and the Diamond Dragon lair is deep in a cavern. Gemstone dragon weaknesses and drops are unannounced. https://oldschool.runescape.wiki/w/Update:RuneFest_2026_Summit_Overview",
    "recheck_when": "Dungeons of Gielinor boss blog with Diamond Dragon weakness and drop table",
-   "last_reviewed": "2026-11-16",
+   "last_reviewed": "2026-11-17",
    "what_would_kill_it": "Dungeons of Gielinor poll fails, or the Diamond Dragon needs no antifire."
   },
   {
    "title": "Underwater jewellery production floods bars and jewellery",
    "trigger": "Deep Sea Diving jewellery production sites with faster-respawn gold and silver rocks and vent furnaces",
    "release": "Early 2027",
-   "evidence": "Jagex Nov 9 blog: poll-stage jewellery site proposal with silver, gold and gem rocks. Rates and jewellery types unconfirmed. Wiki lists early 2027. https://oldschool.runescape.com/m=news/deep-sea-diving-expansion",
+   "evidence": "Deep Sea Diving blog confirms silver and gold rocks plus a banking courier for smelted jewellery. Mining rates and jewellery output are unannounced. Roadmap shows the poll passed. https://secure.runescape.com/m=news/deep-sea-diving-expansion?oldschool=1",
    "mechanism": "A faster, semi-automated source of gold and silver and of cut jewellery raises supply and lowers prices.",
    "direction": "down",
    "items": [
@@ -319,13 +319,8 @@
    "id": "i14",
    "status": "open",
    "first_seen": "2026-11-05",
-   "last_reviewed": "2026-11-16",
+   "last_reviewed": "2026-11-17",
    "history": [
-    {
-     "date": "2026-11-05",
-     "verdict": "new",
-     "reason": "First raised"
-    },
     {
      "date": "2026-11-06",
      "verdict": "keep",
@@ -380,6 +375,11 @@
      "date": "2026-11-16",
      "verdict": "keep",
      "reason": "The jewellery production site is still poll-stage. Rates and jewellery types remain unannounced."
+    },
+    {
+     "date": "2026-11-17",
+     "verdict": "update",
+     "reason": "Jagex's blog now confirms silver, gold and gem rocks plus a banking mermaid courier. Rates are still unannounced, and the roadmap shows the poll passed."
     }
    ]
   },
@@ -409,7 +409,7 @@
    "id": "i24",
    "status": "open",
    "first_seen": "2026-11-09",
-   "last_reviewed": "2026-11-16",
+   "last_reviewed": "2026-11-17",
    "history": [
     {
      "date": "2026-11-09",
@@ -450,6 +450,11 @@
      "date": "2026-11-16",
      "verdict": "keep",
      "reason": "Fairytale III is confirmed for Summer 2027 with a new Runecraft method, but its rune requirements are still unpublished."
+    },
+    {
+     "date": "2026-11-17",
+     "verdict": "keep",
+     "reason": "Fairytale III is still a Summer 2027 roadmap item. Whether the new Runecraft method uses nature runes is unconfirmed."
     }
    ]
   },
@@ -457,7 +462,7 @@
    "title": "Underwater precious rocks add gem supply",
    "trigger": "Deep Sea Diving poll passes and jewellery sites go live",
    "release": "Early 2027 (proposed)",
-   "evidence": "Deep Sea Diving blog: gem rocks identical to Shilo Village ones; the 65 Mining precious-rock requirement is unconfirmed. https://secure.runescape.com/m=news/deep-sea-diving-expansion?oldschool=1",
+   "evidence": "Deep Sea Diving blog: precious gem rocks need 65 Mining and yield uncut sapphires, emeralds, rubies and diamonds. Roadmap shows the poll passed. https://secure.runescape.com/m=news/deep-sea-diving-expansion?oldschool=1",
    "mechanism": "A new gem source raises uncut gem supply, which should push gem prices down if the rocks are fast and easy to mine.",
    "direction": "down",
    "items": [
@@ -477,7 +482,7 @@
     }
    ],
    "substitutes": "Existing gem mining and gem rocks already supply most gem demand.",
-   "confidence": "low",
+   "confidence": "medium",
    "action": "Watch",
    "action_detail": "Wait for the poll result and the jewellery site blog. Act only if yields and respawn rates are published.",
    "exit_plan": "No position needed until yields are confirmed.",
@@ -486,7 +491,7 @@
    "id": "i25",
    "status": "open",
    "first_seen": "2026-11-10",
-   "last_reviewed": "2026-11-16",
+   "last_reviewed": "2026-11-17",
    "history": [
     {
      "date": "2026-11-10",
@@ -522,56 +527,11 @@
      "date": "2026-11-16",
      "verdict": "update",
      "reason": "The Deep Sea Diving blog says the gem rocks match those at Shilo Village. The 65 Mining requirement I had noted is not confirmed."
-    }
-   ]
-  },
-  {
-   "title": "Ascension shard supply up, Obligator demand per charge down",
-   "trigger": "Quest Month Week Two patch raised the shard mining chance and tripled Obligator charges per shard",
-   "release": "Live since Nov 11, 2026",
-   "evidence": "Wiki Update:Quest Month Week Two confirms 3x Obligator charges per shard, +20% raid shards and mining chance 1/3 to 1/2. Wiki Obligator page: 1 shard, 60 nature, 60 death = 30 charges. https://oldschool.runescape.wiki/w/Obligator",
-   "mechanism": "More mining output and three times the Obligator charges per shard cut the shard demand per charge while raising supply, pushing the price down.",
-   "direction": "down",
-   "items": [
-    {
-     "name": "Ascension shards",
-     "id": 34669,
-     "limit": 30000,
-     "high_then": 669,
-     "low_then": 650
-    }
-   ],
-   "substitutes": "No tradeable substitute for Obligator charges or Ascension bolts. Mining supply is the main lever.",
-   "confidence": "medium",
-   "action": "Sell if holding",
-   "action_detail": "Sell stock over the next few days while buy-limit volume is high. Wiki and third-party price sources conflict (671 vs about 2,000 gp), so check the live GE price first.",
-   "exit_plan": "If price stays below the Oct 28 buy-limit change level for a week, stop selling and re-evaluate.",
-   "what_would_kill_it": "Jagex raising shard demand, such as new Ascension sinks, or a mining nerf to Ascension rocks.",
-   "recheck_when": "Fractured Archive patch notes or a Quest Month week three update changing shard rates or sinks",
-   "id": "i27",
-   "status": "open",
-   "first_seen": "2026-11-13",
-   "last_reviewed": "2026-11-16",
-   "history": [
-    {
-     "date": "2026-11-13",
-     "verdict": "new",
-     "reason": "First raised"
     },
     {
-     "date": "2026-11-14",
+     "date": "2026-11-17",
      "verdict": "update",
-     "reason": "Wiki now confirms the 3x Obligator charges per shard, the 20% raid shard increase and the 1/2 mining chance. Shard supply is up and shard use per charge is down."
-    },
-    {
-     "date": "2026-11-15",
-     "verdict": "keep",
-     "reason": "The 11 Nov shard changes are live. Nothing new has replaced them and the thesis holds."
-    },
-    {
-     "date": "2026-11-16",
-     "verdict": "keep",
-     "reason": "Quest Month week two confirms cheaper Obligator charges and better Ascension shard rates, so the shard supply-up thesis holds."
+     "reason": "The blog now states the 65 Mining precious-rock requirement and the gem types, so this is no longer unconfirmed. Roadmap shows the poll passed."
     }
    ]
   },
@@ -601,7 +561,7 @@
    "id": "i29",
    "status": "open",
    "first_seen": "2026-11-14",
-   "last_reviewed": "2026-11-16",
+   "last_reviewed": "2026-11-17",
    "history": [
     {
      "date": "2026-11-14",
@@ -617,6 +577,11 @@
      "date": "2026-11-16",
      "verdict": "keep",
      "reason": "Shard supply still rises under the 11 Nov changes. Bolt demand still depends on shard use."
+    },
+    {
+     "date": "2026-11-17",
+     "verdict": "keep",
+     "reason": "Shard supply rose 20% and mining chance improved on 11 Nov. Bolt prices have not been checked against this, so confidence stays low."
     }
    ]
   },
@@ -667,7 +632,7 @@
    "id": "i30",
    "status": "open",
    "first_seen": "2026-11-14",
-   "last_reviewed": "2026-11-16",
+   "last_reviewed": "2026-11-17",
    "history": [
     {
      "date": "2026-11-14",
@@ -683,6 +648,11 @@
      "date": "2026-11-16",
      "verdict": "update",
      "reason": "Week two sets a fixed base unique rate by group size, from 1/16 for solos and duos up to 1/7.5 for eight players. The group-size thesis strengthens."
+    },
+    {
+     "date": "2026-11-17",
+     "verdict": "keep",
+     "reason": "Accountshark confirms new hard-coded unique rates by group size in TFA, so the larger-group supply effect is confirmed. Price effect still unmeasured."
     }
    ]
   },
@@ -712,7 +682,7 @@
    "id": "i31",
    "status": "open",
    "first_seen": "2026-11-15",
-   "last_reviewed": "2026-11-16",
+   "last_reviewed": "2026-11-17",
    "history": [
     {
      "date": "2026-11-15",
@@ -723,6 +693,11 @@
      "date": "2026-11-16",
      "verdict": "keep",
      "reason": "The Chosen Commander is still unreleased. Whether Zanik's Modified Crossbow is tradeable or made from a Dorgeshuun crossbow is unconfirmed."
+    },
+    {
+     "date": "2026-11-17",
+     "verdict": "keep",
+     "reason": "Quest and reward are confirmed, but whether Zanik's Modified Crossbow is tradeable or consumes a Dorgeshuun crossbow is still unannounced."
     }
    ]
   },
@@ -752,7 +727,7 @@
    "id": "i32",
    "status": "open",
    "first_seen": "2026-11-15",
-   "last_reviewed": "2026-11-16",
+   "last_reviewed": "2026-11-17",
    "history": [
     {
      "date": "2026-11-15",
@@ -763,6 +738,11 @@
      "date": "2026-11-16",
      "verdict": "keep",
      "reason": "No new evidence this scan. The thesis still depends on a black feather price check after the buzzard's drop rate."
+    },
+    {
+     "date": "2026-11-17",
+     "verdict": "keep",
+     "reason": "Wiki creature data was not re-checked this scan. Thesis still rests on a new Hunter 17 source of black feathers; confidence stays low."
     }
    ]
   },
@@ -799,7 +779,7 @@
    "id": "i33",
    "status": "open",
    "first_seen": "2026-11-15",
-   "last_reviewed": "2026-11-16",
+   "last_reviewed": "2026-11-17",
    "history": [
     {
      "date": "2026-11-15",
@@ -810,8 +790,149 @@
      "date": "2026-11-16",
      "verdict": "keep",
      "reason": "The 65 Sailing requirement is confirmed, but the Graveyard release date and whether it consumes planks or repair kits are still unannounced."
+    },
+    {
+     "date": "2026-11-17",
+     "verdict": "keep",
+     "reason": "Sailing 65 requirement is confirmed for the Graveyard. Whether it consumes planks or repair kits remains unannounced."
     }
    ]
+  },
+  {
+   "title": "Zeal unlock lifts Horn of Bran demand",
+   "trigger": "Zeal confirmed as a Piety upgrade unlocked by a tradeable item",
+   "release": "Live since The Fractured Archive, 20 Oct 2026",
+   "evidence": "Fractured Archive guide: Zeal is unlocked by bringing the tradeable Horn of Bran to Camelot Castle, and it adds +5% Attack and Strength to Piety. https://osrstoolkit.com/osrs-fractured-archive-raid-rewards-2026/",
+   "mechanism": "Each melee account needs one Horn of Bran for Zeal, so one-off demand meets a raid-only drop rate of 3/15 uniques, which the group-size scaling changes.",
+   "direction": "up",
+   "items": [
+    {
+     "name": "Horn of Bran",
+     "id": 34679,
+     "limit": null,
+     "high_then": 221999999,
+     "low_then": 216000006
+    }
+   ],
+   "substitutes": "None. Zeal has no alternative unlock item.",
+   "confidence": "low",
+   "action": "Buy now",
+   "action_detail": "Check GE price against its launch-week level first. Buy only if it is near or below that level. Keep the buy small because raid supply is elastic.",
+   "exit_plan": "Sell into any spike once Zeal demand clears, or if the price rises past its launch-week level plus about 30%.",
+   "what_would_kill_it": "A Horn of Bran price already elevated since launch, or a patch making Zeal available without the horn.",
+   "recheck_when": "Fractured Archive patch notes or a Horn of Bran price check on the GE",
+   "id": "i35",
+   "status": "open",
+   "first_seen": "2026-11-17",
+   "last_reviewed": "2026-11-17",
+   "history": [
+    {
+     "date": "2026-11-17",
+     "verdict": "new",
+     "reason": "First raised"
+    }
+   ]
+  },
+  {
+   "title": "Quest Month supply bag may tie up leather and headless arrows",
+   "trigger": "Birds and the Wasps supply bag purchase unlocked by quest-made items",
+   "release": "Live since 11 Nov 2026 (Quest Month Week Two)",
+   "evidence": "Unconfirmed: which items the supply bag requires and whether it consumes leather or headless arrows. Wiki lists bag contents as coins plus darts, arrowheads, headless arrows and leather. https://oldschool.runescape.wiki/w/Update:Quest_Month:_Week_Two_%26_TFA_Changes",
+   "mechanism": "If the bag is bought with quest-made items, demand for the bag's supply materials may rise slightly, but only if the bag draws on the market.",
+   "direction": "up",
+   "items": [
+    {
+     "name": "Leather",
+     "id": 1741,
+     "limit": 13000,
+     "high_then": 175,
+     "low_then": 160
+    },
+    {
+     "name": "Headless arrow",
+     "id": 53,
+     "limit": 11000,
+     "high_then": 11,
+     "low_then": 10
+    }
+   ],
+   "substitutes": "Many low-level supplies with similar uses.",
+   "confidence": "low",
+   "action": "Watch",
+   "action_detail": "Do nothing until the supply bag's purchase requirements are published on the Wiki. Expect small demand effects at most.",
+   "exit_plan": "No position planned. Drop the idea if the requirement uses no market-tradeable items.",
+   "what_would_kill_it": "Bag requirements that use only untradeable or quest-only items.",
+   "recheck_when": "Birds and the Wasps Wiki page or a Quest Month week three post",
+   "id": "i36",
+   "status": "open",
+   "first_seen": "2026-11-17",
+   "last_reviewed": "2026-11-17",
+   "history": [
+    {
+     "date": "2026-11-17",
+     "verdict": "new",
+     "reason": "First raised"
+    }
+   ]
+  }
+ ],
+ "dropped": [
+  {
+   "title": "Ascension shard supply up, Obligator demand per charge down",
+   "trigger": "Quest Month Week Two patch raised the shard mining chance and tripled Obligator charges per shard",
+   "release": "Live since Nov 11, 2026",
+   "evidence": "Wiki Update:Quest Month Week Two confirms 3x Obligator charges per shard, +20% raid shards and mining chance 1/3 to 1/2. Wiki Obligator page: 1 shard, 60 nature, 60 death = 30 charges. https://oldschool.runescape.wiki/w/Obligator",
+   "mechanism": "More mining output and three times the Obligator charges per shard cut the shard demand per charge while raising supply, pushing the price down.",
+   "direction": "down",
+   "items": [
+    {
+     "name": "Ascension shards",
+     "id": 34669,
+     "limit": 30000,
+     "high_then": 669,
+     "low_then": 650
+    }
+   ],
+   "substitutes": "No tradeable substitute for Obligator charges or Ascension bolts. Mining supply is the main lever.",
+   "confidence": "medium",
+   "action": "Sell if holding",
+   "action_detail": "Sell stock over the next few days while buy-limit volume is high. Wiki and third-party price sources conflict (671 vs about 2,000 gp), so check the live GE price first.",
+   "exit_plan": "If price stays below the Oct 28 buy-limit change level for a week, stop selling and re-evaluate.",
+   "what_would_kill_it": "Jagex raising shard demand, such as new Ascension sinks, or a mining nerf to Ascension rocks.",
+   "recheck_when": "Fractured Archive patch notes or a Quest Month week three update changing shard rates or sinks",
+   "id": "i27",
+   "status": "dropped",
+   "first_seen": "2026-11-13",
+   "last_reviewed": "2026-11-17",
+   "history": [
+    {
+     "date": "2026-11-13",
+     "verdict": "new",
+     "reason": "First raised"
+    },
+    {
+     "date": "2026-11-14",
+     "verdict": "update",
+     "reason": "Wiki now confirms the 3x Obligator charges per shard, the 20% raid shard increase and the 1/2 mining chance. Shard supply is up and shard use per charge is down."
+    },
+    {
+     "date": "2026-11-15",
+     "verdict": "keep",
+     "reason": "The 11 Nov shard changes are live. Nothing new has replaced them and the thesis holds."
+    },
+    {
+     "date": "2026-11-16",
+     "verdict": "keep",
+     "reason": "Quest Month week two confirms cheaper Obligator charges and better Ascension shard rates, so the shard supply-up thesis holds."
+    },
+    {
+     "date": "2026-11-17",
+     "verdict": "drop",
+     "reason": "Shards already fell about 31% after the 11 Nov balance change, so the supply shock is largely priced in. Remaining downside is too small to justify a call."
+    }
+   ],
+   "dropped_on": "2026-11-17",
+   "drop_reason": "Shards already fell about 31% after the 11 Nov balance change, so the supply shock is largely priced in. Remaining downside is too small to justify a call."
   },
   {
    "title": "Jagex Account migration may remove botted supply",
@@ -844,9 +965,9 @@
    "what_would_kill_it": "Bots migrate easily and no price change appears within a week.",
    "recheck_when": "After 17 Nov, with GE price and volume data",
    "id": "i34",
-   "status": "open",
+   "status": "dropped",
    "first_seen": "2026-11-15",
-   "last_reviewed": "2026-11-16",
+   "last_reviewed": "2026-11-17",
    "history": [
     {
      "date": "2026-11-15",
@@ -857,11 +978,16 @@
      "date": "2026-11-16",
      "verdict": "keep",
      "reason": "Jagex Accounts migration is confirmed for 17 November. Any effect on botted supply is still unmeasured."
+    },
+    {
+     "date": "2026-11-17",
+     "verdict": "drop",
+     "reason": "The 17 Nov Jagex Accounts migration is confirmed, but there is no confirmed effect on bots or item supply. The thesis was never well founded."
     }
-   ]
-  }
- ],
- "dropped": [
+   ],
+   "dropped_on": "2026-11-17",
+   "drop_reason": "The 17 Nov Jagex Accounts migration is confirmed, but there is no confirmed effect on bots or item supply. The thesis was never well founded."
+  },
   {
    "date": "2026-11-05T15:58+00:00",
    "title": "Menaphos soul altar increases soul rune supply",
