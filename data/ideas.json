@@ -1,5 +1,5 @@
 {
- "next": 37,
+ "next": 38,
  "ideas": [
   {
    "title": "Amulet of sight supply flood",
@@ -81,11 +81,6 @@
    ],
    "history": [
     {
-     "date": "2026-11-06",
-     "verdict": "keep",
-     "reason": "The Graveyard is still confirmed for November with 30+ Marks per hour cited, but the exact release day is unconfirmed. Thesis still depends on the release and the Graceful poll."
-    },
-    {
      "date": "2026-11-07",
      "verdict": "keep",
      "reason": "The Graveyard is still set for November, and the rewards blog still targets 30+ Marks of Grace per hour at high intensity. The Graceful refund is a proposal, so the thesis still stands at medium confidence."
@@ -139,10 +134,15 @@
      "date": "2026-11-17",
      "verdict": "keep",
      "reason": "Graveyard still sits in the November roadmap slot, so the marks-to-amylase chain is still live. No new price or rules data this scan."
+    },
+    {
+     "date": "2026-11-18",
+     "verdict": "keep",
+     "reason": "Graveyard is still slated for November 2026 on the schedule and Marks-to-amylase link is unchanged. Recheck on release and the Graceful poll."
     }
    ],
    "recheck_when": "Graveyard release date; Graceful rework poll result",
-   "last_reviewed": "2026-11-17"
+   "last_reviewed": "2026-11-18"
   },
   {
    "title": "Underwater gem rocks cut gem prices",
@@ -271,11 +271,6 @@
    ],
    "history": [
     {
-     "date": "2026-11-06",
-     "verdict": "keep",
-     "reason": "Still poll-stage. The Jagex blog asks whether to add an underwater farming area, with no confirmed seed list or rates yet."
-    },
-    {
      "date": "2026-11-07",
      "verdict": "update",
      "reason": "Diving expansion farming patches are now confirmed as poll-stage content for early 2027, not live. Seed requirements remain unknown."
@@ -329,10 +324,15 @@
      "date": "2026-11-17",
      "verdict": "update",
      "reason": "The roadmap now marks the Deep Sea Diving poll as passed, while an older Wiki summary still calls it poll-stage. Seed names and yields remain unannounced."
+    },
+    {
+     "date": "2026-11-18",
+     "verdict": "keep",
+     "reason": "Sources conflict on whether the Deep Sea Diving poll passed; the wiki schedule says Passed, while the osrstoolkit guide says poll-stage. Seed yields remain unannounced."
     }
    ],
    "recheck_when": "Deep Sea Diving poll results on the farming area question",
-   "last_reviewed": "2026-11-17"
+   "last_reviewed": "2026-11-18"
   },
   {
    "title": "Zanik crossbow may replace Dorgeshuun crossbow",
@@ -686,11 +686,6 @@
    ],
    "history": [
     {
-     "date": "2026-11-06",
-     "verdict": "update",
-     "reason": "Gemstone dragons are confirmed arrow-weak and Dragonstone dragons drain antifire timers, supporting antifire demand. Dragon hunter lance has no confirmed link, so it is removed. Diamond Dragon weakness is still unknown."
-    },
-    {
      "date": "2026-11-07",
      "verdict": "update",
      "reason": "Dungeons of Gielinor passed its poll and the Diamond Dragon is confirmed, with a call to stock antifires. Its weakness and drop table are still unconfirmed."
@@ -744,13 +739,18 @@
      "date": "2026-11-17",
      "verdict": "keep",
      "reason": "Gemstone dragons remain a Spring 2027 plan. Diamond Dragon weakness and drops are still unannounced, so the antifire thesis stays a Watch."
+    },
+    {
+     "date": "2026-11-18",
+     "verdict": "keep",
+     "reason": "Dungeons of Gielinor is still Spring 2027. Diamond Dragon weakness and drops remain unannounced, so the idea stays low-confidence and far off."
     }
    ],
    "action": "Watch",
    "confidence": "low",
    "evidence": "Jagex's RuneFest summary says to stock antifires before descending, and the Diamond Dragon lair is deep in a cavern. Gemstone dragon weaknesses and drops are unannounced. https://oldschool.runescape.wiki/w/Update:RuneFest_2026_Summit_Overview",
    "recheck_when": "Dungeons of Gielinor boss blog with Diamond Dragon weakness and drop table",
-   "last_reviewed": "2026-11-17",
+   "last_reviewed": "2026-11-18",
    "what_would_kill_it": "Dungeons of Gielinor poll fails, or the Diamond Dragon needs no antifire."
   },
   {
@@ -828,13 +828,8 @@
    "id": "i14",
    "status": "open",
    "first_seen": "2026-11-05",
-   "last_reviewed": "2026-11-17",
+   "last_reviewed": "2026-11-18",
    "history": [
-    {
-     "date": "2026-11-06",
-     "verdict": "keep",
-     "reason": "Still poll-stage. Jewellery production sites are proposed, but the poll result, jewellery types and rates are not published."
-    },
     {
      "date": "2026-11-07",
      "verdict": "keep",
@@ -889,6 +884,11 @@
      "date": "2026-11-17",
      "verdict": "update",
      "reason": "Jagex's blog now confirms silver, gold and gem rocks plus a banking mermaid courier. Rates are still unannounced, and the roadmap shows the poll passed."
+    },
+    {
+     "date": "2026-11-18",
+     "verdict": "keep",
+     "reason": "Jewellery site rocks and banking courier are blog-confirmed. Output rates are still unannounced, and the poll status conflicts across sources."
     }
    ]
   },
@@ -1369,7 +1369,7 @@
    "id": "i24",
    "status": "open",
    "first_seen": "2026-11-09",
-   "last_reviewed": "2026-11-17",
+   "last_reviewed": "2026-11-18",
    "history": [
     {
      "date": "2026-11-09",
@@ -1415,6 +1415,11 @@
      "date": "2026-11-17",
      "verdict": "keep",
      "reason": "Fairytale III is still a Summer 2027 roadmap item. Whether the new Runecraft method uses nature runes is unconfirmed."
+    },
+    {
+     "date": "2026-11-18",
+     "verdict": "keep",
+     "reason": "Fairytale III is still Summer 2027 with a Runecraft method. Rune type and XP rates remain unconfirmed."
     }
    ]
   },
@@ -1451,7 +1456,7 @@
    "id": "i25",
    "status": "open",
    "first_seen": "2026-11-10",
-   "last_reviewed": "2026-11-17",
+   "last_reviewed": "2026-11-18",
    "history": [
     {
      "date": "2026-11-10",
@@ -1492,6 +1497,11 @@
      "date": "2026-11-17",
      "verdict": "update",
      "reason": "The blog now states the 65 Mining precious-rock requirement and the gem types, so this is no longer unconfirmed. Roadmap shows the poll passed."
+    },
+    {
+     "date": "2026-11-18",
+     "verdict": "keep",
+     "reason": "Precious gem rock requirements and drops are blog-confirmed. Poll status is the same conflicting picture as the diving expansion."
     }
    ]
   },
@@ -1672,7 +1682,7 @@
    "id": "i29",
    "status": "open",
    "first_seen": "2026-11-14",
-   "last_reviewed": "2026-11-17",
+   "last_reviewed": "2026-11-18",
    "history": [
     {
      "date": "2026-11-14",
@@ -1693,6 +1703,11 @@
      "date": "2026-11-17",
      "verdict": "keep",
      "reason": "Shard supply rose 20% and mining chance improved on 11 Nov. Bolt prices have not been checked against this, so confidence stays low."
+    },
+    {
+     "date": "2026-11-18",
+     "verdict": "keep",
+     "reason": "Wiki shard and bolt changes remain current. Recheck when a Quest Month week three post changes shard rates."
     }
    ]
   },
@@ -1743,7 +1758,7 @@
    "id": "i30",
    "status": "open",
    "first_seen": "2026-11-14",
-   "last_reviewed": "2026-11-17",
+   "last_reviewed": "2026-11-18",
    "history": [
     {
      "date": "2026-11-14",
@@ -1764,6 +1779,11 @@
      "date": "2026-11-17",
      "verdict": "keep",
      "reason": "Accountshark confirms new hard-coded unique rates by group size in TFA, so the larger-group supply effect is confirmed. Price effect still unmeasured."
+    },
+    {
+     "date": "2026-11-18",
+     "verdict": "keep",
+     "reason": "Group-size loot-rate change still stands per the Quest Month week two source. Loot-rate data is still needed to size the effect."
     }
    ]
   },
@@ -1793,7 +1813,7 @@
    "id": "i31",
    "status": "open",
    "first_seen": "2026-11-15",
-   "last_reviewed": "2026-11-17",
+   "last_reviewed": "2026-11-18",
    "history": [
     {
      "date": "2026-11-15",
@@ -1809,6 +1829,11 @@
      "date": "2026-11-17",
      "verdict": "keep",
      "reason": "Quest and reward are confirmed, but whether Zanik's Modified Crossbow is tradeable or consumes a Dorgeshuun crossbow is still unannounced."
+    },
+    {
+     "date": "2026-11-18",
+     "verdict": "keep",
+     "reason": "Quest and reward are confirmed. Whether Zanik's crossbow is tradeable or built from a Dorgeshuun crossbow is still unconfirmed."
     }
    ]
   },
@@ -1836,9 +1861,9 @@
    "what_would_kill_it": "Low XP or loot rates make the method unpopular, or the price has already collapsed.",
    "recheck_when": "GE price check on black feather in a few days",
    "id": "i32",
-   "status": "open",
+   "status": "dropped",
    "first_seen": "2026-11-15",
-   "last_reviewed": "2026-11-17",
+   "last_reviewed": "2026-11-18",
    "history": [
     {
      "date": "2026-11-15",
@@ -1854,8 +1879,15 @@
      "date": "2026-11-17",
      "verdict": "keep",
      "reason": "Wiki creature data was not re-checked this scan. Thesis still rests on a new Hunter 17 source of black feathers; confidence stays low."
+    },
+    {
+     "date": "2026-11-18",
+     "verdict": "drop",
+     "reason": "The black honey buzzard is a wiki monster with no confirmed new-content date or change. Nothing ties it to a dated supply shock, so the idea is unfounded."
     }
-   ]
+   ],
+   "dropped_on": "2026-11-18",
+   "drop_reason": "The black honey buzzard is a wiki monster with no confirmed new-content date or change. Nothing ties it to a dated supply shock, so the idea is unfounded."
   },
   {
    "title": "Graveyard's 65 Sailing requirement may lift ship repair demand",
@@ -1890,7 +1922,7 @@
    "id": "i33",
    "status": "open",
    "first_seen": "2026-11-15",
-   "last_reviewed": "2026-11-17",
+   "last_reviewed": "2026-11-18",
    "history": [
     {
      "date": "2026-11-15",
@@ -1906,6 +1938,11 @@
      "date": "2026-11-17",
      "verdict": "keep",
      "reason": "Sailing 65 requirement is confirmed for the Graveyard. Whether it consumes planks or repair kits remains unannounced."
+    },
+    {
+     "date": "2026-11-18",
+     "verdict": "keep",
+     "reason": "65 Sailing requirement is wiki-confirmed. Whether the quest consumes planks or repair kits is still unknown."
     }
    ]
   },
@@ -1989,12 +2026,17 @@
    "id": "i35",
    "status": "open",
    "first_seen": "2026-11-17",
-   "last_reviewed": "2026-11-17",
+   "last_reviewed": "2026-11-18",
    "history": [
     {
      "date": "2026-11-17",
      "verdict": "new",
      "reason": "First raised"
+    },
+    {
+     "date": "2026-11-18",
+     "verdict": "keep",
+     "reason": "Zeal unlock via Horn of Bran is from a guide, not a Jagex post, and the raid is already live. Keep at low confidence and verify with a GE price check."
     }
    ]
   },
@@ -2031,15 +2073,55 @@
    "id": "i36",
    "status": "open",
    "first_seen": "2026-11-17",
-   "last_reviewed": "2026-11-17",
+   "last_reviewed": "2026-11-18",
    "history": [
     {
      "date": "2026-11-17",
+     "verdict": "new",
+     "reason": "First raised"
+    },
+    {
+     "date": "2026-11-18",
+     "verdict": "keep",
+     "reason": "Quest Month supply bag contents are wiki-listed, but whether it consumes leather or headless arrows is still unconfirmed."
+    }
+   ]
+  },
+  {
+   "title": "Menaphos true Soul Altar may add soul rune supply",
+   "trigger": "Menaphos release and the true Soul Altar's crafting method",
+   "release": "Spring 2027 (roadmap, poll passed)",
+   "evidence": "Roadmap confirms Menaphos with a true Soul Altar and soul runes at 90 Runecraft. Wiki says soul runes already craft at an Arceuus Soul Altar at 90 Runecraft. https://oldschool.runescape.wiki/w/Upcoming_updates ; https://oldschool.runescape.wiki/w/Soul_rune",
+   "mechanism": "If the new altar is a separate, easier soul rune route, soul rune supply rises and price falls. If it only mirrors the existing altar, little changes.",
+   "direction": "down",
+   "items": [
+    {
+     "name": "Soul rune",
+     "id": 566,
+     "limit": 25000,
+     "high_then": 303,
+     "low_then": 293
+    }
+   ],
+   "substitutes": "Ourania Runecrafting Altar (random chance), Rogue Trader and Magic shop purchases.",
+   "confidence": "low",
+   "action": "Watch",
+   "action_detail": "Do nothing now. Revisit when Menaphos details show whether the true altar uses a different method or is just a second location.",
+   "exit_plan": "No position. If holding, sell into any spike ahead of the Menaphos release.",
+   "what_would_kill_it": "Menaphos details show the true altar is an identical method, or the 90 Runecraft requirement is unchanged in practice.",
+   "recheck_when": "Menaphos blog or patch notes describing the true Soul Altar method",
+   "id": "i37",
+   "status": "open",
+   "first_seen": "2026-11-18",
+   "last_reviewed": "2026-11-18",
+   "history": [
+    {
+     "date": "2026-11-18",
      "verdict": "new",
      "reason": "First raised"
     }
    ]
   }
  ],
- "updated": "2026-11-17T10:58+00:00"
+ "updated": "2026-11-18T10:30+00:00"
 }

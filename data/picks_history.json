@@ -688,6 +688,21 @@
      "low_then": 10
     }
    ]
+  },
+  {
+   "date": "2026-11-18T10:30+00:00",
+   "title": "Menaphos true Soul Altar may add soul rune supply",
+   "idea": "i37",
+   "direction": "down",
+   "items": [
+    {
+     "name": "Soul rune",
+     "id": 566,
+     "limit": 25000,
+     "high_then": 303,
+     "low_then": 293
+    }
+   ]
   }
  ]
 }
