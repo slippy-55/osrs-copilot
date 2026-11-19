@@ -1,5 +1,5 @@
 {
- "next": 38,
+ "next": 39,
  "ideas": [
   {
    "title": "Amulet of sight supply flood",
@@ -81,11 +81,6 @@
    ],
    "history": [
     {
-     "date": "2026-11-07",
-     "verdict": "keep",
-     "reason": "The Graveyard is still set for November, and the rewards blog still targets 30+ Marks of Grace per hour at high intensity. The Graceful refund is a proposal, so the thesis still stands at medium confidence."
-    },
-    {
      "date": "2026-11-08",
      "verdict": "keep",
      "reason": "The Graveyard is still due in November with no exact date. The 30+ Marks/hr course target is unchanged. Sell before release."
@@ -139,10 +134,15 @@
      "date": "2026-11-18",
      "verdict": "keep",
      "reason": "Graveyard is still slated for November 2026 on the schedule and Marks-to-amylase link is unchanged. Recheck on release and the Graceful poll."
+    },
+    {
+     "date": "2026-11-19",
+     "verdict": "update",
+     "reason": "Quest Month week 3 is live, and The Graveyard is reported as closing Quest Month next week, so the release is now imminent. Marks thesis still needs the rewards and Graceful poll outcome."
     }
    ],
-   "recheck_when": "Graveyard release date; Graceful rework poll result",
-   "last_reviewed": "2026-11-18"
+   "recheck_when": "The Graveyard release, expected the week of late November 2026 (https://accountshark.net/blog/osrs-quest-month-week-3-rag-and-bone-man-iii-a-new-leaf-fractured-archive-practice-mode-duo-unique-rate-november-18)",
+   "last_reviewed": "2026-11-19"
   },
   {
    "title": "Underwater gem rocks cut gem prices",
@@ -271,11 +271,6 @@
    ],
    "history": [
     {
-     "date": "2026-11-07",
-     "verdict": "update",
-     "reason": "Diving expansion farming patches are now confirmed as poll-stage content for early 2027, not live. Seed requirements remain unknown."
-    },
-    {
      "date": "2026-11-08",
      "verdict": "keep",
      "reason": "The underwater farming patches are still planned for early 2027 with no seed details. Still a Watch."
@@ -329,10 +324,15 @@
      "date": "2026-11-18",
      "verdict": "keep",
      "reason": "Sources conflict on whether the Deep Sea Diving poll passed; the wiki schedule says Passed, while the osrstoolkit guide says poll-stage. Seed yields remain unannounced."
+    },
+    {
+     "date": "2026-11-19",
+     "verdict": "keep",
+     "reason": "Deep Sea Diving poll closed 16 Nov, but the wiki and roadmap disagree on whether farming patches passed. Still unconfirmed, so it stays on Watch."
     }
    ],
    "recheck_when": "Deep Sea Diving poll results on the farming area question",
-   "last_reviewed": "2026-11-18"
+   "last_reviewed": "2026-11-19"
   },
   {
    "title": "Zanik crossbow may replace Dorgeshuun crossbow",
@@ -686,11 +686,6 @@
    ],
    "history": [
     {
-     "date": "2026-11-07",
-     "verdict": "update",
-     "reason": "Dungeons of Gielinor passed its poll and the Diamond Dragon is confirmed, with a call to stock antifires. Its weakness and drop table are still unconfirmed."
-    },
-    {
      "date": "2026-11-08",
      "verdict": "keep",
      "reason": "Dungeons of Gielinor is still Spring 2027 and the Diamond Dragon weakness is unannounced."
@@ -744,13 +739,18 @@
      "date": "2026-11-18",
      "verdict": "keep",
      "reason": "Dungeons of Gielinor is still Spring 2027. Diamond Dragon weakness and drops remain unannounced, so the idea stays low-confidence and far off."
+    },
+    {
+     "date": "2026-11-19",
+     "verdict": "keep",
+     "reason": "No new Diamond Dragon or gemstone dragon weakness or drop data has been published. The idea stays on Watch until the Dungeons of Gielinor boss blog."
     }
    ],
    "action": "Watch",
    "confidence": "low",
    "evidence": "Jagex's RuneFest summary says to stock antifires before descending, and the Diamond Dragon lair is deep in a cavern. Gemstone dragon weaknesses and drops are unannounced. https://oldschool.runescape.wiki/w/Update:RuneFest_2026_Summit_Overview",
    "recheck_when": "Dungeons of Gielinor boss blog with Diamond Dragon weakness and drop table",
-   "last_reviewed": "2026-11-18",
+   "last_reviewed": "2026-11-19",
    "what_would_kill_it": "Dungeons of Gielinor poll fails, or the Diamond Dragon needs no antifire."
   },
   {
@@ -828,13 +828,8 @@
    "id": "i14",
    "status": "open",
    "first_seen": "2026-11-05",
-   "last_reviewed": "2026-11-18",
+   "last_reviewed": "2026-11-19",
    "history": [
-    {
-     "date": "2026-11-07",
-     "verdict": "keep",
-     "reason": "Underwater jewellery production is still poll-stage content. Jewellery types, rates and bar demand are unannounced, so the thesis stays a low-confidence Watch."
-    },
     {
      "date": "2026-11-08",
      "verdict": "keep",
@@ -889,6 +884,11 @@
      "date": "2026-11-18",
      "verdict": "keep",
      "reason": "Jewellery site rocks and banking courier are blog-confirmed. Output rates are still unannounced, and the poll status conflicts across sources."
+    },
+    {
+     "date": "2026-11-19",
+     "verdict": "keep",
+     "reason": "Deep Sea Diving remains poll-stage. Mining rates and jewellery output are still unannounced, so the bar and jewellery supply thesis is unchanged."
     }
    ]
   },
@@ -1369,7 +1369,7 @@
    "id": "i24",
    "status": "open",
    "first_seen": "2026-11-09",
-   "last_reviewed": "2026-11-18",
+   "last_reviewed": "2026-11-19",
    "history": [
     {
      "date": "2026-11-09",
@@ -1420,6 +1420,11 @@
      "date": "2026-11-18",
      "verdict": "keep",
      "reason": "Fairytale III is still Summer 2027 with a Runecraft method. Rune type and XP rates remain unconfirmed."
+    },
+    {
+     "date": "2026-11-19",
+     "verdict": "keep",
+     "reason": "Fairytale III remains a Summer 2027 item. Runecraft method requirements and nature rune use are still unannounced."
     }
    ]
   },
@@ -1456,7 +1461,7 @@
    "id": "i25",
    "status": "open",
    "first_seen": "2026-11-10",
-   "last_reviewed": "2026-11-18",
+   "last_reviewed": "2026-11-19",
    "history": [
     {
      "date": "2026-11-10",
@@ -1502,6 +1507,11 @@
      "date": "2026-11-18",
      "verdict": "keep",
      "reason": "Precious gem rock requirements and drops are blog-confirmed. Poll status is the same conflicting picture as the diving expansion."
+    },
+    {
+     "date": "2026-11-19",
+     "verdict": "keep",
+     "reason": "Precious gem rocks at 65 Mining are still poll-stage content. The supply thesis holds until the poll result is confirmed."
     }
    ]
   },
@@ -1682,7 +1692,7 @@
    "id": "i29",
    "status": "open",
    "first_seen": "2026-11-14",
-   "last_reviewed": "2026-11-18",
+   "last_reviewed": "2026-11-19",
    "history": [
     {
      "date": "2026-11-14",
@@ -1708,6 +1718,11 @@
      "date": "2026-11-18",
      "verdict": "keep",
      "reason": "Wiki shard and bolt changes remain current. Recheck when a Quest Month week three post changes shard rates."
+    },
+    {
+     "date": "2026-11-19",
+     "verdict": "keep",
+     "reason": "No new shard-rate change beyond the earlier 11 Nov adjustment. The bolt thesis still rests on the same cheaper shard supply."
     }
    ]
   },
@@ -1715,7 +1730,7 @@
    "title": "Groups of 3+ lift Fractured Archive unique supply",
    "trigger": "TFA loot scaling rebalance on 11 Nov 2026",
    "release": "Live since 11 Nov 2026 patch",
-   "evidence": "Quest Month week two: base unique rate moves from 1/14 to 1/16, fixed by group size from 1/16 (solo/duo) up to 1/7.5 (eight players). https://accountshark.net/blog/osrs-quest-month-week-two-birds-and-the-wasps-shell-of-a-friend-fractured-archive-loot-scaling-november-11",
+   "evidence": "Week 3 cuts the base duo unique chance from 1 in 16 to 1 in 17, easing duo supply; group scaling still raises rates for larger teams. https://secure.runescape.com/m=news/quest-month-week-3--tfa-practice-mode?oldschool=1",
    "mechanism": "Larger, more frequent groups should generate more uniques, adding supply to the tradeable uniques and pushing their prices down.",
    "direction": "down",
    "items": [
@@ -1758,7 +1773,7 @@
    "id": "i30",
    "status": "open",
    "first_seen": "2026-11-14",
-   "last_reviewed": "2026-11-18",
+   "last_reviewed": "2026-11-19",
    "history": [
     {
      "date": "2026-11-14",
@@ -1784,6 +1799,11 @@
      "date": "2026-11-18",
      "verdict": "keep",
      "reason": "Group-size loot-rate change still stands per the Quest Month week two source. Loot-rate data is still needed to size the effect."
+    },
+    {
+     "date": "2026-11-19",
+     "verdict": "update",
+     "reason": "Week 3 lowers the base duo unique chance from 1 in 16 to 1 in 17, which trims duo supply and partly offsets the group-size effect. The sell-side direction is weaker."
     }
    ]
   },
@@ -1813,7 +1833,7 @@
    "id": "i31",
    "status": "open",
    "first_seen": "2026-11-15",
-   "last_reviewed": "2026-11-18",
+   "last_reviewed": "2026-11-19",
    "history": [
     {
      "date": "2026-11-15",
@@ -1834,6 +1854,11 @@
      "date": "2026-11-18",
      "verdict": "keep",
      "reason": "Quest and reward are confirmed. Whether Zanik's crossbow is tradeable or built from a Dorgeshuun crossbow is still unconfirmed."
+    },
+    {
+     "date": "2026-11-19",
+     "verdict": "keep",
+     "reason": "Chosen Commander remains an early 2027 release. Zanik's crossbow tradeability and recipe remain unconfirmed."
     }
    ]
   },
@@ -1918,11 +1943,11 @@
    "action_detail": "The volume spike may be early buyers. Wait for the release date and a quest-items list before buying.",
    "exit_plan": "If prices rise before release, sell into the release-day spike.",
    "what_would_kill_it": "The quest uses no Sailing consumables, or the volume proves to be noise.",
-   "recheck_when": "Graveyard release or patch notes",
+   "recheck_when": "The Graveyard release next week, and its patch notes for plank or repair kit consumption",
    "id": "i33",
    "status": "open",
    "first_seen": "2026-11-15",
-   "last_reviewed": "2026-11-18",
+   "last_reviewed": "2026-11-19",
    "history": [
     {
      "date": "2026-11-15",
@@ -1943,6 +1968,11 @@
      "date": "2026-11-18",
      "verdict": "keep",
      "reason": "65 Sailing requirement is wiki-confirmed. Whether the quest consumes planks or repair kits is still unknown."
+    },
+    {
+     "date": "2026-11-19",
+     "verdict": "update",
+     "reason": "The Graveyard is now reported as releasing next week, so this idea moves from a distant check to an imminent one. Consumption of planks or repair kits is still unconfirmed."
     }
    ]
   },
@@ -2026,7 +2056,7 @@
    "id": "i35",
    "status": "open",
    "first_seen": "2026-11-17",
-   "last_reviewed": "2026-11-18",
+   "last_reviewed": "2026-11-19",
    "history": [
     {
      "date": "2026-11-17",
@@ -2037,6 +2067,11 @@
      "date": "2026-11-18",
      "verdict": "keep",
      "reason": "Zeal unlock via Horn of Bran is from a guide, not a Jagex post, and the raid is already live. Keep at low confidence and verify with a GE price check."
+    },
+    {
+     "date": "2026-11-19",
+     "verdict": "keep",
+     "reason": "No new Zeal or Horn of Bran information this scan. Thesis stays as it was, but the buy-now call is low confidence."
     }
    ]
   },
@@ -2073,7 +2108,7 @@
    "id": "i36",
    "status": "open",
    "first_seen": "2026-11-17",
-   "last_reviewed": "2026-11-18",
+   "last_reviewed": "2026-11-19",
    "history": [
     {
      "date": "2026-11-17",
@@ -2084,6 +2119,11 @@
      "date": "2026-11-18",
      "verdict": "keep",
      "reason": "Quest Month supply bag contents are wiki-listed, but whether it consumes leather or headless arrows is still unconfirmed."
+    },
+    {
+     "date": "2026-11-19",
+     "verdict": "keep",
+     "reason": "Week 3 quests were named, but the Quest Month supply bag's contents and whether it consumes leather or headless arrows remain unconfirmed."
     }
    ]
   },
@@ -2113,15 +2153,55 @@
    "id": "i37",
    "status": "open",
    "first_seen": "2026-11-18",
-   "last_reviewed": "2026-11-18",
+   "last_reviewed": "2026-11-19",
    "history": [
     {
      "date": "2026-11-18",
+     "verdict": "new",
+     "reason": "First raised"
+    },
+    {
+     "date": "2026-11-19",
+     "verdict": "keep",
+     "reason": "Menaphos remains a Spring 2027 item. The true Soul Altar method has not been detailed yet."
+    }
+   ]
+  },
+  {
+   "title": "Zorya's tome faster shots lift tome demand",
+   "trigger": "Quest Month week 3 Fractured Archive buff to Zorya's tome projectiles",
+   "release": "18 Nov 2026 (live)",
+   "evidence": "Jagex's week 3 post says Zorya's tome projectiles now travel faster and are less affected by distance. https://secure.runescape.com/m=news/quest-month-week-3--tfa-practice-mode?oldschool=1",
+   "mechanism": "A better-performing raid weapon makes uncharged tomes more wanted by Fractured Archive raiders, which lifts demand a little. The buff is small, so the effect should be modest.",
+   "direction": "up",
+   "items": [
+    {
+     "name": "Zorya's tome (uncharged)",
+     "id": 34727,
+     "limit": 8,
+     "high_then": 23297419,
+     "low_then": 23000000
+    }
+   ],
+   "substitutes": "Other Fractured Archive ranged and magic weapons. Raiders can switch if the tome's gain is small.",
+   "confidence": "low",
+   "action": "Watch",
+   "action_detail": "Only one new confirmed tradeable link was found this scan. Watch GE volume for a week and act only if price moves without a wider rally.",
+   "exit_plan": "Exit if price rises over 10% on low volume, or drop after two weeks with no move.",
+   "what_would_kill_it": "The buff is too minor to change raider choices, so tome prices stay flat.",
+   "recheck_when": "Next Fractured Archive balance post or Graveyard week patch notes",
+   "id": "i38",
+   "status": "open",
+   "first_seen": "2026-11-19",
+   "last_reviewed": "2026-11-19",
+   "history": [
+    {
+     "date": "2026-11-19",
      "verdict": "new",
      "reason": "First raised"
     }
    ]
   }
  ],
- "updated": "2026-11-18T10:30+00:00"
+ "updated": "2026-11-19T09:10+00:00"
 }
