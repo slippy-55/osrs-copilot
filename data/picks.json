@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-19T09:10+00:00",
+ "generated": "2026-11-20T08:54+00:00",
  "mode": "quick",
  "model": "claude-haiku-5-5",
  "theses": [
@@ -36,11 +36,6 @@
     }
    ],
    "history": [
-    {
-     "date": "2026-11-08",
-     "verdict": "keep",
-     "reason": "The Graveyard is still due in November with no exact date. The 30+ Marks/hr course target is unchanged. Sell before release."
-    },
     {
      "date": "2026-11-09",
      "verdict": "keep",
@@ -95,10 +90,15 @@
      "date": "2026-11-19",
      "verdict": "update",
      "reason": "Quest Month week 3 is live, and The Graveyard is reported as closing Quest Month next week, so the release is now imminent. Marks thesis still needs the rewards and Graceful poll outcome."
+    },
+    {
+     "date": "2026-11-20",
+     "verdict": "keep",
+     "reason": "Wiki and Jagex rewards material say The Graveyard adds a 65-80 Agility course with top Marks of Grace rates. Roadmap-linked reporting points to a Nov 25 launch, so the sell-into-release thesis still holds."
     }
    ],
    "recheck_when": "The Graveyard release, expected the week of late November 2026 (https://accountshark.net/blog/osrs-quest-month-week-3-rag-and-bone-man-iii-a-new-leaf-fractured-archive-practice-mode-duo-unique-rate-november-18)",
-   "last_reviewed": "2026-11-19"
+   "last_reviewed": "2026-11-20"
   },
   {
    "title": "Underwater farming patches lift rare seeds",
@@ -137,11 +137,6 @@
     }
    ],
    "history": [
-    {
-     "date": "2026-11-08",
-     "verdict": "keep",
-     "reason": "The underwater farming patches are still planned for early 2027 with no seed details. Still a Watch."
-    },
     {
      "date": "2026-11-09",
      "verdict": "update",
@@ -196,10 +191,15 @@
      "date": "2026-11-19",
      "verdict": "keep",
      "reason": "Deep Sea Diving poll closed 16 Nov, but the wiki and roadmap disagree on whether farming patches passed. Still unconfirmed, so it stays on Watch."
+    },
+    {
+     "date": "2026-11-20",
+     "verdict": "keep",
+     "reason": "Deep Sea Diving poll ran Nov 9-16 and roadmap lists it as passed. Seed yields and farming patch rewards are still unannounced, so the thesis stays on Watch."
     }
    ],
    "recheck_when": "Deep Sea Diving poll results on the farming area question",
-   "last_reviewed": "2026-11-19"
+   "last_reviewed": "2026-11-20"
   },
   {
    "date": "2026-11-05T15:58+00:00",
@@ -218,11 +218,6 @@
     }
    ],
    "history": [
-    {
-     "date": "2026-11-08",
-     "verdict": "keep",
-     "reason": "Dungeons of Gielinor is still Spring 2027 and the Diamond Dragon weakness is unannounced."
-    },
     {
      "date": "2026-11-09",
      "verdict": "update",
@@ -277,13 +272,18 @@
      "date": "2026-11-19",
      "verdict": "keep",
      "reason": "No new Diamond Dragon or gemstone dragon weakness or drop data has been published. The idea stays on Watch until the Dungeons of Gielinor boss blog."
+    },
+    {
+     "date": "2026-11-20",
+     "verdict": "keep",
+     "reason": "Dungeons of Gielinor is still Spring 2027 with a Diamond Dragon planned. Weaknesses and drop tables remain unannounced, so keep on Watch."
     }
    ],
    "action": "Watch",
    "confidence": "low",
    "evidence": "Jagex's RuneFest summary says to stock antifires before descending, and the Diamond Dragon lair is deep in a cavern. Gemstone dragon weaknesses and drops are unannounced. https://oldschool.runescape.wiki/w/Update:RuneFest_2026_Summit_Overview",
    "recheck_when": "Dungeons of Gielinor boss blog with Diamond Dragon weakness and drop table",
-   "last_reviewed": "2026-11-19",
+   "last_reviewed": "2026-11-20",
    "what_would_kill_it": "Dungeons of Gielinor poll fails, or the Diamond Dragon needs no antifire."
   },
   {
@@ -319,13 +319,8 @@
    "id": "i14",
    "status": "open",
    "first_seen": "2026-11-05",
-   "last_reviewed": "2026-11-19",
+   "last_reviewed": "2026-11-20",
    "history": [
-    {
-     "date": "2026-11-08",
-     "verdict": "keep",
-     "reason": "The jewellery production details are still unpolled. Weak but valid Watch."
-    },
     {
      "date": "2026-11-09",
      "verdict": "keep",
@@ -380,9 +375,379 @@
      "date": "2026-11-19",
      "verdict": "keep",
      "reason": "Deep Sea Diving remains poll-stage. Mining rates and jewellery output are still unannounced, so the bar and jewellery supply thesis is unchanged."
+    },
+    {
+     "date": "2026-11-20",
+     "verdict": "keep",
+     "reason": "Roadmap shows the Deep Sea Diving poll passed, and wiki/Jagex material confirms the jewellery sites and smelted-jewellery banking. Supply effect still needs output rates."
     }
    ]
   },
+  {
+   "title": "Underwater precious rocks add gem supply",
+   "trigger": "Deep Sea Diving poll passes and jewellery sites go live",
+   "release": "Early 2027 (proposed)",
+   "evidence": "Deep Sea Diving blog: precious gem rocks need 65 Mining and yield uncut sapphires, emeralds, rubies and diamonds. Roadmap shows the poll passed. https://secure.runescape.com/m=news/deep-sea-diving-expansion?oldschool=1",
+   "mechanism": "A new gem source raises uncut gem supply, which should push gem prices down if the rocks are fast and easy to mine.",
+   "direction": "down",
+   "items": [
+    {
+     "name": "Uncut sapphire",
+     "id": 1623,
+     "limit": 10000,
+     "high_then": 168,
+     "low_then": 165
+    },
+    {
+     "name": "Uncut diamond",
+     "id": 1617,
+     "limit": 10000,
+     "high_then": 2248,
+     "low_then": 2200
+    }
+   ],
+   "substitutes": "Existing gem mining and gem rocks already supply most gem demand.",
+   "confidence": "medium",
+   "action": "Watch",
+   "action_detail": "Wait for the poll result and the jewellery site blog. Act only if yields and respawn rates are published.",
+   "exit_plan": "No position needed until yields are confirmed.",
+   "what_would_kill_it": "Rocks yield cut gems only, or the poll fails.",
+   "recheck_when": "Deep Sea Diving poll result and jewellery site blog",
+   "id": "i25",
+   "status": "open",
+   "first_seen": "2026-11-10",
+   "last_reviewed": "2026-11-20",
+   "history": [
+    {
+     "date": "2026-11-10",
+     "verdict": "new",
+     "reason": "First raised"
+    },
+    {
+     "date": "2026-11-11",
+     "verdict": "update",
+     "reason": "The Jagex blog and Wiki now confirm the 65 Mining precious gem rocks yield uncut sapphires, emeralds, rubies and diamonds, not cut gems. Still poll-stage."
+    },
+    {
+     "date": "2026-11-12",
+     "verdict": "keep",
+     "reason": "Precious gem rocks are still poll-stage Deep Sea Diving content. Drop rates and the gem yield are unconfirmed."
+    },
+    {
+     "date": "2026-11-13",
+     "verdict": "keep",
+     "reason": "Gem rock supply is still poll-stage. Jewellery site reporting confirms gem rocks exist in the proposal, but uncut gem rates are unconfirmed."
+    },
+    {
+     "date": "2026-11-14",
+     "verdict": "keep",
+     "reason": "Gem rock rates are still poll-stage and tied to Deep Sea Diving's early 2027 timing. No new confirmation has appeared."
+    },
+    {
+     "date": "2026-11-15",
+     "verdict": "keep",
+     "reason": "Underwater gem rocks are still poll-stage, so the gem-supply idea stands."
+    },
+    {
+     "date": "2026-11-16",
+     "verdict": "update",
+     "reason": "The Deep Sea Diving blog says the gem rocks match those at Shilo Village. The 65 Mining requirement I had noted is not confirmed."
+    },
+    {
+     "date": "2026-11-17",
+     "verdict": "update",
+     "reason": "The blog now states the 65 Mining precious-rock requirement and the gem types, so this is no longer unconfirmed. Roadmap shows the poll passed."
+    },
+    {
+     "date": "2026-11-18",
+     "verdict": "keep",
+     "reason": "Precious gem rock requirements and drops are blog-confirmed. Poll status is the same conflicting picture as the diving expansion."
+    },
+    {
+     "date": "2026-11-19",
+     "verdict": "keep",
+     "reason": "Precious gem rocks at 65 Mining are still poll-stage content. The supply thesis holds until the poll result is confirmed."
+    },
+    {
+     "date": "2026-11-20",
+     "verdict": "keep",
+     "reason": "Deep Sea Diving proposal confirms precious gem rocks at 65 Mining yielding uncut sapphires and diamonds. Poll reported passed; rates still unknown."
+    }
+   ]
+  },
+  {
+   "title": "Ascension bolts ride cheaper shards",
+   "trigger": "Ascension shard supply raised on 11 Nov 2026",
+   "release": "Live since 11 Nov 2026 patch",
+   "evidence": "Wiki: shards +20% from raid and mining chance 1/3 to 1/2 on 11 Nov. Bolts are made at 86 Fletching, 10 per shard (osrstoolkit). https://oldschool.runescape.wiki/w/Update:Quest_Month:_Week_Two_%26_TFA_Changes ; https://osrstoolkit.com/osrs-fractured-archive-raid-guide/",
+   "mechanism": "Bolts cost roughly one shard per 10, so a larger shard supply lowers the bolt price floor for Ascension crossbow owners.",
+   "direction": "down",
+   "items": [
+    {
+     "name": "Ascension bolts",
+     "id": 34684,
+     "limit": 11000,
+     "high_then": 79,
+     "low_then": 77
+    }
+   ],
+   "substitutes": "Other crossbow bolts are not usable in Ascension crossbows, so demand is captive. Shard price moves are the main driver.",
+   "confidence": "low",
+   "action": "Sell if holding",
+   "action_detail": "Sell any Ascension bolt stock into shard-driven strength. Recheck the shard price after the next Quest Month week.",
+   "exit_plan": "Exit if bolt price stops tracking shard price for two weeks.",
+   "what_would_kill_it": "Shard price falls with no matching bolt drop, or a bolt-demand spike from new Ascension content.",
+   "recheck_when": "Fractured Archive patch notes or a Quest Month week three update changing shard rates",
+   "id": "i29",
+   "status": "open",
+   "first_seen": "2026-11-14",
+   "last_reviewed": "2026-11-20",
+   "history": [
+    {
+     "date": "2026-11-14",
+     "verdict": "new",
+     "reason": "First raised"
+    },
+    {
+     "date": "2026-11-15",
+     "verdict": "keep",
+     "reason": "Bolt cost follows shard supply. The rate changes are live and no new information has arrived."
+    },
+    {
+     "date": "2026-11-16",
+     "verdict": "keep",
+     "reason": "Shard supply still rises under the 11 Nov changes. Bolt demand still depends on shard use."
+    },
+    {
+     "date": "2026-11-17",
+     "verdict": "keep",
+     "reason": "Shard supply rose 20% and mining chance improved on 11 Nov. Bolt prices have not been checked against this, so confidence stays low."
+    },
+    {
+     "date": "2026-11-18",
+     "verdict": "keep",
+     "reason": "Wiki shard and bolt changes remain current. Recheck when a Quest Month week three post changes shard rates."
+    },
+    {
+     "date": "2026-11-19",
+     "verdict": "keep",
+     "reason": "No new shard-rate change beyond the earlier 11 Nov adjustment. The bolt thesis still rests on the same cheaper shard supply."
+    },
+    {
+     "date": "2026-11-20",
+     "verdict": "keep",
+     "reason": "Quest Month shard-rate change from the wiki still applies. No newer shard change found, so the sell-if-holding view stands at low confidence."
+    }
+   ]
+  },
+  {
+   "title": "Groups of 3+ lift Fractured Archive unique supply",
+   "trigger": "TFA loot scaling rebalance on 11 Nov 2026",
+   "release": "Live since 11 Nov 2026 patch",
+   "evidence": "Week 3 cuts the base duo unique chance from 1 in 16 to 1 in 17, easing duo supply; group scaling still raises rates for larger teams. https://secure.runescape.com/m=news/quest-month-week-3--tfa-practice-mode?oldschool=1",
+   "mechanism": "Larger, more frequent groups should generate more uniques, adding supply to the tradeable uniques and pushing their prices down.",
+   "direction": "down",
+   "items": [
+    {
+     "name": "Obligator (uncharged)",
+     "id": 34717,
+     "limit": 8,
+     "high_then": 2463840000,
+     "low_then": 2462000000
+    },
+    {
+     "name": "Ascension crossbows",
+     "id": 34681,
+     "limit": null,
+     "high_then": 238000000,
+     "low_then": 229521135
+    },
+    {
+     "name": "Zorya's tome (uncharged)",
+     "id": 34727,
+     "limit": 8,
+     "high_then": 27801555,
+     "low_then": 26766120
+    },
+    {
+     "name": "Rondache",
+     "id": 34719,
+     "limit": 8,
+     "high_then": 13314541,
+     "low_then": 13012355
+    }
+   ],
+   "substitutes": "Each unique competes with the others in the same loot split, and the Obligator is the only crush megarare in the set.",
+   "confidence": "low",
+   "action": "Sell if holding",
+   "action_detail": "Sell unique stock gradually while the group-size effect is testing. Prices have already fallen sharply since launch, so do not chase.",
+   "exit_plan": "Exit if unique prices stabilise for two weeks after group-size data appears.",
+   "what_would_kill_it": "Group sizes do not grow, or unique prices already reflect the new supply.",
+   "recheck_when": "Fractured Archive loot-rate data or the next TFA balance post",
+   "id": "i30",
+   "status": "open",
+   "first_seen": "2026-11-14",
+   "last_reviewed": "2026-11-20",
+   "history": [
+    {
+     "date": "2026-11-14",
+     "verdict": "new",
+     "reason": "First raised"
+    },
+    {
+     "date": "2026-11-15",
+     "verdict": "keep",
+     "reason": "The group-scaling balance changes are live. Loot data is still thin, so confidence stays low."
+    },
+    {
+     "date": "2026-11-16",
+     "verdict": "update",
+     "reason": "Week two sets a fixed base unique rate by group size, from 1/16 for solos and duos up to 1/7.5 for eight players. The group-size thesis strengthens."
+    },
+    {
+     "date": "2026-11-17",
+     "verdict": "keep",
+     "reason": "Accountshark confirms new hard-coded unique rates by group size in TFA, so the larger-group supply effect is confirmed. Price effect still unmeasured."
+    },
+    {
+     "date": "2026-11-18",
+     "verdict": "keep",
+     "reason": "Group-size loot-rate change still stands per the Quest Month week two source. Loot-rate data is still needed to size the effect."
+    },
+    {
+     "date": "2026-11-19",
+     "verdict": "update",
+     "reason": "Week 3 lowers the base duo unique chance from 1 in 16 to 1 in 17, which trims duo supply and partly offsets the group-size effect. The sell-side direction is weaker."
+    },
+    {
+     "date": "2026-11-20",
+     "verdict": "keep",
+     "reason": "Week 3 duo unique-rate change still eases duo supply, and group scaling still raises rates for larger teams. No newer balance post found."
+    }
+   ]
+  },
+  {
+   "title": "Menaphos true Soul Altar may add soul rune supply",
+   "trigger": "Menaphos release and the true Soul Altar's crafting method",
+   "release": "Spring 2027 (roadmap, poll passed)",
+   "evidence": "Roadmap confirms Menaphos with a true Soul Altar and soul runes at 90 Runecraft. Wiki says soul runes already craft at an Arceuus Soul Altar at 90 Runecraft. https://oldschool.runescape.wiki/w/Upcoming_updates ; https://oldschool.runescape.wiki/w/Soul_rune",
+   "mechanism": "If the new altar is a separate, easier soul rune route, soul rune supply rises and price falls. If it only mirrors the existing altar, little changes.",
+   "direction": "down",
+   "items": [
+    {
+     "name": "Soul rune",
+     "id": 566,
+     "limit": 25000,
+     "high_then": 303,
+     "low_then": 293
+    }
+   ],
+   "substitutes": "Ourania Runecrafting Altar (random chance), Rogue Trader and Magic shop purchases.",
+   "confidence": "low",
+   "action": "Watch",
+   "action_detail": "Do nothing now. Revisit when Menaphos details show whether the true altar uses a different method or is just a second location.",
+   "exit_plan": "No position. If holding, sell into any spike ahead of the Menaphos release.",
+   "what_would_kill_it": "Menaphos details show the true altar is an identical method, or the 90 Runecraft requirement is unchanged in practice.",
+   "recheck_when": "Menaphos blog or patch notes describing the true Soul Altar method",
+   "id": "i37",
+   "status": "open",
+   "first_seen": "2026-11-18",
+   "last_reviewed": "2026-11-20",
+   "history": [
+    {
+     "date": "2026-11-18",
+     "verdict": "new",
+     "reason": "First raised"
+    },
+    {
+     "date": "2026-11-19",
+     "verdict": "keep",
+     "reason": "Menaphos remains a Spring 2027 item. The true Soul Altar method has not been detailed yet."
+    },
+    {
+     "date": "2026-11-20",
+     "verdict": "keep",
+     "reason": "Menaphos is confirmed for Spring 2027 with a true Soul Altar at 90 Runecraft. Supply impact still depends on how it compares with the existing altar."
+    }
+   ]
+  },
+  {
+   "title": "Zorya's tome faster shots lift tome demand",
+   "trigger": "Quest Month week 3 Fractured Archive buff to Zorya's tome projectiles",
+   "release": "18 Nov 2026 (live)",
+   "evidence": "Jagex's week 3 post says Zorya's tome projectiles now travel faster and are less affected by distance. https://secure.runescape.com/m=news/quest-month-week-3--tfa-practice-mode?oldschool=1",
+   "mechanism": "A better-performing raid weapon makes uncharged tomes more wanted by Fractured Archive raiders, which lifts demand a little. The buff is small, so the effect should be modest.",
+   "direction": "up",
+   "items": [
+    {
+     "name": "Zorya's tome (uncharged)",
+     "id": 34727,
+     "limit": 8,
+     "high_then": 23297419,
+     "low_then": 23000000
+    }
+   ],
+   "substitutes": "Other Fractured Archive ranged and magic weapons. Raiders can switch if the tome's gain is small.",
+   "confidence": "low",
+   "action": "Watch",
+   "action_detail": "Only one new confirmed tradeable link was found this scan. Watch GE volume for a week and act only if price moves without a wider rally.",
+   "exit_plan": "Exit if price rises over 10% on low volume, or drop after two weeks with no move.",
+   "what_would_kill_it": "The buff is too minor to change raider choices, so tome prices stay flat.",
+   "recheck_when": "Next Fractured Archive balance post or Graveyard week patch notes",
+   "id": "i38",
+   "status": "open",
+   "first_seen": "2026-11-19",
+   "last_reviewed": "2026-11-20",
+   "history": [
+    {
+     "date": "2026-11-19",
+     "verdict": "new",
+     "reason": "First raised"
+    },
+    {
+     "date": "2026-11-20",
+     "verdict": "keep",
+     "reason": "Week 3 post confirms faster Zorya's tome projectiles. Demand effect still unquantified, so keep on Watch until the next balance or Graveyard week notes."
+    }
+   ]
+  },
+  {
+   "title": "Abyssal Slayer area adds demon kill supply",
+   "trigger": "Deep Sea Diving poll passes and the Abyssal Slayer area with Abyssal Demons opens",
+   "release": "Early 2027 (wiki estimate)",
+   "evidence": "Deep Sea Diving proposal includes an Abyssal Slayer area with Abyssal Demons. Demons are the only creatures that drop the Abyssal whip. https://mmohuts.com/news/old-school-runescape-proposes-deep-sea-diving-and-burial-at-sea-quest ; https://oldschoolrunescape.fandom.com/wiki/Abyssal_demon",
+   "mechanism": "A second demon location raises whip kill volume, adding supply and pushing the price down. Demons already exist, so the effect is likely modest.",
+   "direction": "down",
+   "items": [
+    {
+     "name": "Abyssal whip",
+     "id": 4151,
+     "limit": 70,
+     "high_then": 631119,
+     "low_then": 621188
+    }
+   ],
+   "substitutes": "No direct melee substitute for demon-slaying players; demand from Slayer and PvM stays steady.",
+   "confidence": "low",
+   "action": "Watch",
+   "action_detail": "Only one confirmed idea this scan. Watch the Deep Sea Diving poll result and Slayer area patch notes before acting.",
+   "exit_plan": "Exit or drop if the Slayer area is not confirmed or demons there give no whip drops.",
+   "what_would_kill_it": "Abyssal Slayer area removed from the update, or demon drop rates unchanged at the new location.",
+   "recheck_when": "Deep Sea Diving poll result and Slayer area patch notes",
+   "id": "i39",
+   "status": "open",
+   "first_seen": "2026-11-20",
+   "last_reviewed": "2026-11-20",
+   "history": [
+    {
+     "date": "2026-11-20",
+     "verdict": "new",
+     "reason": "First raised"
+    }
+   ]
+  }
+ ],
+ "dropped": [
   {
    "title": "Fairytale III runecraft method may lift nature rune demand",
    "trigger": "Fairytale III - Nexus of Power release and its new Runecraft method details",
@@ -407,9 +772,9 @@
    "what_would_kill_it": "The method yields nature runes instead of consuming them, or uses a different rune type entirely.",
    "recheck_when": "Fairytale III blog or patch notes listing Runecraft method requirements",
    "id": "i24",
-   "status": "open",
+   "status": "dropped",
    "first_seen": "2026-11-09",
-   "last_reviewed": "2026-11-19",
+   "last_reviewed": "2026-11-20",
    "history": [
     {
      "date": "2026-11-09",
@@ -465,236 +830,15 @@
      "date": "2026-11-19",
      "verdict": "keep",
      "reason": "Fairytale III remains a Summer 2027 item. Runecraft method requirements and nature rune use are still unannounced."
-    }
-   ]
-  },
-  {
-   "title": "Underwater precious rocks add gem supply",
-   "trigger": "Deep Sea Diving poll passes and jewellery sites go live",
-   "release": "Early 2027 (proposed)",
-   "evidence": "Deep Sea Diving blog: precious gem rocks need 65 Mining and yield uncut sapphires, emeralds, rubies and diamonds. Roadmap shows the poll passed. https://secure.runescape.com/m=news/deep-sea-diving-expansion?oldschool=1",
-   "mechanism": "A new gem source raises uncut gem supply, which should push gem prices down if the rocks are fast and easy to mine.",
-   "direction": "down",
-   "items": [
-    {
-     "name": "Uncut sapphire",
-     "id": 1623,
-     "limit": 10000,
-     "high_then": 168,
-     "low_then": 165
     },
     {
-     "name": "Uncut diamond",
-     "id": 1617,
-     "limit": 10000,
-     "high_then": 2248,
-     "low_then": 2200
+     "date": "2026-11-20",
+     "verdict": "drop",
+     "reason": "Nature rune link was a guess. Fairytale III's Runecraft method is still undetailed and sits in Summer 2027, too far off to trade on."
     }
    ],
-   "substitutes": "Existing gem mining and gem rocks already supply most gem demand.",
-   "confidence": "medium",
-   "action": "Watch",
-   "action_detail": "Wait for the poll result and the jewellery site blog. Act only if yields and respawn rates are published.",
-   "exit_plan": "No position needed until yields are confirmed.",
-   "what_would_kill_it": "Rocks yield cut gems only, or the poll fails.",
-   "recheck_when": "Deep Sea Diving poll result and jewellery site blog",
-   "id": "i25",
-   "status": "open",
-   "first_seen": "2026-11-10",
-   "last_reviewed": "2026-11-19",
-   "history": [
-    {
-     "date": "2026-11-10",
-     "verdict": "new",
-     "reason": "First raised"
-    },
-    {
-     "date": "2026-11-11",
-     "verdict": "update",
-     "reason": "The Jagex blog and Wiki now confirm the 65 Mining precious gem rocks yield uncut sapphires, emeralds, rubies and diamonds, not cut gems. Still poll-stage."
-    },
-    {
-     "date": "2026-11-12",
-     "verdict": "keep",
-     "reason": "Precious gem rocks are still poll-stage Deep Sea Diving content. Drop rates and the gem yield are unconfirmed."
-    },
-    {
-     "date": "2026-11-13",
-     "verdict": "keep",
-     "reason": "Gem rock supply is still poll-stage. Jewellery site reporting confirms gem rocks exist in the proposal, but uncut gem rates are unconfirmed."
-    },
-    {
-     "date": "2026-11-14",
-     "verdict": "keep",
-     "reason": "Gem rock rates are still poll-stage and tied to Deep Sea Diving's early 2027 timing. No new confirmation has appeared."
-    },
-    {
-     "date": "2026-11-15",
-     "verdict": "keep",
-     "reason": "Underwater gem rocks are still poll-stage, so the gem-supply idea stands."
-    },
-    {
-     "date": "2026-11-16",
-     "verdict": "update",
-     "reason": "The Deep Sea Diving blog says the gem rocks match those at Shilo Village. The 65 Mining requirement I had noted is not confirmed."
-    },
-    {
-     "date": "2026-11-17",
-     "verdict": "update",
-     "reason": "The blog now states the 65 Mining precious-rock requirement and the gem types, so this is no longer unconfirmed. Roadmap shows the poll passed."
-    },
-    {
-     "date": "2026-11-18",
-     "verdict": "keep",
-     "reason": "Precious gem rock requirements and drops are blog-confirmed. Poll status is the same conflicting picture as the diving expansion."
-    },
-    {
-     "date": "2026-11-19",
-     "verdict": "keep",
-     "reason": "Precious gem rocks at 65 Mining are still poll-stage content. The supply thesis holds until the poll result is confirmed."
-    }
-   ]
-  },
-  {
-   "title": "Ascension bolts ride cheaper shards",
-   "trigger": "Ascension shard supply raised on 11 Nov 2026",
-   "release": "Live since 11 Nov 2026 patch",
-   "evidence": "Wiki: shards +20% from raid and mining chance 1/3 to 1/2 on 11 Nov. Bolts are made at 86 Fletching, 10 per shard (osrstoolkit). https://oldschool.runescape.wiki/w/Update:Quest_Month:_Week_Two_%26_TFA_Changes ; https://osrstoolkit.com/osrs-fractured-archive-raid-guide/",
-   "mechanism": "Bolts cost roughly one shard per 10, so a larger shard supply lowers the bolt price floor for Ascension crossbow owners.",
-   "direction": "down",
-   "items": [
-    {
-     "name": "Ascension bolts",
-     "id": 34684,
-     "limit": 11000,
-     "high_then": 79,
-     "low_then": 77
-    }
-   ],
-   "substitutes": "Other crossbow bolts are not usable in Ascension crossbows, so demand is captive. Shard price moves are the main driver.",
-   "confidence": "low",
-   "action": "Sell if holding",
-   "action_detail": "Sell any Ascension bolt stock into shard-driven strength. Recheck the shard price after the next Quest Month week.",
-   "exit_plan": "Exit if bolt price stops tracking shard price for two weeks.",
-   "what_would_kill_it": "Shard price falls with no matching bolt drop, or a bolt-demand spike from new Ascension content.",
-   "recheck_when": "Fractured Archive patch notes or a Quest Month week three update changing shard rates",
-   "id": "i29",
-   "status": "open",
-   "first_seen": "2026-11-14",
-   "last_reviewed": "2026-11-19",
-   "history": [
-    {
-     "date": "2026-11-14",
-     "verdict": "new",
-     "reason": "First raised"
-    },
-    {
-     "date": "2026-11-15",
-     "verdict": "keep",
-     "reason": "Bolt cost follows shard supply. The rate changes are live and no new information has arrived."
-    },
-    {
-     "date": "2026-11-16",
-     "verdict": "keep",
-     "reason": "Shard supply still rises under the 11 Nov changes. Bolt demand still depends on shard use."
-    },
-    {
-     "date": "2026-11-17",
-     "verdict": "keep",
-     "reason": "Shard supply rose 20% and mining chance improved on 11 Nov. Bolt prices have not been checked against this, so confidence stays low."
-    },
-    {
-     "date": "2026-11-18",
-     "verdict": "keep",
-     "reason": "Wiki shard and bolt changes remain current. Recheck when a Quest Month week three post changes shard rates."
-    },
-    {
-     "date": "2026-11-19",
-     "verdict": "keep",
-     "reason": "No new shard-rate change beyond the earlier 11 Nov adjustment. The bolt thesis still rests on the same cheaper shard supply."
-    }
-   ]
-  },
-  {
-   "title": "Groups of 3+ lift Fractured Archive unique supply",
-   "trigger": "TFA loot scaling rebalance on 11 Nov 2026",
-   "release": "Live since 11 Nov 2026 patch",
-   "evidence": "Week 3 cuts the base duo unique chance from 1 in 16 to 1 in 17, easing duo supply; group scaling still raises rates for larger teams. https://secure.runescape.com/m=news/quest-month-week-3--tfa-practice-mode?oldschool=1",
-   "mechanism": "Larger, more frequent groups should generate more uniques, adding supply to the tradeable uniques and pushing their prices down.",
-   "direction": "down",
-   "items": [
-    {
-     "name": "Obligator (uncharged)",
-     "id": 34717,
-     "limit": 8,
-     "high_then": 2463840000,
-     "low_then": 2462000000
-    },
-    {
-     "name": "Ascension crossbows",
-     "id": 34681,
-     "limit": null,
-     "high_then": 238000000,
-     "low_then": 229521135
-    },
-    {
-     "name": "Zorya's tome (uncharged)",
-     "id": 34727,
-     "limit": 8,
-     "high_then": 27801555,
-     "low_then": 26766120
-    },
-    {
-     "name": "Rondache",
-     "id": 34719,
-     "limit": 8,
-     "high_then": 13314541,
-     "low_then": 13012355
-    }
-   ],
-   "substitutes": "Each unique competes with the others in the same loot split, and the Obligator is the only crush megarare in the set.",
-   "confidence": "low",
-   "action": "Sell if holding",
-   "action_detail": "Sell unique stock gradually while the group-size effect is testing. Prices have already fallen sharply since launch, so do not chase.",
-   "exit_plan": "Exit if unique prices stabilise for two weeks after group-size data appears.",
-   "what_would_kill_it": "Group sizes do not grow, or unique prices already reflect the new supply.",
-   "recheck_when": "Fractured Archive loot-rate data or the next TFA balance post",
-   "id": "i30",
-   "status": "open",
-   "first_seen": "2026-11-14",
-   "last_reviewed": "2026-11-19",
-   "history": [
-    {
-     "date": "2026-11-14",
-     "verdict": "new",
-     "reason": "First raised"
-    },
-    {
-     "date": "2026-11-15",
-     "verdict": "keep",
-     "reason": "The group-scaling balance changes are live. Loot data is still thin, so confidence stays low."
-    },
-    {
-     "date": "2026-11-16",
-     "verdict": "update",
-     "reason": "Week two sets a fixed base unique rate by group size, from 1/16 for solos and duos up to 1/7.5 for eight players. The group-size thesis strengthens."
-    },
-    {
-     "date": "2026-11-17",
-     "verdict": "keep",
-     "reason": "Accountshark confirms new hard-coded unique rates by group size in TFA, so the larger-group supply effect is confirmed. Price effect still unmeasured."
-    },
-    {
-     "date": "2026-11-18",
-     "verdict": "keep",
-     "reason": "Group-size loot-rate change still stands per the Quest Month week two source. Loot-rate data is still needed to size the effect."
-    },
-    {
-     "date": "2026-11-19",
-     "verdict": "update",
-     "reason": "Week 3 lowers the base duo unique chance from 1 in 16 to 1 in 17, which trims duo supply and partly offsets the group-size effect. The sell-side direction is weaker."
-    }
-   ]
+   "dropped_on": "2026-11-20",
+   "drop_reason": "Nature rune link was a guess. Fairytale III's Runecraft method is still undetailed and sits in Summer 2027, too far off to trade on."
   },
   {
    "title": "Chosen Commander crossbow may consume Dorgeshuun crossbow",
@@ -720,9 +864,9 @@
    "what_would_kill_it": "The reward is untradeable and free, or the special is too weak to matter.",
    "recheck_when": "Chosen Commander rewards or poll blog",
    "id": "i31",
-   "status": "open",
+   "status": "dropped",
    "first_seen": "2026-11-15",
-   "last_reviewed": "2026-11-19",
+   "last_reviewed": "2026-11-20",
    "history": [
     {
      "date": "2026-11-15",
@@ -748,8 +892,15 @@
      "date": "2026-11-19",
      "verdict": "keep",
      "reason": "Chosen Commander remains an early 2027 release. Zanik's crossbow tradeability and recipe remain unconfirmed."
+    },
+    {
+     "date": "2026-11-20",
+     "verdict": "drop",
+     "reason": "Zanik's Modified Crossbow is only a proposed reward with unknown tradeability. Wiki shows the quest crossbow is untradeable and no Dorgeshuun crossbow consumption is confirmed."
     }
-   ]
+   ],
+   "dropped_on": "2026-11-20",
+   "drop_reason": "Zanik's Modified Crossbow is only a proposed reward with unknown tradeability. Wiki shows the quest crossbow is untradeable and no Dorgeshuun crossbow consumption is confirmed."
   },
   {
    "title": "Graveyard's 65 Sailing requirement may lift ship repair demand",
@@ -782,9 +933,9 @@
    "what_would_kill_it": "The quest uses no Sailing consumables, or the volume proves to be noise.",
    "recheck_when": "The Graveyard release next week, and its patch notes for plank or repair kit consumption",
    "id": "i33",
-   "status": "open",
+   "status": "dropped",
    "first_seen": "2026-11-15",
-   "last_reviewed": "2026-11-19",
+   "last_reviewed": "2026-11-20",
    "history": [
     {
      "date": "2026-11-15",
@@ -810,8 +961,15 @@
      "date": "2026-11-19",
      "verdict": "update",
      "reason": "The Graveyard is now reported as releasing next week, so this idea moves from a distant check to an imminent one. Consumption of planks or repair kits is still unconfirmed."
+    },
+    {
+     "date": "2026-11-20",
+     "verdict": "drop",
+     "reason": "Sailing 65 is a confirmed requirement, but plank or repair-kit consumption is still unannounced. A requirement alone does not move prices."
     }
-   ]
+   ],
+   "dropped_on": "2026-11-20",
+   "drop_reason": "Sailing 65 is a confirmed requirement, but plank or repair-kit consumption is still unannounced. A requirement alone does not move prices."
   },
   {
    "title": "Zeal unlock lifts Horn of Bran demand",
@@ -837,9 +995,9 @@
    "what_would_kill_it": "A Horn of Bran price already elevated since launch, or a patch making Zeal available without the horn.",
    "recheck_when": "Fractured Archive patch notes or a Horn of Bran price check on the GE",
    "id": "i35",
-   "status": "open",
+   "status": "dropped",
    "first_seen": "2026-11-17",
-   "last_reviewed": "2026-11-19",
+   "last_reviewed": "2026-11-20",
    "history": [
     {
      "date": "2026-11-17",
@@ -855,8 +1013,15 @@
      "date": "2026-11-19",
      "verdict": "keep",
      "reason": "No new Zeal or Horn of Bran information this scan. Thesis stays as it was, but the buy-now call is low confidence."
+    },
+    {
+     "date": "2026-11-20",
+     "verdict": "drop",
+     "reason": "Horn of Bran unlock belongs to Fractured Archive, released in October, so any Zeal demand is likely priced in. No new catalyst; 'Buy now' was not justified."
     }
-   ]
+   ],
+   "dropped_on": "2026-11-20",
+   "drop_reason": "Horn of Bran unlock belongs to Fractured Archive, released in October, so any Zeal demand is likely priced in. No new catalyst; 'Buy now' was not justified."
   },
   {
    "title": "Quest Month supply bag may tie up leather and headless arrows",
@@ -889,9 +1054,9 @@
    "what_would_kill_it": "Bag requirements that use only untradeable or quest-only items.",
    "recheck_when": "Birds and the Wasps Wiki page or a Quest Month week three post",
    "id": "i36",
-   "status": "open",
+   "status": "dropped",
    "first_seen": "2026-11-17",
-   "last_reviewed": "2026-11-19",
+   "last_reviewed": "2026-11-20",
    "history": [
     {
      "date": "2026-11-17",
@@ -907,86 +1072,16 @@
      "date": "2026-11-19",
      "verdict": "keep",
      "reason": "Week 3 quests were named, but the Quest Month supply bag's contents and whether it consumes leather or headless arrows remain unconfirmed."
-    }
-   ]
-  },
-  {
-   "title": "Menaphos true Soul Altar may add soul rune supply",
-   "trigger": "Menaphos release and the true Soul Altar's crafting method",
-   "release": "Spring 2027 (roadmap, poll passed)",
-   "evidence": "Roadmap confirms Menaphos with a true Soul Altar and soul runes at 90 Runecraft. Wiki says soul runes already craft at an Arceuus Soul Altar at 90 Runecraft. https://oldschool.runescape.wiki/w/Upcoming_updates ; https://oldschool.runescape.wiki/w/Soul_rune",
-   "mechanism": "If the new altar is a separate, easier soul rune route, soul rune supply rises and price falls. If it only mirrors the existing altar, little changes.",
-   "direction": "down",
-   "items": [
-    {
-     "name": "Soul rune",
-     "id": 566,
-     "limit": 25000,
-     "high_then": 303,
-     "low_then": 293
-    }
-   ],
-   "substitutes": "Ourania Runecrafting Altar (random chance), Rogue Trader and Magic shop purchases.",
-   "confidence": "low",
-   "action": "Watch",
-   "action_detail": "Do nothing now. Revisit when Menaphos details show whether the true altar uses a different method or is just a second location.",
-   "exit_plan": "No position. If holding, sell into any spike ahead of the Menaphos release.",
-   "what_would_kill_it": "Menaphos details show the true altar is an identical method, or the 90 Runecraft requirement is unchanged in practice.",
-   "recheck_when": "Menaphos blog or patch notes describing the true Soul Altar method",
-   "id": "i37",
-   "status": "open",
-   "first_seen": "2026-11-18",
-   "last_reviewed": "2026-11-19",
-   "history": [
-    {
-     "date": "2026-11-18",
-     "verdict": "new",
-     "reason": "First raised"
     },
     {
-     "date": "2026-11-19",
-     "verdict": "keep",
-     "reason": "Menaphos remains a Spring 2027 item. The true Soul Altar method has not been detailed yet."
-    }
-   ]
-  },
-  {
-   "title": "Zorya's tome faster shots lift tome demand",
-   "trigger": "Quest Month week 3 Fractured Archive buff to Zorya's tome projectiles",
-   "release": "18 Nov 2026 (live)",
-   "evidence": "Jagex's week 3 post says Zorya's tome projectiles now travel faster and are less affected by distance. https://secure.runescape.com/m=news/quest-month-week-3--tfa-practice-mode?oldschool=1",
-   "mechanism": "A better-performing raid weapon makes uncharged tomes more wanted by Fractured Archive raiders, which lifts demand a little. The buff is small, so the effect should be modest.",
-   "direction": "up",
-   "items": [
-    {
-     "name": "Zorya's tome (uncharged)",
-     "id": 34727,
-     "limit": 8,
-     "high_then": 23297419,
-     "low_then": 23000000
+     "date": "2026-11-20",
+     "verdict": "drop",
+     "reason": "Quest Month supply bag contents and whether it consumes leather or headless arrows remain unconfirmed. No basis to hold the thesis."
     }
    ],
-   "substitutes": "Other Fractured Archive ranged and magic weapons. Raiders can switch if the tome's gain is small.",
-   "confidence": "low",
-   "action": "Watch",
-   "action_detail": "Only one new confirmed tradeable link was found this scan. Watch GE volume for a week and act only if price moves without a wider rally.",
-   "exit_plan": "Exit if price rises over 10% on low volume, or drop after two weeks with no move.",
-   "what_would_kill_it": "The buff is too minor to change raider choices, so tome prices stay flat.",
-   "recheck_when": "Next Fractured Archive balance post or Graveyard week patch notes",
-   "id": "i38",
-   "status": "open",
-   "first_seen": "2026-11-19",
-   "last_reviewed": "2026-11-19",
-   "history": [
-    {
-     "date": "2026-11-19",
-     "verdict": "new",
-     "reason": "First raised"
-    }
-   ]
-  }
- ],
- "dropped": [
+   "dropped_on": "2026-11-20",
+   "drop_reason": "Quest Month supply bag contents and whether it consumes leather or headless arrows remain unconfirmed. No basis to hold the thesis."
+  },
   {
    "title": "Black honey buzzards flood black feathers",
    "trigger": "Black honey buzzards give 10-24 black feathers per catch using a bird snare at 17 Hunter. This is a new drop source live since 11 Nov.",
