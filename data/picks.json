@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-20T08:54+00:00",
+ "generated": "2026-11-21T14:16+00:00",
  "mode": "quick",
  "model": "claude-haiku-5-5",
  "theses": [
@@ -7,7 +7,7 @@
    "title": "Graveyard marks flood amylase and stamina",
    "trigger": "The Graveyard master quest unlocks a 65+ Agility course. Jagex says it will be the best Marks of Grace source.",
    "release": "November 2026 (exact day not confirmed)",
-   "evidence": "Graveyard blog aims for 30+ Marks/hr, the best in the game. Graceful rework proposal refunds duplicate pieces in Marks. Marks buy amylase. https://secure.runescape.com/m=news/the-graveyard---rewards-blog?oldschool=1",
+   "evidence": "Graveyard rewards blog targets 30+ Marks of Grace/hr at top end. Graceful proposal would buy duplicates with GP, not marks, trimming marks demand. https://secure.runescape.com/m=news/the-graveyard---rewards-blog?oldschool=1",
    "mechanism": "More marks per hour means more amylase packs, since 10 marks buy 100 crystals. That adds amylase supply and lowers Stamina potion costs. The effect is gradual.",
    "direction": "down",
    "substitutes": "Existing rooftop courses already supply marks. Jagex says Ardougne beats the Graveyard's low-intensity option.",
@@ -36,11 +36,6 @@
     }
    ],
    "history": [
-    {
-     "date": "2026-11-09",
-     "verdict": "keep",
-     "reason": "The Graveyard is confirmed for November, but its exact day is not yet set and I could not re-verify the Marks-to-amylase link this session."
-    },
     {
      "date": "2026-11-10",
      "verdict": "keep",
@@ -95,10 +90,15 @@
      "date": "2026-11-20",
      "verdict": "keep",
      "reason": "Wiki and Jagex rewards material say The Graveyard adds a 65-80 Agility course with top Marks of Grace rates. Roadmap-linked reporting points to a Nov 25 launch, so the sell-into-release thesis still holds."
+    },
+    {
+     "date": "2026-11-21",
+     "verdict": "update",
+     "reason": "Graveyard is still scheduled for late November, and Jagex's rewards blog still targets 30+ marks/hr. The Graceful proposal would let duplicate pieces be bought with GP, not marks, which trims marks demand."
     }
    ],
-   "recheck_when": "The Graveyard release, expected the week of late November 2026 (https://accountshark.net/blog/osrs-quest-month-week-3-rag-and-bone-man-iii-a-new-leaf-fractured-archive-practice-mode-duo-unique-rate-november-18)",
-   "last_reviewed": "2026-11-20"
+   "recheck_when": "The Graveyard release blog (wiki schedule shows November 25)",
+   "last_reviewed": "2026-11-21"
   },
   {
    "title": "Underwater farming patches lift rare seeds",
@@ -137,11 +137,6 @@
     }
    ],
    "history": [
-    {
-     "date": "2026-11-09",
-     "verdict": "update",
-     "reason": "Confirmed patches are Spirit Tree, Celastrus, Mushroom and Hardwood. Irit seed is not among them, so I swapped in the matching seeds."
-    },
     {
      "date": "2026-11-10",
      "verdict": "update",
@@ -196,10 +191,15 @@
      "date": "2026-11-20",
      "verdict": "keep",
      "reason": "Deep Sea Diving poll ran Nov 9-16 and roadmap lists it as passed. Seed yields and farming patch rewards are still unannounced, so the thesis stays on Watch."
+    },
+    {
+     "date": "2026-11-21",
+     "verdict": "keep",
+     "reason": "Wiki roadmap now lists the Deep Sea Diving poll as Passed after the 16 Nov lock-in. Seed yields from the underwater patches are still unannounced, so it stays Watch."
     }
    ],
    "recheck_when": "Deep Sea Diving poll results on the farming area question",
-   "last_reviewed": "2026-11-20"
+   "last_reviewed": "2026-11-21"
   },
   {
    "date": "2026-11-05T15:58+00:00",
@@ -218,11 +218,6 @@
     }
    ],
    "history": [
-    {
-     "date": "2026-11-09",
-     "verdict": "update",
-     "reason": "Dungeons of Gielinor passed its poll and includes Gemstone Dragons with a Diamond Dragon boss. Their weaknesses are unannounced, so confidence drops to low."
-    },
     {
      "date": "2026-11-10",
      "verdict": "keep",
@@ -277,13 +272,18 @@
      "date": "2026-11-20",
      "verdict": "keep",
      "reason": "Dungeons of Gielinor is still Spring 2027 with a Diamond Dragon planned. Weaknesses and drop tables remain unannounced, so keep on Watch."
+    },
+    {
+     "date": "2026-11-21",
+     "verdict": "keep",
+     "reason": "Dungeons of Gielinor is still poll-stage. The Diamond Dragon's weakness and drop table are unannounced; only the RuneFest antifire advice is confirmed."
     }
    ],
    "action": "Watch",
    "confidence": "low",
    "evidence": "Jagex's RuneFest summary says to stock antifires before descending, and the Diamond Dragon lair is deep in a cavern. Gemstone dragon weaknesses and drops are unannounced. https://oldschool.runescape.wiki/w/Update:RuneFest_2026_Summit_Overview",
    "recheck_when": "Dungeons of Gielinor boss blog with Diamond Dragon weakness and drop table",
-   "last_reviewed": "2026-11-20",
+   "last_reviewed": "2026-11-21",
    "what_would_kill_it": "Dungeons of Gielinor poll fails, or the Diamond Dragon needs no antifire."
   },
   {
@@ -319,13 +319,8 @@
    "id": "i14",
    "status": "open",
    "first_seen": "2026-11-05",
-   "last_reviewed": "2026-11-20",
+   "last_reviewed": "2026-11-21",
    "history": [
-    {
-     "date": "2026-11-09",
-     "verdict": "keep",
-     "reason": "Underwater jewellery production is confirmed in the blog, but the poll result, jewellery types and rates are not yet known."
-    },
     {
      "date": "2026-11-10",
      "verdict": "update",
@@ -380,6 +375,11 @@
      "date": "2026-11-20",
      "verdict": "keep",
      "reason": "Roadmap shows the Deep Sea Diving poll passed, and wiki/Jagex material confirms the jewellery sites and smelted-jewellery banking. Supply effect still needs output rates."
+    },
+    {
+     "date": "2026-11-21",
+     "verdict": "keep",
+     "reason": "Jewellery sites and the banking courier are confirmed in the proposal, and the roadmap shows the poll passed. Mining rates and jewellery output remain unannounced."
     }
    ]
   },
@@ -416,7 +416,7 @@
    "id": "i25",
    "status": "open",
    "first_seen": "2026-11-10",
-   "last_reviewed": "2026-11-20",
+   "last_reviewed": "2026-11-21",
    "history": [
     {
      "date": "2026-11-10",
@@ -472,6 +472,11 @@
      "date": "2026-11-20",
      "verdict": "keep",
      "reason": "Deep Sea Diving proposal confirms precious gem rocks at 65 Mining yielding uncut sapphires and diamonds. Poll reported passed; rates still unknown."
+    },
+    {
+     "date": "2026-11-21",
+     "verdict": "keep",
+     "reason": "Precious gem rocks at 65 Mining yielding uncut sapphires, emeralds, rubies and diamonds are confirmed in the Deep Sea Diving proposal. Poll passed on the wiki roadmap."
     }
    ]
   },
@@ -501,7 +506,7 @@
    "id": "i29",
    "status": "open",
    "first_seen": "2026-11-14",
-   "last_reviewed": "2026-11-20",
+   "last_reviewed": "2026-11-21",
    "history": [
     {
      "date": "2026-11-14",
@@ -537,6 +542,11 @@
      "date": "2026-11-20",
      "verdict": "keep",
      "reason": "Quest Month shard-rate change from the wiki still applies. No newer shard change found, so the sell-if-holding view stands at low confidence."
+    },
+    {
+     "date": "2026-11-21",
+     "verdict": "keep",
+     "reason": "No new shard or bolt information found this scan. The shard-rate and Fletching figures were not re-verified, so confidence stays low."
     }
    ]
   },
@@ -587,7 +597,7 @@
    "id": "i30",
    "status": "open",
    "first_seen": "2026-11-14",
-   "last_reviewed": "2026-11-20",
+   "last_reviewed": "2026-11-21",
    "history": [
     {
      "date": "2026-11-14",
@@ -623,6 +633,11 @@
      "date": "2026-11-20",
      "verdict": "keep",
      "reason": "Week 3 duo unique-rate change still eases duo supply, and group scaling still raises rates for larger teams. No newer balance post found."
+    },
+    {
+     "date": "2026-11-21",
+     "verdict": "keep",
+     "reason": "Week 3 duo unique cut is the latest balance change found. No new Fractured Archive loot data has appeared."
     }
    ]
   },
@@ -630,7 +645,7 @@
    "title": "Menaphos true Soul Altar may add soul rune supply",
    "trigger": "Menaphos release and the true Soul Altar's crafting method",
    "release": "Spring 2027 (roadmap, poll passed)",
-   "evidence": "Roadmap confirms Menaphos with a true Soul Altar and soul runes at 90 Runecraft. Wiki says soul runes already craft at an Arceuus Soul Altar at 90 Runecraft. https://oldschool.runescape.wiki/w/Upcoming_updates ; https://oldschool.runescape.wiki/w/Soul_rune",
+   "evidence": "Menaphos has a Spring 2027 target, not a date. Its true Soul Altar would allow soul runes at 90 Runecraft, while Arceuus already offers this. https://oldschool.runescape.wiki/w/Menaphos",
    "mechanism": "If the new altar is a separate, easier soul rune route, soul rune supply rises and price falls. If it only mirrors the existing altar, little changes.",
    "direction": "down",
    "items": [
@@ -648,11 +663,11 @@
    "action_detail": "Do nothing now. Revisit when Menaphos details show whether the true altar uses a different method or is just a second location.",
    "exit_plan": "No position. If holding, sell into any spike ahead of the Menaphos release.",
    "what_would_kill_it": "Menaphos details show the true altar is an identical method, or the 90 Runecraft requirement is unchanged in practice.",
-   "recheck_when": "Menaphos blog or patch notes describing the true Soul Altar method",
+   "recheck_when": "Menaphos release date or Fool's Gold blog",
    "id": "i37",
    "status": "open",
    "first_seen": "2026-11-18",
-   "last_reviewed": "2026-11-20",
+   "last_reviewed": "2026-11-21",
    "history": [
     {
      "date": "2026-11-18",
@@ -668,6 +683,11 @@
      "date": "2026-11-20",
      "verdict": "keep",
      "reason": "Menaphos is confirmed for Spring 2027 with a true Soul Altar at 90 Runecraft. Supply impact still depends on how it compares with the existing altar."
+    },
+    {
+     "date": "2026-11-21",
+     "verdict": "update",
+     "reason": "Wiki now gives Menaphos only a Spring 2027 target, not a date, so any soul rune supply shift is further away. Arceuus remains the existing 90 Runecraft soul rune method."
     }
    ]
   },
@@ -697,7 +717,7 @@
    "id": "i38",
    "status": "open",
    "first_seen": "2026-11-19",
-   "last_reviewed": "2026-11-20",
+   "last_reviewed": "2026-11-21",
    "history": [
     {
      "date": "2026-11-19",
@@ -708,6 +728,11 @@
      "date": "2026-11-20",
      "verdict": "keep",
      "reason": "Week 3 post confirms faster Zorya's tome projectiles. Demand effect still unquantified, so keep on Watch until the next balance or Graveyard week notes."
+    },
+    {
+     "date": "2026-11-21",
+     "verdict": "keep",
+     "reason": "Week 3 post still says Zorya's tome projectiles travel faster. No newer balance post or demand data found."
     }
    ]
   },
@@ -737,12 +762,17 @@
    "id": "i39",
    "status": "open",
    "first_seen": "2026-11-20",
-   "last_reviewed": "2026-11-20",
+   "last_reviewed": "2026-11-21",
    "history": [
     {
      "date": "2026-11-20",
      "verdict": "new",
      "reason": "First raised"
+    },
+    {
+     "date": "2026-11-21",
+     "verdict": "keep",
+     "reason": "Proposal includes an Abyssal Slayer area with Abyssal Demons, confirmed. The claim that demons alone drop the Abyssal whip was not re-verified, and the poll closed 16 Nov."
     }
    ]
   }
