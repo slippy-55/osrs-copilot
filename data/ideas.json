@@ -1,5 +1,5 @@
 {
- "next": 40,
+ "next": 44,
  "ideas": [
   {
    "title": "Amulet of sight supply flood",
@@ -51,13 +51,13 @@
    "title": "Graveyard marks flood amylase and stamina",
    "trigger": "The Graveyard master quest unlocks a 65+ Agility course. Jagex says it will be the best Marks of Grace source.",
    "release": "November 2026 (exact day not confirmed)",
-   "evidence": "Graveyard rewards blog targets 30+ Marks of Grace/hr at top end. Graceful proposal would buy duplicates with GP, not marks, trimming marks demand. https://secure.runescape.com/m=news/the-graveyard---rewards-blog?oldschool=1",
+   "evidence": "Wiki schedule and Nov 19 Q&A confirm The Graveyard launches Nov 25. Rewards blog: high-intensity route gives 30+ Marks of Grace/hr, best in game. https://secure.runescape.com/m=news/the-graveyard---rewards-blog?oldschool=1",
    "mechanism": "More marks per hour means more amylase packs, since 10 marks buy 100 crystals. That adds amylase supply and lowers Stamina potion costs. The effect is gradual.",
    "direction": "down",
    "substitutes": "Existing rooftop courses already supply marks. Jagex says Ardougne beats the Graveyard's low-intensity option.",
    "confidence": "medium",
    "action": "Sell if holding",
-   "action_detail": "Sell amylase stock before the quest drops. Don't stockpile stamina ingredients. Re-check after launch day for marks-per-hour reality.",
+   "action_detail": "Sell amylase or stamina stock before or at the Nov 25 launch. Watch first-week Marks of Grace flow.",
    "exit_plan": "Buy back after the price drops 10-15% and the post-launch flood stabilises.",
    "what_would_kill_it": "The master quest gate limits early participation. Or Jagex nerfs mark rates after launch feedback.",
    "id": "i2",
@@ -80,11 +80,6 @@
     }
    ],
    "history": [
-    {
-     "date": "2026-11-10",
-     "verdict": "keep",
-     "reason": "The Graveyard is still slated for November on the roadmap, but the Marks-per-hour and Graceful refund claims are unverified this scan."
-    },
     {
      "date": "2026-11-11",
      "verdict": "keep",
@@ -139,10 +134,15 @@
      "date": "2026-11-21",
      "verdict": "update",
      "reason": "Graveyard is still scheduled for late November, and Jagex's rewards blog still targets 30+ marks/hr. The Graceful proposal would let duplicate pieces be bought with GP, not marks, which trims marks demand."
+    },
+    {
+     "date": "2026-11-22",
+     "verdict": "update",
+     "reason": "Release date now confirmed for Nov 25. The Marks of Grace thesis is unchanged, so the move should start at launch."
     }
    ],
-   "recheck_when": "The Graveyard release blog (wiki schedule shows November 25)",
-   "last_reviewed": "2026-11-21"
+   "recheck_when": "Nov 25 Graveyard release notes and Graceful rework details",
+   "last_reviewed": "2026-11-22"
   },
   {
    "title": "Underwater gem rocks cut gem prices",
@@ -237,7 +237,7 @@
    "title": "Underwater farming patches lift rare seeds",
    "trigger": "The Deep Sea Diving expansion adds underwater Spirit Tree, Celastrus, Mushroom and Hardwood farming patches.",
    "release": "Early 2027 (poll result pending)",
-   "evidence": "Roadmap lists the Deep Sea Diving poll as passed on 16 Nov 2026, but an earlier guide calls it poll-stage. Underwater Spirit Tree, Celastrus, Mushroom and Hardwood patches are proposed; seed yields unannounced. https://oldschool.runescape.wiki/w/Upcoming_updates",
+   "evidence": "Wiki schedule: Deep Sea Diving poll passed Nov 16, release Early 2027. Blog confirms underwater Spirit Tree, Celastrus, Mushroom and Hardwood patches. Yields unannounced. https://secure.runescape.com/m=news/deep-sea-diving-expansion?oldschool=1",
    "mechanism": "Extra patches mean extra seed demand per player. Spirit and celastrus seeds are rare, so they are most sensitive. Mahogany is secondary.",
    "direction": "up",
    "substitutes": "Players can skip the patches, and existing patches already supply the produce.",
@@ -270,11 +270,6 @@
     }
    ],
    "history": [
-    {
-     "date": "2026-11-10",
-     "verdict": "update",
-     "reason": "The Jagex blog now confirms an underwater cave farming area with four patch types. It is still poll-stage and planned for early 2027."
-    },
     {
      "date": "2026-11-11",
      "verdict": "keep",
@@ -329,10 +324,15 @@
      "date": "2026-11-21",
      "verdict": "keep",
      "reason": "Wiki roadmap now lists the Deep Sea Diving poll as Passed after the 16 Nov lock-in. Seed yields from the underwater patches are still unannounced, so it stays Watch."
+    },
+    {
+     "date": "2026-11-22",
+     "verdict": "update",
+     "reason": "The poll passed per the wiki schedule, but release is only Early 2027. Seed yields are still unannounced."
     }
    ],
-   "recheck_when": "Deep Sea Diving poll results on the farming area question",
-   "last_reviewed": "2026-11-21"
+   "recheck_when": "Deep Sea Diving release-date or patch details blog",
+   "last_reviewed": "2026-11-22"
   },
   {
    "title": "Zanik crossbow may replace Dorgeshuun crossbow",
@@ -686,11 +686,6 @@
    ],
    "history": [
     {
-     "date": "2026-11-10",
-     "verdict": "keep",
-     "reason": "Dungeons of Gielinor is confirmed for Spring 2027 with a Diamond Dragon. Gemstone Dragon weaknesses and drops remain unconfirmed."
-    },
-    {
      "date": "2026-11-11",
      "verdict": "update",
      "reason": "The 'dragonbane' weakness claim was unsupported; the Diamond Dragon weakness is unannounced. The Jagex Summit overview does tell players to stock antifires before descending, which supports the demand case."
@@ -744,13 +739,18 @@
      "date": "2026-11-21",
      "verdict": "keep",
      "reason": "Dungeons of Gielinor is still poll-stage. The Diamond Dragon's weakness and drop table are unannounced; only the RuneFest antifire advice is confirmed."
+    },
+    {
+     "date": "2026-11-22",
+     "verdict": "keep",
+     "reason": "Dungeons of Gielinor is still Spring 2027. Diamond Dragon weakness and drops remain unannounced."
     }
    ],
    "action": "Watch",
    "confidence": "low",
    "evidence": "Jagex's RuneFest summary says to stock antifires before descending, and the Diamond Dragon lair is deep in a cavern. Gemstone dragon weaknesses and drops are unannounced. https://oldschool.runescape.wiki/w/Update:RuneFest_2026_Summit_Overview",
    "recheck_when": "Dungeons of Gielinor boss blog with Diamond Dragon weakness and drop table",
-   "last_reviewed": "2026-11-21",
+   "last_reviewed": "2026-11-22",
    "what_would_kill_it": "Dungeons of Gielinor poll fails, or the Diamond Dragon needs no antifire."
   },
   {
@@ -799,7 +799,7 @@
    "title": "Underwater jewellery production floods bars and jewellery",
    "trigger": "Deep Sea Diving jewellery production sites with faster-respawn gold and silver rocks and vent furnaces",
    "release": "Early 2027",
-   "evidence": "Deep Sea Diving blog confirms silver and gold rocks plus a banking courier for smelted jewellery. Mining rates and jewellery output are unannounced. Roadmap shows the poll passed. https://secure.runescape.com/m=news/deep-sea-diving-expansion?oldschool=1",
+   "evidence": "Blog confirms silver and gold rocks plus a courier that banks smelted jewellery. Wiki schedule: poll passed Nov 16, release Early 2027. Rates unannounced. https://secure.runescape.com/m=news/deep-sea-diving-expansion?oldschool=1",
    "mechanism": "A faster, semi-automated source of gold and silver and of cut jewellery raises supply and lowers prices.",
    "direction": "down",
    "items": [
@@ -824,17 +824,12 @@
    "action_detail": "Wait for the poll result and jewellery details. Do not trade before they are known.",
    "exit_plan": "If the poll fails, drop it. If it passes, check the rates blog.",
    "what_would_kill_it": "The jewellery poll question fails, or the vent only works for low-value items.",
-   "recheck_when": "Deep Sea Diving poll result",
+   "recheck_when": "Deep Sea Diving release-date blog with mining rates and jewellery XP",
    "id": "i14",
    "status": "open",
    "first_seen": "2026-11-05",
-   "last_reviewed": "2026-11-21",
+   "last_reviewed": "2026-11-22",
    "history": [
-    {
-     "date": "2026-11-10",
-     "verdict": "update",
-     "reason": "The jewellery site is now described in Jagex-sourced coverage: silver, gold and gem rocks plus a furnace that banks smelted jewellery. Rates and jewellery types are still unknown."
-    },
     {
      "date": "2026-11-11",
      "verdict": "keep",
@@ -889,6 +884,11 @@
      "date": "2026-11-21",
      "verdict": "keep",
      "reason": "Jewellery sites and the banking courier are confirmed in the proposal, and the roadmap shows the poll passed. Mining rates and jewellery output remain unannounced."
+    },
+    {
+     "date": "2026-11-22",
+     "verdict": "update",
+     "reason": "The poll passed, but release is Early 2027 and jewellery rates are unannounced. Stay on Watch."
     }
    ]
   },
@@ -1439,7 +1439,7 @@
    "title": "Underwater precious rocks add gem supply",
    "trigger": "Deep Sea Diving poll passes and jewellery sites go live",
    "release": "Early 2027 (proposed)",
-   "evidence": "Deep Sea Diving blog: precious gem rocks need 65 Mining and yield uncut sapphires, emeralds, rubies and diamonds. Roadmap shows the poll passed. https://secure.runescape.com/m=news/deep-sea-diving-expansion?oldschool=1",
+   "evidence": "Blog: precious gem rocks (65 Mining) give uncut sapphires, emeralds, rubies, diamonds. Poll passed Nov 16, release Early 2027. https://secure.runescape.com/m=news/deep-sea-diving-expansion?oldschool=1",
    "mechanism": "A new gem source raises uncut gem supply, which should push gem prices down if the rocks are fast and easy to mine.",
    "direction": "down",
    "items": [
@@ -1461,20 +1461,15 @@
    "substitutes": "Existing gem mining and gem rocks already supply most gem demand.",
    "confidence": "medium",
    "action": "Watch",
-   "action_detail": "Wait for the poll result and the jewellery site blog. Act only if yields and respawn rates are published.",
+   "action_detail": "Don't build positions yet. Sell uncut gem stock closer to release if respawn rates look generous.",
    "exit_plan": "No position needed until yields are confirmed.",
    "what_would_kill_it": "Rocks yield cut gems only, or the poll fails.",
-   "recheck_when": "Deep Sea Diving poll result and jewellery site blog",
+   "recheck_when": "Deep Sea Diving release-date blog with gem rock respawn and yield",
    "id": "i25",
    "status": "open",
    "first_seen": "2026-11-10",
-   "last_reviewed": "2026-11-21",
+   "last_reviewed": "2026-11-22",
    "history": [
-    {
-     "date": "2026-11-10",
-     "verdict": "new",
-     "reason": "First raised"
-    },
     {
      "date": "2026-11-11",
      "verdict": "update",
@@ -1529,6 +1524,11 @@
      "date": "2026-11-21",
      "verdict": "keep",
      "reason": "Precious gem rocks at 65 Mining yielding uncut sapphires, emeralds, rubies and diamonds are confirmed in the Deep Sea Diving proposal. Poll passed on the wiki roadmap."
+    },
+    {
+     "date": "2026-11-22",
+     "verdict": "update",
+     "reason": "The poll passed, so the gem rocks are confirmed. Release is Early 2027, so it is too early to sell."
     }
    ]
   },
@@ -1707,9 +1707,9 @@
    "what_would_kill_it": "Shard price falls with no matching bolt drop, or a bolt-demand spike from new Ascension content.",
    "recheck_when": "Fractured Archive patch notes or a Quest Month week three update changing shard rates",
    "id": "i29",
-   "status": "open",
+   "status": "dropped",
    "first_seen": "2026-11-14",
-   "last_reviewed": "2026-11-21",
+   "last_reviewed": "2026-11-22",
    "history": [
     {
      "date": "2026-11-14",
@@ -1750,8 +1750,15 @@
      "date": "2026-11-21",
      "verdict": "keep",
      "reason": "No new shard or bolt information found this scan. The shard-rate and Fletching figures were not re-verified, so confidence stays low."
+    },
+    {
+     "date": "2026-11-22",
+     "verdict": "drop",
+     "reason": "The shard buff landed Nov 11, about 11 days ago, so it is largely priced in. Evidence is thin."
     }
-   ]
+   ],
+   "dropped_on": "2026-11-22",
+   "drop_reason": "The shard buff landed Nov 11, about 11 days ago, so it is largely priced in. Evidence is thin."
   },
   {
    "title": "Groups of 3+ lift Fractured Archive unique supply",
@@ -1798,9 +1805,9 @@
    "what_would_kill_it": "Group sizes do not grow, or unique prices already reflect the new supply.",
    "recheck_when": "Fractured Archive loot-rate data or the next TFA balance post",
    "id": "i30",
-   "status": "open",
+   "status": "dropped",
    "first_seen": "2026-11-14",
-   "last_reviewed": "2026-11-21",
+   "last_reviewed": "2026-11-22",
    "history": [
     {
      "date": "2026-11-14",
@@ -1841,8 +1848,15 @@
      "date": "2026-11-21",
      "verdict": "keep",
      "reason": "Week 3 duo unique cut is the latest balance change found. No new Fractured Archive loot data has appeared."
+    },
+    {
+     "date": "2026-11-22",
+     "verdict": "drop",
+     "reason": "Week 3 lowered the duo unique chance to 1/17, which trims supply. That contradicts the down thesis, which was never well founded."
     }
-   ]
+   ],
+   "dropped_on": "2026-11-22",
+   "drop_reason": "Week 3 lowered the duo unique chance to 1/17, which trims supply. That contradicts the down thesis, which was never well founded."
   },
   {
    "title": "Chosen Commander crossbow may consume Dorgeshuun crossbow",
@@ -2218,7 +2232,7 @@
    "id": "i37",
    "status": "open",
    "first_seen": "2026-11-18",
-   "last_reviewed": "2026-11-21",
+   "last_reviewed": "2026-11-22",
    "history": [
     {
      "date": "2026-11-18",
@@ -2239,6 +2253,11 @@
      "date": "2026-11-21",
      "verdict": "update",
      "reason": "Wiki now gives Menaphos only a Spring 2027 target, not a date, so any soul rune supply shift is further away. Arceuus remains the existing 90 Runecraft soul rune method."
+    },
+    {
+     "date": "2026-11-22",
+     "verdict": "keep",
+     "reason": "Still Spring 2027 with no date. Weak, but nothing new to change it."
     }
    ]
   },
@@ -2266,9 +2285,9 @@
    "what_would_kill_it": "The buff is too minor to change raider choices, so tome prices stay flat.",
    "recheck_when": "Next Fractured Archive balance post or Graveyard week patch notes",
    "id": "i38",
-   "status": "open",
+   "status": "dropped",
    "first_seen": "2026-11-19",
-   "last_reviewed": "2026-11-21",
+   "last_reviewed": "2026-11-22",
    "history": [
     {
      "date": "2026-11-19",
@@ -2284,8 +2303,15 @@
      "date": "2026-11-21",
      "verdict": "keep",
      "reason": "Week 3 post still says Zorya's tome projectiles travel faster. No newer balance post or demand data found."
+    },
+    {
+     "date": "2026-11-22",
+     "verdict": "drop",
+     "reason": "A projectile-speed tweak is minor, a week old, and has no confirmed DPS change. Priced in or irrelevant."
     }
-   ]
+   ],
+   "dropped_on": "2026-11-22",
+   "drop_reason": "A projectile-speed tweak is minor, a week old, and has no confirmed DPS change. Priced in or irrelevant."
   },
   {
    "title": "Abyssal Slayer area adds demon kill supply",
@@ -2311,9 +2337,9 @@
    "what_would_kill_it": "Abyssal Slayer area removed from the update, or demon drop rates unchanged at the new location.",
    "recheck_when": "Deep Sea Diving poll result and Slayer area patch notes",
    "id": "i39",
-   "status": "open",
+   "status": "dropped",
    "first_seen": "2026-11-20",
-   "last_reviewed": "2026-11-21",
+   "last_reviewed": "2026-11-22",
    "history": [
     {
      "date": "2026-11-20",
@@ -2324,9 +2350,163 @@
      "date": "2026-11-21",
      "verdict": "keep",
      "reason": "Proposal includes an Abyssal Slayer area with Abyssal Demons, confirmed. The claim that demons alone drop the Abyssal whip was not re-verified, and the poll closed 16 Nov."
+    },
+    {
+     "date": "2026-11-22",
+     "verdict": "drop",
+     "reason": "The wiki's confirmed new underwater Slayer monster list has no Abyssal Demons, so the whip supply thesis is unsupported."
+    }
+   ],
+   "dropped_on": "2026-11-22",
+   "drop_reason": "The wiki's confirmed new underwater Slayer monster list has no Abyssal Demons, so the whip supply thesis is unsupported."
+  },
+  {
+   "title": "Seed of growth early spike will fade",
+   "trigger": "A New Leaf quest released Nov 18 adds a 1/100 seed pack drop of tradeable, stackable seeds",
+   "release": "2026-11-18 (live)",
+   "evidence": "Seed of growth drops 1/100 from seed packs after A New Leaf, is tradeable and stackable, and teleports to the Farming Guild. https://oldschool.runescape.wiki/w/Seed_of_growth",
+   "mechanism": "New item with thin early supply. Every contract seed pack opened by quest finishers adds supply. Demand is only a convenience teleport.",
+   "direction": "down",
+   "items": [
+    {
+     "name": "Seed of growth",
+     "id": 34813,
+     "limit": null,
+     "high_then": 5010,
+     "low_then": 5000
+    }
+   ],
+   "substitutes": "Skills necklace, Farming cape, Farming Guild teleport options; many cheap alternatives.",
+   "confidence": "medium",
+   "action": "Avoid holding",
+   "action_detail": "Don't buy. If you hold any, sell into early-week scarcity prices as more players finish the quest.",
+   "exit_plan": "Re-evaluate if price stabilises well under early levels and volume stays low.",
+   "what_would_kill_it": "Jagex lowers the drop rate, or the seed gains a further use.",
+   "recheck_when": "Seed of growth price and volume over the next week",
+   "id": "i40",
+   "status": "open",
+   "first_seen": "2026-11-22",
+   "last_reviewed": "2026-11-22",
+   "history": [
+    {
+     "date": "2026-11-22",
+     "verdict": "new",
+     "reason": "First raised"
+    }
+   ]
+  },
+  {
+   "title": "Zanik's crossbow may move Dorgeshuun crossbow",
+   "trigger": "The Chosen Commander backport adds Zanik's Modified Crossbow, a stronger version of the Dorgeshuun crossbow's special",
+   "release": "Early 2027",
+   "evidence": "Wiki upcoming updates: Zanik's Modified Crossbow has a stronger defence-draining special than the Dorgeshuun crossbow. Poll passed. https://oldschool.runescape.wiki/w/Upcoming_updates",
+   "mechanism": "If the new crossbow is untradeable or built from the old one, Dorgeshuun crossbow demand rises. If it is a standalone replacement, demand falls.",
+   "direction": "up",
+   "items": [
+    {
+     "name": "Dorgeshuun crossbow",
+     "id": 8880,
+     "limit": 70,
+     "high_then": 3865,
+     "low_then": 1600
+    }
+   ],
+   "substitutes": "Other special-attack crossbows and Toxic blowpipe-style defence drainers.",
+   "confidence": "low",
+   "action": "Watch",
+   "action_detail": "Unconfirmed: whether Zanik's crossbow is tradeable or needs a Dorgeshuun crossbow. Don't position until the post-quest activities poll and rewards blog.",
+   "exit_plan": "Buy on announcement only if the recipe consumes the crossbow.",
+   "what_would_kill_it": "Zanik's crossbow is a free tradeable reward that outclasses the Dorgeshuun crossbow.",
+   "recheck_when": "Chosen Commander rewards blog and post-quest activities poll result",
+   "id": "i41",
+   "status": "open",
+   "first_seen": "2026-11-22",
+   "last_reviewed": "2026-11-22",
+   "history": [
+    {
+     "date": "2026-11-22",
+     "verdict": "new",
+     "reason": "First raised"
+    }
+   ]
+  },
+  {
+   "title": "Abyssal rock slug may lift salt demand",
+   "trigger": "Deep Sea Diving adds Abyssal Rock Slug, a higher-level variant of Rock slug, to new underwater Slayer areas",
+   "release": "Early 2027",
+   "evidence": "Blog lists Abyssal Rock Slug as a variant of Rock slug in new underwater Slayer areas; poll passed Nov 16. https://secure.runescape.com/m=news/deep-sea-diving-expansion?oldschool=1",
+   "mechanism": "Rock slugs are salt-finished. If the variant shares that mechanic and task, slayer salt demand rises.",
+   "direction": "up",
+   "items": [
+    {
+     "name": "Bag of salt",
+     "id": 4161,
+     "limit": 8000,
+     "high_then": 30,
+     "low_then": 29
+    }
+   ],
+   "substitutes": "Cheap and abundant; Slayer teleports and an alternative kill method may exist.",
+   "confidence": "low",
+   "action": "Watch",
+   "action_detail": "Unconfirmed: whether the variant needs salt or counts toward the Rock slug task. Wait for the wiki page and release notes.",
+   "exit_plan": "Buy only if the finisher is confirmed; sell the spike within days of release.",
+   "what_would_kill_it": "The monster dies normally with no finisher, or the task is separate.",
+   "recheck_when": "Deep Sea Diving Slayer monster detail blog",
+   "id": "i42",
+   "status": "open",
+   "first_seen": "2026-11-22",
+   "last_reviewed": "2026-11-22",
+   "history": [
+    {
+     "date": "2026-11-22",
+     "verdict": "new",
+     "reason": "First raised"
+    }
+   ]
+  },
+  {
+   "title": "Mining and Smithing Reforged could reprice ores and bars",
+   "trigger": "Passed poll for a rework of Mining and Smithing",
+   "release": "Summer 2027",
+   "evidence": "Wiki upcoming updates: Mining and Smithing Reforged passed the RuneFest poll, Summer 2027, with no details yet. https://oldschool.runescape.wiki/w/Upcoming_updates",
+   "mechanism": "A skill rework can change ore supply, bar recipes and gear demand, but the direction is unknown until the blog.",
+   "direction": "up",
+   "items": [
+    {
+     "name": "Runite ore",
+     "id": 451,
+     "limit": 4500,
+     "high_then": 10147,
+     "low_then": 9978
+    },
+    {
+     "name": "Runite bar",
+     "id": 2363,
+     "limit": 10000,
+     "high_then": 12096,
+     "low_then": 12096
+    }
+   ],
+   "substitutes": "Other ore tiers and mined or smithed alternatives.",
+   "confidence": "low",
+   "action": "Watch",
+   "action_detail": "Unconfirmed: new recipes, ore requirements and rates. Don't buy before the design blog.",
+   "exit_plan": "Act only once specific items and sinks are named.",
+   "what_would_kill_it": "A rework that only changes XP rates with no item sinks.",
+   "recheck_when": "Mining and Smithing Reforged design blog",
+   "id": "i43",
+   "status": "open",
+   "first_seen": "2026-11-22",
+   "last_reviewed": "2026-11-22",
+   "history": [
+    {
+     "date": "2026-11-22",
+     "verdict": "new",
+     "reason": "First raised"
     }
    ]
   }
  ],
- "updated": "2026-11-21T14:16+00:00"
+ "updated": "2026-11-22T07:55+00:00"
 }

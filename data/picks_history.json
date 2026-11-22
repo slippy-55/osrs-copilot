@@ -733,6 +733,73 @@
      "low_then": 621188
     }
    ]
+  },
+  {
+   "date": "2026-11-22T07:55+00:00",
+   "title": "Seed of growth early spike will fade",
+   "idea": "i40",
+   "direction": "down",
+   "items": [
+    {
+     "name": "Seed of growth",
+     "id": 34813,
+     "limit": null,
+     "high_then": 5010,
+     "low_then": 5000
+    }
+   ]
+  },
+  {
+   "date": "2026-11-22T07:55+00:00",
+   "title": "Zanik's crossbow may move Dorgeshuun crossbow",
+   "idea": "i41",
+   "direction": "up",
+   "items": [
+    {
+     "name": "Dorgeshuun crossbow",
+     "id": 8880,
+     "limit": 70,
+     "high_then": 3865,
+     "low_then": 1600
+    }
+   ]
+  },
+  {
+   "date": "2026-11-22T07:55+00:00",
+   "title": "Abyssal rock slug may lift salt demand",
+   "idea": "i42",
+   "direction": "up",
+   "items": [
+    {
+     "name": "Bag of salt",
+     "id": 4161,
+     "limit": 8000,
+     "high_then": 30,
+     "low_then": 29
+    }
+   ]
+  },
+  {
+   "date": "2026-11-22T07:55+00:00",
+   "title": "Mining and Smithing Reforged could reprice ores and bars",
+   "idea": "i43",
+   "direction": "up",
+   "items": [
+    {
+     "name": "Runite ore",
+     "id": 451,
+     "limit": 4500,
+     "high_then": 10147,
+     "low_then": 9978
+    },
+    {
+     "name": "Runite bar",
+     "id": 2363,
+     "limit": 10000,
+     "high_then": 12096,
+     "low_then": 12096
+    }
+   ]
   }
  ]
 }
