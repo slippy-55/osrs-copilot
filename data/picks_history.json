@@ -800,6 +800,21 @@
      "low_then": 12096
     }
    ]
+  },
+  {
+   "date": "2026-11-23T11:02+00:00",
+   "title": "Fairytale III new runecrafting method may draw on essence (Watch)",
+   "idea": "i44",
+   "direction": "up",
+   "items": [
+    {
+     "name": "Pure essence",
+     "id": 7936,
+     "limit": 30000,
+     "high_then": 2,
+     "low_then": 1
+    }
+   ]
   }
  ]
 }

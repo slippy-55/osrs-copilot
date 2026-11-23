@@ -1,5 +1,5 @@
 {
- "next": 44,
+ "next": 45,
  "ideas": [
   {
    "title": "Amulet of sight supply flood",
@@ -51,7 +51,7 @@
    "title": "Graveyard marks flood amylase and stamina",
    "trigger": "The Graveyard master quest unlocks a 65+ Agility course. Jagex says it will be the best Marks of Grace source.",
    "release": "November 2026 (exact day not confirmed)",
-   "evidence": "Wiki schedule and Nov 19 Q&A confirm The Graveyard launches Nov 25. Rewards blog: high-intensity route gives 30+ Marks of Grace/hr, best in game. https://secure.runescape.com/m=news/the-graveyard---rewards-blog?oldschool=1",
+   "evidence": "Graveyard launches Nov 25 per the wiki Quest Month page. Rewards blog targets 30+ Marks/hr at high intensity. Graceful rework proposal: duplicates bought with GP, not Marks. https://oldschool.runescape.wiki/w/Quest_Month and https://secure.runescape.com/m=news/the-graveyard---rewards-blog?oldschool=1",
    "mechanism": "More marks per hour means more amylase packs, since 10 marks buy 100 crystals. That adds amylase supply and lowers Stamina potion costs. The effect is gradual.",
    "direction": "down",
    "substitutes": "Existing rooftop courses already supply marks. Jagex says Ardougne beats the Graveyard's low-intensity option.",
@@ -80,11 +80,6 @@
     }
    ],
    "history": [
-    {
-     "date": "2026-11-11",
-     "verdict": "keep",
-     "reason": "Graveyard is still due in November and its rewards are confirmed. The Marks-to-amylase link was not re-verified in this scan, so the idea stays at medium confidence."
-    },
     {
      "date": "2026-11-12",
      "verdict": "keep",
@@ -139,10 +134,15 @@
      "date": "2026-11-22",
      "verdict": "update",
      "reason": "Release date now confirmed for Nov 25. The Marks of Grace thesis is unchanged, so the move should start at launch."
+    },
+    {
+     "date": "2026-11-23",
+     "verdict": "update",
+     "reason": "Graveyard still launches Nov 25. The Graceful rework proposal would let duplicate sets be bought with GP, not Marks, cutting Marks demand. Direction stays down."
     }
    ],
-   "recheck_when": "Nov 25 Graveyard release notes and Graceful rework details",
-   "last_reviewed": "2026-11-22"
+   "recheck_when": "Nov 25 Graveyard release notes and the Graceful rework update",
+   "last_reviewed": "2026-11-23"
   },
   {
    "title": "Underwater gem rocks cut gem prices",
@@ -271,11 +271,6 @@
    ],
    "history": [
     {
-     "date": "2026-11-11",
-     "verdict": "keep",
-     "reason": "The OSRS Wiki confirms early 2027 underwater farming patches for Spirit Tree, Celastrus, Mushroom and Hardwood. Seed names and yields are still unannounced."
-    },
-    {
      "date": "2026-11-12",
      "verdict": "keep",
      "reason": "Deep Sea Diving is still poll-stage and listed for early 2027. The underwater farming area is proposed, and seed names and yields are not yet confirmed."
@@ -329,10 +324,15 @@
      "date": "2026-11-22",
      "verdict": "update",
      "reason": "The poll passed per the wiki schedule, but release is only Early 2027. Seed yields are still unannounced."
+    },
+    {
+     "date": "2026-11-23",
+     "verdict": "keep",
+     "reason": "Deep Sea Diving poll passed Nov 16 and the patches are still unannounced for early 2027. No new yield data."
     }
    ],
    "recheck_when": "Deep Sea Diving release-date or patch details blog",
-   "last_reviewed": "2026-11-22"
+   "last_reviewed": "2026-11-23"
   },
   {
    "title": "Zanik crossbow may replace Dorgeshuun crossbow",
@@ -686,11 +686,6 @@
    ],
    "history": [
     {
-     "date": "2026-11-11",
-     "verdict": "update",
-     "reason": "The 'dragonbane' weakness claim was unsupported; the Diamond Dragon weakness is unannounced. The Jagex Summit overview does tell players to stock antifires before descending, which supports the demand case."
-    },
-    {
      "date": "2026-11-12",
      "verdict": "update",
      "reason": "Gemstone Dragons are confirmed for Dungeons of Gielinor. The regular dragons have weaknesses, and the wiki says dragons are weak to dragonbane. The antifire claim and Diamond Dragon weakness remain unverified."
@@ -744,13 +739,18 @@
      "date": "2026-11-22",
      "verdict": "keep",
      "reason": "Dungeons of Gielinor is still Spring 2027. Diamond Dragon weakness and drops remain unannounced."
+    },
+    {
+     "date": "2026-11-23",
+     "verdict": "keep",
+     "reason": "Diamond Dragon is still a Spring 2027 Dungeons of Gielinor boss. Weakness and drops remain unpublished."
     }
    ],
    "action": "Watch",
    "confidence": "low",
    "evidence": "Jagex's RuneFest summary says to stock antifires before descending, and the Diamond Dragon lair is deep in a cavern. Gemstone dragon weaknesses and drops are unannounced. https://oldschool.runescape.wiki/w/Update:RuneFest_2026_Summit_Overview",
    "recheck_when": "Dungeons of Gielinor boss blog with Diamond Dragon weakness and drop table",
-   "last_reviewed": "2026-11-22",
+   "last_reviewed": "2026-11-23",
    "what_would_kill_it": "Dungeons of Gielinor poll fails, or the Diamond Dragon needs no antifire."
   },
   {
@@ -828,13 +828,8 @@
    "id": "i14",
    "status": "open",
    "first_seen": "2026-11-05",
-   "last_reviewed": "2026-11-22",
+   "last_reviewed": "2026-11-23",
    "history": [
-    {
-     "date": "2026-11-11",
-     "verdict": "keep",
-     "reason": "The Jagex blog and Wiki confirm poll-stage silver, gold and gem rocks plus a hydrothermal vent furnace that banks jewellery. Production rates are still unknown."
-    },
     {
      "date": "2026-11-12",
      "verdict": "keep",
@@ -889,6 +884,11 @@
      "date": "2026-11-22",
      "verdict": "update",
      "reason": "The poll passed, but release is Early 2027 and jewellery rates are unannounced. Stay on Watch."
+    },
+    {
+     "date": "2026-11-23",
+     "verdict": "keep",
+     "reason": "Jewellery sites are poll-stage content with no mining rates published yet. Thesis still holds conditionally."
     }
    ]
   },
@@ -1468,13 +1468,8 @@
    "id": "i25",
    "status": "open",
    "first_seen": "2026-11-10",
-   "last_reviewed": "2026-11-22",
+   "last_reviewed": "2026-11-23",
    "history": [
-    {
-     "date": "2026-11-11",
-     "verdict": "update",
-     "reason": "The Jagex blog and Wiki now confirm the 65 Mining precious gem rocks yield uncut sapphires, emeralds, rubies and diamonds, not cut gems. Still poll-stage."
-    },
     {
      "date": "2026-11-12",
      "verdict": "keep",
@@ -1529,6 +1524,11 @@
      "date": "2026-11-22",
      "verdict": "update",
      "reason": "The poll passed, so the gem rocks are confirmed. Release is Early 2027, so it is too early to sell."
+    },
+    {
+     "date": "2026-11-23",
+     "verdict": "keep",
+     "reason": "Precious gem rocks at 65 Mining are still confirmed in the blog. Yield and respawn rates are still unannounced."
     }
    ]
   },
@@ -2232,7 +2232,7 @@
    "id": "i37",
    "status": "open",
    "first_seen": "2026-11-18",
-   "last_reviewed": "2026-11-22",
+   "last_reviewed": "2026-11-23",
    "history": [
     {
      "date": "2026-11-18",
@@ -2258,6 +2258,11 @@
      "date": "2026-11-22",
      "verdict": "keep",
      "reason": "Still Spring 2027 with no date. Weak, but nothing new to change it."
+    },
+    {
+     "date": "2026-11-23",
+     "verdict": "keep",
+     "reason": "Menaphos remains a Spring 2027 target with no firm date. The soul rune thesis is still unconfirmed."
     }
    ]
   },
@@ -2386,12 +2391,17 @@
    "id": "i40",
    "status": "open",
    "first_seen": "2026-11-22",
-   "last_reviewed": "2026-11-22",
+   "last_reviewed": "2026-11-23",
    "history": [
     {
      "date": "2026-11-22",
      "verdict": "new",
      "reason": "First raised"
+    },
+    {
+     "date": "2026-11-23",
+     "verdict": "keep",
+     "reason": "No new information. Seed of growth thesis still rests on drop rates and price tracking."
     }
    ]
   },
@@ -2419,16 +2429,23 @@
    "what_would_kill_it": "Zanik's crossbow is a free tradeable reward that outclasses the Dorgeshuun crossbow.",
    "recheck_when": "Chosen Commander rewards blog and post-quest activities poll result",
    "id": "i41",
-   "status": "open",
+   "status": "dropped",
    "first_seen": "2026-11-22",
-   "last_reviewed": "2026-11-22",
+   "last_reviewed": "2026-11-23",
    "history": [
     {
      "date": "2026-11-22",
      "verdict": "new",
      "reason": "First raised"
+    },
+    {
+     "date": "2026-11-23",
+     "verdict": "drop",
+     "reason": "Zanik's crossbow has a rune-crossbow statline and fires up to runite bolts, so it competes with existing crossbows. It is an early-2027 quest reward, so the demand case for the Dorgeshuun crossbow is weak."
     }
-   ]
+   ],
+   "dropped_on": "2026-11-23",
+   "drop_reason": "Zanik's crossbow has a rune-crossbow statline and fires up to runite bolts, so it competes with existing crossbows. It is an early-2027 quest reward, so the demand case for the Dorgeshuun crossbow is weak."
   },
   {
    "title": "Abyssal rock slug may lift salt demand",
@@ -2456,12 +2473,17 @@
    "id": "i42",
    "status": "open",
    "first_seen": "2026-11-22",
-   "last_reviewed": "2026-11-22",
+   "last_reviewed": "2026-11-23",
    "history": [
     {
      "date": "2026-11-22",
      "verdict": "new",
      "reason": "First raised"
+    },
+    {
+     "date": "2026-11-23",
+     "verdict": "keep",
+     "reason": "Abyssal Rock Slug is still only a poll-stage Slayer variant. Drop tables are unannounced."
     }
    ]
   },
@@ -2498,15 +2520,55 @@
    "id": "i43",
    "status": "open",
    "first_seen": "2026-11-22",
-   "last_reviewed": "2026-11-22",
+   "last_reviewed": "2026-11-23",
    "history": [
     {
      "date": "2026-11-22",
+     "verdict": "new",
+     "reason": "First raised"
+    },
+    {
+     "date": "2026-11-23",
+     "verdict": "keep",
+     "reason": "Mining and Smithing Reforged is still a Summer 2027 target with no design details."
+    }
+   ]
+  },
+  {
+   "title": "Fairytale III new runecrafting method may draw on essence (Watch)",
+   "trigger": "Fairytale III release and its runecrafting method details",
+   "release": "Summer 2027 roadmap target",
+   "evidence": "Unconfirmed: the runecrafting method's inputs and rates. Roadmap says Fairytale III includes a new runecrafting method, a new boss and a fairy ring upgrade, and its poll passed. https://secure.runescape.com/m=news/a=97/runefest-2026-summit-overview?oldschool=1",
+   "mechanism": "If the new method consumes pure or essence, extra demand lifts essence prices. Runes it produces could also add supply.",
+   "direction": "up",
+   "items": [
+    {
+     "name": "Pure essence",
+     "id": 7936,
+     "limit": 30000,
+     "high_then": 2,
+     "low_then": 1
+    }
+   ],
+   "substitutes": "Existing Runecraft methods and other essence types, such as rune essence, which can also be used.",
+   "confidence": "low",
+   "action": "Watch",
+   "action_detail": "Wait for the Fairytale III blog naming the inputs. Only act if the method consumes pure essence at scale.",
+   "exit_plan": "Drop the idea if the method uses no essence or only a one-off input.",
+   "what_would_kill_it": "Method uses other inputs or the release slips past 2027.",
+   "recheck_when": "Fairytale III release blog or Runecraft method details",
+   "id": "i44",
+   "status": "open",
+   "first_seen": "2026-11-23",
+   "last_reviewed": "2026-11-23",
+   "history": [
+    {
+     "date": "2026-11-23",
      "verdict": "new",
      "reason": "First raised"
     }
    ]
   }
  ],
- "updated": "2026-11-22T07:55+00:00"
+ "updated": "2026-11-23T11:02+00:00"
 }
