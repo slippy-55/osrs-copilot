@@ -815,6 +815,50 @@
      "low_then": 1
     }
    ]
+  },
+  {
+   "date": "2026-11-24T18:40+00:00",
+   "title": "Graveyard amylase route may lift Super energy demand",
+   "idea": "i45",
+   "direction": "up",
+   "items": [
+    {
+     "name": "Super energy(4)",
+     "id": 3016,
+     "limit": 2000,
+     "high_then": 1895,
+     "low_then": 1769
+    }
+   ]
+  },
+  {
+   "date": "2026-11-24T18:40+00:00",
+   "title": "Exotic gem rocks add uncut opal and jade supply",
+   "idea": "i46",
+   "direction": "down",
+   "items": [
+    {
+     "name": "Uncut opal",
+     "id": 1625,
+     "limit": 10000,
+     "high_then": 65,
+     "low_then": 62
+    },
+    {
+     "name": "Uncut jade",
+     "id": 1627,
+     "limit": 10000,
+     "high_then": 80,
+     "low_then": 76
+    },
+    {
+     "name": "Uncut red topaz",
+     "id": 1629,
+     "limit": 10000,
+     "high_then": 787,
+     "low_then": 780
+    }
+   ]
   }
  ]
 }

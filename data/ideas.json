@@ -1,5 +1,5 @@
 {
- "next": 45,
+ "next": 47,
  "ideas": [
   {
    "title": "Amulet of sight supply flood",
@@ -51,7 +51,7 @@
    "title": "Graveyard marks flood amylase and stamina",
    "trigger": "The Graveyard master quest unlocks a 65+ Agility course. Jagex says it will be the best Marks of Grace source.",
    "release": "November 2026 (exact day not confirmed)",
-   "evidence": "Graveyard launches Nov 25 per the wiki Quest Month page. Rewards blog targets 30+ Marks/hr at high intensity. Graceful rework proposal: duplicates bought with GP, not Marks. https://oldschool.runescape.wiki/w/Quest_Month and https://secure.runescape.com/m=news/the-graveyard---rewards-blog?oldschool=1",
+   "evidence": "Wiki schedule and 19 Nov Weekly Q&A put The Graveyard on 25 Nov. Rewards blog targets 30+ Marks/hr. Wiki: one amylase pack costs 10 Marks for 100 crystals. https://oldschool.runescape.wiki/w/Amylase_crystal",
    "mechanism": "More marks per hour means more amylase packs, since 10 marks buy 100 crystals. That adds amylase supply and lowers Stamina potion costs. The effect is gradual.",
    "direction": "down",
    "substitutes": "Existing rooftop courses already supply marks. Jagex says Ardougne beats the Graveyard's low-intensity option.",
@@ -80,11 +80,6 @@
     }
    ],
    "history": [
-    {
-     "date": "2026-11-12",
-     "verdict": "keep",
-     "reason": "Roadmap still lists The Graveyard for November with its Marks and Agility method. No new confirmed rewards or rates found, so the thesis stands at medium confidence."
-    },
     {
      "date": "2026-11-13",
      "verdict": "keep",
@@ -139,10 +134,15 @@
      "date": "2026-11-23",
      "verdict": "update",
      "reason": "Graveyard still launches Nov 25. The Graceful rework proposal would let duplicate sets be bought with GP, not Marks, cutting Marks demand. Direction stays down."
+    },
+    {
+     "date": "2026-11-24",
+     "verdict": "update",
+     "reason": "Release is now dated for 25 Nov by the wiki schedule and Jagex's Q&A, and the amylase route from Marks is confirmed. Thesis holds, but the release is imminent."
     }
    ],
-   "recheck_when": "Nov 25 Graveyard release notes and the Graceful rework update",
-   "last_reviewed": "2026-11-23"
+   "recheck_when": "25 Nov Graveyard release notes and first Marks/hr reports",
+   "last_reviewed": "2026-11-24"
   },
   {
    "title": "Underwater gem rocks cut gem prices",
@@ -254,15 +254,8 @@
      "name": "Celastrus seed",
      "id": 22869,
      "limit": 200,
-     "high_then": 18819,
-     "low_then": 18012
-    },
-    {
-     "name": "Mahogany seed",
-     "id": 21488,
-     "limit": 200,
-     "high_then": 115,
-     "low_then": 85
+     "high_then": 23371,
+     "low_then": 23300
     },
     {
      "name": "Bittercap mushroom spore",
@@ -270,11 +263,6 @@
     }
    ],
    "history": [
-    {
-     "date": "2026-11-12",
-     "verdict": "keep",
-     "reason": "Deep Sea Diving is still poll-stage and listed for early 2027. The underwater farming area is proposed, and seed names and yields are not yet confirmed."
-    },
     {
      "date": "2026-11-13",
      "verdict": "keep",
@@ -329,10 +317,15 @@
      "date": "2026-11-23",
      "verdict": "keep",
      "reason": "Deep Sea Diving poll passed Nov 16 and the patches are still unannounced for early 2027. No new yield data."
+    },
+    {
+     "date": "2026-11-24",
+     "verdict": "update",
+     "reason": "Blog lists Spirit Tree, Celastrus, Mushroom and Hardwood patches, not Mahogany. Items corrected to match the announced patches. Yields are still unannounced."
     }
    ],
    "recheck_when": "Deep Sea Diving release-date or patch details blog",
-   "last_reviewed": "2026-11-23"
+   "last_reviewed": "2026-11-24"
   },
   {
    "title": "Zanik crossbow may replace Dorgeshuun crossbow",
@@ -686,11 +679,6 @@
    ],
    "history": [
     {
-     "date": "2026-11-12",
-     "verdict": "update",
-     "reason": "Gemstone Dragons are confirmed for Dungeons of Gielinor. The regular dragons have weaknesses, and the wiki says dragons are weak to dragonbane. The antifire claim and Diamond Dragon weakness remain unverified."
-    },
-    {
      "date": "2026-11-13",
      "verdict": "update",
      "reason": "Jagex's Dungeons of Gielinor summary explicitly tells players to bring antifires for the Diamond Dragon. Gemstone weaknesses and drop tables are still unannounced, so the idea stays Watch."
@@ -744,13 +732,18 @@
      "date": "2026-11-23",
      "verdict": "keep",
      "reason": "Diamond Dragon is still a Spring 2027 Dungeons of Gielinor boss. Weakness and drops remain unpublished."
+    },
+    {
+     "date": "2026-11-24",
+     "verdict": "keep",
+     "reason": "Diamond Dragon is still only a Dungeons of Gielinor boss with a Spring 2027 target. No weakness or drop table has been published."
     }
    ],
    "action": "Watch",
    "confidence": "low",
    "evidence": "Jagex's RuneFest summary says to stock antifires before descending, and the Diamond Dragon lair is deep in a cavern. Gemstone dragon weaknesses and drops are unannounced. https://oldschool.runescape.wiki/w/Update:RuneFest_2026_Summit_Overview",
    "recheck_when": "Dungeons of Gielinor boss blog with Diamond Dragon weakness and drop table",
-   "last_reviewed": "2026-11-23",
+   "last_reviewed": "2026-11-24",
    "what_would_kill_it": "Dungeons of Gielinor poll fails, or the Diamond Dragon needs no antifire."
   },
   {
@@ -804,18 +797,18 @@
    "direction": "down",
    "items": [
     {
+     "name": "Gold ore",
+     "id": 444,
+     "limit": 30000,
+     "high_then": 118,
+     "low_then": 115
+    },
+    {
      "name": "Gold bar",
      "id": 2357,
      "limit": 10000,
-     "high_then": 65,
-     "low_then": 64
-    },
-    {
-     "name": "Sapphire bracelet",
-     "id": 11072,
-     "limit": 10000,
-     "high_then": 542,
-     "low_then": 410
+     "high_then": 92,
+     "low_then": 88
     }
    ],
    "substitutes": "Existing jewellery methods and Shilo gem rocks, and Sailing-level gating limits who can use it.",
@@ -828,13 +821,8 @@
    "id": "i14",
    "status": "open",
    "first_seen": "2026-11-05",
-   "last_reviewed": "2026-11-23",
+   "last_reviewed": "2026-11-24",
    "history": [
-    {
-     "date": "2026-11-12",
-     "verdict": "keep",
-     "reason": "Jewellery sites are still a poll-stage proposal with silver, gold and gem rocks and a magical furnace that banks jewellery. Rates and jewellery types are still unconfirmed."
-    },
     {
      "date": "2026-11-13",
      "verdict": "update",
@@ -889,6 +877,11 @@
      "date": "2026-11-23",
      "verdict": "keep",
      "reason": "Jewellery sites are poll-stage content with no mining rates published yet. Thesis still holds conditionally."
+    },
+    {
+     "date": "2026-11-24",
+     "verdict": "update",
+     "reason": "Sapphire bracelet is not a rock output. Gold rocks give gold ore, so the items list is corrected to the actual rock output."
     }
    ]
   },
@@ -1468,13 +1461,8 @@
    "id": "i25",
    "status": "open",
    "first_seen": "2026-11-10",
-   "last_reviewed": "2026-11-23",
+   "last_reviewed": "2026-11-24",
    "history": [
-    {
-     "date": "2026-11-12",
-     "verdict": "keep",
-     "reason": "Precious gem rocks are still poll-stage Deep Sea Diving content. Drop rates and the gem yield are unconfirmed."
-    },
     {
      "date": "2026-11-13",
      "verdict": "keep",
@@ -1529,6 +1517,11 @@
      "date": "2026-11-23",
      "verdict": "keep",
      "reason": "Precious gem rocks at 65 Mining are still confirmed in the blog. Yield and respawn rates are still unannounced."
+    },
+    {
+     "date": "2026-11-24",
+     "verdict": "keep",
+     "reason": "Blog still confirms precious gem rocks at 65 Mining, and the poll is listed as passed. Respawn and yield numbers remain unannounced."
     }
    ]
   },
@@ -2230,9 +2223,9 @@
    "what_would_kill_it": "Menaphos details show the true altar is an identical method, or the 90 Runecraft requirement is unchanged in practice.",
    "recheck_when": "Menaphos release date or Fool's Gold blog",
    "id": "i37",
-   "status": "open",
+   "status": "dropped",
    "first_seen": "2026-11-18",
-   "last_reviewed": "2026-11-23",
+   "last_reviewed": "2026-11-24",
    "history": [
     {
      "date": "2026-11-18",
@@ -2263,8 +2256,15 @@
      "date": "2026-11-23",
      "verdict": "keep",
      "reason": "Menaphos remains a Spring 2027 target with no firm date. The soul rune thesis is still unconfirmed."
+    },
+    {
+     "date": "2026-11-24",
+     "verdict": "drop",
+     "reason": "Menaphos has no firm date, and the true Soul Altar only duplicates an existing 90 Runecraft soul rune route. The supply change would be marginal and far off."
     }
-   ]
+   ],
+   "dropped_on": "2026-11-24",
+   "drop_reason": "Menaphos has no firm date, and the true Soul Altar only duplicates an existing 90 Runecraft soul rune route. The supply change would be marginal and far off."
   },
   {
    "title": "Zorya's tome faster shots lift tome demand",
@@ -2389,9 +2389,9 @@
    "what_would_kill_it": "Jagex lowers the drop rate, or the seed gains a further use.",
    "recheck_when": "Seed of growth price and volume over the next week",
    "id": "i40",
-   "status": "open",
+   "status": "dropped",
    "first_seen": "2026-11-22",
-   "last_reviewed": "2026-11-23",
+   "last_reviewed": "2026-11-24",
    "history": [
     {
      "date": "2026-11-22",
@@ -2402,8 +2402,15 @@
      "date": "2026-11-23",
      "verdict": "keep",
      "reason": "No new information. Seed of growth thesis still rests on drop rates and price tracking."
+    },
+    {
+     "date": "2026-11-24",
+     "verdict": "drop",
+     "reason": "No announced content in this scan links to seed of growth. With no fresh catalyst, the thesis is stale and the spike is likely already priced in."
     }
-   ]
+   ],
+   "dropped_on": "2026-11-24",
+   "drop_reason": "No announced content in this scan links to seed of growth. With no fresh catalyst, the thesis is stale and the spike is likely already priced in."
   },
   {
    "title": "Zanik's crossbow may move Dorgeshuun crossbow",
@@ -2471,9 +2478,9 @@
    "what_would_kill_it": "The monster dies normally with no finisher, or the task is separate.",
    "recheck_when": "Deep Sea Diving Slayer monster detail blog",
    "id": "i42",
-   "status": "open",
+   "status": "dropped",
    "first_seen": "2026-11-22",
-   "last_reviewed": "2026-11-23",
+   "last_reviewed": "2026-11-24",
    "history": [
     {
      "date": "2026-11-22",
@@ -2484,8 +2491,15 @@
      "date": "2026-11-23",
      "verdict": "keep",
      "reason": "Abyssal Rock Slug is still only a poll-stage Slayer variant. Drop tables are unannounced."
+    },
+    {
+     "date": "2026-11-24",
+     "verdict": "drop",
+     "reason": "Blog gives no drop table for the Abyssal Rock Slug and no link to salt demand. The mechanism is too weak to support a position."
     }
-   ]
+   ],
+   "dropped_on": "2026-11-24",
+   "drop_reason": "Blog gives no drop table for the Abyssal Rock Slug and no link to salt demand. The mechanism is too weak to support a position."
   },
   {
    "title": "Mining and Smithing Reforged could reprice ores and bars",
@@ -2520,7 +2534,7 @@
    "id": "i43",
    "status": "open",
    "first_seen": "2026-11-22",
-   "last_reviewed": "2026-11-23",
+   "last_reviewed": "2026-11-24",
    "history": [
     {
      "date": "2026-11-22",
@@ -2531,6 +2545,11 @@
      "date": "2026-11-23",
      "verdict": "keep",
      "reason": "Mining and Smithing Reforged is still a Summer 2027 target with no design details."
+    },
+    {
+     "date": "2026-11-24",
+     "verdict": "keep",
+     "reason": "Mining and Smithing Reforged is still only a Summer 2027 target with no design details. Kept as a low-confidence watch."
     }
    ]
   },
@@ -2560,15 +2579,104 @@
    "id": "i44",
    "status": "open",
    "first_seen": "2026-11-23",
-   "last_reviewed": "2026-11-23",
+   "last_reviewed": "2026-11-24",
    "history": [
     {
      "date": "2026-11-23",
+     "verdict": "new",
+     "reason": "First raised"
+    },
+    {
+     "date": "2026-11-24",
+     "verdict": "keep",
+     "reason": "Fairytale III still lacks published runecrafting inputs or rates. Kept as a low-confidence watch until the release blog."
+    }
+   ]
+  },
+  {
+   "title": "Graveyard amylase route may lift Super energy demand",
+   "trigger": "The Graveyard makes Marks of Grace the best source of amylase, cutting the crafting cost of stamina potions.",
+   "release": "25 Nov 2026 (wiki schedule)",
+   "evidence": "Wiki: one amylase pack costs 10 Marks for 100 crystals, and stamina potions combine one Super energy with amylase per dose. https://oldschool.runescape.wiki/w/Amylase_crystal",
+   "mechanism": "Cheaper amylase makes stamina potions cheaper to craft, so more Super energy(4) is consumed in Herblore, lifting its demand second-hand.",
+   "direction": "up",
+   "items": [
+    {
+     "name": "Super energy(4)",
+     "id": 3016,
+     "limit": 2000,
+     "high_then": 1895,
+     "low_then": 1769
+    }
+   ],
+   "substitutes": "Stamina potions bought directly, and other Herblore potions that use Super energy.",
+   "confidence": "low",
+   "action": "Watch",
+   "action_detail": "After 25 Nov, watch Super energy(4) price and volume. Buy only if volume rises for several days running.",
+   "exit_plan": "Exit if the volume spike fades within a week.",
+   "what_would_kill_it": "Marks/hr stays low, so amylase supply does not grow and stamina crafting does not rise.",
+   "recheck_when": "Graveyard release notes and first week of Super energy volume data",
+   "id": "i45",
+   "status": "open",
+   "first_seen": "2026-11-24",
+   "last_reviewed": "2026-11-24",
+   "history": [
+    {
+     "date": "2026-11-24",
+     "verdict": "new",
+     "reason": "First raised"
+    }
+   ]
+  },
+  {
+   "title": "Exotic gem rocks add uncut opal and jade supply",
+   "trigger": "Deep Sea Diving adds exotic gem rocks at 75 Mining that yield uncut opals, jades and red topazes.",
+   "release": "Early 2027 (wiki schedule)",
+   "evidence": "Blog lists exotic gem rocks at 75 Mining giving uncut opals, jades and red topazes. https://secure.runescape.com/m=news/deep-sea-diving-expansion?oldschool=1",
+   "mechanism": "A new mined supply source for these gems lowers their prices as underwater mining adds volume to the market.",
+   "direction": "down",
+   "items": [
+    {
+     "name": "Uncut opal",
+     "id": 1625,
+     "limit": 10000,
+     "high_then": 65,
+     "low_then": 62
+    },
+    {
+     "name": "Uncut jade",
+     "id": 1627,
+     "limit": 10000,
+     "high_then": 80,
+     "low_then": 76
+    },
+    {
+     "name": "Uncut red topaz",
+     "id": 1629,
+     "limit": 10000,
+     "high_then": 787,
+     "low_then": 780
+    }
+   ],
+   "substitutes": "Mainland gem rocks and gem drops still supply these gems.",
+   "confidence": "low",
+   "action": "Watch",
+   "action_detail": "Wait for the release blog with respawn rates. Sell any stock into a post-release spike if yields look strong.",
+   "exit_plan": "Revisit if release yields fall below mainland rates or the rocks are too slow to matter.",
+   "what_would_kill_it": "Respawn rates are set low or the rocks need too much travel to change supply.",
+   "recheck_when": "Deep Sea Diving release-date blog with gem rock respawn and yield data",
+   "id": "i46",
+   "status": "open",
+   "first_seen": "2026-11-24",
+   "last_reviewed": "2026-11-24",
+   "history": [
+    {
+     "date": "2026-11-24",
      "verdict": "new",
      "reason": "First raised"
     }
    ]
   }
  ],
- "updated": "2026-11-23T11:02+00:00"
+ "updated": "2026-11-24T18:40+00:00"
 }
