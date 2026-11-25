@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-24T18:40+00:00",
+ "generated": "2026-11-25T12:19+00:00",
  "mode": "quick",
  "model": "claude-haiku-5-5",
  "theses": [
@@ -7,7 +7,7 @@
    "title": "Graveyard marks flood amylase and stamina",
    "trigger": "The Graveyard master quest unlocks a 65+ Agility course. Jagex says it will be the best Marks of Grace source.",
    "release": "November 2026 (exact day not confirmed)",
-   "evidence": "Wiki schedule and 19 Nov Weekly Q&A put The Graveyard on 25 Nov. Rewards blog targets 30+ Marks/hr. Wiki: one amylase pack costs 10 Marks for 100 crystals. https://oldschool.runescape.wiki/w/Amylase_crystal",
+   "evidence": "Graveyard went live today per Jagex's Quest Month Week IV post (https://secure.runescape.com/m=news/the-graveyard--quest-month-week-iv?oldschool=1). Jagex targets 30+ Marks/hr at top end (https://secure.runescape.com/m=news/the-graveyard---rewards-blog?oldschool=1). Amylase pack cost: https://oldschool.runescape.wiki/w/Amylase_crystal",
    "mechanism": "More marks per hour means more amylase packs, since 10 marks buy 100 crystals. That adds amylase supply and lowers Stamina potion costs. The effect is gradual.",
    "direction": "down",
    "substitutes": "Existing rooftop courses already supply marks. Jagex says Ardougne beats the Graveyard's low-intensity option.",
@@ -36,11 +36,6 @@
     }
    ],
    "history": [
-    {
-     "date": "2026-11-13",
-     "verdict": "keep",
-     "reason": "Graveyard rewards blog still stands. The roadmap says November, but a Nov 11 report says The Graveyard has no date yet, so timing is unconfirmed. Keep Sell if holding, and wait for a date before acting."
-    },
     {
      "date": "2026-11-14",
      "verdict": "keep",
@@ -95,10 +90,15 @@
      "date": "2026-11-24",
      "verdict": "update",
      "reason": "Release is now dated for 25 Nov by the wiki schedule and Jagex's Q&A, and the amylase route from Marks is confirmed. Thesis holds, but the release is imminent."
+    },
+    {
+     "date": "2026-11-25",
+     "verdict": "update",
+     "reason": "The Graveyard is now live, so the release-day trigger has fired. The 30+ Marks/hr claim is still a Jagex target, so watch first-week Marks reports before acting."
     }
    ],
-   "recheck_when": "25 Nov Graveyard release notes and first Marks/hr reports",
-   "last_reviewed": "2026-11-24"
+   "recheck_when": "First-week Marks/hr reports and Amylase crystal or Stamina potion volume data",
+   "last_reviewed": "2026-11-25"
   },
   {
    "title": "Underwater farming patches lift rare seeds",
@@ -130,11 +130,6 @@
     }
    ],
    "history": [
-    {
-     "date": "2026-11-13",
-     "verdict": "keep",
-     "reason": "Wiki and Jagex still list the underwater Spirit Tree, Celastrus, Mushroom and Hardwood patches as proposals. Seed names and yields remain unconfirmed. Massively OP says the expansion arrived, which conflicts with Jagex and the wiki listing early 2027."
-    },
     {
      "date": "2026-11-14",
      "verdict": "keep",
@@ -189,10 +184,15 @@
      "date": "2026-11-24",
      "verdict": "update",
      "reason": "Blog lists Spirit Tree, Celastrus, Mushroom and Hardwood patches, not Mahogany. Items corrected to match the announced patches. Yields are still unannounced."
+    },
+    {
+     "date": "2026-11-25",
+     "verdict": "keep",
+     "reason": "Deep Sea Diving is still slated for Early 2027 with underwater Farming patches. Seed yields remain unannounced, so the idea stays a low-confidence Watch."
     }
    ],
    "recheck_when": "Deep Sea Diving release-date or patch details blog",
-   "last_reviewed": "2026-11-24"
+   "last_reviewed": "2026-11-25"
   },
   {
    "date": "2026-11-05T15:58+00:00",
@@ -211,11 +211,6 @@
     }
    ],
    "history": [
-    {
-     "date": "2026-11-13",
-     "verdict": "update",
-     "reason": "Jagex's Dungeons of Gielinor summary explicitly tells players to bring antifires for the Diamond Dragon. Gemstone weaknesses and drop tables are still unannounced, so the idea stays Watch."
-    },
     {
      "date": "2026-11-14",
      "verdict": "keep",
@@ -270,13 +265,18 @@
      "date": "2026-11-24",
      "verdict": "keep",
      "reason": "Diamond Dragon is still only a Dungeons of Gielinor boss with a Spring 2027 target. No weakness or drop table has been published."
+    },
+    {
+     "date": "2026-11-25",
+     "verdict": "update",
+     "reason": "Antifire demand is now confirmed by Jagex's RuneFest summary. Gemstone dragon weaknesses and drops are still unannounced, and the Dungeons release is Spring 2027."
     }
    ],
    "action": "Watch",
    "confidence": "low",
-   "evidence": "Jagex's RuneFest summary says to stock antifires before descending, and the Diamond Dragon lair is deep in a cavern. Gemstone dragon weaknesses and drops are unannounced. https://oldschool.runescape.wiki/w/Update:RuneFest_2026_Summit_Overview",
-   "recheck_when": "Dungeons of Gielinor boss blog with Diamond Dragon weakness and drop table",
-   "last_reviewed": "2026-11-24",
+   "evidence": "Jagex's RuneFest summary says to stock antifires before descending into the Diamond Dragon's cavern (https://secure.runescape.com/m=news/a=97/runefest-2026-summit-overview?oldschool=1). Dungeons of Gielinor is slated Spring 2027 (https://oldschool.runescape.wiki/w/Upcoming_updates). Weaknesses and drops unannounced.",
+   "recheck_when": "Dungeons of Gielinor boss blog with Gemstone dragon weaknesses and drop tables",
+   "last_reviewed": "2026-11-25",
    "what_would_kill_it": "Dungeons of Gielinor poll fails, or the Diamond Dragon needs no antifire."
   },
   {
@@ -312,13 +312,8 @@
    "id": "i14",
    "status": "open",
    "first_seen": "2026-11-05",
-   "last_reviewed": "2026-11-24",
+   "last_reviewed": "2026-11-25",
    "history": [
-    {
-     "date": "2026-11-13",
-     "verdict": "update",
-     "reason": "Jagex's Nov 9 blog confirms the low-level jewellery site concept as a poll proposal. Rates and jewellery types are still unannounced. Release is early 2027 per the wiki."
-    },
     {
      "date": "2026-11-14",
      "verdict": "keep",
@@ -373,6 +368,11 @@
      "date": "2026-11-24",
      "verdict": "update",
      "reason": "Sapphire bracelet is not a rock output. Gold rocks give gold ore, so the items list is corrected to the actual rock output."
+    },
+    {
+     "date": "2026-11-25",
+     "verdict": "keep",
+     "reason": "Underwater silver and gold rocks and a jewellery courier are confirmed. The Early 2027 date and mining rates are unchanged and still unannounced."
     }
    ]
   },
@@ -409,13 +409,8 @@
    "id": "i25",
    "status": "open",
    "first_seen": "2026-11-10",
-   "last_reviewed": "2026-11-24",
+   "last_reviewed": "2026-11-25",
    "history": [
-    {
-     "date": "2026-11-13",
-     "verdict": "keep",
-     "reason": "Gem rock supply is still poll-stage. Jewellery site reporting confirms gem rocks exist in the proposal, but uncut gem rates are unconfirmed."
-    },
     {
      "date": "2026-11-14",
      "verdict": "keep",
@@ -470,6 +465,11 @@
      "date": "2026-11-24",
      "verdict": "keep",
      "reason": "Blog still confirms precious gem rocks at 65 Mining, and the poll is listed as passed. Respawn and yield numbers remain unannounced."
+    },
+    {
+     "date": "2026-11-25",
+     "verdict": "keep",
+     "reason": "Precious gem rocks at 65 Mining are confirmed in Jagex's Deep Sea Diving blog. Respawn and yield are still unannounced, and the release remains Early 2027."
     }
    ]
   },
@@ -506,7 +506,7 @@
    "id": "i43",
    "status": "open",
    "first_seen": "2026-11-22",
-   "last_reviewed": "2026-11-24",
+   "last_reviewed": "2026-11-25",
    "history": [
     {
      "date": "2026-11-22",
@@ -522,6 +522,11 @@
      "date": "2026-11-24",
      "verdict": "keep",
      "reason": "Mining and Smithing Reforged is still only a Summer 2027 target with no design details. Kept as a low-confidence watch."
+    },
+    {
+     "date": "2026-11-25",
+     "verdict": "keep",
+     "reason": "Mining and Smithing Reforged is still slated for Summer 2027 with no design details. The ore and bar repricing thesis remains an unconfirmed Watch."
     }
    ]
   },
@@ -529,7 +534,7 @@
    "title": "Fairytale III new runecrafting method may draw on essence (Watch)",
    "trigger": "Fairytale III release and its runecrafting method details",
    "release": "Summer 2027 roadmap target",
-   "evidence": "Unconfirmed: the runecrafting method's inputs and rates. Roadmap says Fairytale III includes a new runecrafting method, a new boss and a fairy ring upgrade, and its poll passed. https://secure.runescape.com/m=news/a=97/runefest-2026-summit-overview?oldschool=1",
+   "evidence": "Unconfirmed: the runecrafting method's inputs and rates. Wiki lists Fairytale III for Summer 2027 with a new runecrafting method, a new boss and fairy ring upgrades (https://oldschool.runescape.wiki/w/Upcoming_updates).",
    "mechanism": "If the new method consumes pure or essence, extra demand lifts essence prices. Runes it produces could also add supply.",
    "direction": "up",
    "items": [
@@ -547,11 +552,11 @@
    "action_detail": "Wait for the Fairytale III blog naming the inputs. Only act if the method consumes pure essence at scale.",
    "exit_plan": "Drop the idea if the method uses no essence or only a one-off input.",
    "what_would_kill_it": "Method uses other inputs or the release slips past 2027.",
-   "recheck_when": "Fairytale III release blog or Runecraft method details",
+   "recheck_when": "Fairytale III release blog with Runecraft method inputs and XP rates",
    "id": "i44",
    "status": "open",
    "first_seen": "2026-11-23",
-   "last_reviewed": "2026-11-24",
+   "last_reviewed": "2026-11-25",
    "history": [
     {
      "date": "2026-11-23",
@@ -562,41 +567,11 @@
      "date": "2026-11-24",
      "verdict": "keep",
      "reason": "Fairytale III still lacks published runecrafting inputs or rates. Kept as a low-confidence watch until the release blog."
-    }
-   ]
-  },
-  {
-   "title": "Graveyard amylase route may lift Super energy demand",
-   "trigger": "The Graveyard makes Marks of Grace the best source of amylase, cutting the crafting cost of stamina potions.",
-   "release": "25 Nov 2026 (wiki schedule)",
-   "evidence": "Wiki: one amylase pack costs 10 Marks for 100 crystals, and stamina potions combine one Super energy with amylase per dose. https://oldschool.runescape.wiki/w/Amylase_crystal",
-   "mechanism": "Cheaper amylase makes stamina potions cheaper to craft, so more Super energy(4) is consumed in Herblore, lifting its demand second-hand.",
-   "direction": "up",
-   "items": [
+    },
     {
-     "name": "Super energy(4)",
-     "id": 3016,
-     "limit": 2000,
-     "high_then": 1895,
-     "low_then": 1769
-    }
-   ],
-   "substitutes": "Stamina potions bought directly, and other Herblore potions that use Super energy.",
-   "confidence": "low",
-   "action": "Watch",
-   "action_detail": "After 25 Nov, watch Super energy(4) price and volume. Buy only if volume rises for several days running.",
-   "exit_plan": "Exit if the volume spike fades within a week.",
-   "what_would_kill_it": "Marks/hr stays low, so amylase supply does not grow and stamina crafting does not rise.",
-   "recheck_when": "Graveyard release notes and first week of Super energy volume data",
-   "id": "i45",
-   "status": "open",
-   "first_seen": "2026-11-24",
-   "last_reviewed": "2026-11-24",
-   "history": [
-    {
-     "date": "2026-11-24",
-     "verdict": "new",
-     "reason": "First raised"
+     "date": "2026-11-25",
+     "verdict": "update",
+     "reason": "The Wiki now dates Fairytale III to Summer 2027. The new runecrafting method is described only as relaxed and built around the Nexus, so its essence inputs are still unconfirmed."
     }
    ]
   },
@@ -640,17 +615,64 @@
    "id": "i46",
    "status": "open",
    "first_seen": "2026-11-24",
-   "last_reviewed": "2026-11-24",
+   "last_reviewed": "2026-11-25",
    "history": [
     {
      "date": "2026-11-24",
      "verdict": "new",
      "reason": "First raised"
+    },
+    {
+     "date": "2026-11-25",
+     "verdict": "keep",
+     "reason": "Exotic gem rocks at 75 Mining are confirmed in Jagex's blog. Respawn and yield data are still missing, and the release remains Early 2027."
     }
    ]
   }
  ],
  "dropped": [
+  {
+   "title": "Graveyard amylase route may lift Super energy demand",
+   "trigger": "The Graveyard makes Marks of Grace the best source of amylase, cutting the crafting cost of stamina potions.",
+   "release": "25 Nov 2026 (wiki schedule)",
+   "evidence": "Wiki: one amylase pack costs 10 Marks for 100 crystals, and stamina potions combine one Super energy with amylase per dose. https://oldschool.runescape.wiki/w/Amylase_crystal",
+   "mechanism": "Cheaper amylase makes stamina potions cheaper to craft, so more Super energy(4) is consumed in Herblore, lifting its demand second-hand.",
+   "direction": "up",
+   "items": [
+    {
+     "name": "Super energy(4)",
+     "id": 3016,
+     "limit": 2000,
+     "high_then": 1895,
+     "low_then": 1769
+    }
+   ],
+   "substitutes": "Stamina potions bought directly, and other Herblore potions that use Super energy.",
+   "confidence": "low",
+   "action": "Watch",
+   "action_detail": "After 25 Nov, watch Super energy(4) price and volume. Buy only if volume rises for several days running.",
+   "exit_plan": "Exit if the volume spike fades within a week.",
+   "what_would_kill_it": "Marks/hr stays low, so amylase supply does not grow and stamina crafting does not rise.",
+   "recheck_when": "Graveyard release notes and first week of Super energy volume data",
+   "id": "i45",
+   "status": "dropped",
+   "first_seen": "2026-11-24",
+   "last_reviewed": "2026-11-25",
+   "history": [
+    {
+     "date": "2026-11-24",
+     "verdict": "new",
+     "reason": "First raised"
+    },
+    {
+     "date": "2026-11-25",
+     "verdict": "drop",
+     "reason": "Duplicate of i2 with a weaker chain. It relies on a Super energy demand link that Jagex has not confirmed, so it is folded into i2's Stamina potion exposure."
+    }
+   ],
+   "dropped_on": "2026-11-25",
+   "drop_reason": "Duplicate of i2 with a weaker chain. It relies on a Super energy demand link that Jagex has not confirmed, so it is folded into i2's Stamina potion exposure."
+  },
   {
    "title": "Menaphos true Soul Altar may add soul rune supply",
    "trigger": "Menaphos release and the true Soul Altar's crafting method",
