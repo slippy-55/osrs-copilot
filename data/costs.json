@@ -262,6 +262,15 @@
    "searches": 5,
    "usd": 0.1586,
    "model": "claude-haiku-5-5"
+  },
+  {
+   "date": "2026-11-26T13:42+00:00",
+   "mode": "quick",
+   "in": 181561,
+   "out": 11236,
+   "searches": 5,
+   "usd": 0.1689,
+   "model": "claude-haiku-5-5"
   }
  ]
 }

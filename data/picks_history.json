@@ -859,6 +859,36 @@
      "low_then": 780
     }
    ]
+  },
+  {
+   "date": "2026-11-26T13:42+00:00",
+   "title": "Tradeable Mokhaiotl cloth lowers Confliction gauntlet cost",
+   "idea": "i47",
+   "direction": "down",
+   "items": [
+    {
+     "name": "Confliction gauntlets",
+     "id": 31106,
+     "limit": null,
+     "high_then": 59381000,
+     "low_then": 57500011
+    }
+   ]
+  },
+  {
+   "date": "2026-11-26T13:42+00:00",
+   "title": "Menaphos Soul Altar adds a 90 Runecraft soul rune route",
+   "idea": "i48",
+   "direction": "down",
+   "items": [
+    {
+     "name": "Soul rune",
+     "id": 566,
+     "limit": 25000,
+     "high_then": 292,
+     "low_then": 284
+    }
+   ]
   }
  ]
 }
