@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-26T13:42+00:00",
+ "generated": "2026-11-27T14:43+00:00",
  "mode": "quick",
  "model": "claude-haiku-5-5",
  "theses": [
@@ -7,7 +7,7 @@
    "title": "Graveyard marks flood amylase and stamina",
    "trigger": "The Graveyard master quest unlocks a 65+ Agility course. Jagex says it will be the best Marks of Grace source.",
    "release": "November 2026 (exact day not confirmed)",
-   "evidence": "Graveyard released Nov 25 per Jagex Quest Month Week IV post (https://secure.runescape.com/m=news/the-graveyard--quest-month-week-iv?oldschool=1). 30+ Marks/hr is a pre-release estimate (https://osrstoolkit.com/osrs-new-quests-2026/).",
+   "evidence": "Graveyard live 25 Nov (https://oldschool.runescape.wiki/w/Update:The_Graveyard_-_Quest_Month_Week_IV). Graceful is now a one-time unlock, so duplicates cost GP, not Marks. Sunken treasure trades to Volf for Marks (https://oldschool.runescape.wiki/w/Prison_of_R%C3%A6un).",
    "mechanism": "More marks per hour means more amylase packs, since 10 marks buy 100 crystals. That adds amylase supply and lowers Stamina potion costs. The effect is gradual.",
    "direction": "down",
    "substitutes": "Existing rooftop courses already supply marks. Jagex says Ardougne beats the Graveyard's low-intensity option.",
@@ -36,11 +36,6 @@
     }
    ],
    "history": [
-    {
-     "date": "2026-11-15",
-     "verdict": "keep",
-     "reason": "The Graveyard has not shipped yet. The Wiki still says only 'November 2026', so the thesis is intact and the drop is still ahead."
-    },
     {
      "date": "2026-11-16",
      "verdict": "keep",
@@ -95,10 +90,15 @@
      "date": "2026-11-26",
      "verdict": "update",
      "reason": "The Graveyard went live Nov 25 and the Prison of Ræun course is confirmed. The 30+ Marks/hr figure is a pre-release projection, so the supply thesis stands but is unmeasured."
+    },
+    {
+     "date": "2026-11-27",
+     "verdict": "update",
+     "reason": "Graveyard is confirmed live on 25 Nov. The wiki confirms Graceful pieces are now a one-time unlock, so duplicates cost GP instead of Marks. Sunken treasure also trades for Marks, which adds supply."
     }
    ],
-   "recheck_when": "First-week Marks/hr reports and Amylase crystal or Stamina potion volume data",
-   "last_reviewed": "2026-11-26"
+   "recheck_when": "First-week Marks/hr reports, Amylase crystal and Stamina potion volume, and any Sunken treasure rate data",
+   "last_reviewed": "2026-11-27"
   },
   {
    "title": "Underwater farming patches lift rare seeds",
@@ -130,11 +130,6 @@
     }
    ],
    "history": [
-    {
-     "date": "2026-11-15",
-     "verdict": "keep",
-     "reason": "Still poll-stage and still planned for early 2027. Seed names and yields remain unconfirmed."
-    },
     {
      "date": "2026-11-16",
      "verdict": "keep",
@@ -189,10 +184,15 @@
      "date": "2026-11-26",
      "verdict": "update",
      "reason": "Underwater farming patches are confirmed, but release timing conflicts: the wiki says early 2027 while a secondary source says Jagex gave no date. Yields remain unannounced, so keep as Watch."
+    },
+    {
+     "date": "2026-11-27",
+     "verdict": "keep",
+     "reason": "Underwater farming patches are still unreleased. The wiki schedule lists early 2027 with no firm date, so the idea stays a low-confidence watch."
     }
    ],
    "recheck_when": "Deep Sea Diving release-date or patch details blog",
-   "last_reviewed": "2026-11-26"
+   "last_reviewed": "2026-11-27"
   },
   {
    "date": "2026-11-05T15:58+00:00",
@@ -211,11 +211,6 @@
     }
    ],
    "history": [
-    {
-     "date": "2026-11-15",
-     "verdict": "keep",
-     "reason": "Still Spring 2027. No Diamond Dragon weakness or drop table has been published."
-    },
     {
      "date": "2026-11-16",
      "verdict": "keep",
@@ -270,13 +265,18 @@
      "date": "2026-11-26",
      "verdict": "update",
      "reason": "Gemstone dragons already drain antifire timers, so antifire demand exists today. The Diamond Dragon's weakness and drops are still unannounced, so the thesis is only partly new."
+    },
+    {
+     "date": "2026-11-27",
+     "verdict": "keep",
+     "reason": "Dungeons of Gielinor is still unscheduled beyond Spring 2027. Diamond Dragon weaknesses and drops remain unannounced, so the thesis is still unconfirmed."
     }
    ],
    "action": "Watch",
    "confidence": "low",
    "evidence": "Dragonstone dragon special drains antifire timers by half (https://runescape.wiki/w/Gemstone_dragons). Diamond Dragon weakness and drops remain unannounced in Dungeons of Gielinor (https://oldschool.runescape.wiki/w/Upcoming_updates).",
    "recheck_when": "Dungeons of Gielinor boss blog with Gemstone dragon weaknesses and drop tables",
-   "last_reviewed": "2026-11-26",
+   "last_reviewed": "2026-11-27",
    "what_would_kill_it": "Dungeons of Gielinor poll fails, or the Diamond Dragon needs no antifire."
   },
   {
@@ -312,13 +312,8 @@
    "id": "i14",
    "status": "open",
    "first_seen": "2026-11-05",
-   "last_reviewed": "2026-11-26",
+   "last_reviewed": "2026-11-27",
    "history": [
-    {
-     "date": "2026-11-15",
-     "verdict": "keep",
-     "reason": "Underwater jewellery is still poll-stage and listed for early 2027. Rates are unconfirmed."
-    },
     {
      "date": "2026-11-16",
      "verdict": "keep",
@@ -373,6 +368,11 @@
      "date": "2026-11-26",
      "verdict": "keep",
      "reason": "Silver and gold rocks plus a courier banking smelted jewellery are confirmed in the blog. Rates are unannounced, so it remains a low-confidence Watch."
+    },
+    {
+     "date": "2026-11-27",
+     "verdict": "keep",
+     "reason": "The Deep Sea Diving poll is recorded as passed on the wiki schedule, with release in early 2027. Jewellery rates are still unannounced, so the thesis stays a watch."
     }
    ]
   },
@@ -409,13 +409,8 @@
    "id": "i25",
    "status": "open",
    "first_seen": "2026-11-10",
-   "last_reviewed": "2026-11-26",
+   "last_reviewed": "2026-11-27",
    "history": [
-    {
-     "date": "2026-11-15",
-     "verdict": "keep",
-     "reason": "Underwater gem rocks are still poll-stage, so the gem-supply idea stands."
-    },
     {
      "date": "2026-11-16",
      "verdict": "update",
@@ -470,6 +465,11 @@
      "date": "2026-11-26",
      "verdict": "keep",
      "reason": "Precious gem rocks at 65 Mining giving uncut sapphires, emeralds, rubies and diamonds are confirmed in the blog. Release timing and yields are still open."
+    },
+    {
+     "date": "2026-11-27",
+     "verdict": "keep",
+     "reason": "The precious gem rock details (65 Mining, uncut sapphire, emerald, ruby, diamond) are confirmed in the blog. Release is still early 2027 with no date and no yield data."
     }
    ]
   },
@@ -506,7 +506,7 @@
    "id": "i43",
    "status": "open",
    "first_seen": "2026-11-22",
-   "last_reviewed": "2026-11-26",
+   "last_reviewed": "2026-11-27",
    "history": [
     {
      "date": "2026-11-22",
@@ -532,6 +532,11 @@
      "date": "2026-11-26",
      "verdict": "keep",
      "reason": "Mining and Smithing Reforged is confirmed for Summer 2027 with no details. Thin, but still a valid Watch on announcement."
+    },
+    {
+     "date": "2026-11-27",
+     "verdict": "keep",
+     "reason": "Mining and Smithing Reforged is still Summer 2027 with no design details. It stays a low-confidence watch until a design blog appears."
     }
    ]
   },
@@ -561,7 +566,7 @@
    "id": "i44",
    "status": "open",
    "first_seen": "2026-11-23",
-   "last_reviewed": "2026-11-26",
+   "last_reviewed": "2026-11-27",
    "history": [
     {
      "date": "2026-11-23",
@@ -582,6 +587,11 @@
      "date": "2026-11-26",
      "verdict": "keep",
      "reason": "Fairytale III is confirmed for Summer 2027 with a new runecrafting method, but its inputs are unrevealed. Keep as Watch."
+    },
+    {
+     "date": "2026-11-27",
+     "verdict": "keep",
+     "reason": "Fairytale III is still listed for Summer 2027 with a new runecrafting method. The method's inputs and rates remain unannounced, so the essence link is unconfirmed."
     }
    ]
   },
@@ -625,7 +635,7 @@
    "id": "i46",
    "status": "open",
    "first_seen": "2026-11-24",
-   "last_reviewed": "2026-11-26",
+   "last_reviewed": "2026-11-27",
    "history": [
     {
      "date": "2026-11-24",
@@ -641,6 +651,11 @@
      "date": "2026-11-26",
      "verdict": "keep",
      "reason": "Exotic gem rocks at 75 Mining giving uncut opals, jades and red topazes are confirmed. Yields and respawns are still open."
+    },
+    {
+     "date": "2026-11-27",
+     "verdict": "keep",
+     "reason": "Exotic gem rocks at 75 Mining are confirmed in the blog. Release timing and yields are still unknown, so the idea stays a watch."
     }
    ]
   },
@@ -670,12 +685,17 @@
    "id": "i47",
    "status": "open",
    "first_seen": "2026-11-26",
-   "last_reviewed": "2026-11-26",
+   "last_reviewed": "2026-11-27",
    "history": [
     {
      "date": "2026-11-26",
      "verdict": "new",
      "reason": "First raised"
+    },
+    {
+     "date": "2026-11-27",
+     "verdict": "keep",
+     "reason": "The Gazette says Mokhaiotl Cloth will become tradeable with no date. Confliction gauntlet pricing still depends on that date, so it stays a watch."
     }
    ]
   },
@@ -705,12 +725,17 @@
    "id": "i48",
    "status": "open",
    "first_seen": "2026-11-26",
-   "last_reviewed": "2026-11-26",
+   "last_reviewed": "2026-11-27",
    "history": [
     {
      "date": "2026-11-26",
      "verdict": "new",
      "reason": "First raised"
+    },
+    {
+     "date": "2026-11-27",
+     "verdict": "keep",
+     "reason": "Menaphos is still listed for Spring 2027, with the true Soul Altar and 90 Runecraft soul rune crafting. Craft inputs and rates are still unannounced."
     }
    ]
   }
