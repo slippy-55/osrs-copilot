@@ -1,5 +1,5 @@
 {
- "next": 49,
+ "next": 50,
  "ideas": [
   {
    "title": "Amulet of sight supply flood",
@@ -81,11 +81,6 @@
    ],
    "history": [
     {
-     "date": "2026-11-16",
-     "verdict": "keep",
-     "reason": "Graveyard still has no confirmed release date, so the marks-to-amylase and stamina chain is unchanged. Recheck when Jagex sets a date."
-    },
-    {
      "date": "2026-11-17",
      "verdict": "keep",
      "reason": "Graveyard still sits in the November roadmap slot, so the marks-to-amylase chain is still live. No new price or rules data this scan."
@@ -139,10 +134,15 @@
      "date": "2026-11-27",
      "verdict": "update",
      "reason": "Graveyard is confirmed live on 25 Nov. The wiki confirms Graceful pieces are now a one-time unlock, so duplicates cost GP instead of Marks. Sunken treasure also trades for Marks, which adds supply."
+    },
+    {
+     "date": "2026-11-28",
+     "verdict": "keep",
+     "reason": "The Graveyard went live 25 Nov and the wiki page confirms it. No Marks-per-hour or Amylase/Stamina volume data yet, so the thesis is still unverified."
     }
    ],
    "recheck_when": "First-week Marks/hr reports, Amylase crystal and Stamina potion volume, and any Sunken treasure rate data",
-   "last_reviewed": "2026-11-27"
+   "last_reviewed": "2026-11-28"
   },
   {
    "title": "Underwater gem rocks cut gem prices",
@@ -264,11 +264,6 @@
    ],
    "history": [
     {
-     "date": "2026-11-16",
-     "verdict": "keep",
-     "reason": "Underwater farming is still poll-stage and listed for early 2027 on the Wiki. Seed names and yields remain unconfirmed."
-    },
-    {
      "date": "2026-11-17",
      "verdict": "update",
      "reason": "The roadmap now marks the Deep Sea Diving poll as passed, while an older Wiki summary still calls it poll-stage. Seed names and yields remain unannounced."
@@ -322,10 +317,15 @@
      "date": "2026-11-27",
      "verdict": "keep",
      "reason": "Underwater farming patches are still unreleased. The wiki schedule lists early 2027 with no firm date, so the idea stays a low-confidence watch."
+    },
+    {
+     "date": "2026-11-28",
+     "verdict": "keep",
+     "reason": "Wiki still lists the underwater farming patches for early 2027 with no firm date. Low confidence until a release-date blog appears."
     }
    ],
    "recheck_when": "Deep Sea Diving release-date or patch details blog",
-   "last_reviewed": "2026-11-27"
+   "last_reviewed": "2026-11-28"
   },
   {
    "title": "Zanik crossbow may replace Dorgeshuun crossbow",
@@ -679,11 +679,6 @@
    ],
    "history": [
     {
-     "date": "2026-11-16",
-     "verdict": "keep",
-     "reason": "Diamond Dragon and gemstone dragon weaknesses and drops are still unannounced. Nothing new supports or breaks the antifire thesis."
-    },
-    {
      "date": "2026-11-17",
      "verdict": "keep",
      "reason": "Gemstone dragons remain a Spring 2027 plan. Diamond Dragon weakness and drops are still unannounced, so the antifire thesis stays a Watch."
@@ -737,13 +732,18 @@
      "date": "2026-11-27",
      "verdict": "keep",
      "reason": "Dungeons of Gielinor is still unscheduled beyond Spring 2027. Diamond Dragon weaknesses and drops remain unannounced, so the thesis is still unconfirmed."
+    },
+    {
+     "date": "2026-11-28",
+     "verdict": "keep",
+     "reason": "No new information. Diamond Dragon weakness and drop tables remain unannounced, so the antifire link is still speculative."
     }
    ],
    "action": "Watch",
    "confidence": "low",
    "evidence": "Dragonstone dragon special drains antifire timers by half (https://runescape.wiki/w/Gemstone_dragons). Diamond Dragon weakness and drops remain unannounced in Dungeons of Gielinor (https://oldschool.runescape.wiki/w/Upcoming_updates).",
    "recheck_when": "Dungeons of Gielinor boss blog with Gemstone dragon weaknesses and drop tables",
-   "last_reviewed": "2026-11-27",
+   "last_reviewed": "2026-11-28",
    "what_would_kill_it": "Dungeons of Gielinor poll fails, or the Diamond Dragon needs no antifire."
   },
   {
@@ -821,13 +821,8 @@
    "id": "i14",
    "status": "open",
    "first_seen": "2026-11-05",
-   "last_reviewed": "2026-11-27",
+   "last_reviewed": "2026-11-28",
    "history": [
-    {
-     "date": "2026-11-16",
-     "verdict": "keep",
-     "reason": "The jewellery production site is still poll-stage. Rates and jewellery types remain unannounced."
-    },
     {
      "date": "2026-11-17",
      "verdict": "update",
@@ -882,6 +877,11 @@
      "date": "2026-11-27",
      "verdict": "keep",
      "reason": "The Deep Sea Diving poll is recorded as passed on the wiki schedule, with release in early 2027. Jewellery rates are still unannounced, so the thesis stays a watch."
+    },
+    {
+     "date": "2026-11-28",
+     "verdict": "keep",
+     "reason": "Blog still confirms gold and silver rocks plus the jewellery courier. Mining rates and jewellery XP remain unannounced, so the supply effect is unquantified."
     }
    ]
   },
@@ -1461,13 +1461,8 @@
    "id": "i25",
    "status": "open",
    "first_seen": "2026-11-10",
-   "last_reviewed": "2026-11-27",
+   "last_reviewed": "2026-11-28",
    "history": [
-    {
-     "date": "2026-11-16",
-     "verdict": "update",
-     "reason": "The Deep Sea Diving blog says the gem rocks match those at Shilo Village. The 65 Mining requirement I had noted is not confirmed."
-    },
     {
      "date": "2026-11-17",
      "verdict": "update",
@@ -1522,6 +1517,11 @@
      "date": "2026-11-27",
      "verdict": "keep",
      "reason": "The precious gem rock details (65 Mining, uncut sapphire, emerald, ruby, diamond) are confirmed in the blog. Release is still early 2027 with no date and no yield data."
+    },
+    {
+     "date": "2026-11-28",
+     "verdict": "keep",
+     "reason": "Blog still confirms precious gem rocks at 65 Mining. Jagex notes existing loot tables already give plenty of precious gems, which supports a supply-up effect."
     }
    ]
   },
@@ -2534,7 +2534,7 @@
    "id": "i43",
    "status": "open",
    "first_seen": "2026-11-22",
-   "last_reviewed": "2026-11-27",
+   "last_reviewed": "2026-11-28",
    "history": [
     {
      "date": "2026-11-22",
@@ -2565,6 +2565,11 @@
      "date": "2026-11-27",
      "verdict": "keep",
      "reason": "Mining and Smithing Reforged is still Summer 2027 with no design details. It stays a low-confidence watch until a design blog appears."
+    },
+    {
+     "date": "2026-11-28",
+     "verdict": "keep",
+     "reason": "Mining and Smithing Reforged remains a Summer 2027 item with no design details. Still a pure roadmap watch."
     }
    ]
   },
@@ -2594,7 +2599,7 @@
    "id": "i44",
    "status": "open",
    "first_seen": "2026-11-23",
-   "last_reviewed": "2026-11-27",
+   "last_reviewed": "2026-11-28",
    "history": [
     {
      "date": "2026-11-23",
@@ -2620,6 +2625,11 @@
      "date": "2026-11-27",
      "verdict": "keep",
      "reason": "Fairytale III is still listed for Summer 2027 with a new runecrafting method. The method's inputs and rates remain unannounced, so the essence link is unconfirmed."
+    },
+    {
+     "date": "2026-11-28",
+     "verdict": "keep",
+     "reason": "Fairytale III is still a Summer 2027 roadmap item. Runecraft method inputs are unannounced, so the Pure essence link is unconfirmed."
     }
    ]
   },
@@ -2703,9 +2713,9 @@
    "what_would_kill_it": "Respawn rates are set low or the rocks need too much travel to change supply.",
    "recheck_when": "Deep Sea Diving release-date blog with gem rock respawn and yield data",
    "id": "i46",
-   "status": "open",
+   "status": "dropped",
    "first_seen": "2026-11-24",
-   "last_reviewed": "2026-11-27",
+   "last_reviewed": "2026-11-28",
    "history": [
     {
      "date": "2026-11-24",
@@ -2726,8 +2736,15 @@
      "date": "2026-11-27",
      "verdict": "keep",
      "reason": "Exotic gem rocks at 75 Mining are confirmed in the blog. Release timing and yields are still unknown, so the idea stays a watch."
+    },
+    {
+     "date": "2026-11-28",
+     "verdict": "drop",
+     "reason": "Jagex says semi-precious gems are intentionally kept at a premium because they are harder to mine safely. That undercuts the supply-up thesis."
     }
-   ]
+   ],
+   "dropped_on": "2026-11-28",
+   "drop_reason": "Jagex says semi-precious gems are intentionally kept at a premium because they are harder to mine safely. That undercuts the supply-up thesis."
   },
   {
    "title": "Tradeable Mokhaiotl cloth lowers Confliction gauntlet cost",
@@ -2755,7 +2772,7 @@
    "id": "i47",
    "status": "open",
    "first_seen": "2026-11-26",
-   "last_reviewed": "2026-11-27",
+   "last_reviewed": "2026-11-28",
    "history": [
     {
      "date": "2026-11-26",
@@ -2766,6 +2783,11 @@
      "date": "2026-11-27",
      "verdict": "keep",
      "reason": "The Gazette says Mokhaiotl Cloth will become tradeable with no date. Confliction gauntlet pricing still depends on that date, so it stays a watch."
+    },
+    {
+     "date": "2026-11-28",
+     "verdict": "keep",
+     "reason": "No new information on the Mokhaiotl Cloth tradeable date. Still awaiting a Jagex or Gazette date."
     }
    ]
   },
@@ -2795,7 +2817,7 @@
    "id": "i48",
    "status": "open",
    "first_seen": "2026-11-26",
-   "last_reviewed": "2026-11-27",
+   "last_reviewed": "2026-11-28",
    "history": [
     {
      "date": "2026-11-26",
@@ -2806,9 +2828,49 @@
      "date": "2026-11-27",
      "verdict": "keep",
      "reason": "Menaphos is still listed for Spring 2027, with the true Soul Altar and 90 Runecraft soul rune crafting. Craft inputs and rates are still unannounced."
+    },
+    {
+     "date": "2026-11-28",
+     "verdict": "keep",
+     "reason": "Menaphos is still a Spring 2027 roadmap item. Soul Altar craft inputs and rates are unannounced."
+    }
+   ]
+  },
+  {
+   "title": "Abyssal gland may cut Redwood log demand",
+   "trigger": "Abyssal gland gives a permanent alternative to the Abyssal Lantern for essence pouch durability",
+   "release": "Early 2027 (wiki schedule, not confirmed by Jagex)",
+   "evidence": "Lantern lit with redwood logs stops pouch decay but needs 90 Firemaking. https://oldschool.runescape.wiki/w/Essence_pouch . Jagex blog calls the gland a lower-variance alternative to the lantern. https://secure.runescape.com/m=news/deep-sea-diving-expansion?oldschool=1",
+   "mechanism": "Players who would have burned redwood logs in the lantern may use the gland instead, slightly reducing redwood log demand.",
+   "direction": "down",
+   "items": [
+    {
+     "name": "Redwood logs",
+     "id": 19669,
+     "limit": 12000,
+     "high_then": 749,
+     "low_then": 741
+    }
+   ],
+   "substitutes": "Astral Contact spell and pouch repairs remain alternatives",
+   "confidence": "low",
+   "action": "Watch",
+   "action_detail": "No trade yet. Revisit once the Abyssal gland is released and lantern use data is visible.",
+   "exit_plan": "Drop if redwood demand from lanterns is too small to move the price.",
+   "what_would_kill_it": "Gland not released, or redwood logs driven by other demand.",
+   "recheck_when": "Deep Sea Diving release-date blog and Abyssal gland drop confirmation",
+   "id": "i49",
+   "status": "open",
+   "first_seen": "2026-11-28",
+   "last_reviewed": "2026-11-28",
+   "history": [
+    {
+     "date": "2026-11-28",
+     "verdict": "new",
+     "reason": "First raised"
     }
    ]
   }
  ],
- "updated": "2026-11-27T14:43+00:00"
+ "updated": "2026-11-28T13:55+00:00"
 }

@@ -889,6 +889,21 @@
      "low_then": 284
     }
    ]
+  },
+  {
+   "date": "2026-11-28T13:55+00:00",
+   "title": "Abyssal gland may cut Redwood log demand",
+   "idea": "i49",
+   "direction": "down",
+   "items": [
+    {
+     "name": "Redwood logs",
+     "id": 19669,
+     "limit": 12000,
+     "high_then": 749,
+     "low_then": 741
+    }
+   ]
   }
  ]
 }
